@@ -1,0 +1,29 @@
+{
+	"dependencies": {
+		"main.js": {
+			"files": [
+				"scripts/main.js"
+			],
+			"main": true
+		},
+		"main.css": {
+			"files": [
+				"styles/main.scss"
+			],
+			"main": true
+		},
+		"admin.css": {
+			"files": [
+				"styles/backend/editor-style.scss"
+			]
+		},
+		"jquery.js": {
+			"bower": [
+				"jquery"
+			]
+		}
+	},
+	"config": {
+		"devUrl": "http://wpegg.dev"
+	}
+}

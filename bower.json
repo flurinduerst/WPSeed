@@ -1,0 +1,21 @@
+{
+  "name": "wpegg",
+  "version": "1.0.0",
+  "authors": [
+    "Flurin Dürst <mail@flurinduerst.ch>"
+  ],
+  "main": "gulpfile.js",
+  "license": "MIT",
+  "homepage": "//flurinduerst.ch",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "fastclick": "~1"
+  }
+}
