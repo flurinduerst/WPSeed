@@ -3,7 +3,7 @@
  * Functions used for Development purposes
  *
  * @author         Flurin Dürst
- * @version 	   1.01
+ * @version 	   1.1
  * @since 		   WPegg 0.1
  *
  */

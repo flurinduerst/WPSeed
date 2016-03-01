@@ -3,7 +3,7 @@
  * The template displaying the posts-overview
  *
  * @author         Flurin Dürst
- * @version        1.02
+ * @version        1.2
  * @since          WPegg 0.18
  */
 

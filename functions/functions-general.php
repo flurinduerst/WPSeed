@@ -1,9 +1,9 @@
 <?
 /**
- * File for general functions that are not WordPress related 
+ * File for general functions that are not WordPress related
  *
  * @author         Flurin Dürst
- * @version 	   1.03
+ * @version 	   1.3.1
  * @since 		   WPegg 0.14
  *
  */
@@ -40,6 +40,7 @@
     /* URL CHECK
     /------------------------*/
     // searches url by string
+	// note: also consider basename() http://php.net/manual/de/function.basename.php
     function urlcontains($string) {
         if (strpos('http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'],$string) == true) {
             return true;

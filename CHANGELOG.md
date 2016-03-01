@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## Head
+* unified file-versions (1.02.15 => 1.2.15)
+* documentation
+
 ## 0.5.0 | 25.02.2016 | public beta
 * added custom styles dropdown for tinymce
 * added `current-page-ancestor` to active class in nav css

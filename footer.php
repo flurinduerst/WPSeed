@@ -1,7 +1,7 @@
 <?
 /**
  * @author 		   Flurin Dürst
- * @version 	   1.05
+ * @version 	   1.5
  * @since          WPegg 0.1
  */
 ?>

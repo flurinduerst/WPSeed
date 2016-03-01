@@ -4,7 +4,7 @@
  * Menus, Theme Supports and General Settings
  *
  * @author         Flurin Dürst
- * @version 	   1.03
+ * @version 	   1.3
  * @since 		   WPegg 0.15
  *
  */

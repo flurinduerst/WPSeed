@@ -3,7 +3,7 @@
  * The template for displaying all single posts and attachments
  *
  * @author         Flurin Dürst
- * @version        1.01
+ * @version        1.1
  * @since          WPegg 0.18
  */
 ?>

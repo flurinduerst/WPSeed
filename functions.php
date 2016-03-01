@@ -6,7 +6,7 @@
  * • general functions like replacements, translations
  *
  * @author         Flurin Dürst
- * @version        1.012
+ * @version        1.12
  * @since          WPegg 0.1
  *
  */

@@ -2,7 +2,7 @@
  * Mobile Navigation handler
  *
  * @author         Flurin Dürst
- * @version 	   1.02
+ * @version 	   1.2
  * @since 		   WPegg 0.12
  *
  */
@@ -22,7 +22,7 @@ $(function(){
  * Configuration and styling for Google Maps
  *
  * @author         Flurin Dürst
- * @version        1.01
+ * @version        1.1
  * @since          WPegg 0.13
  *
  */
