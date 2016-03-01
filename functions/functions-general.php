@@ -3,7 +3,7 @@
  * File for general functions that are not WordPress related
  *
  * @author         Flurin Dürst
- * @version 	   1.3.1
+ * @version 	   1.4.1
  * @since 		   WPegg 0.14
  *
  */
@@ -11,6 +11,12 @@
 
 /* GENERAL FUNCTIONS
 /===================================================== */
+
+	/* VARIABLES
+	/------------------------*/
+	$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+	$loremipsum = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.';
+
 
     /* STRING SHORTENER
     /------------------------*/
