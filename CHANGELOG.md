@@ -3,6 +3,7 @@
 ## Head
 * unified file-versions (1.02.15 => 1.2.15)
 * added variables to functions
+* added pointer-event attributes to predefined hidden/shown classes
 * documentation
 
 ## 0.5.0 | 25.02.2016 | public beta

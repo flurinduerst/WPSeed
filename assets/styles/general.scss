@@ -103,11 +103,12 @@ a {
 }
 
 .hidden {
-	opacity: 0;
-	transition: .1s;
+	opacity: 0 !important;
+	pointer-events: none !important;
 }
 .shown {
-	opacity: 1;
+	opacity: 1 !important;
+	pointer-events: all !important;
 }
 
 
