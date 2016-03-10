@@ -15,7 +15,7 @@
 /* RESPONSIVE MIXINS
 /===================================================== */
 
-/* MIXIN BY BREAKPOINTS
+/* BY BREAKPOINTS
 /------------------------*/
 // breakpoint-width defined in vars.scss
 
@@ -30,7 +30,7 @@
   }
 }
 
-/* MIXIN BY PIXELS
+/* BY PIXELS
 /------------------------*/
 // usage example:  { ... }
 @mixin vpw_min($min) {
@@ -43,7 +43,7 @@
     @media (min-width: #{$min}) and (max-width: #{$max}) { @content; }
 }
 
-/* MIXIN BY ASPECT RATIO
+/* BY ASPECT RATIO
 /------------------------*/
 // usage example: asr_min(16,9) { ... }
 @mixin asr_min($width: 16, $height: 9) {
@@ -51,4 +51,18 @@
 }
 @mixin asr_max($width: 16, $height: 9) {
     @media (max-aspect-ratio:  #{$width} / #{$height}) { @content; }
+}
+
+
+/* BY CLASS
+/------------------------*/
+.mobile {
+	@include desktop {
+		display: none;
+	}
+}
+.desktop {
+	@include mobile {
+		display: none;
+	}
 }
