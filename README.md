@@ -47,7 +47,7 @@ For Instructions please visit [sage theme development](https://roots.io/sage/doc
 ##### defined by variables
 * The width of the two available variables `mobile` and `desktop` are defined in vars.scss. Usage (with default values):
 * min 800px `@include desktop {...}`
-* min 0px, max 799px`@include mobile {...}`
+* max 799px`@include mobile {...}`
 
 ##### defined by individual pixel widths
 * at least 750px: `@include vpw_min(750px)`
@@ -78,7 +78,7 @@ Contact: [flurin@flurinduerst.ch](mailto:flurin@flurinduerst.ch)
 Twitter: [@flurinduerst](https://twitter.com/flurinduerst)
 
 ## Contribution
-Feel free to contact me or add pull-requests/issues. There are no contributing guidelines YET. :)
+Feel free to contact me or add pull-requests/issues.
 
 ## License
 WPegg is published under the GNU GENERAL PUBLIC LICENSE.
