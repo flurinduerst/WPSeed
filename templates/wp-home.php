@@ -2,16 +2,17 @@
 /**
  * The template displaying the posts-overview
  *
- * @author         Flurin Dürst
- * @version        1.2
- * @since          WPegg 0.18
+ * @author			Flurin Dürst
+ * @version			1.3
+ * @since			WPegg 0.18
  */
 
 ?>
 
 <? get_header(); ?>
 
-<!--===== CONTENT - Blog Home =====-->
+<!--- content » blog home --->
+
 	<div class="content blog">
 
 		<? if (have_posts() ) : while (have_posts()) : the_post(); ?>
@@ -22,7 +23,6 @@
 				<? the_content(); ?>
 			</article>
 		<? endwhile; endif; ?>
-
 
 	</div>
 

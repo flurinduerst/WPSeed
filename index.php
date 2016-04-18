@@ -1,14 +1,15 @@
 <?
 /**
- * @author         Flurin Dürst
- * @version        1.1
- * @since          WPegg 0.1
+ * @author			Flurin Dürst
+ * @version			1.2
+ * @since			WPegg 0.1
  */
 ?>
 
 <? get_header(); ?>
 
-<!--===== CONTENT - index =====-->
+<!--- content » index --->
+
 	<div class="content">
 
 		<? if (have_posts() ) : while (have_posts()) : the_post(); ?>
@@ -21,6 +22,6 @@
 
 		<? endwhile; endif; ?>
 
-	</div><!--/.content -->
-
+	</div>
+	
 <? get_footer(); ?>

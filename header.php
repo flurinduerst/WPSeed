@@ -1,8 +1,8 @@
 <?
 /**
- * @author 		   Flurin Dürst
- * @version 	   1.12
- * @since          WPegg 0.1
+ * @author			Flurin Dürst
+ * @version			1.13
+ * @since			WPegg 0.1
  */
 ?>
 <!DOCTYPE html>
@@ -28,7 +28,6 @@
 
 		<div class="wrapper">
 
-			<!-- Top/Nav -->
 			<div class="top">
 				<a href="<?= get_bloginfo('url'); ?>"><div class="logo"></div></a>
 				<div class="mobilenav_trigger" id="mobilenav_trigger"></div>

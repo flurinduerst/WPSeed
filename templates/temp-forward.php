@@ -2,12 +2,13 @@
 /**
  * Template to forward to the first child-page
  *
- * @author 			Flurin Dürst
- * @version   		1.0
- * @since 			WPegg 0.4.0
+ * @author			Flurin Dürst
+ * @version			1.0
+ * @since			WPegg 0.4.0
  *
  */
 ?>
+
 <? /* Template Name: Weiterleitung zu Unterseite */ ?>
 
 <?

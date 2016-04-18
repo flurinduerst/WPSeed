@@ -1,8 +1,8 @@
 <?
 /**
- * @author 		   Flurin Dürst
- * @version 	   1.5
- * @since          WPegg 0.1
+ * @author			Flurin Dürst
+ * @version			1.5
+ * @since			WPegg 0.1
  */
 ?>
 

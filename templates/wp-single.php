@@ -3,18 +3,18 @@
  * The template for displaying all single posts and attachments
  *
  * @author         Flurin Dürst
- * @version        1.1
+ * @version        1.2
  * @since          WPegg 0.18
  */
 ?>
 
 <? get_header(); ?>
 
-<!--===== CONTENT - Single Post =====-->
+<!--- content » single post --->
+
 	<div class="content post">
 
 		<? if (have_posts() ) : while (have_posts()) : the_post(); ?>
-
 			<article>
 				<h2><? the_title(); ?></h2>
 				<div class="postinfo"><?= wpegg_get_the_date_german(); ?></div>
@@ -23,7 +23,6 @@
 				<? previous_post_link('<div class="postlink_prev>%link</div>'); ?>
 				<? next_post_link('<div class="postlink_next>%link</div>'); ?>
 			</article>
-
 		<? endwhile; endif; ?>
 
 	</div>

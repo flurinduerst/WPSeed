@@ -5,30 +5,30 @@
  * • WP-Support & WP-Setup
  * • general functions like replacements, translations
  *
- * @author         Flurin Dürst
- * @version        1.12
- * @since          WPegg 0.1
+ * @author			Flurin Dürst
+ * @version			1.12
+ * @since			WPegg 0.1
  *
  */
 
 /* GENERAL
 /===================================================== */
-    require('functions/functions-general.php');
+	require('functions/functions-general.php');
 
 
 /* DEVELOPMENT
 /===================================================== */
-    require('functions/functions-dev.php');
+	require('functions/functions-dev.php');
 
 
 /* WP SETUP & SETTINGS
 /===================================================== */
-    require('functions/functions-wpsetup.php');
+	require('functions/functions-wpsetup.php');
 
 
 /* WORDPRESS
 /===================================================== */
-    require('functions/functions-wp.php');
+	require('functions/functions-wp.php');
 
 
 /* PLUGIN RELATED
