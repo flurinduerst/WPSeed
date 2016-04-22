@@ -16,7 +16,7 @@
 	/* SETUP WP-MENUS
 	/------------------------*/
 
-	// => https://codex.wordpress.org/Function_Reference/register_nav_menus
+	// » https://codex.wordpress.org/Function_Reference/register_nav_menus
 	function register_theme_menus() {
 		register_nav_menus([
 			'mainmenu' => __('Hauptmenü'),
@@ -34,17 +34,17 @@
 	function wpegg_theme_features()  {
 
 		// Enable plugins to manage the document title
-		// => http://codex.wordpress.org/Function_Reference/add_theme_support#Title_Tag
+		// » http://codex.wordpress.org/Function_Reference/add_theme_support#Title_Tag
 		add_theme_support( 'title-tag' );
 
 		// Add Theme Support for Menus
-		// => http://codex.wordpress.org/Navigation_Menus
+		// » http://codex.wordpress.org/Navigation_Menus
 		add_theme_support('menus');
 
 		// Add Theme Support for Post thumbnails
-		// => http://codex.wordpress.org/Post_Thumbnails
-		// => http://codex.wordpress.org/Function_Reference/set_post_thumbnail_size
-		// => http://codex.wordpress.org/Function_Reference/add_image_size
+		// » http://codex.wordpress.org/Post_Thumbnails
+		// » http://codex.wordpress.org/Function_Reference/set_post_thumbnail_size
+		// » http://codex.wordpress.org/Function_Reference/add_image_size
 		add_theme_support('post-thumbnails');
 
 		// Add Theme Support for soil components (https://roots.io/plugins/soil/)
@@ -65,11 +65,11 @@
 	/* Time, Locale, Language
 	/------------------------*/
 	// Define Local Time, Date and Language-Location
-	// => http://php.net/manual/de/function.setlocale.php
+	// » http://php.net/manual/de/function.setlocale.php
 	setlocale(LC_TIME, "de_CH");
 
 	// Load theme textdomain (based on locale de_CH)
-	// => https://codex.wordpress.org/Function_Reference/load_theme_textdomain
+	// » https://codex.wordpress.org/Function_Reference/load_theme_textdomain
 	load_theme_textdomain('WPegg', get_template_directory() . '/languages');
 
 	/* Disable Backend Theme-Editor

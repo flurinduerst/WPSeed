@@ -78,7 +78,7 @@
 	/* THUMBNAIL URL
 	/------------------------*/
 	// output the absolute url of the featured image
-	// => usage: wpegg_the_post_thumbnail_url($post->ID, 'large');
+	// usage: wpegg_the_post_thumbnail_url($post->ID, 'large');
 	function wpegg_the_post_thumbnail_url($size, $postid) {
 		echo wp_get_attachment_image_src( get_post_thumbnail_id($postid), $size )['0'];
 	}
@@ -96,7 +96,7 @@
 
 	/* TINY_MCE CUSTOM STYLES DROPDOWN
 	/---------------------------------*/
-	// => http://www.wpbeginner.com/wp-tutorials/how-to-add-custom-styles-to-wordpress-visual-editor/
+	// » http://www.wpbeginner.com/wp-tutorials/how-to-add-custom-styles-to-wordpress-visual-editor/
 	// Show "Styles" Dropdown
 	add_filter( 'mce_buttons_2', 'mce_editor_buttons' );
 	function mce_editor_buttons( $buttons ) {

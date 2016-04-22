@@ -16,11 +16,11 @@
 /===================================================== */
 
 	// Base Size
-	// => scales everything (defined by rem)
+	// scales everything (defined by rem)
 	$base_size: .5vw;
 
 	// Base Size Scaling
-	// => defines scaling in relationship to viewport with
+	// » defines scaling in relationship to viewport with
 	$size_2000: 	$base_size * 1;
 	$size_1800: 	$base_size * 1.1;
 	$size_1600: 	$base_size * 1.2;
@@ -30,11 +30,11 @@
 	$size_mobile:  	$base_size * 3;
 
 	// Desktop/Mobile Breakpoint
-	$desktop:	800px;
+	$desktop_min:	800px;
 
 /* COLORS
 /===================================================== */
-// => Color Names based on http://chir.ag/projects/name-that-color/
+// » Color Names based on http://chir.ag/projects/name-that-color/
 
 	/* Base
 	/------------------------*/

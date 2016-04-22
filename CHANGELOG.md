@@ -4,12 +4,9 @@
 * re-added responsive css classes `.desktop` and `.mobile`
 * added pointer-event attributes to predefined hidden/shown classes
 * added variables to functions
-* added general variables and presets (isTouch / $vpWidth) to main.js
-* re-named html template comments
-* fixed tab indents
-* trimmed template-html-comments
 * unified file-versions (1.02.15 => 1.2.15)
-* documentation
+* fixed tab indents
+* cleanup & documentation
 
 ## 0.5.0 | 25.02.2016 | public beta
 * added custom styles dropdown for tinymce
