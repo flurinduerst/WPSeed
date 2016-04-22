@@ -17,7 +17,6 @@
   "dependencies": {
     "jquery": "~2.1.4",
     "fastclick": "~1",
-    "normalize-strings": "normalize#~1.0.4",
     "normalize-css": "~4.1.1"
   }
 }
