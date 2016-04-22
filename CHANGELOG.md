@@ -4,6 +4,7 @@
 * re-added responsive css classes `.desktop` and `.mobile`
 * added pointer-event attributes to predefined hidden/shown classes
 * added variables to functions
+* added general variables and presets (isTouch / $vpWidth) to main.js
 * re-named html template comments
 * fixed tab indents
 * trimmed template-html-comments
