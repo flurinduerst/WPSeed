@@ -2,6 +2,8 @@
 
 ## Head
 * re-added responsive css classes `.desktop` and `.mobile`
+* added general variables and presets (isTouch / $vpWidth) to main.js
+* fixed bower-config & moved normalize into bower
 * added pointer-event attributes to predefined hidden/shown classes
 * added variables to functions
 * unified file-versions (1.02.15 => 1.2.15)

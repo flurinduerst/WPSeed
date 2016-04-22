@@ -14,8 +14,12 @@
 	} else {
 		$root.attr('data-touch', 'false');
 	}
+	/* Initialize Fastclick
+	/------------------------*/
+	//» https://github.com/ftlabs/fastclick
+	FastClick.attach(document.body);
 
-
+	
 /* Functions
 /===================================================== */
 

@@ -2,7 +2,7 @@
   "name": "wpegg",
   "version": "1.0.0",
   "authors": [
-    "Flurin Dürst <mail@flurinduerst.ch>"
+    "Flurin Dürst <flurin@flurinduerst.ch>"
   ],
   "main": "gulpfile.js",
   "license": "MIT",
@@ -16,6 +16,8 @@
   ],
   "dependencies": {
     "jquery": "~2.1.4",
-    "fastclick": "~1"
+    "fastclick": "~1",
+    "normalize-strings": "normalize#~1.0.4",
+    "normalize-css": "~4.1.1"
   }
 }
