@@ -6,6 +6,7 @@
 * fixed bower-config & moved normalize into bower
 * added pointer-event attributes to predefined hidden/shown classes
 * added variables to functions
+* renamed some variables
 * unified file-versions (1.02.15 => 1.2.15)
 * fixed tab indents
 * cleanup & documentation

@@ -10,7 +10,7 @@
  */
 ?>
 <?
-	// get parent items for subnav
+	// get siblings for subnav
 	$args = [
 		'post_type'      => 'page',
 		'posts_per_page' => -1,
@@ -18,15 +18,15 @@
 		'order'          => 'ASC',
 		'orderby'        => 'menu_order'
 	];
-	$parent = new WP_Query( $args );
+	$query = new WP_Query( $args );
 
-	// get current page ID for active subnav
+	// get current_page_id to determinate active subnav
 	$current_page_id = $post->ID;
 ?>
 
-<? if ( $parent->have_posts() ) : ?>
+<? if ( $query->have_posts() ) : ?>
 	<ul>
-		<? while ( $parent->have_posts() ) : $parent->the_post(); ?>
+		<? while ( $query->have_posts() ) : $query->the_post(); ?>
 			<a href="<? the_permalink() ?>"><li<?= ($post->ID == $current_page_id ? ' class="active"' : '') ?>><? the_title(); ?></li></a>
 		<? endwhile; ?>
 	</ul>

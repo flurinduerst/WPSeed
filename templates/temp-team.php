@@ -28,9 +28,9 @@
 			'order'          => 'ASC',
 			'orderby'        => 'menu_order'
 		 ];
-		$parent = new WP_Query( $args );
-		if ( $parent->have_posts() ) : ?>
-			<? while ( $parent->have_posts() ) : $parent->the_post(); ?>
+		$query = new WP_Query( $args );
+		if ( $query->have_posts() ) : ?>
+			<? while ( $query->have_posts() ) : $query->the_post(); ?>
 				<section>
 					<img src="<? $thumbnail = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), array(250,250), false); echo $thumbnail[0]; ?>">
 					<h2><? the_title(); ?></h2>
