@@ -1,9 +1,9 @@
 <?
 /**
- * File for general, WordPress related functions
+ * General, WordPress-related functions
  *
  * @author			Flurin Dürst
- * @version			1.2
+ * @version			1.2.1
  * @since			WPegg 0.11
  *
  */

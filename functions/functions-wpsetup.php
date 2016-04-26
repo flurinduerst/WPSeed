@@ -1,10 +1,10 @@
 <?
 /**
- * File for the WordPress Setup including
- * Menus, Theme Supports and General Settings
+ * WordPress Setup including
+ * Menus, Theme-Supports and General Settings
  *
  * @author			Flurin Dürst
- * @version			1.3
+ * @version			1.3.1
  * @since			WPegg 0.15
  *
  */
