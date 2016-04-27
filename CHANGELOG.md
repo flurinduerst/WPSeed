@@ -1,6 +1,7 @@
 # CHANGELOG
 
-## Head
+## 0.6.0 | 27.04.2016
+* added animated hamburger icons to mobile nav (thanks to https://jonsuh.com/hamburgers/)
 * re-added responsive css classes `.desktop` and `.mobile`
 * added general variables and presets (isTouch / $vpWidth) to main.js
 * fixed bower-config & moved normalize into bower

@@ -19,7 +19,7 @@
 	//» https://github.com/ftlabs/fastclick
 	FastClick.attach(document.body);
 
-	
+
 /* Functions
 /===================================================== */
 
@@ -27,17 +27,17 @@
  * Mobile Navigation handler
  *
  * @author			Flurin Dürst
- * @version			1.2
+ * @version			1.3
  * @since			WPegg 0.12
  *
  */
 
 $(function(){
-	$(document).on('click', '#mobilenav_trigger', function (event) {
+	$(document).on('click', '#hamburger', function (event) {
 		// show overlay
-		$('#nav_main').toggleClass('mobilenav_hidden');
+		$('#nav_main').toggleClass('hiddenmobile');
 		// switch icon
-		$('#mobilenav_trigger').toggleClass('close');
+		$('#hamburger').toggleClass('is-active');
 		$('html').toggleClass('noscroll');
 	});
 });

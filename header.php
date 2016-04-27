@@ -1,7 +1,7 @@
 <?
 /**
  * @author			Flurin Dürst
- * @version			1.13
+ * @version			1.14
  * @since			WPegg 0.1
  */
 ?>
@@ -30,8 +30,12 @@
 
 			<div class="top">
 				<a href="<?= get_bloginfo('url'); ?>"><div class="logo"></div></a>
-				<div class="mobilenav_trigger" id="mobilenav_trigger"></div>
-				<nav id="nav_main" class="mobilenav_hidden">
+				<button class="hamburger--squeeze" id="hamburger" type="button">
+				  <span class="hamburger-box">
+				    <span class="hamburger-inner"></span>
+				  </span>
+				</button>
+				<nav id="nav_main" class="hiddenmobile">
 					<? wp_nav_menu([ 'container' => false, 'theme_location' => 'mainmenu' ]); ?>
 				</nav>
 			</div>
