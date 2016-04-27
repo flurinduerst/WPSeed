@@ -6,7 +6,7 @@
  * minimum while using vars.scss for very basic styling.
  *
  * @author			Flurin Dürst
- * @version			1.3
+ * @version			1.4
  * @since			WPegg 0.1
  *
  */
@@ -27,10 +27,6 @@
 	background-size: contain;
 	transition-timing-function: cubic-bezier(.5, .5, .5, 1.1) !important;
 	-webkit-tap-highlight-color: transparent;
-}
-
-*:focus {
-	outline: 0;
 }
 
 html {
@@ -72,14 +68,6 @@ html {
 	}
 }
 
-:focus {
-	outline: 0;
-}
-
-address {
-	font-style: normal;
-}
-
 a {
 	color: $color_link;
 	transition: .3s;
@@ -89,6 +77,19 @@ a {
 	}
 }
 
+/* ADDITIONAL SANITIZING
+/------------------------*/
+:focus {
+	outline: 0;
+}
+address {
+	font-style: normal;
+}
+
+button {
+	border: none;
+	background-color: transparent;
+}
 
 /* CUSTOM CLASSES
 /------------------------*/
