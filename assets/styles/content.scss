@@ -72,8 +72,9 @@ p {
 table {
 	width: 100%;
 	text-align: left;
+	border-collapse:collapse;
 	tr:nth-child(odd) {
-		background-color: $color_grey; 
+		background-color: $color_grey;
 	}
 	thead tr:first-child {
 		background-color: transparent;
