@@ -3,6 +3,7 @@
 ## Head (no Release yet)
 * admin bar is now only shown on hover.
 * added font-size variable for default font-size on all elements.
+* added basic table styling and sanitizing
 
 ## 0.6.0 | 27.04.2016
 * added animated hamburger icons to mobile nav (thanks to https://jonsuh.com/hamburgers/)

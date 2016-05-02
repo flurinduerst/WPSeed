@@ -67,6 +67,22 @@ p {
 	line-height: normal;
 }
 
+/* ELEMENTS
+/===================================================== */
+table {
+	width: 100%;
+	text-align: left;
+	tr:nth-child(odd) {
+		background-color: $color_grey; 
+	}
+	thead tr:first-child {
+		background-color: transparent;
+	}
+	td {
+		padding: .5rem 1rem;
+	}
+}
+
 
 /* PAGES
 /===================================================== */
