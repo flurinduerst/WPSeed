@@ -68,6 +68,7 @@
 	// » http://php.net/manual/de/function.setlocale.php
 	setlocale(LC_TIME, "de_CH");
 
+
 	// Load theme textdomain (based on locale de_CH)
 	// » https://codex.wordpress.org/Function_Reference/load_theme_textdomain
 	load_theme_textdomain('WPegg', get_template_directory() . '/languages');
