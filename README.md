@@ -1,22 +1,24 @@
-<img src="/assets/images/wpseed.png" width="527"/>
+<img src="/assets/images/wpseed.png" width="518"/>
+
+Note: As requested, extended documentation will be provided soon at wpseed.org.
 
 ## What is WPSeed?
 WPSeed is a WordPress starter theme following the intention of being able to skip the time-consuming first steps when creating a new theme.
 WPSeed uses a variety of pre-built objects that allow kickstarting any kind of theme. These objects consist of:
 * basic templates
-* basic html/scss structure
-* responsive functionality including full rem-based content resizing and a mobile menu
-* a single scss file managing all colors, fonts and re-sizing
+* basic html/scss structure and presets
+* responsive functionality including viewport-mixins, rem-based content resizing and a animated mobile menu
+* a preset/config scss file managing all colors, fonts and sizes
 
 ## Installation
 * WPSeed Theme: Clone WPSeed `$ git clone --depth=1 git@github.com:flurinduerst/WPSeed.git` into your themes directory.
-* Workflow: WPSeeds enviroment (Gulp, Bower, Browsersync, asset-builder) is based on the [sage](https://roots.io/sage/) workflow.
+* Workflow: WPSeeds environment (Gulp, Bower, Browsersync, asset-builder) is based on the [sage](https://roots.io/sage/) workflow.
 For Instructions please visit [sage theme development](https://roots.io/sage/docs/theme-development-and-building/).
 
 ## Usage
 
 ### General
-* All important files have a description/version on the top. Make sure to read it first.
+* All important files provide a description/version at the top. Make sure to read it first.
 
 ### Important Files/Folders
 
