@@ -4,7 +4,7 @@
  * Menus, Theme-Supports and General Settings
  *
  * @author			Flurin Dürst
- * @version			1.3.1
+ * @version			1.3.2
  * @since			WPegg 0.15
  *
  */
@@ -31,7 +31,7 @@
 
 	/* GENERAL
 	/---------------------------------*/
-	function wpegg_theme_features()  {
+	function wpseed_theme_features()  {
 
 		// Enable plugins to manage the document title
 		// » http://codex.wordpress.org/Function_Reference/add_theme_support#Title_Tag
@@ -56,7 +56,7 @@
 		add_theme_support('soil-disable-asset-versioning');
 	}
 
-	add_action( 'after_setup_theme', 'wpegg_theme_features' );
+	add_action( 'after_setup_theme', 'wpseed_theme_features' );
 
 
 /* GENERAL SETTINGS
@@ -71,7 +71,7 @@
 
 	// Load theme textdomain (based on locale de_CH)
 	// » https://codex.wordpress.org/Function_Reference/load_theme_textdomain
-	load_theme_textdomain('WPegg', get_template_directory() . '/languages');
+	load_theme_textdomain('WPSeed', get_template_directory() . '/languages');
 
 	/* Disable Backend Theme-Editor
 	/------------------------------*/

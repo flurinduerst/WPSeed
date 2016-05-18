@@ -3,7 +3,7 @@
  * General functions that are not WordPress related
  *
  * @author			Flurin Dürst
- * @version			1.4.2
+ * @version			1.4.3
  * @since			WPegg 0.14
  *
  */
@@ -21,7 +21,7 @@
 	/* STRING SHORTENER
 	/------------------------*/
 	// shorten strings and append ...
-	function wpegg_shorten($string,$length,$append="...") {
+	function wpseed_shorten($string,$length,$append="...") {
 		$string = trim($string);
 		if(strlen($string) > $length) {
 			$string  = substr($string, 0, $length);

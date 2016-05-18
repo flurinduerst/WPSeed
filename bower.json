@@ -1,12 +1,12 @@
 {
-  "name": "wpegg",
+  "name": "wpseed",
   "version": "1.0.0",
   "authors": [
     "Flurin Dürst <flurin@flurinduerst.ch>"
   ],
   "main": "gulpfile.js",
   "license": "MIT",
-  "homepage": "//flurinduerst.ch",
+  "homepage": "//wpseed.org",
   "ignore": [
     "**/.*",
     "node_modules",

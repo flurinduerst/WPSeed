@@ -1,16 +1,16 @@
-<img src="/assets/images/wpegg.png" width="350"/>
+<img src="/assets/images/wpseed.png" width="527"/>
 
-## What is WPegg?
-WPegg is a WordPress starter theme following the intention of being able to skip the time-consuming first steps when creating a new theme.
-WPegg uses a variety of pre-built objects that allow kickstarting any kind of theme. These objects consist of:
+## What is WPSeed?
+WPSeed is a WordPress starter theme following the intention of being able to skip the time-consuming first steps when creating a new theme.
+WPSeed uses a variety of pre-built objects that allow kickstarting any kind of theme. These objects consist of:
 * basic templates
 * basic html/scss structure
 * responsive functionality including full rem-based content resizing and a mobile menu
 * a single scss file managing all colors, fonts and re-sizing
 
 ## Installation
-* WPegg Theme: Clone WPegg `$ git clone --depth=1 git@github.com:flurinduerst/WPegg.git` into your themes directory.
-* Workflow: WPeggs enviroment (Gulp, Bower, Browsersync, asset-builder) is based on the [sage](https://roots.io/sage/) workflow.
+* WPSeed Theme: Clone WPSeed `$ git clone --depth=1 git@github.com:flurinduerst/WPSeed.git` into your themes directory.
+* Workflow: WPSeeds enviroment (Gulp, Bower, Browsersync, asset-builder) is based on the [sage](https://roots.io/sage/) workflow.
 For Instructions please visit [sage theme development](https://roots.io/sage/docs/theme-development-and-building/).
 
 ## Usage
@@ -81,4 +81,4 @@ Twitter: [@flurinduerst](https://twitter.com/flurinduerst)
 Feel free to contact me or add pull-requests/issues.
 
 ## License
-WPegg is published under the GNU GENERAL PUBLIC LICENSE.
+WPSeed is published under the GNU GENERAL PUBLIC LICENSE.

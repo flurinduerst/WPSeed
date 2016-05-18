@@ -3,7 +3,7 @@
  * General, WordPress-related functions
  *
  * @author			Flurin Dürst
- * @version			1.2.1
+ * @version			1.2.2
  * @since			WPegg 0.11
  *
  */
@@ -30,21 +30,21 @@
 	/* SOCIAL MEDIA ICONS
 	/------------------------*/
 	// Usage: [button type="facebook"], [button type="twitter"]
-	function wpegg_button_shortcode($type) {
+	function wpseed_button_shortcode($type) {
 		extract(shortcode_atts(array(
 			'type' => 'type'
 		), $type));
 
 		switch ($type) {
 			case 'twitter':
-				return '<a href="http://twitter.com/wpegg"><img src="'.get_bloginfo('template_directory').'/assets/icons/icon_twitter.png"></a>';
+				return '<a href="http://twitter.com/wpseed"><img src="'.get_bloginfo('template_directory').'/assets/icons/icon_twitter.png"></a>';
 				break;
 			case 'facebook':
-				return '<a href="http://facebook.com/wpegg"><img src="'.get_bloginfo('template_directory').'/assets/icons/icon_fb.png"></a>';
+				return '<a href="http://facebook.com/wpseed"><img src="'.get_bloginfo('template_directory').'/assets/icons/icon_fb.png"></a>';
 				break;
 		}
 	}
-	add_shortcode('button', 'wpegg_button_shortcode');
+	add_shortcode('button', 'wpseed_button_shortcode');
 
 
  /* BLOG
@@ -52,7 +52,7 @@
 
 	/* OUTPUT FORMATTED POST-DATE IN GERMAN
 	/--------------------------------------*/
-	function wpegg_get_the_date_german() {
+	function wpseed_get_the_date_german() {
 		$months_de = ['Januar','Februar','März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
 		return get_the_date('d.').' '.$months_de[intval(get_the_date('m'))-1].' '.get_the_date('Y.');
 	}
@@ -78,8 +78,8 @@
 	/* THUMBNAIL URL
 	/------------------------*/
 	// output the absolute url of the featured image
-	// usage: wpegg_the_post_thumbnail_url($post->ID, 'large');
-	function wpegg_the_post_thumbnail_url($size, $postid) {
+	// usage: wpseed_the_post_thumbnail_url($post->ID, 'large');
+	function wpseed_the_post_thumbnail_url($size, $postid) {
 		echo wp_get_attachment_image_src( get_post_thumbnail_id($postid), $size )['0'];
 	}
 

@@ -1,9 +1,11 @@
 # CHANGELOG
 
-## Head (no Release yet)
-* admin bar is now only shown on hover.
-* added font-size variable for default font-size on all elements.
+## 0.7.0 | WPSeed | 18.05.2016
+* renamed to WPSeed
+* admin bar is now only shown on hover
+* added font-size variable for default font-size on all elements
 * added basic table styling and sanitizing
+* changed versioning of main.js to full-file-version instead of seperate versions per function
 
 ## 0.6.0 | 27.04.2016
 * added animated hamburger icons to mobile nav (thanks to https://jonsuh.com/hamburgers/)

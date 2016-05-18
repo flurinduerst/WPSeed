@@ -1,4 +1,13 @@
-/* General Variables & Presets
+/**
+ * All sorts javascript/jQuery functions go here
+ *
+ * @author			Flurin Dürst
+ * @version			2.0
+ * @since			WPegg 0.12
+ *
+ */
+
+ /* General Variables & Presets
 /===================================================== */
 
 	/* Viewport Width
@@ -23,15 +32,6 @@
 /* Functions
 /===================================================== */
 
-/**
- * Mobile Navigation handler
- *
- * @author			Flurin Dürst
- * @version			1.3
- * @since			WPegg 0.12
- *
- */
-
 $(function(){
 	$(document).on('click', '#hamburger', function (event) {
 		// show overlay
@@ -41,16 +41,6 @@ $(function(){
 		$('html').toggleClass('noscroll');
 	});
 });
-
-
-/**
- * Configuration and styling for Google Maps
- *
- * @author			Flurin Dürst
- * @version			1.1
- * @since			WPegg 0.13
- *
- */
 
 function initialize() {
 	if($("#map" + name).length !== 0) {
@@ -108,7 +98,7 @@ function initialize() {
 			]
 		};
 		var map = new google.maps.Map(document.getElementById("map"), options);
-		var image = 'http://wpegg.dev/app/themes/WPegg/assets/images/icons/googlemap-arrow.png';
+		var image = 'http://wpseed.dev/app/themes/WPSeed/assets/images/icons/googlemap-arrow.png';
 
 		var marker = new google.maps.Marker({
 			position: position,
