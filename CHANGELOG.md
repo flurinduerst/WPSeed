@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## HEAD
+* renaming versioning to WPSeed
+* add color-classes to hamburger
+
 ## 0.7.0 | WPSeed | 18.05.2016
 * **renamed to WPSeed**
 * admin bar is now only shown on hover
