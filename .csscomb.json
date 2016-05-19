@@ -36,6 +36,7 @@
             "flex-pack",
             "flex-align",
             "justify-content",
+            "align-items",
 
             "box-sizing",
 

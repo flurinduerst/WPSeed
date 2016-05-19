@@ -1,7 +1,7 @@
 # CHANGELOG
 
 ## 0.7.0 | WPSeed | 18.05.2016
-* renamed to WPSeed
+* **renamed to WPSeed**
 * admin bar is now only shown on hover
 * added font-size variable for default font-size on all elements
 * added basic table styling and sanitizing

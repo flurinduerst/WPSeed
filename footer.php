@@ -2,7 +2,7 @@
 /**
  * @author			Flurin Dürst
  * @version			1.5
- * @since			WPegg 0.1
+ * @since			WPSeed 0.1
  */
 ?>
 

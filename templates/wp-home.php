@@ -4,7 +4,7 @@
  *
  * @author			Flurin Dürst
  * @version			1.3.1
- * @since			WPegg 0.18
+ * @since			WPSeed 0.18
  */
 
 ?>
