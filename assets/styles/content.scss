@@ -2,9 +2,9 @@
  * Content CSS File
  * Contains all content related styles
  *
- * @author			Flurin Dürst
- * @version			1.2
- * @since			WPSeed 0.1
+ * @author      Flurin Dürst
+ * @version     1.2
+ * @since       WPSeed 0.1
  *
  */
 
@@ -14,73 +14,73 @@
 /===================================================== */
 
 .wrapper {
-	margin-top: 6rem;
+  margin-top: 6rem;
 }
 
-
 .content {
-	position: relative;
-	width: 80%;
-	max-width: 1000px;
-	margin: auto;
-	padding-top: 4rem;
-	@include mobile {
-		width: 100%;
-		padding: 2rem;
-	}
-	section img {
-		float: left;
-		width: 50%;
-		padding: 0 2rem 2rem 0;
-		@include mobile {
-			float: none;
-			width: 100%;
-			padding: -2rem;
-		}
-	}
+  position: relative;
+  width: 80%;
+  max-width: 1000px;
+  margin: auto;
+  padding-top: 4rem;
+  @include mobile {
+    width: 100%;
+    padding: 2rem;
+  }
+  section img {
+    float: left;
+    width: 50%;
+    padding: 0 2rem 2rem 0;
+    @include mobile {
+      float: none;
+      width: 100%;
+      padding: -2rem;
+    }
+  }
 }
 
 /* TYPO
 /------------------------*/
 p {
-	margin: 0 0 1rem 0;
-	line-height: normal;
+  margin: 0 0 1rem 0;
+  line-height: normal;
 }
 
 /* HEADINGS, PARAGRAPHS
 /===================================================== */
 
 h1 {
-	margin: 0 0 .5rem 0;
-	font-size: 4rem;
+  margin: 0 0 .5rem 0;
+  font-size: 4rem;
 }
 
 h2 {
-	margin: 0 0 .5rem 0;
-	font-size: 3rem;
+  margin: 0 0 .5rem 0;
+  font-size: 3rem;
 }
 
 p {
-	margin: 0 0 1rem 0;
-	font-size: 2rem;
-	line-height: normal;
+  margin: 0 0 1rem 0;
+  font-size: 2rem;
+  line-height: normal;
 }
 
 /* ELEMENTS
 /===================================================== */
+
 table {
-	width: 100%;
-	text-align: left;
-	border-collapse:collapse;
-	tr:nth-child(odd) {
-		background-color: $color_grey;
-	}
-	thead tr:first-child {
-		background-color: transparent;
-	}
-	td {
-		padding: .5rem 1rem;
-	}
+  width: 100%;
+  text-align: left;
+  border-collapse:collapse;
+  tr:nth-child(odd) {
+    background-color: $color_grey;
+  }
+  thead tr:first-child {
+    background-color: transparent;
+  }
+  td {
+    padding: .5rem 1rem;
+  }
 }
 
 
@@ -90,60 +90,60 @@ table {
 /* TEMPLATE - HOME
 /------------------------*/
 .home {
-	.teaser {
-		width: 100%;
-		height: 50rem;
-		background-position: center;
-		background-size: cover;
-	}
+  .teaser {
+    width: 100%;
+    height: 50rem;
+    background-position: center;
+    background-size: cover;
+  }
 }
 
 /* TEMPLATE - BLOG
 /------------------------*/
 .blog,
 .post {
-	article {
-		margin-bottom: 5rem;
-		h2 {
-			margin: 0 0 1rem 0; // top space fix compensation
-			line-height: 70%; // top-space fix
-		}
-		.postinfo {
-			margin: 0 0 2rem 0;
-			font-size: 1.5rem;
-			color: $color_grey;
-		}
-		.readmore a {
-			color: $color_brown;
-			&:hover {
-				opacity: .5;
-			}
-		}
-	}
+  article {
+    margin-bottom: 5rem;
+    h2 {
+      margin: 0 0 1rem 0; // top space fix compensation
+      line-height: 70%; // top-space fix
+    }
+    .postinfo {
+      margin: 0 0 2rem 0;
+      font-size: 1.5rem;
+      color: $color_grey;
+    }
+    .readmore a {
+      color: $color_brown;
+      &:hover {
+        opacity: .5;
+      }
+    }
+  }
 }
 
 
 /* TEMPLATE - TEAM
 /------------------------*/
 .team {
-	section {
-		float: left;
-		width: 33%;
-		@include mobile {
-			float: none;
-			width: 100%;
-		}
-		img {
-			width: 100%;
-		}
-	}
+  section {
+    float: left;
+    width: 33%;
+    @include mobile {
+      float: none;
+      width: 100%;
+    }
+    img {
+      width: 100%;
+    }
+  }
 }
 
 /* TEMPLATE - CONTACT
 /------------------------*/
 .map {
-	width: 100vw;
-	height: 50rem;
+  width: 100vw;
+  height: 50rem;
 }
 
 
@@ -151,20 +151,20 @@ table {
 /===================================================== */
 
 h1 {
-	margin: 0 0 .5rem 0;
-	font-size: 4rem;
+  margin: 0 0 .5rem 0;
+  font-size: 4rem;
 }
 
 h2 {
-	margin: 0 0 .5rem 0;
-	font-size: 3rem;
+  margin: 0 0 .5rem 0;
+  font-size: 3rem;
 }
 
 h3,
 h4,
 h5 {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /* FOOTER
@@ -173,33 +173,33 @@ h5 {
 // docu: http://bit.ly/1Lt1vzH
 
 .flexsite {
-	display: flex;
-	flex-direction: column;
-	height: 100%; /* 1, 3 */
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* 1, 3 */
 }
 
 .wrapper {
-	flex: 1 0 auto; /* 2 */
-	width: 100%;
-	padding: var(--space) var(--space) 0;
+  flex: 1 0 auto; /* 2 */
+  width: 100%;
+  padding: var(--space) var(--space) 0;
 }
 
 .wrapper::after {
-	display: block;
-	visibility: hidden;
-	height: 0;
-	margin-top: var(--space);
-	content: '\00a0'; /* &nbsp; */
+  display: block;
+  visibility: hidden;
+  height: 0;
+  margin-top: var(--space);
+  content: '\00a0'; /* &nbsp; */
 }
 
 .footer {
-	width: 100%;
-	height: 4rem;
-	padding: 1.5rem;
-	font-size: 1rem;
-	color: $color_grey;
-	background: $color_pampas;
-	box-shadow: $shadow_material_s1;
+  width: 100%;
+  height: 4rem;
+  padding: 1.5rem;
+  font-size: 1rem;
+  color: $color_grey;
+  background: $color_pampas;
+  box-shadow: $shadow_material_s1;
 }
 
 
@@ -208,11 +208,11 @@ h5 {
 // frontend admin related
 
 .editcontent {
-	position: fixed;
-	right: 0;
-	bottom: 0;
-	height: 4rem;
-	padding: 2rem;
-	color: white;
-	background-color: black;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  height: 4rem;
+  padding: 2rem;
+  color: white;
+  background-color: black;
 }

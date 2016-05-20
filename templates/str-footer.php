@@ -1,3 +1,3 @@
 <footer class="footer">
-	<div class="test">Lorem Ipsum dolor sit amet</div>
+  <div class="test">Lorem Ipsum dolor sit amet</div>
 </footer>

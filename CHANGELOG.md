@@ -1,9 +1,10 @@
 # CHANGELOG
 
-## Head (0.7.2)
-* renaming versioning to WPSeed
-* update csscomb (based on codeguide.co)
+## Head (0.7.3)
+* coding guideline update: csscomb, convert tabs to spaces (based on codeguide.co)
 * add the most important attributes to hamburger at nav.scss
+* renaming versioning to WPSeed
+* cleanup
 
 ## 0.7.0 | WPSeed | 18.05.2016
 * **renamed to WPSeed**

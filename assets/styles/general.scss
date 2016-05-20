@@ -5,9 +5,9 @@
  * The Idea is to keep editing in this file to a
  * minimum while using vars.scss for very basic styling.
  *
- * @author			Flurin Dürst
- * @version			1.4.2
- * @since			WPSeed 0.1
+ * @author      Flurin Dürst
+ * @version     1.4.2
+ * @since       WPSeed 0.1
  *
  */
 
@@ -19,120 +19,120 @@
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-	background-size: contain;
-	transition-timing-function: cubic-bezier(.5, .5, .5, 1.1) !important;
-	-webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+  transition-timing-function: cubic-bezier(.5, .5, .5, 1.1) !important;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html {
-	max-width: 100vw;
-	height: 100%;
-	overflow-x: hidden;
-	margin: 0;
-	padding: 0;
-	font-family: $font_name;
-	font-size: $base_size;
-	font-weight: $font_weight;
-	color: $color_text;
-	background-color: $color_pampas;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	@include vpw_min(2000px) {
-		font-size: $size_2000;
-	}
-	@include vpw_max(1999px) {
-		font-size: $size_1800;
-	}
-	@include vpw_max(1800px) {
-		font-size: $size_1800;
-	}
-	@include vpw_max(1600px) {
-		font-size: $size_1600;
-	}
-	@include vpw_max(1400px) {
-		font-size: $size_1400;
-	}
-	@include vpw_max(1200px) {
-		font-size: $size_1200;
-	}
-	@include vpw_max(1000px) {
-		font-size: $size_1000;
-	}
-	@include mobile {
-		font-size: $size_mobile;
-	}
+  max-width: 100vw;
+  height: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: $font_name;
+  font-size: $base_size;
+  font-weight: $font_weight;
+  color: $color_text;
+  background-color: $color_pampas;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @include vpw_min(2000px) {
+    font-size: $size_2000;
+  }
+  @include vpw_max(1999px) {
+    font-size: $size_1800;
+  }
+  @include vpw_max(1800px) {
+    font-size: $size_1800;
+  }
+  @include vpw_max(1600px) {
+    font-size: $size_1600;
+  }
+  @include vpw_max(1400px) {
+    font-size: $size_1400;
+  }
+  @include vpw_max(1200px) {
+    font-size: $size_1200;
+  }
+  @include vpw_max(1000px) {
+    font-size: $size_1000;
+  }
+  @include mobile {
+    font-size: $size_mobile;
+  }
 }
 
 body  {
-	font-size: $font_size;
+  font-size: $font_size;
 }
 
 a {
-	color: $color_link;
-	transition: .3s;
-	text-decoration: none;
-	&:hover {
-		color: $color_link-hover;
-	}
+  color: $color_link;
+  transition: .3s;
+  text-decoration: none;
+  &:hover {
+    color: $color_link-hover;
+  }
 }
 
 /* ADDITIONAL SANITIZING
 /------------------------*/
 :focus {
-	outline: 0;
+  outline: 0;
 }
 address {
-	font-style: normal;
+  font-style: normal;
 }
 
 button {
-	border: none;
-	background-color: transparent;
+  border: none;
+  background-color: transparent;
 }
 table {
-	border-collapse:collapse;
+  border-collapse:collapse;
 }
 
 /* CUSTOM CLASSES
 /------------------------*/
 .noscroll {
-	overflow: hidden;
+  overflow: hidden;
 }
 
 .ff {
-	// used in flexfill()
-	height: 0;
-	border: none;
+  // used in flexfill()
+  height: 0;
+  border: none;
 }
 
 .dn {
-	display: none !important;
+  display: none !important;
 }
 .db {
-	display: block !important;
+  display: block !important;
 }
 
 .hidden {
-	opacity: 0 !important;
-	pointer-events: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
 .shown {
-	opacity: 1 !important;
-	pointer-events: all !important;
+  opacity: 1 !important;
+  pointer-events: all !important;
 }
 
 
 /* FIXES
 /------------------------*/
 .fcf:after {
-	display: table;
-	clear: both;
-	content: '';
+  display: table;
+  clear: both;
+  content: '';
 }
 
 
@@ -141,15 +141,15 @@ table {
 // make admin bar hidden until hover
 // never show admin bar on mobile size
 #wpadminbar {
-	position: absolute;
-	opacity: 0;
-	// Hide WP-Admin Bar on Mobile
-	@include vpw_max($desktop_min) {
-		display: none;
-	}
-	&:hover {
-		opacity: 1;
-	}
+  position: absolute;
+  opacity: 0;
+  // Hide WP-Admin Bar on Mobile
+  @include vpw_max($desktop_min) {
+    display: none;
+  }
+  &:hover {
+    opacity: 1;
+  }
 }
 
 /* DEV CLASSES
@@ -157,42 +157,42 @@ table {
 // used in dd() @ functions-dev.php
 
 .dev {
-	margin: 5rem 0;
-	border: 5px dashed #abb2c0;
-	&.noborder {
-		border: none;
-	}
-	&.green {
-		border-color: #97c475;
-	}
-	&.blue {
-		border-color: #51b6c3;
-	}
-	&.orange {
-		border-color: #cc9b62;
-	}
-	&.red {
-		border-color: #e26b73;
-	}
+  margin: 5rem 0;
+  border: 5px dashed #abb2c0;
+  &.noborder {
+    border: none;
+  }
+  &.green {
+    border-color: #97c475;
+  }
+  &.blue {
+    border-color: #51b6c3;
+  }
+  &.orange {
+    border-color: #cc9b62;
+  }
+  &.red {
+    border-color: #e26b73;
+  }
 }
 pre {
-	margin: .1rem;
-	padding: .3rem;
-	font-family: Menlo, Consolas, 'DejaVu Sans Mono', monospace;
-	font-size: 15px;
-	color: #abb2c0;
-	border-radius: 5px;
-	background-color: #282c34;
-	&.green {
-		color: #97c475;
-	}
-	&.blue {
-		color: #51b6c3;
-	}
-	&.orange {
-		color: #cc9b62;
-	}
-	&.red {
-		color: #e26b73;
-	}
+  margin: .1rem;
+  padding: .3rem;
+  font-family: Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+  font-size: 15px;
+  color: #abb2c0;
+  border-radius: 5px;
+  background-color: #282c34;
+  &.green {
+    color: #97c475;
+  }
+  &.blue {
+    color: #51b6c3;
+  }
+  &.orange {
+    color: #cc9b62;
+  }
+  &.red {
+    color: #e26b73;
+  }
 }

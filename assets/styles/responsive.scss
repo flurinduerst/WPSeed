@@ -3,9 +3,9 @@
  * Contains all responsive/fluid related styles, mixins, settings
  * This file is not meant to be changed
  *
- * @author			Flurin Dürst
- * @version			1.1
- * @since			WPSeed 0.1
+ * @author      Flurin Dürst
+ * @version     1.1
+ * @since       WPSeed 0.1
  *
  */
 
@@ -57,12 +57,12 @@
 /* BY CLASS
 /------------------------*/
 .mobile {
-	@include desktop {
-		display: none;
-	}
+  @include desktop {
+    display: none;
+  }
 }
 .desktop {
-	@include mobile {
-		display: none;
-	}
+  @include mobile {
+    display: none;
+  }
 }

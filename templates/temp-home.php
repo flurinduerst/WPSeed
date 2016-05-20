@@ -2,9 +2,9 @@
 /**
  * Template for the Home-Site.
  *
- * @author			Flurin Dürst
- * @version			1.1
- * @since			WPSeed 0.2
+ * @author      Flurin Dürst
+ * @version     1.1
+ * @since       WPSeed 0.2
  *
  */
 ?>
@@ -14,17 +14,17 @@
 
 <!--- content » home --->
 
-	<div class="teaser" style="background-image: url(<? the_post_thumbnail_url('large', $post->ID) ?>)"></div>
+  <div class="teaser" style="background-image: url(<? the_post_thumbnail_url('large', $post->ID) ?>)"></div>
 
-	<div class="content home">
+  <div class="content home">
 
-		<? if (have_posts() ) : while (have_posts()) : the_post(); ?>
-			<section>
-				<h1><? the_title(); ?></h1>
-				<? the_content(); ?>
-			</section>
-		<? endwhile; endif; ?>
+    <? if (have_posts() ) : while (have_posts()) : the_post(); ?>
+      <section>
+        <h1><? the_title(); ?></h1>
+        <? the_content(); ?>
+      </section>
+    <? endwhile; endif; ?>
 
-	</div>
+  </div>
 
 <? get_footer(); ?>

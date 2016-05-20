@@ -1,8 +1,8 @@
 <?
 /**
- * @author			Flurin Dürst
- * @version			1.2
- * @since			WPSeed 0.1
+ * @author      Flurin Dürst
+ * @version     1.2
+ * @since       WPSeed 0.1
  */
 ?>
 
@@ -10,18 +10,18 @@
 
 <!--- content » index --->
 
-	<div class="content">
+  <div class="content">
 
-		<? if (have_posts() ) : while (have_posts()) : the_post(); ?>
+    <? if (have_posts() ) : while (have_posts()) : the_post(); ?>
 
-			<article>
-				<h1><? the_title(); ?></h1>
-				<? the_post_thumbnail('thumbnail'); ?>
-				<? the_content(); ?>
-			</article>
+      <article>
+        <h1><? the_title(); ?></h1>
+        <? the_post_thumbnail('thumbnail'); ?>
+        <? the_content(); ?>
+      </article>
 
-		<? endwhile; endif; ?>
+    <? endwhile; endif; ?>
 
-	</div>
-	
+  </div>
+
 <? get_footer(); ?>

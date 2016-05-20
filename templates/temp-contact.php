@@ -2,9 +2,9 @@
 /**
  * Template with an API-configured Google Map
  *
- * @author			Flurin Dürst
- * @version			1.2
- * @since			WPSeed 0.13
+ * @author      Flurin Dürst
+ * @version     1.2
+ * @since       WPSeed 0.13
  *
  */
 ?>
@@ -15,18 +15,18 @@
 
 <!--- content » map --->
 
-	<div id="map" class="map"></div>
+  <div id="map" class="map"></div>
 
-	<div class="content contact">
+  <div class="content contact">
 
-		<? if (have_posts() ) : while (have_posts()) : the_post(); ?>
-			<article>
-				<h1><? the_title(); ?></h1>
-				<? the_post_thumbnail('thumbnail'); ?>
-				<? the_content(); ?>
-			</article>
-		<? endwhile; endif; ?>
+    <? if (have_posts() ) : while (have_posts()) : the_post(); ?>
+      <article>
+        <h1><? the_title(); ?></h1>
+        <? the_post_thumbnail('thumbnail'); ?>
+        <? the_content(); ?>
+      </article>
+    <? endwhile; endif; ?>
 
-	</div>
+  </div>
 
 <? get_footer(); ?>
