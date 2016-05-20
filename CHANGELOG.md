@@ -1,8 +1,9 @@
 # CHANGELOG
 
-## HEAD
+## Head (0.7.2)
 * renaming versioning to WPSeed
-* add color-classes to hamburger
+* update csscomb (based on codeguide.co)
+* add the most important attributes to hamburger at nav.scss
 
 ## 0.7.0 | WPSeed | 18.05.2016
 * **renamed to WPSeed**
