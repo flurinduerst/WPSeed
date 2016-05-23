@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## Head (0.7.3)
+## Head (0.7.4)
 * coding guideline update: csscomb, convert tabs to spaces (based on codeguide.co)
 * add the most important attributes to hamburger at nav.scss
 * added marker.click preset to googlemaps template
