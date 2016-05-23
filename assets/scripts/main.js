@@ -104,13 +104,19 @@ function initialize() {
       position: position,
       map: map,
       icon: image,
-      title: "WordPress Egg"
+      title: "WPSeed",
+      url: 'http://link_executed_on_marker.click'
     });
 
     // center map on resize
     center = map.getCenter();
     google.maps.event.addDomListener(window, 'resize', function() {
       map.setCenter(center);
+    });
+
+    // href on marker click
+    google.maps.event.addListener(marker, 'click', function() {
+      window.open(marker.url, '_blank');
     });
 
   }
