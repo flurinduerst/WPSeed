@@ -9,7 +9,7 @@
 * renaming versioning to WPSeed
 * cleanup
 
-## 0.7.0 | WPSeed | 18.05.2016
+## 0.7.0 | 18.05.2016 | WPSeed
 * **renamed to WPSeed**
 * admin bar is now only shown on hover
 * added font-size variable for default font-size on all elements
