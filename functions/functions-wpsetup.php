@@ -80,6 +80,11 @@
   }
   add_action('_admin_menu', 'remove_editor_menu', 1);
 
+  /* Set image processing quality to 100%
+  /-------------------------------------*/
+  add_filter('jpeg_quality', function($arg){return 100;});
+  add_filter( 'wp_editor_set_quality', function($arg){return 100;} );
+
   /* Remove html-hardcoded thumbnail-dimensions (for CSS-Scaling of Images)
   /------------------------------------------------------------------------*/
   function remove_thumbnail_dimensions( $html, $post_id, $post_image_id ) {

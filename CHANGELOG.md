@@ -1,6 +1,7 @@
 # CHANGELOG
 
-## Head (0.7.6)
+## Head (0.7.7)
+* preset image processing quality to 100%
 * seperate google maps javascript/jQuery from other javascript/jQuery
 * switch from wp_nav_menu to wp_list_items
 * coding guideline update: csscomb, convert tabs to spaces (based on codeguide.co)
