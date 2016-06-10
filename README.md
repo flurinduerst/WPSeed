@@ -11,10 +11,14 @@ WPSeed uses a variety of pre-built objects that allow kickstarting any kind of t
 * a preset/config scss file managing all colors, fonts and sizes
 
 ## Installation
-* WPSeed Theme: Clone WPSeed `$ git clone --depth=1 git@github.com:flurinduerst/WPSeed.git` into your themes directory.
-* Workflow: WPSeeds environment (Gulp, Bower, Browsersync, asset-builder) uses the [sage](https://roots.io/sage/) workflow.
-  * **Quick-Instructions:** (For Additional instructions and usage please visit [sage theme development](https://roots.io/sage/docs/theme-development-and-building/).)
-  * Requirments:
+### WPSeed Theme:
+* Clone WPSeed `$ git clone --depth=1 git@github.com:flurinduerst/WPSeed.git` into your themes directory.
+
+### Workflow ###
+WPSeeds environment (Gulp, Bower, Browsersync, asset-builder) uses the [sage](https://roots.io/sage/) workflow.
+
+**Quick-Instructions:** (For Additional instructions and usage please visit [sage theme development](https://roots.io/sage/docs/theme-development-and-building/).)
+  * Requirements:
     * Node >= 0.12.x ([nodejs.org](https://nodejs.org/))
     * npm >=2.1.5 (`npm install -g npm@latest`)
   * Installation
