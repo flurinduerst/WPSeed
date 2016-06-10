@@ -1,6 +1,7 @@
 # CHANGELOG
 
-## Head (0.7.8)
+## 0.8.0 | 10.06.2016
+* update/clean node_modules (update gulp-if version, remove deprecated minify-css, add cssnano)
 * preset image processing quality to 100%
 * seperate google maps javascript/jQuery from other javascript/jQuery
 * switch from wp_nav_menu to wp_list_pages

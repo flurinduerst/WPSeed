@@ -1,3 +1,6 @@
+// author: roots.io/sage edited by flurinduerst for wpseed.org
+// Version: 1.1 (WPseed related » versioning starting with 1.1 @ WPSeed 0.8.0)
+
 // ## Globals
 var argv = require('minimist')(process.argv.slice(2));
 var autoprefixer = require('gulp-autoprefixer');
@@ -11,9 +14,9 @@ var imagemin = require('gulp-imagemin');
 var jshint = require('gulp-jshint');
 var lazypipe = require('lazypipe');
 var less = require('gulp-less');
-var notify = require("gulp-notify");
+var notify = require('gulp-notify');
 var merge = require('merge-stream');
-var minifyCss = require('gulp-minify-css');
+var cssNano = require('gulp-cssnano');
 var plumber = require('gulp-plumber');
 var rev = require('gulp-rev');
 var runSequence = require('run-sequence');
@@ -80,18 +83,18 @@ var revManifest = path.dist + 'assets.json';
 // ```
 var cssTasks = function (filename) {
 	return lazypipe()
-		.pipe(function () {
+		.pipe(function() {
 			return gulpif(!enabled.failStyleTask, plumber({
-				errorHandler: notify.onError("<%= error.message %>")
+				errorHandler: notify.onError('<%= error.message %>')
 			}));
 		})
-		.pipe(function () {
+		.pipe(function() {
 			return gulpif(enabled.maps, sourcemaps.init());
 		})
-		.pipe(function () {
+		.pipe(function() {
 			return gulpif('*.less', less());
 		})
-		.pipe(function () {
+		.pipe(function() {
 			return gulpif('*.scss', sass({
 				outputStyle: 'nested',
 				precision: 10,
@@ -110,14 +113,13 @@ var cssTasks = function (filename) {
 				'opera 12'
 			]
 		})
-		.pipe(minifyCss, {
-			advanced: false,
-			rebase: false
+		.pipe(cssNano, {
+      safe: true
 		})
-		.pipe(function () {
+		.pipe(function() {
 			return gulpif(enabled.rev, rev());
 		})
-		.pipe(function () {
+		.pipe(function() {
 			return gulpif(enabled.maps, sourcemaps.write('.', {
 				sourceRoot: 'assets/styles/'
 			}));
@@ -133,12 +135,12 @@ var cssTasks = function (filename) {
 // ```
 var jsTasks = function (filename) {
 	return lazypipe()
-		.pipe(function () {
+		.pipe(function() {
 			return gulpif(!enabled.failJSHint, plumber({
-				errorHandler: notify.onError("<%= error.message %>")
+				errorHandler: notify.onError('<%= error.message %>')
 			}));
 		})
-		.pipe(function () {
+		.pipe(function() {
 			return gulpif(enabled.maps, sourcemaps.init());
 		})
 		.pipe(concat, filename)
@@ -147,10 +149,10 @@ var jsTasks = function (filename) {
 				'drop_debugger': enabled.stripJSDebug
 			}
 		})
-		.pipe(function () {
+		.pipe(function() {
 			return gulpif(enabled.rev, rev());
 		})
-		.pipe(function () {
+		.pipe(function() {
 			return gulpif(enabled.maps, sourcemaps.write('.', {
 				sourceRoot: 'assets/scripts/'
 			}));
@@ -180,7 +182,7 @@ var writeToManifest = function (directory) {
 // `gulp styles` - Compiles, combines, and optimizes Bower CSS and project CSS.
 // By default this task will only log a warning if a precompiler error is
 // raised. If the `--production` flag is set: this task will fail outright.
-gulp.task('styles', ['wiredep'], function () {
+gulp.task('styles', ['wiredep'], function() {
 	var merged = merge();
 	manifest.forEachDependency('css', function (dep) {
 		var cssTasksInstance = cssTasks(dep.name);
@@ -202,7 +204,7 @@ gulp.task('styles', ['wiredep'], function () {
 // ### Scripts
 // `gulp scripts` - Runs JSHint then compiles, combines, and optimizes Bower JS
 // and project JS.
-gulp.task('scripts', ['jshint'], function () {
+gulp.task('scripts', ['jshint'], function() {
 	var merged = merge();
 	manifest.forEachDependency('js', function (dep) {
 		merged.add(
@@ -219,7 +221,7 @@ gulp.task('scripts', ['jshint'], function () {
 // ### Fonts
 // `gulp fonts` - Grabs all the fonts and outputs them in a flattened directory
 // structure. See: https://github.com/armed/gulp-flatten
-gulp.task('fonts', function () {
+gulp.task('fonts', function() {
 	return gulp.src(globs.fonts)
 		.pipe(flatten())
 		.pipe(gulp.dest(path.dist + 'fonts'))
@@ -228,7 +230,7 @@ gulp.task('fonts', function () {
 
 // ### Images
 // `gulp images` - Run lossless compression on all the images.
-gulp.task('images', function () {
+gulp.task('images', function() {
 	return gulp.src(globs.images)
 		.pipe(imagemin({
 			progressive: true,
@@ -245,7 +247,7 @@ gulp.task('images', function () {
 
 // ### JSHint
 // `gulp jshint` - Lints configuration JSON and project JS.
-gulp.task('jshint', function () {
+gulp.task('jshint', function() {
 	return gulp.src([
 			'bower.json', 'gulpfile.js'
 		].concat(project.js))
@@ -268,6 +270,7 @@ gulp.task('watch', function() {
   browserSync.init({
     files: ['{lib,templates}/**/*.php', '*.php'],
     proxy: config.devUrl,
+    // WPSeed custom: don't open browser/notify automatically on browserSync
     notify: false,
     open: false,
     snippetOptions: {
