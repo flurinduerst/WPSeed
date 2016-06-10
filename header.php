@@ -37,7 +37,7 @@
         </button>
         <nav id="nav_main" class="hiddenmobile">
           <? $frontPageID = get_option('page_on_front') ?>
-          <? wp_list_items([
+          <? wp_list_pages([
       				'depth' => 1,
       				'sort_column' => 'menu_order',
       				'title_li' => '',

@@ -1,9 +1,9 @@
 # CHANGELOG
 
-## Head (0.7.7)
+## Head (0.7.8)
 * preset image processing quality to 100%
 * seperate google maps javascript/jQuery from other javascript/jQuery
-* switch from wp_nav_menu to wp_list_items
+* switch from wp_nav_menu to wp_list_pages
 * coding guideline update: csscomb, convert tabs to spaces (based on codeguide.co)
 * add the most important attributes to hamburger at nav.scss
 * added marker.click preset to googlemaps template
