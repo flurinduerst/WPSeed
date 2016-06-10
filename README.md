@@ -12,8 +12,17 @@ WPSeed uses a variety of pre-built objects that allow kickstarting any kind of t
 
 ## Installation
 * WPSeed Theme: Clone WPSeed `$ git clone --depth=1 git@github.com:flurinduerst/WPSeed.git` into your themes directory.
-* Workflow: WPSeeds environment (Gulp, Bower, Browsersync, asset-builder) is based on the [sage](https://roots.io/sage/) workflow.
-For Instructions please visit [sage theme development](https://roots.io/sage/docs/theme-development-and-building/).
+* Workflow: WPSeeds environment (Gulp, Bower, Browsersync, asset-builder) uses the [sage](https://roots.io/sage/) workflow.
+  * **Quick-Instructions:** (For Additional instructions and usage please visit [sage theme development](https://roots.io/sage/docs/theme-development-and-building/).)
+  * Requirments:
+    * Node >= 0.12.x ([nodejs.org](https://nodejs.org/))
+    * npm >=2.1.5 (`npm install -g npm@latest`)
+  * Installation
+    * Install gulp and Bower globally with `npm install -g gulp bower`
+    * Navigate to the theme directory
+    * run `npm install`
+    * Run `bower install`
+    * done - you can now use gulp to compile and optimize your asset files
 
 ## Usage
 
