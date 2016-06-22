@@ -1,4 +1,4 @@
-<?
+<?php
 /**
  * Main Functions File - used for:
  * • including other function-files
@@ -6,7 +6,7 @@
  * • general functions like replacements, translations
  *
  * @author      Flurin Dürst
- * @version     1.12
+ * @version     1.14
  * @since       WPSeed 0.1
  *
  */

@@ -1,10 +1,10 @@
-<?
+<?php
 /**
  * WordPress Setup including
  * Menus, Theme-Supports and General Settings
  *
  * @author      Flurin Dürst
- * @version     1.3.2
+ * @version     1.3.3
  * @since       WPSeed 0.15
  *
  */

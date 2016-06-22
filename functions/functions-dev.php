@@ -1,9 +1,9 @@
-<?
+<?php
 /**
  * Functions used for Development purposes
  *
  * @author      Flurin Dürst
- * @version     1.1
+ * @version     1.2
  * @since       WPegg 0.1
  *
  */

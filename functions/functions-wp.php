@@ -1,9 +1,9 @@
-<?
+<?php
 /**
  * General, WordPress-related functions
  *
  * @author      Flurin Dürst
- * @version     1.2.2
+ * @version     1.2.3
  * @since       WPSeed 0.11
  *
  */
