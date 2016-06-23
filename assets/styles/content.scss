@@ -3,7 +3,7 @@
  * Contains all content related styles
  *
  * @author      Flurin Dürst
- * @version     1.2
+ * @version     1.3
  * @since       WPSeed 0.1
  *
  */
@@ -39,12 +39,20 @@
   }
 }
 
-/* TYPO
-/------------------------*/
-p {
-  margin: 0 0 1rem 0;
-  line-height: normal;
+
+/* TOP
+/===================================================== */
+
+.top {
+  position: fixed;
+  z-index: 200;
+  top: 0;
+  width: 100%;
+  height: 6rem;
+  background-color: $color_pampas;
+  box-shadow: $shadow_material_soft_s1;
 }
+
 
 /* HEADINGS, PARAGRAPHS
 /===================================================== */
@@ -64,6 +72,7 @@ p {
   font-size: 2rem;
   line-height: normal;
 }
+
 
 /* ELEMENTS
 /===================================================== */
@@ -146,26 +155,6 @@ table {
   height: 50rem;
 }
 
-
-/* HEADINGS
-/===================================================== */
-
-h1 {
-  margin: 0 0 .5rem 0;
-  font-size: 4rem;
-}
-
-h2 {
-  margin: 0 0 .5rem 0;
-  font-size: 3rem;
-}
-
-h3,
-h4,
-h5 {
-  margin: 0;
-  padding: 0;
-}
 
 /* FOOTER
 /===================================================== */

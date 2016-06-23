@@ -3,27 +3,13 @@
  * Contains all navigation related styles
  *
  * @author      Flurin Dürst
- * @version     1.3.1
+ * @version     1.4
  * @since       WPSeed 0.1
  *
  */
 
 
 @import 'vars';
-
-/* TOP
-/===================================================== */
-
-.top {
-  position: fixed;
-  z-index: 200;
-  top: 0;
-  width: 100%;
-  height: 6rem;
-  background-color: $color_pampas;
-  box-shadow: $shadow_material_soft_s1;
-}
-
 
 /* NAV
 /===================================================== */
