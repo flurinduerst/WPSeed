@@ -3,7 +3,7 @@
  * Functions used for Development purposes
  *
  * @author      Flurin Dürst
- * @version     1.2.1
+ * @version     1.2.2
  * @since       WPegg 0.1
  *
  */
@@ -52,9 +52,9 @@
 
   /* IP CHECKS
   /------------------------*/
-  // clus
-  function is_clus() {
-    return $_SERVER['REMOTE_ADDR'] === '46.140.123.94';
+  // add your own ip here
+  function is_me() {
+    return $_SERVER['REMOTE_ADDR'] === '11.111.111.11';
   }
 
   /* LOGIN PAGE
