@@ -3,7 +3,7 @@
  * General, WordPress-related functions
  *
  * @author      Flurin Dürst
- * @version     1.2.3
+ * @version     1.2.4
  * @since       WPSeed 0.11
  *
  */
@@ -125,3 +125,4 @@
 
 /* PLUGIN RELATED
 /===================================================== */
+?>

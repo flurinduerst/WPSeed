@@ -4,7 +4,7 @@
  * Menus, Theme-Supports and General Settings
  *
  * @author      Flurin Dürst
- * @version     1.3.3
+ * @version     1.3.4
  * @since       WPSeed 0.15
  *
  */
@@ -91,3 +91,4 @@
     $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
     return $html;
   } add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10, 3 );
+?>

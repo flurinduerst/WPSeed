@@ -3,7 +3,7 @@
  * General functions that are not WordPress related
  *
  * @author      Flurin Dürst
- * @version     1.4.4
+ * @version     1.4.5
  * @since       WPSeed 0.14
  *
  */
@@ -52,3 +52,4 @@
       return true;
     }
   }
+?>

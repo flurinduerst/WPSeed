@@ -1,7 +1,7 @@
 <?
 /**
  * @author      Flurin Dürst
- * @version     1.15
+ * @version     1.16
  * @since       WPSeed 0.1
  */
 ?>
@@ -10,7 +10,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, initial-scale=1, user-scalable=no">
-    <title>WPSeed <? wp_title('|', true, 'left'); ?></title>
+    <title><? bloginfo('name') ?><? wp_title('|', true, 'left'); ?></title>
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
     <!--===== OPEN-GRAPH TAGS =====-->
     <meta property="og:title"       content="<? bloginfo('name'); ?>">

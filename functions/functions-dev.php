@@ -3,7 +3,7 @@
  * Functions used for Development purposes
  *
  * @author      Flurin Dürst
- * @version     1.2
+ * @version     1.2.1
  * @since       WPegg 0.1
  *
  */
@@ -62,3 +62,4 @@
   function is_login_page() {
     return in_array($GLOBALS['pagenow'], array('wp-login.php', 'wp-register.php'));
   }
+?>

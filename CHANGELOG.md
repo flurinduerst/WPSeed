@@ -2,6 +2,7 @@
 
 ## Head
 * remove short open tags on functions files to satisfy wpcli
+* fix title, close functions
 
 ## 0.8.0 | 10.06.2016
 * update/clean node_modules (update gulp-if version, remove deprecated minify-css, add cssnano)
