@@ -1,6 +1,6 @@
 <img src="/assets/images/wpseed.png" width="518"/>
 
-Note: As requested, extended documentation will be provided soon at wpseed.org.
+**Version:** 0.9.0
 
 ## What is WPSeed?
 WPSeed is a WordPress starter theme following the intention of being able to skip the time-consuming first steps when creating a new theme.
@@ -34,9 +34,7 @@ WPSeeds environment (Gulp, Bower, Browsersync, asset-builder) uses the [sage](ht
 
 ### Important Files/Folders
 
-##### Functions/Templates
-* `templates` (Wordpress Default Templates (like page.php, single.php) get their content from the associated file inside the template folder. This way all templates are grouped together.)
-* `header.php` (Metadata, Navigation)
+##### Functions
 * `functions/dev` (Functions used for development purposes)
 * `functions/general` (general functions that are not WordPress related )
 * `functions/wp` (WordPress related functions)
@@ -51,10 +49,26 @@ WPSeeds environment (Gulp, Bower, Browsersync, asset-builder) uses the [sage](ht
 * `assets/scrips/main.js` (javascript/jQuery goes here. It will be minimized to dist/scripts/main.js along with all bower components)
 
 
-### Template prefixes
+##### Templates
+The Wordpress default templates (like page.php, single.php) get their content from the associated file inside the template folder. This way all templates are grouped together.
+
+All templates are seperate into three categories recognizable by their prefix:
 * **`wp`**: wordpress default templates. examples: `wp-page.php`, `wp-single.php`
 * **`temp`**: individual site templates. examples: `temp-team.php`, `temp-contact.php`
 * **`str`**: structure files that have to be included (typically multiple types) in other sites or the main structure. examples: `str-footer.php`, `str-sidebar.php`
+
+* `str-footer`      footer content that shows up at the bottom of the page (this is content, don't mix this up with `footer.php`)
+* `str-subnav`      displays sub-navigation containing child-pages as list items
+
+* `temp-contact`    displays default content + google maps
+* `temp-forward`    forwards to the first child-page
+* `temp-home`       displays default content + teaser image
+* `temp-onepage`    displays all pages within their respective template in a one page
+* `temp-subcontent` displays default content + content of respective child pages
+
+* `wp-home`         WP blog default
+* `wp-page`         WP page default
+* `wp-single`       WP post default
 
 
 ### Responsive mixins/classes
