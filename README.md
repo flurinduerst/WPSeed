@@ -54,15 +54,11 @@ The Wordpress default templates (like page.php, single.php) get their content fr
 
 * `str-footer`      footer content that shows up at the bottom of the page (this is content, don't mix this up with `footer.php`)
 * `str-subnav`      displays sub-navigation containing child-pages as list items
-
-
 * `temp-contact`    displays default content + google maps
 * `temp-forward`    forwards to the first child-page
 * `temp-home`       displays default content + teaser image
 * `temp-onepage`    displays all pages within their respective template in a one page
 * `temp-subcontent` displays default content + content of respective child pages
-
-
 * `wp-home`         WP blog default
 * `wp-page`         WP page default
 * `wp-single`       WP post default
