@@ -3,7 +3,7 @@
  * Functions used for Development purposes
  *
  * @author      Flurin Dürst
- * @version     1.2.2
+ * @version     1.2.3
  * @since       WPegg 0.1
  *
  */
@@ -29,7 +29,7 @@
       <p>Zurzeit werden Wartungsarbeiten ausgeführt.<br>Bitte versuchen Sie es später erneut.</p>
       <p><small>01. Januar 2015, 18.00 Uhr</small></p>
     </main>
-    <? die();
+    <?php die();
   }
 
   /* REDIRECT NOT-LOGGED-IN TO LOGIN

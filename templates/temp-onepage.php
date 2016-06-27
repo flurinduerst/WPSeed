@@ -23,7 +23,7 @@
   <?  $page_query = new WP_Query( $args ); ?>
   <?  while( $page_query->have_posts() ) : $page_query->the_post(); ?>
 
-      <? include(basename( get_page_template() )) ?>
+      <? include(basename(get_page_template())) ?>
 
   <?  endwhile ?>
   <?  wp_reset_postdata();?>
