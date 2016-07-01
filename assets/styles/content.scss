@@ -191,6 +191,19 @@ table {
   box-shadow: $shadow_material_s1;
 }
 
+/* EXTERNAL LINKS
+/===================================================== */
+a[href^='//']:before,
+a[href^='http://']:before,
+a[href^='https://']:before {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  margin: 0 .5rem 0 0;
+  background-image: url('http://bit.ly/290LftQ');
+  background-size: contain;
+  content: '';
+}
 
 /* ADMIN
 /------------------------*/
