@@ -2,6 +2,8 @@
 
 ## Head
 * add open graph image tags
+* add styling for external links
+* bugfixes
 
 ## 0.9.0 | 27.06.2016
 * add onepage template
