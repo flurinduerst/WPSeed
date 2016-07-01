@@ -1,7 +1,7 @@
 <?
 /**
  * @author      Flurin Dürst
- * @version     1.16
+ * @version     1.2
  * @since       WPSeed 0.1
  */
 ?>
@@ -13,9 +13,13 @@
     <title><? bloginfo('name') ?><? wp_title('|', true, 'left'); ?></title>
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
     <!--===== OPEN-GRAPH TAGS =====-->
-    <meta property="og:title"       content="<? bloginfo('name'); ?>">
-    <meta property="og:description"   content="<? bloginfo('description'); ?>">
-    <meta property="og:url"       content="<? bloginfo('url'); ?>">
+    <meta property="og:title" content="<? bloginfo('name'); ?>">
+    <meta property="og:description" content="<? bloginfo('description'); ?>">
+    <meta property="og:url" content="<? bloginfo('url'); ?>">
+    <meta property="og:image" content="<? bloginfo('template_url') ?>/dist/images/ogimg.jpg">
+    <meta property="og:image:width" content="">
+    <meta property="og:image:height" content="">
+
     <!--===== CSS =====-->
     <link rel="stylesheet" href="<? bloginfo('template_url') ?>/dist/styles/main.css">
     <!--===== FONTS =====-->
