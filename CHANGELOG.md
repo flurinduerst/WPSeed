@@ -4,6 +4,8 @@
 * add open graph image tags
 * add styling for external links
 * bugfixes
+* remove subnav preset
+* re-organize/cleanup assets folder
 
 ## 0.9.0 | 27.06.2016
 * add onepage template
