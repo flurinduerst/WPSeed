@@ -5,10 +5,11 @@
 * add open graph image tags
 * add styling for external links
 * bugfixes
-* remove subnav preset
-* remove forward-to-child template
-* re-organize/cleanup assets folder
 * cleanup
+  * remove subnav preset
+  * remove forward-to-child template
+  * remove contact template
+  * re-organize/cleanup assets folder
 
 ## 0.9.0 | 27.06.2016
 * add onepage template
