@@ -8,7 +8,7 @@
  *
  */
 ?>
-<? /* Template Name: Elemente */ ?>
+<? /* Template Name: Elements */ ?>
 
 <? get_header(); ?>
 

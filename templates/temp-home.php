@@ -1,6 +1,6 @@
 <?
 /**
- * Template for the Home-Site.
+ * Template for the Home-Site containing a teaser-image.
  *
  * @author      Flurin Dürst
  * @version     1.1

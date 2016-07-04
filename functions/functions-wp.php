@@ -3,7 +3,7 @@
  * General, WordPress-related functions
  *
  * @author      Flurin Dürst
- * @version     1.2.4
+ * @version     1.2.5
  * @since       WPSeed 0.11
  *
  */
@@ -62,15 +62,8 @@
   add_filter( 'the_content_more_link', 'modify_read_more_link' );
   function modify_read_more_link() {
    return ' <span class="readmore"><a href="' . get_permalink() . '">[read more]</a>';
+   // to hide the button use `return;`
   }
-
-  /* EMPTY «READ MORE»
-  /---------------------------*/
-  //  add_filter( 'the_content_more_link', 'modify_read_more_link' );
-  //  function modify_read_more_link() {
-    //  return;
-  //  }
-
 
 /* OTHERS
 /===================================================== */

@@ -8,7 +8,7 @@
  *
  */
 ?>
-<? /* Template Name: Team */ ?>
+<? /* Template Name: Subcontent */ ?>
 
 <? get_header(); ?>
 
