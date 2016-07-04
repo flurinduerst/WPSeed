@@ -3,7 +3,7 @@
  * Template for Sites with Sub-Sites.
  *
  * @author      Flurin Dürst
- * @version     1.2
+ * @version     1.3
  * @since       WPSeed 0.2
  *
  */
@@ -32,7 +32,10 @@
     if ( $query->have_posts() ) : ?>
       <? while ( $query->have_posts() ) : $query->the_post(); ?>
         <section>
-          <img src="<? $thumbnail = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), array(250,250), false); echo $thumbnail[0]; ?>">
+          <? $thumbnail = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), array(250,250), false) ?>
+          <? if (!empty($thumbnail[0])) : ?>
+            <img src="<?= $thumbnail[0] ?>">
+          <? endif ?>
           <h2><? the_title(); ?></h2>
           <p><? the_content(); ?></p>
         </section>
