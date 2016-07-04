@@ -6,7 +6,7 @@
  * minimum while using vars.scss for very basic styling.
  *
  * @author      Flurin Dürst
- * @version     1.4.2
+ * @version     1.4.3
  * @since       WPSeed 0.1
  *
  */
@@ -133,23 +133,6 @@ table {
   display: table;
   clear: both;
   content: '';
-}
-
-
-/* ADMIN CLASSES
-/------------------------*/
-// make admin bar hidden until hover
-// never show admin bar on mobile size
-#wpadminbar {
-  position: absolute;
-  opacity: 0;
-  // Hide WP-Admin Bar on Mobile
-  @include vpw_max($desktop_min) {
-    display: none;
-  }
-  &:hover {
-    opacity: 1;
-  }
 }
 
 /* DEV CLASSES

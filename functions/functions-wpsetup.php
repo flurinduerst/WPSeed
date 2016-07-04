@@ -4,7 +4,7 @@
  * Menus, Theme-Supports and General Settings
  *
  * @author      Flurin Dürst
- * @version     1.3.4
+ * @version     1.4
  * @since       WPSeed 0.15
  *
  */
@@ -79,6 +79,11 @@
     remove_action('admin_menu', '_add_themes_utility_last', 101);
   }
   add_action('_admin_menu', 'remove_editor_menu', 1);
+
+  /* Disable Admin Bar
+  /------------------------------*/
+  add_filter('show_admin_bar', '__return_false');
+
 
   /* Set image processing quality to 100%
   /-------------------------------------*/

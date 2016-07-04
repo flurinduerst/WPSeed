@@ -1,11 +1,14 @@
 # CHANGELOG
 
 ## Head
+* disable admin bar in wp-setup function
 * add open graph image tags
 * add styling for external links
 * bugfixes
 * remove subnav preset
+* remove forward-to-child template
 * re-organize/cleanup assets folder
+* cleanup
 
 ## 0.9.0 | 27.06.2016
 * add onepage template
