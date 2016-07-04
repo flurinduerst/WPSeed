@@ -6,8 +6,6 @@
  */
 ?>
 
-    </div><!--/.wrapper-->
-
     <? include 'templates/str-footer.php' ?>
 
     <? wp_footer() ?>

@@ -30,8 +30,6 @@
 
   <body <? body_class('flexsite') ?>>
 
-    <div class="wrapper">
-
       <div class="top">
         <a href="<?= get_bloginfo('url'); ?>"><div class="logo"></div></a>
         <button class="hamburger--squeeze" id="hamburger" type="button">
