@@ -2,6 +2,7 @@
 
 ## Head
 * simplify sticky footer
+* css cleanup/re-structuring
 
 ## 0.10.0 | 04.07.2016
 * disable admin bar in wp-setup function
