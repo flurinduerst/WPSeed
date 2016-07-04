@@ -6,7 +6,7 @@
  * • general functions like replacements, translations
  *
  * @author      Flurin Dürst
- * @version     1.14
+ * @version     1.2
  * @since       WPSeed 0.1
  *
  */
@@ -33,6 +33,8 @@
 
 /* PLUGIN RELATED
 /===================================================== */
-
+  // Elements for ACF Flexible Content
+  // » https://www.advancedcustomfields.com/resources/flexible-content/
+  require('functions/functions-elements.php');
 
 ?>

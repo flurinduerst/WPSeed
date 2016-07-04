@@ -1,9 +1,10 @@
 # CHANGELOG
 
-## Head
+## 0.10.0 | 04.07.2016
 * disable admin bar in wp-setup function
 * add open graph image tags
 * add styling for external links
+* add template/functions for acf flexible content
 * bugfixes
 * cleanup
   * remove subnav preset
