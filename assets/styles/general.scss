@@ -37,9 +37,8 @@ html {
   padding: 0;
   font-family: $font_name;
   font-size: $base_size;
-  font-weight: $font_weight;
   color: $color_text;
-  background-color: $color_pampas;
+  background-color: $color_bright;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   @include vpw_min(2000px) {
@@ -68,6 +67,24 @@ html {
   }
 }
 
+body  {
+  // used as wrapper for sticky footer
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-size: $font_size;
+  font-weight: $font_weight;
+}
+
+a {
+  color: $color_link;
+  text-decoration: none;
+  transition: .3s;
+  &:hover {
+    color: $color_link_hover;
+  }
+}
+
 /* ADDITIONAL SANITIZING
 /------------------------*/
 :focus {
@@ -82,7 +99,7 @@ button {
   background-color: transparent;
 }
 table {
-  border-collapse:collapse;
+  border-collapse: collapse;
 }
 
 /* CUSTOM CLASSES
@@ -148,8 +165,8 @@ table {
 pre {
   margin: .1rem;
   padding: .3rem;
-  font-family: Menlo, Consolas, 'DejaVu Sans Mono', monospace;
-  font-size: 15px;
+  font-family: 'Menlo', 'Consolas', 'DejaVu Sans Mono', monospace;
+  font-size: 2rem;
   color: #abb2c0;
   border-radius: 5px;
   background-color: #282c34;

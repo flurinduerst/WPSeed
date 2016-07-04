@@ -10,12 +10,8 @@
 
 @import 'vars';
 
-/* GENERAL/STRUCTURE
+/* GENERAL
 /===================================================== */
-
-.wrapper {
-  margin-top: 6rem;
-}
 
 .content {
   position: relative;
@@ -39,17 +35,20 @@
   }
 }
 
+.top + div {
+  margin-top: 8rem;
+}
 
 /* TOP
 /===================================================== */
 
 .top {
   position: fixed;
-  z-index: 200;
   top: 0;
+  z-index: 200;
   width: 100%;
   height: 6rem;
-  background-color: $color_pampas;
+  background-color: $color_bright;
   box-shadow: $shadow_material_soft_s1;
 }
 
@@ -69,7 +68,6 @@ h2 {
 
 p {
   margin: 0 0 1rem 0;
-  font-size: 2rem;
   line-height: normal;
 }
 
@@ -98,14 +96,13 @@ table {
 
 /* TEMPLATE - HOME
 /------------------------*/
-.home {
-  .teaser {
-    width: 100%;
-    height: 50rem;
-    background-position: center;
-    background-size: cover;
-  }
+.teaser {
+  width: 100%;
+  height: 50rem;
+  background-position: center;
+  background-size: cover;
 }
+
 
 /* TEMPLATE - BLOG
 /------------------------*/
@@ -123,7 +120,7 @@ table {
       color: $color_grey;
     }
     .readmore a {
-      color: $color_brown;
+      color: $color_link;
       &:hover {
         opacity: .5;
       }
@@ -134,7 +131,7 @@ table {
 
 /* TEMPLATE - TEAM
 /------------------------*/
-.team {
+.subcontent {
   section {
     float: left;
     width: 33%;
@@ -158,36 +155,14 @@ table {
 
 /* FOOTER
 /===================================================== */
-// https://philipwalton.github.io/solved-by-flexbox/
-// docu: http://bit.ly/1Lt1vzH
-
-.flexsite {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.wrapper {
-  flex: 1 0 auto; /* 2 */
-  width: 100%;
-  padding: var(--space) var(--space) 0;
-}
-
-.wrapper::after {
-  display: block;
-  visibility: hidden;
-  height: 0;
-  margin-top: var(--space);
-  content: '\00a0'; /* &nbsp; */
-}
 
 .footer {
   width: 100%;
-  height: 4rem;
-  padding: 1.5rem;
-  font-size: 1rem;
+  margin-top: auto;
+  padding: 3rem;
+  font-size: 1.5rem;
   color: $color_grey;
-  background: $color_pampas;
+  background: $color_bright;
   box-shadow: $shadow_material_s1;
 }
 

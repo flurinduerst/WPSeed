@@ -23,12 +23,12 @@
     <!--===== CSS =====-->
     <link rel="stylesheet" href="<? bloginfo('template_url') ?>/dist/styles/main.css">
     <!--===== FONTS =====-->
-    <link href='https://fonts.googleapis.com/css?family=Bitter:400,400italic,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css'>
     <!--===== GOOGLE ANALYTICS =====-->
     <script>//###</script>
   </head>
 
-  <body <? body_class('flexsite') ?>>
+  <body>
 
       <div class="top">
         <a href="<?= get_bloginfo('url'); ?>"><div class="logo"></div></a>

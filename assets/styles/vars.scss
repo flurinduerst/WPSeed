@@ -6,7 +6,7 @@
   * because we define settings here
   *
   * @author     Flurin Dürst
-  * @version    1.2.1
+  * @version    1.2.3
   * @since      WPSeed 0.1
   *
   */
@@ -27,44 +27,41 @@
   $size_1400:   $base_size * 1.3;
   $size_1200:   $base_size * 1.4;
   $size_1000:   $base_size * 1.5;
-  $size_mobile:    $base_size * 3;
+  $size_mobile: $base_size * 3;
 
   // Desktop/Mobile Breakpoint
-  $desktop_min:  800px;
+  $desktop_min: 800px;
+
 
 /* COLORS
 /===================================================== */
-// » Color Names based on http://chir.ag/projects/name-that-color/
 
   /* Base
   /------------------------*/
-  $color_mine:    #333333;
-  $color_pampas:    #f7f7f2;
-  $color_grey:    #b5b5b1;
-  $color_brown:    #c59258;
+  $color_dark:         #333333;
+  $color_bright:       #f7f7f2;
+  $color_grey:         #b5b5b1;
+  $color_green:        #97c475;
 
   /* Text
   /------------------------*/
-  $color_text:    $color_mine;
-  $color_link:      $color_mine;
-  $color_link_hover:  $color_mine;
+  $color_text:        $color_dark;
+  $color_link:        $color_dark;
+  $color_link_hover:  $color_dark;
 
   /* Nav
   /------------------------*/
-  $color_nav:     $color_grey;
-  $color_nav_active:  $color_mine;
-  $color_nav_hover:   $color_brown;
+  $color_nav:         $color_grey;
+  $color_nav_active:  $color_dark;
+  $color_nav_hover:   $color_green;
   $color_nav_spacer:  $color_grey;
 
 
-/* FONTS
+/* FONT STYLING
 /===================================================== */
-
-  /* Font Basics used @ html {}
-  /-----------------------------*/
-  $font_name:      'Bitter'; // Normal 400, Normal 400 Italic, Bold 700
-  $font_weight:    300;
-  $font_size:      2rem;  // default font size for all elements
+  $font_name:      'Ubuntu';  // Normal 400, Medium 500, Bold 700
+  $font_size:      2rem;      // the actual font-size no coherence with html font-size
+  $font_weight:    300;       // default font-weight in body
 
 /* SHADOWS
 /===================================================== */
