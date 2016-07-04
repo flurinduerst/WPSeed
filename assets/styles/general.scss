@@ -6,7 +6,7 @@
  * minimum while using vars.scss for very basic styling.
  *
  * @author      Flurin Dürst
- * @version     1.4.3
+ * @version     1.4.4
  * @since       WPSeed 0.1
  *
  */
@@ -65,19 +65,6 @@ html {
   }
   @include mobile {
     font-size: $size_mobile;
-  }
-}
-
-body  {
-  font-size: $font_size;
-}
-
-a {
-  color: $color_link;
-  transition: .3s;
-  text-decoration: none;
-  &:hover {
-    color: $color_link-hover;
   }
 }
 
