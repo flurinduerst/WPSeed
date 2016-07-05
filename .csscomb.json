@@ -37,12 +37,14 @@
 
             "display",
             "flex",
-            "flex-wrap",
             "flex-direction",
+            "flex-align",
+            "flex-wrap",
             "flex-order",
             "flex-pack",
-            "flex-align",
+            "flex-basis",
             "justify-content",
+            "align-content",
             "align-items",
 
             "float",

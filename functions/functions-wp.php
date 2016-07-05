@@ -3,7 +3,7 @@
  * General, WordPress-related functions
  *
  * @author      Flurin Dürst
- * @version     1.2.5
+ * @version     1.2.6
  * @since       WPSeed 0.11
  *
  */
@@ -54,7 +54,7 @@
   /--------------------------------------*/
   function wpseed_get_the_date_german() {
     $months_de = ['Januar','Februar','März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
-    return get_the_date('d.').' '.$months_de[intval(get_the_date('m'))-1].' '.get_the_date('Y.');
+    return get_the_date('d.').' '.$months_de[intval(get_the_date('m'))-1].' '.get_the_date('Y');
   }
 
   /* EDIT «READ MORE» BUTTON
