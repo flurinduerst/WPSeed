@@ -1,10 +1,11 @@
 # CHANGELOG
 
-## Head
+## Head (0.11.3)
+* reorganize/cleanup functions
+* cleanup/flex navigation
 * adjustments for w3c compability
 * use page as index
 * add logo
-* cleanup/flex navigation
 
 ## 0.11.0 | 05.07.2016 | «CleanFlex»
 * huge cleanup/simplification of css and templates

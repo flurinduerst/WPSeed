@@ -3,63 +3,95 @@
  * Functions used for Development purposes
  *
  * @author      Flurin Dürst
- * @version     1.2.3
- * @since       WPegg 0.1
+ * @version     1.4
+ * @since       WPegg 0.1.0
  *
  */
 
 
-/* ACTIVATABLE
-/===================================================== */
-
-  /* MAINTENANCE MODE
-  /------------------------*/
-  if (false && !is_admin()) {
-  ?>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <style>
-      * { font-family: 'HelveticaNeue', Arial, Verdana; font-weight: normal; font-style: normal; margin: 0; padding: 0; }
-      body { font-family: 'HelveticaNeue',sans-serif; font-size: 22px; color: #fff; line-height: 1.5; background-color: #6d8b9c; }
-      p:first-of-type { margin-bottom: 2rem; }
-      main { position: absolute; top: 50%; left: 50%; margin: auto; -webkit-transform: translate(-50%,-50%); -ms-transform: translate(-50%,-50%); transform: translate(-50%,-50%); }
-      small { opacity: .6; }
-    </style>
-    <main>
-      <p>Zurzeit werden Wartungsarbeiten ausgeführt.<br>Bitte versuchen Sie es später erneut.</p>
-      <p><small>01. Januar 2015, 18.00 Uhr</small></p>
-    </main>
-    <?php die();
-  }
-
-  /* REDIRECT NOT-LOGGED-IN TO LOGIN
-  /---------------------------------*/
-  if (false && !is_user_logged_in() && is_main_query() && !is_admin() && !is_login_page()){
-    wp_redirect('/admin'); die();
-  }
-
-
-/* CODING
-/===================================================== */
+ /* CODING TOOLKIT
+ /===================================================== */
 
   /* DUMP'N DIE
   /------------------------*/
+  function d($var) {
+    echo '<pre>'.var_dump($var).'</pre>';
+  }
   function dd($var) {
-    echo '<pre>';
-    var_dump($var);
+    echo '<pre>'.var_dump($var).'</pre>';
     die();
   }
 
-  /* IP CHECKS
+  /* is AJAX/PJAX Request
   /------------------------*/
-  // add your own ip here
-  function is_me() {
-    return $_SERVER['REMOTE_ADDR'] === '11.111.111.11';
+  function is_ajax_request() {
+    return !empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest';
+  }
+  function is_pjax_request() {
+    return !empty($_SERVER['X-PJAX']) && $_SERVER['X-PJAX'] === true;
   }
 
-  /* LOGIN PAGE
+  /* VARIABLES
   /------------------------*/
-  function is_login_page() {
-    return in_array($GLOBALS['pagenow'], array('wp-login.php', 'wp-register.php'));
+  $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+  $loremipsum = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.';
+
+  /* STRING SHORTENER
+  /------------------------*/
+  // shorten strings and append ...
+  function wpseed_shorten($string,$length,$append="...") {
+    $string = trim($string);
+    if(strlen($string) > $length) {
+      $string  = substr($string, 0, $length);
+      $string .= $append;
+    }
+    return $string;
   }
+
+  /* URL CHECK
+  /------------------------*/
+  // searches url by string
+  // note: also consider using basename($url) or basename(dirname($url)) => http://php.net/manual/de/function.basename.php
+  function urlcontains($string) {
+    if (strpos('http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'],$string) == true) {
+      return true;
+    }
+  }
+
+/* OUTPUT TOOLKIT
+/===================================================== */
+
+  /* SANITIZER
+  /------------------------*/
+  function sanitize_output($buffer) {
+    $search = ['/\>[^\S ]+/s', '/[^\S ]+\</s', '/(\s)+/s'];
+    $replace = ['>', '<', '\\1'];
+    $buffer = preg_replace($search, $replace, $buffer);
+    return $buffer;
+  }
+
+  /* THUMBNAIL URL
+  /------------------------*/
+  // output the absolute url of the featured image
+  // usage: wpseed_the_post_thumbnail_url($post->ID, 'large');
+  function wpseed_the_post_thumbnail_url($size, $postid) {
+    echo wp_get_attachment_image_src( get_post_thumbnail_id($postid), $size )['0'];
+  }
+
+  /* BLOG RELATED
+  /------------------------*/
+
+  // Output formatted post-date in german
+  function wpseed_get_the_date_german() {
+    $months_de = ['Januar','Februar','März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
+    return get_the_date('d.').' '.$months_de[intval(get_the_date('m'))-1].' '.get_the_date('Y');
+  }
+
+  // Edit «read more» button
+  add_filter( 'the_content_more_link', 'modify_read_more_link' );
+  function modify_read_more_link() {
+    return ' <span class="readmore"><a href="' . get_permalink() . '">[mehr...]</a>';
+    // to hide the button use `return;`
+  }
+
 ?>

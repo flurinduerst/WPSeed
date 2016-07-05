@@ -6,17 +6,17 @@
  * • general functions like replacements, translations
  *
  * @author      Flurin Dürst
- * @version     1.2
+ * @version     1.3
  * @since       WPSeed 0.1
  *
  */
 
-/* GENERAL
+/* ACCESS CONTROL
 /===================================================== */
-  require('functions/functions-general.php');
+  require('functions/functions-access.php');
 
 
-/* DEVELOPMENT
+/* DEVELOPER TOOLKIT
 /===================================================== */
   require('functions/functions-dev.php');
 
@@ -26,9 +26,9 @@
   require('functions/functions-wpsetup.php');
 
 
-/* WORDPRESS
+/* BACKEND
 /===================================================== */
-  require('functions/functions-wp.php');
+  require('functions/functions-backend.php');
 
 
 /* PLUGIN RELATED

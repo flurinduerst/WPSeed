@@ -4,8 +4,8 @@
  * Menus, Theme-Supports and General Settings
  *
  * @author      Flurin Dürst
- * @version     1.4
- * @since       WPSeed 0.15
+ * @version     1.5
+ * @since       WPSeed 0.1.5
  *
  */
 
@@ -47,15 +47,7 @@
     // » http://codex.wordpress.org/Function_Reference/add_image_size
     add_theme_support('post-thumbnails');
 
-    // Add Theme Support for soil components (https://roots.io/plugins/soil/)
-    add_theme_support('soil-clean-up');
-    add_theme_support('soil-nav-walker');
-    add_theme_support('soil-relative-urls');
-    add_theme_support('soil-js-to-footer');
-    add_theme_support('soil-disable-trackbacks');
-    add_theme_support('soil-disable-asset-versioning');
   }
-
   add_action( 'after_setup_theme', 'wpseed_theme_features' );
 
 
@@ -66,8 +58,7 @@
   /------------------------*/
   // Define Local Time, Date and Language-Location
   // » http://php.net/manual/de/function.setlocale.php
-  setlocale(LC_TIME, "de_CH");
-
+  setlocale(LC_ALL, 'de_CH.UTF-8');
 
   // Load theme textdomain (based on locale de_CH)
   // » https://codex.wordpress.org/Function_Reference/load_theme_textdomain
@@ -83,7 +74,6 @@
   /* Disable Admin Bar
   /------------------------------*/
   add_filter('show_admin_bar', '__return_false');
-
 
   /* Set image processing quality to 100%
   /-------------------------------------*/

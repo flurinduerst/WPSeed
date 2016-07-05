@@ -1,6 +1,6 @@
 <img src="/assets/images/wpseed.png" width="518"/>
 
-**Version:** 0.11.2
+**Version:** 0.11.3
 
 ## What is WPSeed?
 WPSeed is a WordPress starter theme following the intention of being able to skip the time-consuming first steps when creating a new theme.
@@ -108,3 +108,11 @@ Feel free to contact me or add pull-requests/issues.
 
 ## License
 WPSeed is released under the terms of the GNU General Public License
+
+
+
+
+------------------------------------------------------------
+#README UPDATE
+
+- change setlocale (check for other de_CH)
