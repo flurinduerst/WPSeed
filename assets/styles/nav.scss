@@ -15,9 +15,6 @@
 /===================================================== */
 
 nav {
-  position: absolute;
-  top: 2rem;
-  left: 2rem;
   z-index: 210;
   font-size: 2rem;
   font-weight: 700;
@@ -61,13 +58,13 @@ nav {
   .top {
     box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);
     #hamburger {
-      position: absolute;
-      top: 0;
-      right: 1rem;
-      z-index: 260;
       // » https://jonsuh.com/hamburgers/
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      z-index: 260;
       display: block;
-      height: 6rem;
+      height: 4rem;
       cursor: pointer;
       &.is-active {
         z-index: 300;
@@ -95,8 +92,8 @@ nav {
     overflow: scroll;
     background-color: white;
     opacity: 1;
-    pointer-events: initial;
     transition: .5s;
+    pointer-events: initial;
     &.hiddenmobile {
       opacity: 0;
       pointer-events: none;

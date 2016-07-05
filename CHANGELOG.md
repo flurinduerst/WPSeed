@@ -3,6 +3,8 @@
 ## Head
 * adjustments for w3c compability
 * use page as index
+* add logo
+* cleanup/flex navigation
 
 ## 0.11.0 | 05.07.2016 | «CleanFlex»
 * huge cleanup/simplification of css and templates

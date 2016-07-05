@@ -31,7 +31,9 @@
   <body>
 
       <div class="top">
-        <a href="<?= get_bloginfo('url'); ?>"><div class="logo"></div></a>
+        <a href="<?= get_bloginfo('url'); ?>">
+          <div class="logo"></div>
+        </a>
         <button class="hamburger--squeeze" id="hamburger" type="button">
           <span class="hamburger-box">
             <span class="hamburger-inner"></span>

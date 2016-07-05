@@ -21,7 +21,8 @@
     width: 100%;
     padding: 2rem;
   }
-  section img, article img {
+  section img,
+  article img {
     float: left;
     width: 50%;
     padding: 0 2rem 2rem 0;
@@ -34,7 +35,7 @@
 }
 
 .top + div {
-  margin-top: 6rem;
+  margin-top: 8rem;
 }
 
 /* TOP
@@ -44,10 +45,26 @@
   position: fixed;
   top: 0;
   z-index: 200;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
   width: 100%;
-  height: 6rem;
+  height: 8rem;
+  padding: 0 10%;
   background-color: $color_bright;
   box-shadow: $shadow_material_soft_s1;
+  @include mobile {
+    padding: 0 2rem;
+  }
+  .logo {
+    width: 6rem;
+    height: 6rem;
+    margin-right: 5rem;
+    background-image: url('../images/logo.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
 }
 
 
@@ -104,7 +121,8 @@ p {
   }
 }
 
-.blog, .post {
+.blog,
+.post {
   .postinfo {
     margin: 0 0 2rem 0;
     color: $color_grey;
@@ -113,8 +131,8 @@ p {
   .thumbnail {
     width: 100%;
     height: 30rem;
-    background-size: cover;
     margin-bottom: 1rem;
+    background-size: cover;
   }
 }
 
