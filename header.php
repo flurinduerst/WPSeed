@@ -1,7 +1,7 @@
 <?
 /**
  * @author      Flurin Dürst
- * @version     1.2.1
+ * @version     1.2.2
  * @since       WPSeed 0.1
  */
 ?>
@@ -38,6 +38,7 @@
           </span>
         </button>
         <nav id="nav_main" class="hiddenmobile">
+          <ul>
           <? $frontPageID = get_option('page_on_front') ?>
           <? wp_list_pages([
       				'depth' => 1,
@@ -46,5 +47,6 @@
       				'exclude' => $frontPageID
       			]);
           ?>
+          </ul>
         </nav>
       </div>

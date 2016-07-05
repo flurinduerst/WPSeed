@@ -2,8 +2,8 @@
   "dependencies": {
     "main.js": {
       "files": [
-        "scripts/main.js",
-        "scripts/googlemapsAPI.js"
+        "scripts/essentials.js",
+        "scripts/main.js"
       ],
       "main": true
     },
