@@ -1,8 +1,11 @@
 # CHANGELOG
 
-## Head
+## 0.11.0 | 05.07.2016
+* huge cleanup/simplification of css and templates
+* use flexbox as template default
 * simplify sticky footer
-* css cleanup/re-structuring
+* re-organize javascript files/add essentials.js
+* bugfix mobilemenu
 
 ## 0.10.0 | 04.07.2016
 * disable admin bar in wp-setup function
