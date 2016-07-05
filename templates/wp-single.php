@@ -3,14 +3,14 @@
  * The template for displaying all single posts and attachments
  *
  * @author      Flurin Dürst
- * @version     1.2.2
+ * @version     1.2.3
  * @since       WPegg 0.18
  */
 ?>
 
 <? get_header(); ?>
 
-<!--- content » single post --->
+<!-- content » single post -->
 
   <div class="content post">
 

@@ -3,7 +3,7 @@
  * Template for ACF flexible elements
  *
  * @author      Flurin Dürst
- * @version     1.0
+ * @version     1.0.1
  * @since       WPSeed 0.10.0
  *
  */
@@ -12,7 +12,7 @@
 
 <? get_header(); ?>
 
-<!--- content » elements --->
+<!-- content » elements -->
 
 	<div class="content elements">
 

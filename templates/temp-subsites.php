@@ -3,7 +3,7 @@
  * Template for Sites with Sub-Sites.
  *
  * @author      Flurin Dürst
- * @version     1.4
+ * @version     1.4.1
  * @since       WPSeed 0.2
  *
  */
@@ -12,7 +12,7 @@
 
 <? get_header(); ?>
 
-<!--- content » subsites --->
+<!-- content » subsites -->
 
   <div class="content subsites">
 

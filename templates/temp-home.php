@@ -3,7 +3,7 @@
  * Template for the Home-Site containing a teaser-image.
  *
  * @author      Flurin Dürst
- * @version     1.1
+ * @version     1.1.1
  * @since       WPSeed 0.2
  *
  */
@@ -12,7 +12,7 @@
 
 <? get_header(); ?>
 
-<!--- content » home --->
+<!-- content » home -->
 
   <div class="teaser" style="background-image: url(<? the_post_thumbnail_url('large', $post->ID) ?>)"></div>
 
