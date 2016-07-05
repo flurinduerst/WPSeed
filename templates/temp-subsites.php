@@ -3,22 +3,25 @@
  * Template for Sites with Sub-Sites.
  *
  * @author      Flurin Dürst
- * @version     1.3
+ * @version     1.4
  * @since       WPSeed 0.2
  *
  */
 ?>
-<? /* Template Name: Subcontent */ ?>
+<? /* Template Name: Subsites */ ?>
 
 <? get_header(); ?>
 
-<!--- content » subcontent --->
+<!--- content » subsites --->
 
-  <div class="content subcontent">
+  <div class="content subsites">
 
-    <div class="summary">
-      <p><? the_content(); ?><p>
-    </div>
+    <? if (have_posts() ) : while (have_posts()) : the_post(); ?>
+      <div class="summary">
+        <h1><? the_title(); ?></h1>
+        <p><? the_content(); ?><p>
+      </div>
+    <? endwhile; endif; ?>
 
     <? // Child Pages
     $args = [
@@ -31,14 +34,15 @@
     $query = new WP_Query( $args );
     if ( $query->have_posts() ) : ?>
       <? while ( $query->have_posts() ) : $query->the_post(); ?>
+
         <section>
-          <? $thumbnail = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), array(250,250), false) ?>
-          <? if (!empty($thumbnail[0])) : ?>
-            <img src="<?= $thumbnail[0] ?>">
-          <? endif ?>
           <h2><? the_title(); ?></h2>
+          <? if (has_post_thumbnail()) : ?>
+            <div class="thumbnail" style="background-image: url(<? the_post_thumbnail_url() ?>)"></div>
+          <? endif ?>
           <p><? the_content(); ?></p>
         </section>
+
       <? endwhile; ?>
     <? endif; wp_reset_query(); ?>
 

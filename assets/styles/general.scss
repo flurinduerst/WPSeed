@@ -71,6 +71,7 @@ body  {
   // used as wrapper for sticky footer
   display: flex;
   flex-direction: column;
+  align-items: center;
   min-height: 100vh;
   font-size: $font_size;
   font-weight: $font_weight;

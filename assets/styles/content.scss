@@ -3,7 +3,7 @@
  * Contains all content related styles
  *
  * @author      Flurin Dürst
- * @version     1.5.0
+ * @version     1.6.0
  * @since       WPSeed 0.1
  *
  */
@@ -16,14 +16,12 @@
 .content {
   position: relative;
   width: 80%;
-  max-width: 1000px;
-  margin: 0 auto;
   padding-top: 4rem;
   @include mobile {
     width: 100%;
     padding: 2rem;
   }
-  section img {
+  section img, article img {
     float: left;
     width: 50%;
     padding: 0 2rem 2rem 0;
@@ -36,7 +34,7 @@
 }
 
 .top + div {
-  margin-top: 8rem;
+  margin-top: 6rem;
 }
 
 /* TOP
@@ -68,26 +66,6 @@ h2 {
 
 p {
   margin: 0 0 1rem 0;
-  line-height: normal;
-}
-
-
-/* ELEMENTS
-/===================================================== */
-
-table {
-  width: 100%;
-  text-align: left;
-  border-collapse: collapse;
-  tr:nth-child(odd) {
-    background-color: $color_grey;
-  }
-  thead tr:first-child {
-    background-color: transparent;
-  }
-  td {
-    padding: .5rem 1rem;
-  }
 }
 
 
@@ -106,18 +84,16 @@ table {
 
 /* TEMPLATE - BLOG
 /------------------------*/
-.blog,
-.post {
+.blog {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
   article {
-    margin-bottom: 5rem;
-    h2 {
-      margin: 0 0 1rem 0; // top space fix compensation
-      line-height: 70%; // top-space fix
-    }
-    .postinfo {
-      margin: 0 0 2rem 0;
-      font-size: 1.5rem;
-      color: $color_grey;
+    flex-basis: calc(90% / 2);
+    margin-bottom: 2rem;
+    @include mobile {
+      flex-basis: 100%;
     }
     .readmore a {
       color: $color_link;
@@ -128,28 +104,46 @@ table {
   }
 }
 
+.blog, .post {
+  .postinfo {
+    margin: 0 0 2rem 0;
+    color: $color_grey;
+  }
 
-/* TEMPLATE - TEAM
-/------------------------*/
-.subcontent {
-  section {
-    float: left;
-    width: 33%;
-    @include mobile {
-      float: none;
-      width: 100%;
-    }
-    img {
-      width: 100%;
-    }
+  .thumbnail {
+    width: 100%;
+    height: 30rem;
+    background-size: cover;
+    margin-bottom: 1rem;
   }
 }
 
-/* TEMPLATE - CONTACT
+
+/* TEMPLATE - SUBSITES
 /------------------------*/
-.map {
-  width: 100vw;
-  height: 50rem;
+.subsites {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  section {
+    flex-basis: calc(90% / 3);
+    margin-bottom: 2rem;
+    @include vpw_min(1600px) {
+      flex-basis: calc(90% / 4);
+    }
+    @include vpw_max(1000px) {
+      flex-basis: calc(90% / 2);
+    }
+    @include mobile {
+      flex-basis: 100%;
+    }
+    .thumbnail {
+      width: 100%;
+      height: 30rem;
+      background-size: cover;
+    }
+  }
 }
 
 
@@ -164,32 +158,4 @@ table {
   color: $color_grey;
   background: $color_bright;
   box-shadow: $shadow_material_s1;
-}
-
-/* EXTERNAL LINKS
-/===================================================== */
-a[href^='//']:before,
-a[href^='http://']:before,
-a[href^='https://']:before {
-  display: inline-block;
-  width: 2rem;
-  height: 2rem;
-  margin: 0 .5rem 0 0;
-  background-image: url('http://bit.ly/290LftQ');
-  background-size: contain;
-  content: '';
-}
-
-/* ADMIN
-/------------------------*/
-// frontend admin related
-
-.editcontent {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  height: 4rem;
-  padding: 2rem;
-  color: white;
-  background-color: black;
 }
