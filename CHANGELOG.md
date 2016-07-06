@@ -1,9 +1,10 @@
 # CHANGELOG
 
-## Head (0.11.3)
+## Head (0.11.4)
+* add php-tags for wp-cli compatibility
 * reorganize/cleanup functions
 * cleanup/flex navigation
-* adjustments for w3c compability
+* adjustments for w3c compatibility
 * use page as index
 * add logo
 

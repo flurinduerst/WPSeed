@@ -4,7 +4,7 @@
  * WPSeed_Text and WPSeed_Gallery are placeholder presets.
  *
  * @author     Flurin Dürst
- * @version    1.0
+ * @version    1.1
  * @since      WPSeed 0.10.0
  *
  */
@@ -29,10 +29,10 @@ function elements() {
 function WPSeed_Text() {
   ob_start('sanitize_output') ?>
   <section class="text">
-    <h2><? the_sub_field('title') ?></h2>
-    <? the_sub_field('content') ?>
+    <h2><?php the_sub_field('title') ?></h2>
+    <?php the_sub_field('content') ?>
   </section>
-  <? return ob_get_flush();
+  <?php return ob_get_flush();
 }
 
 /* GALLERY
@@ -40,16 +40,16 @@ function WPSeed_Text() {
 function WPSeed_Gallery() {
   ob_start('sanitize_output') ?>
     <section class="gallery">
-      <h2><? the_sub_field('title') ?></h2>
-      <? if (have_rows('galleryimg')): ?>
+      <h2><?php the_sub_field('title') ?></h2>
+      <?php if (have_rows('galleryimg')): ?>
         <ul>
-          <? while (have_rows('galleryimg')) : the_row(); ?>
-            <? $img = get_sub_field('img') ?>
+          <?php while (have_rows('galleryimg')) : the_row(); ?>
+            <?php $img = get_sub_field('img') ?>
             <li><img src="<?= $img['url'] ?>" /></li>
-          <? endwhile ?>
+          <?php endwhile ?>
         </ul>
-      <? endif ?>
+      <?php endif ?>
     </section>
-  <? return ob_get_flush();
+  <?php return ob_get_flush();
 }
 ?>
