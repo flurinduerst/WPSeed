@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## Head
+* bugfix (typo) in backend function `onlyadmin_update`
+
 ## 0.12.0
 * enqueue scripts, styles, fonts
 * add wp_head

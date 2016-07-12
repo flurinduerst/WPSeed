@@ -3,7 +3,7 @@
  * Backend related functions
  *
  * @author      Flurin Dürst
- * @version     1.1
+ * @version     1.1.1
  * @since       WPSeed 0.11.3
  *
  */
@@ -75,7 +75,7 @@
         remove_action( 'admin_notices', 'update_nag', 3 );
     }
   }
-  add_action( 'admin_head', 'honlyadmin_update', 1 );
+  add_action( 'admin_head', 'onlyadmin_update', 1 );
 
 
 ?>
