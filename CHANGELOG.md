@@ -1,6 +1,7 @@
 # CHANGELOG
 
-## Head (0.11.5)
+## Head (0.11.6)
+* add function to hide core updates for non-admins
 * cleanups
 * update bower dependencies
 * add php-tags for wp-cli compatibility
