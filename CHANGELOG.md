@@ -1,6 +1,8 @@
 # CHANGELOG
 
-## Head (0.11.4)
+## Head (0.11.5)
+* cleanups
+* update bower dependencies
 * add php-tags for wp-cli compatibility
 * reorganize/cleanup functions
 * cleanup/flex navigation
