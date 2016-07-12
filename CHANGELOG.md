@@ -1,6 +1,7 @@
 # CHANGELOG
 
 ## Head
+* bugfix remove hardcoded scripts from footer
 * bugfix (typo) in backend function `onlyadmin_update`
 
 ## 0.12.0
