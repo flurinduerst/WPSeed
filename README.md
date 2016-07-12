@@ -58,13 +58,13 @@ WPSeeds environment (Gulp, Bower, Browsersync, asset-builder) uses the [sage](ht
 ##### Templates
 The Wordpress default templates (like page.php, single.php) receive their content from the associated file inside the template folder. This way all templates are grouped together. `index.php` is forwarded to `page.php`.
 
-* `str-footer`      footer content that shows up at the bottom of the page (this is content, don't mix this up with `footer.php`)
-* `str-elements`    template for ACF flexible elements
-* `temp-home`       displays default content and a full width teaser image
-* `temp-subsites`   displays default content and content of the respective child pages
-* `wp-home`         WP blog default
-* `wp-page`         WP page default
-* `wp-single`       WP post default
+* `str-footer.php`      footer content that shows up at the bottom of the page (this is content, don't mix this up with `footer.php`)
+* `str-elements.php`    template for ACF flexible elements
+* `temp-home.php`       displays default content and a full width teaser image
+* `temp-subsites.php`   displays default content and content of the respective child pages
+* `wp-home.php`         WP blog default
+* `wp-page.php`         WP page default
+* `wp-single.php`       WP post default
 
 All templates are seperate into three categories recognizable by their prefix:
 * **`wp`**: wordpress default templates.
