@@ -1,6 +1,6 @@
 <?php
 /**
- * Functions used for Development purposes
+ * Functions used for development purposes
  *
  * @author      Flurin Dürst
  * @version     1.4

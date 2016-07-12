@@ -6,13 +6,14 @@
 WPSeed is a WordPress starter theme following the intention of being able to skip the time-consuming first steps when creating a new theme.
 WPSeed uses a variety of pre-built objects that allow kickstarting any kind of theme. These objects consist of:
 * basic templates
-* basic html/scss structure and presets
+* basic html/scss structure
+* html/scss/javascript presets and essential functions
 * responsive functionality including viewport-mixins, rem-based content resizing and a animated mobile menu
 * a preset/config scss file managing all colors, fonts and sizes
 
 ## Installation
 #### WPSeed Theme:
-* Clone WPSeed `$ git clone --depth=1 git@github.com:flurinduerst/WPSeed.git` into your `themes` directory.
+* Clone WPSeed `$ git clone git@github.com:flurinduerst/WPSeed.git` into your `themes` directory.
 
 #### Workflow
 WPSeeds environment (Gulp, Bower, Browsersync, asset-builder) uses the [sage](https://roots.io/sage/) workflow.
@@ -21,11 +22,11 @@ WPSeeds environment (Gulp, Bower, Browsersync, asset-builder) uses the [sage](ht
   * Requirements:
     * Node >= 0.12.x ([nodejs.org](https://nodejs.org/))
     * npm >=2.1.5 (`npm install -g npm@latest`)
-    * [short_open_tag](http://php.net/manual/de/ini.core.php#ini.short-open-tag) set to true on your VM/Webserver
+    * [short_open_tag](http://php.net/manual/de/ini.core.php#ini.short-open-tag) set `true` on your VM/Webserver
   * Installation
-    * Install gulp and Bower globally with `npm install -g gulp bower`
+    * Install gulp and Bower globally with `npm install -g gulp bower` if you haven't already
     * in the theme directory run `npm install && bower install && gulp`
-    * done - you can now use gulp to compile and optimize your asset files
+    * done - you can now use gulp (run `gulp watch` in your theme directory) to compile and optimize your asset files
 
 ## Usage
 
@@ -35,38 +36,40 @@ WPSeeds environment (Gulp, Bower, Browsersync, asset-builder) uses the [sage](ht
 ### Important Files/Folders
 
 ##### Functions
-* `functions/dev` (Functions used for development purposes)
-* `functions/general` (general functions that are not WordPress related )
-* `functions/wp` (WordPress related functions)
-* `functions/wpsetup` (WordPress Setup including menus, theme supports and general settings)
+* `functions/access` (functions that control access to the site)
+* `functions/backend` (backend related functions)
+* `functions/dev` (functions used for development purposes)
+* `functions/elements` (functions to output ACF flexible elements)
+* `functions/wpsetup` (WordPress setup)
 
 ##### CSS
-* `assets/styles/vars.scss` (this is where you start styling. This file manages all colors, fonts and re-sizing)
-* `assets/styles/nav.scss` (Navigation)
-* `assets/styles/content.scss` (basically everything else)
+* `assets/styles/content.scss` (content related styles)
+* `assets/styles/general.scss` (re-usable classes and settings)
+* `assets/styles/main.scss` (gathers all .scss files for compiling with gulp)
+* `assets/styles/nav.scss` (navigation)
+* `assets/styles/responsive.scss` (responsive stuff, **this file is not meant to be changed**)
+* `assets/styles/vars.scss` (manages all colors, fonts and re-sizing and other presets)
 
 ##### Javascript
-* `assets/scrips/main.js` (javascript/jQuery goes here. It will be minimized to dist/scripts/main.js along with all bower components)
+* `assets/scrips/essentials.js` (re-usable essential javascript/jQuery functions/variables)
+* `assets/scrips/main.js` (javascript/jQuery stuff - if you want to split this up into multiple files, edit `manifest.json`)
 
 
 ##### Templates
-The Wordpress default templates (like page.php, single.php) get their content from the associated file inside the template folder. This way all templates are grouped together.
+The Wordpress default templates (like page.php, single.php) receive their content from the associated file inside the template folder. This way all templates are grouped together. `index.php` is forwarded to `page.php`.
 
 * `str-footer`      footer content that shows up at the bottom of the page (this is content, don't mix this up with `footer.php`)
-* `str-subnav`      displays sub-navigation containing child-pages as list items
-* `temp-contact`    displays default content + google maps
-* `temp-forward`    forwards to the first child-page
-* `temp-home`       displays default content + teaser image
-* `temp-onepage`    displays all pages within their respective template in a one page
-* `temp-subcontent` displays default content + content of respective child pages
+* `str-elements`    template for ACF flexible elements
+* `temp-home`       displays default content and a full width teaser image
+* `temp-subsites`   displays default content and content of the respective child pages
 * `wp-home`         WP blog default
 * `wp-page`         WP page default
 * `wp-single`       WP post default
 
 All templates are seperate into three categories recognizable by their prefix:
-* **`wp`**: wordpress default templates. examples: `wp-page.php`, `wp-single.php`
-* **`temp`**: individual site templates. examples: `temp-team.php`, `temp-contact.php`
-* **`str`**: structure files that have to be included (typically multiple types) in other sites or the main structure.
+* **`wp`**: wordpress default templates.
+* **`temp`**: individual site templates.
+* **`str`**: structure files that have to be included in other sites or the main structure.
 
 
 ### Responsive mixins/classes
@@ -108,11 +111,3 @@ Feel free to contact me or add pull-requests/issues.
 
 ## License
 WPSeed is released under the terms of the GNU General Public License
-
-
-
-
-------------------------------------------------------------
-#README UPDATE
-
-- change setlocale (check for other de_CH)

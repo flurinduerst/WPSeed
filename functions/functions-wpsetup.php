@@ -1,7 +1,7 @@
 <?php
 /**
  * WordPress Setup including
- * Menus, Theme-Supports and General Settings
+ * menus, theme-support settings, general settings and a wp_head cleaner
  *
  * @author      Flurin Dürst
  * @version     1.6
