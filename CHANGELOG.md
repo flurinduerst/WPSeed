@@ -1,6 +1,9 @@
 # CHANGELOG
 
-## Head (0.11.6)
+## 0.12.0
+* enqueue scripts, styles, fonts
+* add wp_head
+* add wp_head cleaner
 * add function to hide core updates for non-admins
 * cleanups
 * update bower dependencies

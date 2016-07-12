@@ -4,7 +4,7 @@
  * Menus, Theme-Supports and General Settings
  *
  * @author      Flurin Dürst
- * @version     1.5
+ * @version     1.6
  * @since       WPSeed 0.1.5
  *
  */
@@ -13,9 +13,19 @@
 /* THEME SETUP
 /===================================================== */
 
+  /* ENQUEUE SCRIPTS
+  /------------------------*/
+  // enqueue sctipts
+  // » https://developer.wordpress.org/reference/functions/wp_enqueue_script/
+  function wpseed_enqueue_scripts_and_styles() {
+    wp_register_script('wpseed/scripts', get_template_directory_uri() . '/dist/scripts/main.js', false, array( 'jquery' ), null);
+    wp_enqueue_style('wpseed/styles', get_template_directory_uri() . '/dist/styles/main.css', false, null);
+    wp_enqueue_style('google/fonts', 'https://fonts.googleapis.com/css?family=Ubuntu:400,500,700', false, null);
+  }
+  add_action('wp_enqueue_scripts', 'wpseed_enqueue_scripts_and_styles');
+
   /* SETUP WP-MENUS
   /------------------------*/
-
   // » https://codex.wordpress.org/Function_Reference/register_nav_menus
   function register_theme_menus() {
     register_nav_menus([
@@ -23,7 +33,7 @@
       'submenu' => __('Untermenü')
     ]);
   }
-  add_action( 'init', 'register_theme_menus' );
+  add_action( 'init', 'register_theme_menus');
 
 
 /* THEME SUPPORT
@@ -35,7 +45,7 @@
 
     // Enable plugins to manage the document title
     // » http://codex.wordpress.org/Function_Reference/add_theme_support#Title_Tag
-    add_theme_support( 'title-tag' );
+    add_theme_support( 'title-tag');
 
     // Add Theme Support for Menus
     // » http://codex.wordpress.org/Navigation_Menus
@@ -48,7 +58,7 @@
     add_theme_support('post-thumbnails');
 
   }
-  add_action( 'after_setup_theme', 'wpseed_theme_features' );
+  add_action( 'after_setup_theme', 'wpseed_theme_features');
 
 
 /* GENERAL SETTINGS
@@ -78,12 +88,49 @@
   /* Set image processing quality to 100%
   /-------------------------------------*/
   add_filter('jpeg_quality', function($arg){return 100;});
-  add_filter( 'wp_editor_set_quality', function($arg){return 100;} );
+  add_filter( 'wp_editor_set_quality', function($arg){return 100;});
 
-  /* Remove html-hardcoded thumbnail-dimensions (for CSS-Scaling of Images)
+  /* Remove html hardcoded thumbnail dimensions (for CSS-Scaling of Images)
   /------------------------------------------------------------------------*/
   function remove_thumbnail_dimensions( $html, $post_id, $post_image_id ) {
-    $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
+    $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html);
     return $html;
-  } add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10, 3 );
+  }
+  add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10, 3);
+
+
+/* WPHEAD CLEANUP
+/===================================================== */
+// removes unused stuff from wp_head()
+function wphead_cleanup () {
+  // remove the generator meta tag
+  remove_action('wp_head', 'wp_generator');
+  // remove wlwmanifest link
+  remove_action('wp_head', 'wlwmanifest_link');
+  // remove RSD API connection
+  remove_action('wp_head', 'rsd_link');
+  // remove wp shortlink support
+  remove_action('wp_head', 'wp_shortlink_wp_head');
+  // remove next/previous links (this is not touching blog-posts)
+  remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10);
+  // remove generator name from RSS
+  add_filter('the_generator', '__return_false');
+  add_filter('show_admin_bar','__return_false');
+  // disable emojo support
+  remove_action( 'wp_head', 'print_emoji_detection_script', 7);
+  remove_action( 'wp_print_styles', 'print_emoji_styles');
+  // disable automatic feeds
+  remove_action('wp_head', 'feed_links_extra', 3);
+  remove_action('wp_head', 'feed_links', 2);
+  // remove rest API link
+  remove_action( 'wp_head', 'rest_output_link_wp_head', 10);
+  // remove oEmbed link
+  remove_action( 'wp_head', 'wp_oembed_add_discovery_links', 10);
+  remove_action('wp_head', 'wp_oembed_add_host_js');
+  // remove canonical links
+  remove_action('wp_head', 'rel_canonical');
+}
+add_action('after_setup_theme', 'wphead_cleanup');
+
+
 ?>
