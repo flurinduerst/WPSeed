@@ -36,11 +36,11 @@ WPSeeds environment (Gulp, Bower, Browsersync, asset-builder) uses the [sage](ht
 ### Important Files/Folders
 
 ##### Functions
-* `functions/access` (functions that control access to the site)
-* `functions/backend` (backend related functions)
-* `functions/dev` (functions used for development purposes)
-* `functions/elements` (functions to output ACF flexible elements)
-* `functions/wpsetup` (WordPress setup)
+* `functions-access.php` (functions that control access to the site)
+* `functions-backend.php` (backend related functions)
+* `functions-dev.php` (functions used for development purposes)
+* `functions-elements.php` (functions to output ACF flexible elements)
+* `functions-wpsetup.php` (WordPress setup)
 
 ##### CSS
 * `assets/styles/content.scss` (content related styles)
