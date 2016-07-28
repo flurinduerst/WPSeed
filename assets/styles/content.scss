@@ -3,7 +3,7 @@
  * Contains all content related styles
  *
  * @author      Flurin Dürst
- * @version     1.6.1
+ * @version     1.7
  * @since       WPSeed 0.1
  *
  */
@@ -16,26 +16,26 @@
 .content {
   position: relative;
   width: 80%;
-  padding-top: 4rem;
+  padding-top: 2rem;
   @include mobile {
     width: 100%;
-    padding: 2rem;
+    padding: 1rem;
   }
   section img,
   article img {
     float: left;
     width: 50%;
-    padding: 0 2rem 2rem 0;
+    padding: 0 1rem 1rem 0;
     @include mobile {
       float: none;
       width: 100%;
-      padding: -2rem;
+      padding: -1rem;
     }
   }
 }
 
 .top + div {
-  margin-top: 8rem;
+  margin-top: 4rem;
 }
 
 /* TOP
@@ -51,17 +51,17 @@
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  height: 8rem;
+  height: 4rem;
   padding: 0 10%;
   background-color: $color_bright;
   box-shadow: $shadow_material_soft_s1;
   @include mobile {
-    padding: 0 2rem;
+    padding: 0 1rem;
   }
   .logo {
-    width: 6rem;
-    height: 6rem;
-    margin-right: 5rem;
+    width: 3rem;
+    height: 3rem;
+    margin-right: 2rem;
     background-image: url('../images/logo.svg');
     background-size: contain;
     background-repeat: no-repeat;
@@ -73,17 +73,17 @@
 /===================================================== */
 
 h1 {
-  margin: 0 0 .5rem 0;
-  font-size: 4rem;
+  margin: 0 0 .25rem 0;
+  font-size: 2rem;
 }
 
 h2 {
   margin: 0 0 .5rem 0;
-  font-size: 3rem;
+  font-size: 1.5rem;
 }
 
 p {
-  margin: 0 0 1rem 0;
+  margin: 0 0 .5rem 0;
 }
 
 
@@ -94,7 +94,7 @@ p {
 /------------------------*/
 .teaser {
   width: 100%;
-  height: 50rem;
+  height: 25rem;
   background-position: center;
   background-size: cover;
 }
@@ -109,7 +109,7 @@ p {
   justify-content: space-between;
   article {
     flex-basis: calc(90% / 2);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     @include mobile {
       flex-basis: 100%;
     }
@@ -125,14 +125,14 @@ p {
 .blog,
 .post {
   .postinfo {
-    margin: 0 0 2rem 0;
+    margin: 0 0 1rem 0;
     color: $color_grey;
   }
 
   .thumbnail {
     width: 100%;
-    height: 30rem;
-    margin-bottom: 1rem;
+    height: 15rem;
+    margin-bottom: .5rem;
     background-size: cover;
   }
 }
@@ -147,7 +147,7 @@ p {
   justify-content: space-between;
   section {
     flex-basis: calc(90% / 3);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     @include vpw_min(1600px) {
       flex-basis: calc(90% / 4);
     }
@@ -159,7 +159,7 @@ p {
     }
     .thumbnail {
       width: 100%;
-      height: 30rem;
+      height: 15rem;
       background-size: cover;
     }
   }
@@ -172,8 +172,8 @@ p {
 .footer {
   width: 100%;
   margin-top: auto;
-  padding: 3rem;
-  font-size: 1.5rem;
+  padding: 1.5rem;
+  font-size: .8rem;
   color: $color_grey;
   background: $color_bright;
   box-shadow: $shadow_material_s1;

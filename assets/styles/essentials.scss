@@ -1,0 +1,81 @@
+/**
+ * SASS Functions/Mixings/Toolbox
+ * Contains general SASS functions aswell all responsive/fluid mixins
+ * This file is not meant to be changed
+ *
+ * @author      Flurin Dürst
+ * @version     1.0
+ * @since       WPSeed 0.13
+ *
+ */
+
+
+@import 'vars';
+
+/* GENERAL FUNCTIONS
+/===================================================== */
+
+  /* STRIP UNIT
+  /------------------------*/
+  // removes a unit from a variable
+  @function stripunit($number) {
+    @if type-of($number) == 'number' and not unitless($number) {
+      @return $number / ($number * 0 + 1);
+    }
+    @return $number;
+  }
+
+
+/* RESPONSIVE MIXINS
+/===================================================== */
+// contains styles & mixins for responsive/fluid usage
+
+  /* BY BREAKPOINTS
+  /------------------------*/
+  // breakpoint-width defined in vars.scss
+  @mixin desktop {
+    @media (min-width: #{$desktop_min}) {
+      @content;
+    }
+  }
+  @mixin mobile {
+    @media (max-width: #{$desktop_min - 1px}) {
+      @content;
+    }
+  }
+
+  /* BY PIXELS
+  /------------------------*/
+  // usage example:  { ... }
+  @mixin vpw_min($min) {
+      @media (min-width: #{$min}) { @content; }
+  }
+  @mixin vpw_max($max) {
+      @media (max-width: #{$max}) { @content; }
+  }
+  @mixin vpw($min: 0px, $max: 0px) {
+      @media (min-width: #{$min}) and (max-width: #{$max}) { @content; }
+  }
+
+  /* BY ASPECT RATIO
+  /------------------------*/
+  // usage example: asr_min(16,9) { ... }
+  @mixin asr_min($width: 16, $height: 9) {
+      @media (min-aspect-ratio:  #{$width} / #{$height}) { @content; }
+  }
+  @mixin asr_max($width: 16, $height: 9) {
+      @media (max-aspect-ratio:  #{$width} / #{$height}) { @content; }
+  }
+
+  /* BY CLASS
+  /------------------------*/
+  .mobile {
+    @include desktop {
+      display: none;
+    }
+  }
+  .desktop {
+    @include mobile {
+      display: none;
+    }
+  }

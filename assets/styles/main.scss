@@ -4,22 +4,18 @@
  * included external sources: Bower, Normalize
  *
  * @author      Flurin Dürst
- * @version     1.2
+ * @version     1.3
  * @since       WPSeed 0.1
  *
  */
 
 
 @charset 'UTF-8';
-@import 'vars';
 
-/* VARS
+/* VARS/FUNCTIONS
 /===================================================== */
 @import 'vars';
-
-/* RESPONSIVE
-/===================================================== */
-@import 'responsive';
+@import 'essentials';
 
 /* STYLES
 /===================================================== */

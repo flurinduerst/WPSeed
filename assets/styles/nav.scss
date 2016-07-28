@@ -3,7 +3,7 @@
  * Contains all navigation related styles
  *
  * @author      Flurin Dürst
- * @version     1.5.0
+ * @version     1.6.0
  * @since       WPSeed 0.1
  *
  */
@@ -16,7 +16,7 @@
 
 nav {
   z-index: 210;
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: 700;
   ul {
     margin: 0;
@@ -40,7 +40,7 @@ nav {
       color: $color_nav-active;
     }
     + li:before{
-      padding: 0 1.5rem;
+      padding: 0 .8rem;
       color: $color_nav_spacer;
       content: ' | ';
     }
@@ -60,11 +60,11 @@ nav {
     #hamburger {
       // » https://jonsuh.com/hamburgers/
       position: absolute;
-      top: 2rem;
-      right: 2rem;
+      top: 1rem;
+      right: 1rem;
       z-index: 260;
       display: block;
-      height: 4rem;
+      height: 2rem;
       cursor: pointer;
       &.is-active {
         z-index: 300;
@@ -102,11 +102,11 @@ nav {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-top: 6rem; // = x icon height
+      margin-top: 3rem; // = x icon height
       padding: 0;
       li {
-        padding: 2rem 0;
-        font-size: 4rem;
+        padding: 1rem 0;
+        font-size: 2rem;
         text-align: center;
         list-style-type: none;
         + li:before{

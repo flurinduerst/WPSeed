@@ -6,7 +6,7 @@
  * minimum while using vars.scss for very basic styling.
  *
  * @author      Flurin Dürst
- * @version     1.5.1
+ * @version     1.6
  * @since       WPSeed 0.1
  *
  */
@@ -35,36 +35,18 @@ html {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
-  font-family: $font_name;
-  font-size: $base_size;
-  color: $color_text;
-  background-color: $color_bright;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  @include vpw_min(2000px) {
-    font-size: $size_2000;
-  }
-  @include vpw_max(1999px) {
-    font-size: $size_1800;
-  }
-  @include vpw_max(1800px) {
-    font-size: $size_1800;
-  }
-  @include vpw_max(1600px) {
-    font-size: $size_1600;
-  }
-  @include vpw_max(1400px) {
-    font-size: $size_1400;
-  }
-  @include vpw_max(1200px) {
-    font-size: $size_1200;
-  }
-  @include vpw_max(1000px) {
-    font-size: $size_1000;
+  font-family: $font_name, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: $size;
+  @include vpw_min($scl_breakpoint) {
+    font-size: $scl_breakpoint / 100 * stripunit($size);
   }
   @include mobile {
     font-size: $size_mobile;
   }
+  color: $color_text;
+  background-color: $color_bright;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body  {
@@ -75,6 +57,7 @@ body  {
   min-height: 100vh;
   font-size: $font_size;
   font-weight: $font_weight;
+  line-height: $line_height;
 }
 
 a {
@@ -139,7 +122,7 @@ table {
 // used in dd() @ functions-dev.php
 
 .dev {
-  margin: 5rem 0;
+  margin: 2.5rem 0;
   border: 5px dashed #abb2c0;
   &.noborder {
     border: none;
@@ -161,7 +144,7 @@ pre {
   margin: .1rem;
   padding: .3rem;
   font-family: 'Menlo', 'Consolas', 'DejaVu Sans Mono', monospace;
-  font-size: 2rem;
+  font-size: .5rem;
   color: #abb2c0;
   border-radius: 5px;
   background-color: #282c34;

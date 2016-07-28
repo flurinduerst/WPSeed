@@ -1,11 +1,12 @@
 # CHANGELOG
 
-## Head
+## 0.13.0 «Scale»
+* rework scaling functionality
 * bugfix enqueue jQuery from Google CDN
 * bugfix remove hardcoded scripts from footer
 * bugfix (typo) in backend function `onlyadmin_update`
 
-## 0.12.0
+## 0.12.0 «Heads up»
 * enqueue scripts, styles, fonts
 * add wp_head
 * add wp_head cleaner

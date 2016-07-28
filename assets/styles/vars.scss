@@ -6,7 +6,7 @@
   * because we define settings here
   *
   * @author     Flurin Dürst
-  * @version    1.3.0
+  * @version    1.4.0
   * @since      WPSeed 0.1
   *
   */
@@ -15,22 +15,12 @@
 /* GENERAL
 /===================================================== */
 
-  // Base Size
-  // scales everything (defined by rem)
-  $base_size: .5vw;
-
-  // Base Size Scaling
-  // » defines scaling in relationship to viewport with
-  $size_2000:   $base_size * 1;
-  $size_1800:   $base_size * 1.1;
-  $size_1600:   $base_size * 1.2;
-  $size_1400:   $base_size * 1.3;
-  $size_1200:   $base_size * 1.4;
-  $size_1000:   $base_size * 1.5;
-  $size_mobile: $base_size * 3;
-
-  // Desktop/Mobile Breakpoint
-  $desktop_min: 800px;
+/* SIZE/SCALING
+/------------------------*/
+$size:                2vw;          // scales all `rem` based elements
+$size_mobile:         $size * 2.2;  // scaling filter for mobile viewport
+$scl_breakpoint:      1200px;       // scaling of all `rem` based elements stops here
+$desktop_min:         800px;        // Desktop/Mobile Breakpoint
 
 
 /* COLORS
@@ -60,7 +50,8 @@
 /* FONT STYLING
 /===================================================== */
   $font_name:      'Ubuntu';  // Normal 400, Medium 500, Bold 700
-  $font_size:      2rem;      // the actual font-size no coherence with html font-size
+  $font_size:      1rem;    // default font-size
+  $line_height:    1.3;       // default line-height;
   $font_weight:    300;       // default font-weight in body
 
 /* SHADOWS

@@ -1,6 +1,6 @@
 <img src="/assets/images/wpseed.png" width="518"/>
 
-**Version:** 0.12.3
+**Version:** 0.13.0
 
 ## What is WPSeed?
 WPSeed is a WordPress starter theme following the intention of being able to skip the time-consuming first steps when creating a new theme.
@@ -47,8 +47,8 @@ WPSeeds environment (Gulp, Bower, Browsersync, asset-builder) uses the [sage](ht
 * `assets/styles/general.scss` (re-usable classes and settings)
 * `assets/styles/main.scss` (gathers all .scss files for compiling with gulp)
 * `assets/styles/nav.scss` (navigation)
-* `assets/styles/responsive.scss` (responsive stuff, **this file is not meant to be changed**)
-* `assets/styles/vars.scss` (manages all colors, fonts and re-sizing and other presets)
+* `assets/styles/essentials.scss` (required SASS functions and all presets for responsive, **this file is not meant to be changed**)
+* `assets/styles/vars.scss` (manages scaling, all colors, fonts and other presets)
 
 ##### Javascript
 * `assets/scrips/essentials.js` (re-usable essential javascript/jQuery functions/variables)
@@ -72,22 +72,28 @@ All templates are seperate into three categories recognizable by their prefix:
 * **`str`**: structure files that have to be included in other sites or the main structure.
 
 
-### Responsive mixins/classes
-##### defined by variables
+### Responsive/Fluid presets
+
+#### Scaling
+By default, the layout will scale with the viewport-width as all units are `rem` based and `html` uses font-size as the root unit.
+This scaling can be configured at the `SIZE/SCALING` section in `vars.scss`. It is also possible to stop the scaling at a certain viewport-width. See instructions inside `vars.scss`.
+
+#### Mixins/Classes
+**defined by variables**
 * The width of the two available variables `mobile` and `desktop` are defined in vars.scss. Usage (with default values):
 * min 800px `@include desktop {...}`
 * max 799px`@include mobile {...}`
 
-##### defined by individual pixel widths
+**defined by individual pixel widths**
 * at least 750px: `@include vpw_min(750px)`
 * at most 500px: `@include vpw_max(500px)`
 * between 1000px and 1200px: `vpw(1000px, 1200px)`
 
-##### defined by ascepct-ratio
+**defined by ascepct-ratio**
 * at least 16:9: `@include asr_min(16,9) { ... }`
 * at most 4:3: `@include asr_max(4,3) { ... }`
 
-##### defined by css-class
+**defined by css-class**
 the two available classes `mobile` and `desktop` perform as followed (with default values):
 ```SCSS
 .desktop {
