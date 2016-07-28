@@ -1,6 +1,7 @@
 # CHANGELOG
 
 ## Head
+* bugfix enqueue jQuery from Google CDN
 * bugfix remove hardcoded scripts from footer
 * bugfix (typo) in backend function `onlyadmin_update`
 

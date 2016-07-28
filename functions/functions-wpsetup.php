@@ -4,7 +4,7 @@
  * menus, theme-support settings, general settings and a wp_head cleaner
  *
  * @author      Flurin Dürst
- * @version     1.6
+ * @version     1.6.1
  * @since       WPSeed 0.1.5
  *
  */
@@ -18,8 +18,17 @@
   // enqueue sctipts
   // » https://developer.wordpress.org/reference/functions/wp_enqueue_script/
   function wpseed_enqueue_scripts_and_styles() {
-    wp_register_script('wpseed/scripts', get_template_directory_uri() . '/dist/scripts/main.js', false, array( 'jquery' ), null);
+    # jquery.js (from wp core)
+    wp_deregister_script( 'jquery' );
+    // wp_register_script( 'jquery', includes_url( '/js/jquery/jquery.js' ), false, NULL, true );
+    wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js', false, '2.1.4');
+    wp_enqueue_script( 'jquery' );
+    # main.js
+    wp_register_script('wpseed/scripts', get_template_directory_uri() . '/dist/scripts/main.js', false, array( 'jquery' ), true);
+    wp_enqueue_script('wpseed/scripts');
+    # main.css
     wp_enqueue_style('wpseed/styles', get_template_directory_uri() . '/dist/styles/main.css', false, null);
+    # fonts
     wp_enqueue_style('google/fonts', 'https://fonts.googleapis.com/css?family=Ubuntu:400,500,700', false, null);
   }
   add_action('wp_enqueue_scripts', 'wpseed_enqueue_scripts_and_styles');
