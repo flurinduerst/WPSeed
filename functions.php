@@ -31,7 +31,7 @@
   require('functions/functions-backend.php');
 
 
-/* PLUGIN RELATED
+/* ELEMENTS
 /===================================================== */
   // Elements for ACF Flexible Content
   // » https://www.advancedcustomfields.com/resources/flexible-content/
