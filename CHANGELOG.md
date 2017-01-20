@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 0.13.1
+* make sure jQuery is loaded via https
+
 ## 0.13.0 «Scale»
 * rework scaling functionality
 * bugfix enqueue jQuery from Google CDN
