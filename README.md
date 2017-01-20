@@ -16,7 +16,7 @@ WPSeed uses a variety of pre-built objects that allow kickstarting any kind of t
 * Clone WPSeed `$ git clone git@github.com:flurinduerst/WPSeed.git` into your `themes` directory.
 
 #### Workflow
-WPSeeds environment (Gulp, Bower, Browsersync, asset-builder) uses the [sage](https://roots.io/sage/) workflow.
+**Link to sage outdated, will update asap**: WPSeeds environment (Gulp, Bower, Browsersync, asset-builder) uses the [sage](https://roots.io/sage/) workflow.
 
 **Quick-Instructions:** (For Additional instructions and usage please visit [sage theme development](https://roots.io/sage/docs/theme-development-and-building/).)
   * Requirements:
