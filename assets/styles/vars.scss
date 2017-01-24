@@ -2,8 +2,8 @@
   * Variables CSS File
   * Contains re-usable variables like
   * colors, sizes, breakpoints etc
-  * we don't have to change responsive.css and general.css
-  * because we define settings here
+  * we don't have to add styles to responsive.css and general.css
+  * because we define settings here (we might add some though)
   *
   * @author     Flurin Dürst
   * @version    1.4.0
@@ -19,40 +19,45 @@
 /------------------------*/
 $size:                2vw;          // scales all `rem` based elements
 $size_mobile:         $size * 2.2;  // scaling filter for mobile viewport
-$scl_breakpoint:      1200px;       // scaling of all `rem` based elements stops here
+$scaling_breakpoint:  1200px;       // scaling of all `rem` based elements stops here
 $desktop_min:         800px;        // Desktop/Mobile Breakpoint
 
 
-/* COLORS
+/* DEFAULT COLORS
 /===================================================== */
 
-  /* Base
+  /* Theme
   /------------------------*/
-  $color_dark:         #333333;
-  $color_bright:       #f7f7f2;
-  $color_grey:         #b5b5b1;
-  $color_green:        #97c475;
+  // these variables are used in general.css and
+  $c_dark:         #333333;
+  $c_bright:       #f7f7f2;
+  $c_grey:         #b5b5b1;
+  $c_green:        #97c475;
 
   /* Text
   /------------------------*/
-  $color_text:        $color_dark;
-  $color_link:        $color_dark;
-  $color_link_hover:  $color_dark;
+  $c_text:        $c_dark;
+  $c_link:        $c_dark;
+  $c_link_hover:  $c_dark;
 
   /* Nav
   /------------------------*/
-  $color_nav:         $color_grey;
-  $color_nav_active:  $color_dark;
-  $color_nav_hover:   $color_green;
-  $color_nav_spacer:  $color_grey;
+  $c_nav:         $c_grey;
+  $c_nav_active:  $c_dark;
+  $c_nav_hover:   $c_green;
+  $c_nav_spacer:  $c_grey;
+
+  /* General
+  /------------------------*/
+  $c_bgcolor:     $c_bright;
 
 
 /* FONT STYLING
 /===================================================== */
   $font_name:      'Ubuntu';  // Normal 400, Medium 500, Bold 700
-  $font_size:      1rem;    // default font-size
-  $line_height:    1.3;       // default line-height;
-  $font_weight:    300;       // default font-weight in body
+  $font_size:      1rem;      // default font-size (applied to body)
+  $line_height:    1.3;       // default line-height (applied to body)
+  $font_weight:    300;       // default font-weight (applied to body)
 
 
 /* SHADOWS

@@ -53,7 +53,7 @@
   width: 100%;
   height: 4rem;
   padding: 0 10%;
-  background-color: $color_bright;
+  background-color: $c_bright;
   box-shadow: $shadow_material_soft_s1;
   @include mobile {
     padding: 0 1rem;
@@ -114,7 +114,7 @@ p {
       flex-basis: 100%;
     }
     .readmore a {
-      color: $color_link;
+      color: $c_link;
       &:hover {
         opacity: .5;
       }
@@ -126,7 +126,7 @@ p {
 .post {
   .postinfo {
     margin: 0 0 1rem 0;
-    color: $color_grey;
+    color: $c_grey;
   }
 
   .thumbnail {
@@ -174,7 +174,7 @@ p {
   margin-top: auto;
   padding: 1.5rem;
   font-size: .8rem;
-  color: $color_grey;
-  background: $color_bright;
+  color: $c_grey;
+  background: $c_bright;
   box-shadow: $shadow_material_s1;
 }

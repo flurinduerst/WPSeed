@@ -13,11 +13,11 @@
   <div class="content page">
 
     <? if (have_posts() ) : while (have_posts()) : the_post(); ?>
-      <section>
+      <article>
         <h1><? the_title(); ?></h1>
         <? the_post_thumbnail('medium'); ?>
         <? the_content(); ?>
-      </section>
+      </article>
     <? endwhile; endif; ?>
 
   </div>

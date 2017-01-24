@@ -125,7 +125,7 @@ function wphead_cleanup () {
   // remove generator name from RSS
   add_filter('the_generator', '__return_false');
   add_filter('show_admin_bar','__return_false');
-  // disable emojo support
+  // disable emoji support
   remove_action( 'wp_head', 'print_emoji_detection_script', 7);
   remove_action( 'wp_print_styles', 'print_emoji_styles');
   // disable automatic feeds

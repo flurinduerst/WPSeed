@@ -35,13 +35,13 @@
     if ( $query->have_posts() ) : ?>
       <? while ( $query->have_posts() ) : $query->the_post(); ?>
 
-        <section>
+        <article>
           <h2><? the_title(); ?></h2>
           <? if (has_post_thumbnail()) : ?>
             <div class="thumbnail" style="background-image: url(<? the_post_thumbnail_url() ?>)"></div>
           <? endif ?>
           <p><? the_content(); ?></p>
-        </section>
+        </article>
 
       <? endwhile; ?>
     <? endif; wp_reset_query(); ?>

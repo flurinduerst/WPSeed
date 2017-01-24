@@ -1,6 +1,7 @@
 # CHANGELOG
 
-## 0.13.1
+## HEAD (0.13.2)
+* cleanup variables and html5 tags
 * make sure jQuery is loaded via https
 
 ## 0.13.0 «Scale»
