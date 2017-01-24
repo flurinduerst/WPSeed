@@ -21,7 +21,7 @@ WPSeed uses a variety of pre-built objects that allow kickstarting any kind of t
 * Clone WPSeed `$ git clone git@github.com:flurinduerst/WPSeed.git` into your `themes` directory.
 
 #### Workflow
-WPSeed uses bower to manage vendorsr and [gulp](https://gulpjs.com) to compile assets from `assets` to `dist`. For details see `gulpfile.js`.
+WPSeed uses bower to manage vendors and [gulp](https://gulpjs.com) to compile assets from `assets` to `dist`. For details see `gulpfile.js`.
   * Install gulp and Bower globally with `npm install -g gulp bower` if you haven't already
   * in the theme directory run `npm install && bower install && gulp`
   * done - you can now use gulp (run `gulp watch` in your theme directory) to compile and optimize your asset files
