@@ -1,8 +1,10 @@
 # CHANGELOG
 
-## HEAD (0.13.2)
-* cleanup variables and html5 tags
+## 0.14.0
+* add custom gulpfile/package for an independent gulp-workflow (not using sage workflow anymore)
 * make sure jQuery is loaded via https
+* cleanup variables and html5 tags
+* update Readme
 
 ## 0.13.0 «Scale»
 * rework scaling functionality

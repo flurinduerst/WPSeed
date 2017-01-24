@@ -1,6 +1,6 @@
 <img src="/assets/images/wpseed.png" width="518"/>
 
-**Version:** 0.13.1
+**Version:** 0.14.0
 
 ## What is WPSeed?
 WPSeed is a WordPress starter theme following the intention of being able to skip the time-consuming first steps when creating a new theme.
@@ -11,22 +11,20 @@ WPSeed uses a variety of pre-built objects that allow kickstarting any kind of t
 * responsive functionality including viewport-mixins, rem-based content resizing and a animated mobile menu
 * a preset/config scss file managing all colors, fonts and sizes
 
+## Requirements:
+  * Node >= 0.12.x ([nodejs.org](https://nodejs.org/))
+  * npm >=2.11.x (`npm install -g npm@latest`)
+  * php >= 5.4.0 or [short_open_tag](http://php.net/manual/de/ini.core.php#ini.short-open-tag) set `true` on your VM/Webserver
+
 ## Installation
 #### WPSeed Theme:
 * Clone WPSeed `$ git clone git@github.com:flurinduerst/WPSeed.git` into your `themes` directory.
 
 #### Workflow
-**Link to sage outdated, will update asap**: WPSeeds environment (Gulp, Bower, Browsersync, asset-builder) uses the [sage](https://roots.io/sage/) workflow.
-
-**Quick-Instructions:** (For Additional instructions and usage please visit [sage theme development](https://roots.io/sage/docs/theme-development-and-building/).)
-  * Requirements:
-    * Node >= 0.12.x ([nodejs.org](https://nodejs.org/))
-    * npm >=2.1.5 (`npm install -g npm@latest`)
-    * [short_open_tag](http://php.net/manual/de/ini.core.php#ini.short-open-tag) set `true` on your VM/Webserver
-  * Installation
-    * Install gulp and Bower globally with `npm install -g gulp bower` if you haven't already
-    * in the theme directory run `npm install && bower install && gulp`
-    * done - you can now use gulp (run `gulp watch` in your theme directory) to compile and optimize your asset files
+WPSeed uses bower to manage vendorsr and [gulp](https://gulpjs.com) to compile assets from `assets` to `dist`. For details see `gulpfile.js`.
+  * Install gulp and Bower globally with `npm install -g gulp bower` if you haven't already
+  * in the theme directory run `npm install && bower install && gulp`
+  * done - you can now use gulp (run `gulp watch` in your theme directory) to compile and optimize your asset files
 
 ## Usage
 
@@ -52,7 +50,7 @@ WPSeed uses a variety of pre-built objects that allow kickstarting any kind of t
 
 ##### Javascript
 * `assets/scrips/essentials.js` (re-usable essential javascript/jQuery functions/variables)
-* `assets/scrips/main.js` (javascript/jQuery stuff - if you want to split this up into multiple files, edit `manifest.json`)
+* `assets/scrips/main.js` (javascript/jQuery)
 
 
 ##### Templates
