@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## 0.14.0
+## 0.14.0 «Independent»
 * add custom gulpfile/package for an independent gulp-workflow (not using sage workflow anymore)
 * make sure jQuery is loaded via https
 * cleanup variables and html5 tags
