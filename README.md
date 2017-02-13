@@ -1,6 +1,6 @@
 <img src="/assets/images/wpseed.png" width="518"/>
 
-**Version:** 0.14.1
+**Version:** 0.14.2
 
 ## What is WPSeed?
 WPSeed is a WordPress starter theme following the intention of being able to skip the time-consuming first steps when creating a new theme.
@@ -24,7 +24,8 @@ WPSeed uses a variety of pre-built objects that allow kickstarting any kind of t
 WPSeed uses bower to manage vendors and [gulp](https://gulpjs.com) to compile assets from `assets` to `dist`. For details see `gulpfile.js`.
   * Install gulp and Bower globally with `npm install -g gulp bower` if you haven't already
   * in the theme directory run `npm install && bower install && gulp`
-  * done - you can now use gulp (run `gulp watch` in your theme directory) to compile and optimize your asset files
+  * add your domain/ip to `browsersync_proxy` in `gulpfile.js`
+  * you can now use gulp (run `gulp watch` in your theme directory) to compile and optimize your asset files and run browsersync
 
 ## Usage
 

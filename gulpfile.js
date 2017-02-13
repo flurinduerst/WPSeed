@@ -92,7 +92,7 @@ gulp.task('javascript', function() {
 /* IMAGES
 /------------------------*/
 // from:    assets/images/
-// actions: minify, rename
+// actions: minify
 // to:      dist/images
 gulp.task('images',  function() {
   gulp.src('assets/images/*.*')
