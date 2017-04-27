@@ -3,7 +3,7 @@
  * Functions used for development purposes
  *
  * @author      Flurin Dürst
- * @version     1.4
+ * @version     1.5
  * @since       WPegg 0.1.0
  *
  */
@@ -57,6 +57,25 @@
       return true;
     }
   }
+
+  /* SLUGIFY
+  /------------------------*/
+  // creates slugs
+  // exaple: "Lorem Ipsum 25%" will be "lorem-ipsum-25"
+  function slugify($text) {
+     // replace non letter or digits by -
+     $text = preg_replace('~[^\pL\d]+~u', '-', $text);
+     // remove unwanted characters
+     $text = preg_replace('~[^-\w]+~', '', $text);
+     // trim
+     $text = trim($text, '-');
+     // remove duplicate -
+     $text = preg_replace('~-+~', '-', $text);
+     // lowercase
+     $text = strtolower($text);
+     return $text;
+   }
+
 
 /* OUTPUT TOOLKIT
 /===================================================== */

@@ -1,7 +1,8 @@
 # CHANGELOG
 
-## HEAD (0.14.1)
+## HEAD (0.14.2)
 * switch to MIT Public License, add note to Readme
+* add slugify function
 
 
 ## 0.14.0 «Independent»
