@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## HEAD (0.14.1)
+* switch to MIT Public License, add note to Readme
+
+
 ## 0.14.0 «Independent»
 * add custom gulpfile/package for an independent gulp-workflow (not using sage workflow anymore)
 * make sure jQuery is loaded via https
