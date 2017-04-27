@@ -1,8 +1,9 @@
 # CHANGELOG
 
-## HEAD (0.14.2)
+## HEAD (0.14.3)
 * switch to MIT Public License, add note to Readme
 * add slugify function
+* update csscomb config
 
 
 ## 0.14.0 «Independent»
