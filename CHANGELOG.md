@@ -1,9 +1,10 @@
 # CHANGELOG
 
-## HEAD (0.14.3)
+## HEAD (0.14.4)
 * switch to MIT Public License, add note to Readme
 * add slugify function
 * update csscomb config
+* remove global css timing-function
 
 
 ## 0.14.0 «Independent»
