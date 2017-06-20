@@ -1,13 +1,12 @@
 # CHANGELOG
 
-## HEAD (0.14.5)
+## HEAD (0.14.6)
+* add function to add the subfield title to ACF Flexible Element Bars
 * switch to MIT Public License, add note to Readme
 * add slugify function
 * update csscomb config
 * remove global css timing-function
 * fix dist-path to default logo
-
-
 
 ## 0.14.0 «Independent»
 * add custom gulpfile/package for an independent gulp-workflow (not using sage workflow anymore)
