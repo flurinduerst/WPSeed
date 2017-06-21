@@ -63,6 +63,4 @@ function WPSeed_Gallery() {
       <? endif ?>
     </section>
   <? return ob_get_flush();
-}
-
-?>
+} ?>
