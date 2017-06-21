@@ -64,4 +64,5 @@ function WPSeed_Gallery() {
     </section>
   <? return ob_get_flush();
 }
+
 ?>
