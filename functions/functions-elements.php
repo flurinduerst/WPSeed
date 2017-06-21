@@ -1,4 +1,4 @@
-<?
+<?php
 /**
  * Functions to output ACF flexible elements.
  * WPSeed_Text and WPSeed_Gallery are placeholder presets.
