@@ -1,6 +1,7 @@
 # CHANGELOG
 
-## HEAD (0.14.6)
+## HEAD (0.14.7)
+* remove german localization, add english menu names
 * add function to add the subfield title to ACF Flexible Element Bars
 * switch to MIT Public License, add note to Readme
 * add slugify function
