@@ -2,7 +2,7 @@
  * All sorts javascript/jQuery functions go here
  *
  * @author      Flurin Dürst
- * @version     3.1
+ * @version     3.2
  * @since       WPSeed 0.12
  *
  */
@@ -23,9 +23,3 @@ $(function(){
     $('html').toggleClass('noscroll');
   });
 });
-
-
-/* Initialize Fastclick
-/------------------------*/
-// » https://github.com/ftlabs/fastclick
-FastClick.attach(document.body);
