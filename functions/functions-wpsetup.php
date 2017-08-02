@@ -38,8 +38,8 @@
   // » https://codex.wordpress.org/Function_Reference/register_nav_menus
   function register_theme_menus() {
     register_nav_menus([
-      'mainmenu' => __('Hauptmenü'),
-      'submenu' => __('Untermenü')
+      'mainmenu' => __('Mainmenu'),
+      'submenu' => __('Submenu')
     ]);
   }
   add_action( 'init', 'register_theme_menus');
