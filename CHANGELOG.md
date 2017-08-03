@@ -1,6 +1,7 @@
 # CHANGELOG
 
-## HEAD (0.14.7)
+## HEAD (0.14.8)
+* udpate npm-packages (please update gulp and node + rebuild packages)
 * remove german localization, add english menu names
 * add function to add the subfield title to ACF Flexible Element Bars
 * switch to MIT Public License, add note to Readme
