@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## HEAD (0.14.8)
+## HEAD (0.14.8) | 03.08.2017
 * udpate npm-packages (please update gulp and node + rebuild packages)
 * remove german localization, add english menu names
 * add function to add the subfield title to ACF Flexible Element Bars
@@ -10,19 +10,19 @@
 * remove global css timing-function
 * fix dist-path to default logo
 
-## 0.14.0 «Independent»
+## 0.14.0 | 24.01.2017 | «Independent»
 * add custom gulpfile/package for an independent gulp-workflow (not using sage workflow anymore)
 * make sure jQuery is loaded via https
 * cleanup variables and html5 tags
 * update Readme
 
-## 0.13.0 «Scale»
+## 0.13.0 | 28.07.2016 | «Scale»
 * rework scaling functionality
 * bugfix enqueue jQuery from Google CDN
 * bugfix remove hardcoded scripts from footer
 * bugfix (typo) in backend function `onlyadmin_update`
 
-## 0.12.0 «Heads up»
+## 0.12.0 | 12.07.2017 | «Heads up»
 * enqueue scripts, styles, fonts
 * add wp_head
 * add wp_head cleaner
