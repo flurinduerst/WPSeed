@@ -26,10 +26,10 @@ nav {
     display: inline-block;
     list-style-type: none;
     a {
-      color: $c_nav;
+      color: $color__nav;
     }
     a:hover {
-      color: $c_nav_hover;
+      color: $color__nav_hover;
     }
     &.current_page_item,
     &.current_page_parent,
@@ -37,11 +37,11 @@ nav {
     &.current_page_item a,
     &.current_page_parent a,
     &.current-page-ancestor a {
-      color: $c_nav-active;
+      color: $color__nav-active;
     }
     + li:before{
       padding: 0 .8rem;
-      color: $c_nav_spacer;
+      color: $color__nav_spacer;
       content: ' | ';
     }
   }
@@ -75,7 +75,7 @@ nav {
         .hamburger-inner:after {
           width: 35px;
           height: 5px;
-          background-color: $c_grey;
+          background-color: $color__grey;
           border-radius: 1px;
         }
       }

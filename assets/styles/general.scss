@@ -34,7 +34,7 @@ html {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
-  font-family: $font_name, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $font__name, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: $size;
   @include vpw_min($scaling_breakpoint) {
     font-size: $scaling_breakpoint / 100 * stripunit($size);
@@ -42,8 +42,8 @@ html {
   @include mobile {
     font-size: $size_mobile;
   }
-  color: $c_text;
-  background-color: $c_bgcolor;
+  color: $color__text;
+  background-color: $color__bgcolor;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -54,17 +54,17 @@ body  {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  font-size: $font_size;
-  font-weight: $font_weight;
-  line-height: $line_height;
+  font-size: $font__size;
+  font-weight: $font__weight;
+  line-height: $font__line_height;
 }
 
 a {
-  color: $c_link;
+  color: $color__link;
   text-decoration: none;
   transition: .3s;
   &:hover {
-    color: $c_link_hover;
+    color: $color__link_hover;
   }
 }
 
