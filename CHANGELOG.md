@@ -1,6 +1,7 @@
 # CHANGELOG
 
-## HEAD (0.14.9) | 04.08.2017
+## HEAD (0.14.10) | 04.08.2017
+* add debug to dump'n die function
 * add hierarchy to css-variables
 * udpate npm-packages (please update gulp and node + rebuild packages)
 * remove german localization, add english menu names

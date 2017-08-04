@@ -3,7 +3,7 @@
  * Functions used for development purposes
  *
  * @author      Flurin Dürst
- * @version     1.5
+ * @version     1.6.0
  * @since       WPegg 0.1.0
  *
  */
@@ -12,9 +12,9 @@
  /* CODING TOOLKIT
  /===================================================== */
 
-  /* DUMP'N DIE
+  /* DEBUG / DUMP'N DIE
   /------------------------*/
-  function d($var) {
+  function debug($var) {
     echo '<pre>'.var_dump($var).'</pre>';
   }
   function dd($var) {
