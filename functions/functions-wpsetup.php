@@ -4,7 +4,7 @@
  * menus, theme-support settings, general settings and a wp_head cleaner
  *
  * @author      Flurin Dürst
- * @version     1.6.2
+ * @version     1.7.0
  * @since       WPSeed 0.1.6
  *
  */
@@ -26,6 +26,9 @@
     # main.js
     wp_register_script('wpseed/scripts', get_template_directory_uri() . '/dist/script.min.js', false, array( 'jquery' ), true);
     wp_enqueue_script('wpseed/scripts');
+    # wow.js
+    wp_register_script('wowjs', get_template_directory_uri() . '/bower_components/wow/dist/wow.min.js', false, array( 'wowjs' ), true);
+    wp_enqueue_script('wowjs');
     # main.css
     wp_enqueue_style('wpseed/styles', get_template_directory_uri() . '/dist/style.min.css', false, null);
     # fonts

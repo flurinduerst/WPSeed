@@ -2,7 +2,7 @@
  * All sorts javascript/jQuery functions go here
  *
  * @author      Flurin Dürst
- * @version     3.2
+ * @version     3.3.0
  * @since       WPSeed 0.12
  *
  */
@@ -22,4 +22,11 @@ $(function(){
     // prevent content scrolling
     $('html').toggleClass('noscroll');
   });
+});
+
+/* WOW
+/------------------------*/
+// http://mynameismatthieu.com/WOW/
+$(function(){
+  new WOW().init();
 });

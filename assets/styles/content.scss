@@ -3,7 +3,7 @@
  * Contains all content related styles
  *
  * @author      Flurin Dürst
- * @version     1.8.0
+ * @version     1.9.0
  * @since       WPSeed 0.1
  *
  */
@@ -37,6 +37,11 @@
 .top + div {
   margin-top: 4rem;
 }
+
+.wow {
+  visibility: hidden;
+}
+
 
 /* TOP
 /===================================================== */

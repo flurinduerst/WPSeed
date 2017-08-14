@@ -1,6 +1,7 @@
 # CHANGELOG
 
-## HEAD (0.14.10) | 04.08.2017
+## 1.0.0 | 14.08.2017 | «Fully-Grown»
+* pre-install animate.css and wow.js
 * add debug to dump'n die function
 * add hierarchy to css-variables
 * udpate npm-packages (please update gulp and node + rebuild packages)
