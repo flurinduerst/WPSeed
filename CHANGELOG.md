@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## HEAD | 1.0.2 | 03.11.2017
+## HEAD | 1.0.3 | 03.11.2017
 * add font-defaults to vars.scss/general.scss
 * fix fullwidth elements using `vw`
 * add sanitizing to button element
