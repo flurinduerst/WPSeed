@@ -6,7 +6,7 @@
  * minimum while using vars.scss for very basic styling.
  *
  * @author      Flurin Dürst
- * @version     1.9.1
+ * @version     1.10.0
  * @since       WPSeed 0.1
  *
  */
@@ -34,7 +34,7 @@ html {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
-  font-family: $fontdefault__name;
+  font-family: $default__font__name;
   font-size: $size;
   @include vpw_min($scaling_breakpoint) {
     font-size: $scaling_breakpoint / 100 * stripunit($size);
@@ -42,8 +42,8 @@ html {
   @include mobile {
     font-size: $size_mobile;
   }
-  color: $color__text;
-  background-color: $color__bgcolor;
+  color: $default__color__text;
+  background-color: $default__color__bgcolor;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -54,17 +54,17 @@ body  {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  font-size: $fontdefault__size;
-  font-weight: $fontdefault__weight;
-  line-height: $fontdefault__line_height;
+  font-size: $default__font__size;
+  font-weight: $default__font__weight;
+  line-height: $default__font__line_height;
 }
 
 a {
-  color: $color__link;
+  color: $default__color__link;
   text-decoration: none;
   transition: .3s;
   &:hover {
-    color: $color__link_hover;
+    color: $default__color__link_hover;
   }
 }
 
@@ -81,8 +81,8 @@ address {
 button {
   border: none;
   background-color: transparent;
-  font-size: $fontdefault__size;
-  font-family: $fontdefault__name;
+  font-size: $default__font__size;
+  font-family: $default__font__name;
 }
 
 table {
@@ -112,37 +112,10 @@ table {
 }
 
 
-/* FIXES
+/* DEBUGGING
 /------------------------*/
-.fcf:after {
-  display: table;
-  clear: both;
-  content: '';
-}
+// used in debug() and dd() @ functions-dev.php
 
-/* DEV CLASSES
-/------------------------*/
-// used in dd() @ functions-dev.php
-
-.dev {
-  margin: 2.5rem 0;
-  border: 5px dashed #abb2c0;
-  &.noborder {
-    border: none;
-  }
-  &.green {
-    border-color: #97c475;
-  }
-  &.blue {
-    border-color: #51b6c3;
-  }
-  &.orange {
-    border-color: #cc9b62;
-  }
-  &.red {
-    border-color: #e26b73;
-  }
-}
 pre {
   margin: .1rem;
   padding: .3rem;

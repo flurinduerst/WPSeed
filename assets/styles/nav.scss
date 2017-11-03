@@ -3,7 +3,7 @@
  * Contains all navigation related styles
  *
  * @author      Flurin Dürst
- * @version     1.7.0
+ * @version     1.8.0
  * @since       WPSeed 0.1
  *
  */
@@ -26,10 +26,10 @@ nav {
     display: inline-block;
     list-style-type: none;
     a {
-      color: $color__nav;
+      color: $default__color__nav;
     }
     a:hover {
-      color: $color__nav_hover;
+      color: $default__color__nav_hover;
     }
     &.current_page_item,
     &.current_page_parent,
@@ -37,11 +37,11 @@ nav {
     &.current_page_item a,
     &.current_page_parent a,
     &.current-page-ancestor a {
-      color: $color__nav-active;
+      color: $default__color__nav-active;
     }
     + li:before{
       padding: 0 .8rem;
-      color: $color__nav_spacer;
+      color: $default__color__nav_spacer;
       content: ' | ';
     }
   }

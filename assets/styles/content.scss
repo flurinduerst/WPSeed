@@ -3,7 +3,7 @@
  * Contains all content related styles
  *
  * @author      Flurin Dürst
- * @version     1.10.0
+ * @version     1.11.0
  * @since       WPSeed 0.1
  *
  */
@@ -59,7 +59,7 @@
   height: 4rem;
   padding: 0 10%;
   background-color: $color__bright;
-  box-shadow: $shadow__material_soft_s1;
+  box-shadow: $shadow;
   @include mobile {
     padding: 0 1rem;
   }
@@ -119,7 +119,7 @@ p {
       flex-basis: 100%;
     }
     .readmore a {
-      color: $color__link;
+      color: $default__color__link;
       &:hover {
         opacity: .5;
       }
@@ -181,5 +181,5 @@ p {
   font-size: .8rem;
   color: $color__grey;
   background: $color__bright;
-  box-shadow: $shadow__material_s1;
+  box-shadow: $shadow;
 }

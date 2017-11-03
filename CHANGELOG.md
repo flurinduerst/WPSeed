@@ -1,7 +1,10 @@
 # CHANGELOG
 
-## HEAD | 1.0.3 | 03.11.2017
-* add font-defaults to vars.scss/general.scss
+## 1.1.0 | 03.11.2017 | «Preset»
+* restructure vars
+  * add theme-wide defaults
+  * add/edit/delete presets
+* cleanup general.scss
 * fix fullwidth elements using `vw`
 * add sanitizing to button element
 * hide editor on elements-template
