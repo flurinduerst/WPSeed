@@ -3,7 +3,7 @@
  * Contains all content related styles
  *
  * @author      Flurin Dürst
- * @version     1.9.0
+ * @version     1.10.0
  * @since       WPSeed 0.1
  *
  */
@@ -15,7 +15,7 @@
 
 .content {
   position: relative;
-  width: 80%;
+  width: 80vw;
   padding-top: 2rem;
   @include mobile {
     width: 100%;
@@ -55,7 +55,7 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   height: 4rem;
   padding: 0 10%;
   background-color: $color__bright;
@@ -175,7 +175,7 @@ p {
 /===================================================== */
 
 .footer {
-  width: 100%;
+  width: 100vw;
   margin-top: auto;
   padding: 1.5rem;
   font-size: .8rem;

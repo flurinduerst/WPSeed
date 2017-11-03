@@ -6,7 +6,7 @@
  * minimum while using vars.scss for very basic styling.
  *
  * @author      Flurin Dürst
- * @version     1.7.0
+ * @version     1.8.0
  * @since       WPSeed 0.1
  *
  */
@@ -73,6 +73,7 @@ a {
 :focus {
   outline: 0;
 }
+
 address {
   font-style: normal;
 }
@@ -80,7 +81,10 @@ address {
 button {
   border: none;
   background-color: transparent;
+  font-size: $font__size;
+  font-family: $font__name;
 }
+
 table {
   border-collapse: collapse;
 }

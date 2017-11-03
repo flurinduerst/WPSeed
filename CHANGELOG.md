@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## HEAD | 1.0.1 | 03.11.2017
+* fix fullwidth elements using `vw`
+* add sanitizing to button element
+* hide editor on elements-template
+
 ## 1.0.0 | 14.08.2017 | «Fully-Grown»
 * pre-install animate.css and wow.js
 * add debug to dump'n die function
