@@ -6,7 +6,7 @@
   * because we define settings here (we might add some though)
   *
   * @author     Flurin Dürst
-  * @version    1.5.0
+  * @version    1.6.0
   * @since      WPSeed 0.1
   *
   */
@@ -52,13 +52,16 @@ $desktop_min:         800px;        // Desktop/Mobile Breakpoint
   $color__bgcolor:     $color__bright;
 
 
-/* FONT STYLING
+/* FONTS
 /===================================================== */
-  $font__name:        'Ubuntu';  // Normal 400, Medium 500, Bold 700
-  $font__size:        1rem;      // default font-size (applied to body)
-  $font__line_height: 1.3;       // default line-height (applied to body)
-  $font__weight:      300;       // default font-weight (applied to body)
+  $font__Ubuntu: 'Ubuntu', sans-serif; // Normal 400, Medium 500, Bold 700
 
+  /* FONT DEFAULTS
+  /------------------------*/
+  $fontdefault__name:        $font__Ubuntu;
+  $fontdefault__size:        1rem;
+  $fontdefault__line_height: 1.3;
+  $fontdefault__weight:      400;
 
 /* SHADOWS
 /===================================================== */
