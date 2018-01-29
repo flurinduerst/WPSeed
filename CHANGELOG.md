@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## HEAD | 1.1.2 | 29.01.2018
+* rearrange defaults in vars.scss
+* remove editor-hiding in elements-template (you can hide it via ACF now)
+
 ## 1.1.0 | 03.11.2017 | «Preset»
 * restructure vars
   * add theme-wide defaults

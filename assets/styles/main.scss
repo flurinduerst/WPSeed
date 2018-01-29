@@ -4,7 +4,7 @@
  * included external sources: Bower, Normalize
  *
  * @author      Flurin Dürst
- * @version     1.4.0
+ * @version     1.4.1
  * @since       WPSeed 0.1
  *
  */
@@ -20,9 +20,9 @@
 /* VENDORS
 /===================================================== */
 // https://jonsuh.com/hamburgers/
-@import "../../bower_components/css-hamburgers/_sass/hamburgers/hamburgers.scss";
+@import "../../node_modules/hamburgers/dist/hamburgers.min.css";
 // https://daneden.github.io/animate.css/
-@import "../../bower_components/animate.css/animate.min.css";
+@import "../../node_modules/animate.css/animate.min.css";
 
 /* SITE STYLES
 /===================================================== */

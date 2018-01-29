@@ -3,7 +3,7 @@
  * Backend related functions
  *
  * @author      Flurin Dürst
- * @version     1.2.0
+ * @version     1.3.0
  * @since       WPSeed 0.11.3
  *
  */
@@ -77,21 +77,6 @@
   }
   add_action( 'admin_head', 'onlyadmin_update', 1 );
 
-  /* Hide Editor on Elements Templates
-  /-----------------------------------*/
-  add_action( 'admin_head', 'hide_editor' );
-  function hide_editor() {
-    if (isset($_GET['post']) or isset($_POST['post_ID'])) {
-      // get post ID
-      $post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
-      if( !isset( $post_id ) ) return;
-      // get template_file
-      $template_file = get_post_meta($post_id, '_wp_page_template', true);
-      // disable editor at template
-      if ($template_file == 'templates/temp-elements.php') {
-        remove_post_type_support('page', 'editor');
-      }
-    }
   }
 
 ?>
