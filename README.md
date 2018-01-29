@@ -1,6 +1,6 @@
 <img src="/assets/images/wpseed.png" width="518"/>
 
-**Version 1.1.1** (29.01.2018)
+**Version 1.1.3** (29.01.2018)
 
 ## What is WPSeed?
 WPSeed is a WordPress starter theme following the intention of being able to skip the time-consuming first steps when creating a new theme.
@@ -12,20 +12,25 @@ WPSeed uses a variety of pre-built objects that allow kickstarting any kind of t
 * a preset/config scss file managing all colors, fonts and sizes
 
 ## Requirements:
-  * Node >= 0.12.x ([nodejs.org](https://nodejs.org/))
-  * npm >=2.11.x (`npm install -g npm@latest`)
-  * php >= 5.4.0 or [short_open_tag](http://php.net/manual/de/ini.core.php#ini.short-open-tag) set `true` on your VM/Webserver
+  * Node >= 8.0 ([nodejs.org](https://nodejs.org/))
+  * npm >=5.0 (`npm install -g npm@latest` - [npm](https://www.npmjs.com/))
+  * php >= 5.4 or [short_open_tag](http://php.net/manual/de/ini.core.php#ini.short-open-tag) set `true` on your VM/Webserver
 
 ## Installation
 #### WPSeed Theme:
 * Clone WPSeed `$ git clone git@github.com:flurinduerst/WPSeed.git` into your `themes` directory.
 
 #### Workflow
-WPSeed uses bower to manage vendors and [gulp](https://gulpjs.com) to compile assets from `assets` to `dist`. For details see `gulpfile.js`.
-  * Install gulp and Bower globally with `npm install -g gulp bower` if you haven't already
-  * in the theme directory run `npm install && bower install && gulp`
+WPSeed uses npm to manage development-modules aswell as frontend-modules and [gulp](https://gulpjs.com) to compile assets from `assets` to `dist`. For details see `gulpfile.js`.
+  * Install gulp globally with `npm install -g gulp` if you haven't already
+  * in the theme directory run `npm install && gulp`
   * add your domain/ip to `browsersync_proxy` in `gulpfile.js`
   * you can now use gulp (run `gulp watch` in your theme directory) to compile and optimize your asset files and run browsersync
+
+#### Deployment
+* when deploying your website using a deployment-environment like [deploybot](https://deploybot.com/) or [deployHQ](https://www.deployhq.com/) run
+  * `gulp` to compile assets
+  * `npm install --production` to install the frontend-modules/vendors on the staging
 
 ## Usage
 

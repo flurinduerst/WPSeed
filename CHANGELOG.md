@@ -1,8 +1,9 @@
 # CHANGELOG
 
-## HEAD | 1.1.2 | 29.01.2018
+## HEAD | 1.1.3 | 29.01.2018
+* remove bower, use npm for frontend-modules/vendors
 * rearrange defaults in vars.scss
-* remove editor-hiding in elements-template (you can hide it via ACF now)
+* remove editor-hiding in elements-template (we can hide it within ACF now)
 
 ## 1.1.0 | 03.11.2017 | «Preset»
 * restructure vars
