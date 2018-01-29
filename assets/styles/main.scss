@@ -1,7 +1,6 @@
 /**
  * Main CSS File
  * Merges all .scss files before they're processed by gulp
- * included external sources: Bower, Normalize
  *
  * @author      Flurin Dürst
  * @version     1.4.1
@@ -20,13 +19,12 @@
 /* VENDORS
 /===================================================== */
 // https://jonsuh.com/hamburgers/
-@import "../../node_modules/hamburgers/dist/hamburgers.min.css";
+@import "../../bower_components/css-hamburgers/_sass/hamburgers/hamburgers.scss";
 // https://daneden.github.io/animate.css/
-@import "../../node_modules/animate.css/animate.min.css";
+@import "../../bower_components/animate.css/animate.min.css";
 
 /* SITE STYLES
 /===================================================== */
-// endbower
 @import 'general';
 @import 'content';
 @import 'nav';
