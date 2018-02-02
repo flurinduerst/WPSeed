@@ -3,7 +3,7 @@
  * Backend related functions
  *
  * @author      Flurin Dürst
- * @version     1.3.0
+ * @version     1.3.1
  * @since       WPSeed 0.11.3
  *
  */
@@ -65,18 +65,18 @@
   }
   add_filter('upload_mimes', 'cc_mime_types');
 
-/* MISC
+
+/* USER CAPABILITIES
 /===================================================== */
 
-  /* Hide core update info for non-admins
-  /------------------------*/
-  function onlyadmin_update() {
-    if (!current_user_can('update_core')) {
-        remove_action( 'admin_notices', 'update_nag', 3 );
-    }
+/* Hide core update info for non-admins
+/---------------------------------------*/
+function onlyadmin_update() {
+  if (!current_user_can('update_core')) {
+      remove_action( 'admin_notices', 'update_nag', 3 );
   }
-  add_action( 'admin_head', 'onlyadmin_update', 1 );
+}
+add_action( 'admin_head', 'onlyadmin_update', 1 );
 
-  }
 
 ?>

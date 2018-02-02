@@ -78,7 +78,7 @@ gulp.task('css', function() {
 /------------------------*/
 // from:    assets/scripts/
 // actions: concatinate, minify, rename
-// to:      dist/script.min.css
+// to:      dist/script.min.js
 gulp.task('javascript', function() {
   gulp.src('assets/scripts/*.js')
   .pipe(plumber({errorHandler: notify.onError("<%= error.message %>")}))
@@ -98,7 +98,7 @@ gulp.task('images',  function() {
   gulp.src('assets/images/*.*')
     .pipe(imagemin())
     .pipe(gulp.dest('dist/images'))
-    .pipe(browserSync.stream());
+    // .pipe(browserSync.stream()); // currently bugged (18.12.2017)
 });
 
 /* CLEAN
