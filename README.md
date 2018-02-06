@@ -1,6 +1,6 @@
 <img src="/assets/images/wpseed.png" width="518"/>
 
-**Version 1.1.5** (02.02.2018)
+**Version 1.1.5** (06.02.2018)
 
 ## What is WPSeed?
 WPSeed is a WordPress starter theme following the intention of being able to skip the time-consuming first steps when creating a new theme.
@@ -29,8 +29,9 @@ WPSeed uses npm to manage development-modules aswell as frontend-modules and [gu
 
 #### Deployment
 * when deploying your website using a deployment-environment like [deploybot](https://deploybot.com/) or [deployHQ](https://www.deployhq.com/) run
+  * `npm install` to install the frontend-modules/vendors on the deployment-docker (`--no-spin` helps to keep the logfile clean)
   * `gulp` to compile assets
-  * `npm install --production` to install the frontend-modules/vendors on the staging
+  * Note: the `npm_modules` folder is not needed on the webserver itself. Vendors from npm_modules are compiled into `style.min.css` and `script.min.js`.
 
 ## Usage
 
@@ -49,14 +50,14 @@ WPSeed uses npm to manage development-modules aswell as frontend-modules and [gu
 ##### CSS
 * `assets/styles/content.scss` (content related styles)
 * `assets/styles/general.scss` (re-usable classes and settings)
-* `assets/styles/main.scss` (gathers all .scss files for compiling with gulp)
+* `assets/styles/bundle.scss` (gathers all .scss files for compiling with gulp)
 * `assets/styles/nav.scss` (navigation)
 * `assets/styles/essentials.scss` (required SASS functions and all presets for responsive, **this file is not meant to be changed**)
 * `assets/styles/vars.scss` (manages scaling, all colors, fonts and other presets)
 
 ##### Javascript
 * `assets/scrips/essentials.js` (re-usable essential javascript/jQuery functions/variables)
-* `assets/scrips/main.js` (javascript/jQuery)
+* `assets/scrips/functions.js` (javascript/jQuery)
 
 
 ##### Templates
