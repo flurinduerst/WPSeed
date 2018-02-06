@@ -1,8 +1,8 @@
-/**
+/*!
  * Essential javascript functions/variables
  *
  * @author      Flurin Dürst
- * @version     1.0
+ * @version     1.0.1
  * @since       WPSeed 0.11.0
  *
  */

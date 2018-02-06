@@ -1,19 +1,21 @@
 /*
  * GULP CONFIG
  *
- * Desciption:  Clean gulpfile for web development workflow with browsersync, compiling/optimization of sass, javascript and images from assets to dist
- * Usage:       gulp (to run the whole process), gulp watch (to watch for changes and compile if anything was modified)
+ * Desciption:  Clean gulpfile for web development workflow using
+ *              - browsersync
+ *              - compiling/optimization of sass, javascript and images from assets to dist and vendors (usally from npm_modules to dist)
+ * Usage:       gulp (to run the whole process), gulp watch (to watch for changes and compile if anything is being modified)
  *
  * Author:      Flurin Dürst (https://flurinduerst.ch)
  *
- * Version:     1.3.1
+ * Version:     1.4.0
  *
 */
 
 
 /* SETTINGS
 /===================================================== */
-var browsersync_proxy = "wpseed.dev";
+var browsersync_proxy = "wpseed.vm";
 
 
 /* DEPENDENCIES
@@ -60,12 +62,19 @@ gulp.task('browsersync', function() {
 
 /* CSS
 /------------------------*/
-// from:    assets/styles/main.css
+// from:    assets/styles/main.css (+ optional vendors)
 // actions: compile, minify, prefix, rename
 // to:      dist/style.min.css
 gulp.task('css', function() {
-  gulp.src('assets/styles/main.scss')
+  gulp.src([
+    //main
+    'assets/styles/bundle.scss',
+    // vendors
+    'node_modules/hamburgers/dist/hamburgers.min.css', // https://jonsuh.com/hamburgers/
+    'node_modules/animate.css/animate.min.css' // https://daneden.github.io/animate.css/
+  ])
   .pipe(plumber({errorHandler: notify.onError("<%= error.message %>")}))
+  .pipe(concat('style.min.css'))
   .pipe(sass())
   .pipe(autoprefixer('last 2 version', { cascade: false }))
   .pipe(cleanCSS())
@@ -76,11 +85,16 @@ gulp.task('css', function() {
 
 /* JAVASCRIPT
 /------------------------*/
-// from:    assets/scripts/
+// from:    assets/scripts/ (+ optional vendors)
 // actions: concatinate, minify, rename
-// to:      dist/script.min.js
+// to:      dist/script.min.css
 gulp.task('javascript', function() {
-  gulp.src('assets/scripts/*.js')
+  gulp.src([
+    // main
+    'assets/scripts/*.js',
+    // vendors
+    'node_modules/wowjs/dist/wow.min.js' // https://github.com/matthieua/WOW
+  ])
   .pipe(plumber({errorHandler: notify.onError("<%= error.message %>")}))
   .pipe(concat('script.min.js'))
   .pipe(uglify())

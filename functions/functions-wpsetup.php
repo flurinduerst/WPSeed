@@ -4,7 +4,7 @@
  * menus, theme-support settings, general settings and a wp_head cleaner
  *
  * @author      Flurin Dürst
- * @version     1.7.1
+ * @version     1.8.0
  * @since       WPSeed 0.1.6
  *
  */
@@ -18,18 +18,14 @@
   // enqueue sctipts
   // » https://developer.wordpress.org/reference/functions/wp_enqueue_script/
   function wpseed_enqueue_scripts_and_styles() {
-    # jquery.js (from wp core)
+    # jQuery (from wp core)
     wp_deregister_script( 'jquery' );
-    // wp_register_script( 'jquery', includes_url( '/js/jquery/jquery.js' ), false, NULL, true );
     wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js', false, '2.1.4');
     wp_enqueue_script( 'jquery' );
-    # main.js
+    # scripts
     wp_register_script('wpseed/scripts', get_template_directory_uri() . '/dist/script.min.js', false, array( 'jquery' ), true);
     wp_enqueue_script('wpseed/scripts');
-    # wow.js
-    wp_register_script('wowjs', get_template_directory_uri() . '/node_modules/wowjs/dist/wow.min.js', false, array( 'wowjs' ), true);
-    wp_enqueue_script('wowjs');
-    # main.css
+    # styles
     wp_enqueue_style('wpseed/styles', get_template_directory_uri() . '/dist/style.min.css', false, null);
     # fonts
     wp_enqueue_style('google/fonts', 'https://fonts.googleapis.com/css?family=Ubuntu:400,500,700', false, null);

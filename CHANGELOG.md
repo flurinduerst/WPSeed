@@ -1,8 +1,13 @@
 # CHANGELOG
 
-## HEAD | 1.1.4 | 02.02.2018
+## HEAD | 1.1.5 | 06.02.2018
+* re-organize build-process
+  * rename main.js to functions.js
+  * rename main.scss to bundler.scss
+  * remove vendor-dependencies from `functions-wppsetup.php` and `bundler.scss`
+  * add all vendor-dependencies to the gulpfile to have them organized in one place
+  * remove bower, use npm for frontend-modules/vendors
 * fix minor bugs and cleanup code
-* remove bower, use npm for frontend-modules/vendors
 * rearrange defaults in vars.scss
 * remove editor-hiding in elements-template (we can hide it within ACF now)
 

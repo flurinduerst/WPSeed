@@ -1,9 +1,10 @@
-/**
- * All sorts javascript/jQuery functions go here
+/*!
+ * All sorts javascript/jQuery functions
  *
  * @author      Flurin Dürst
- * @version     3.3.0
+ * @version     3.4.0
  * @since       WPSeed 0.12
+ * was main.js until 3.4.0
  *
  */
 

@@ -1,0 +1,24 @@
+/*!
+ * Main CSS File
+ * Merges all .scss files (in the desired order) before they're processed by gulp
+ *
+ * @author      Flurin Dürst
+ * @version     1.6.0
+ * @since       WPSeed 0.1
+ * was main.scss until 1.6.0
+ *
+ */
+
+
+@charset 'UTF-8';
+
+/* VARS/FUNCTIONS
+/===================================================== */
+@import 'vars';
+@import 'essentials';
+
+/* SITE STYLES
+/===================================================== */
+@import 'general';
+@import 'content';
+@import 'nav';
