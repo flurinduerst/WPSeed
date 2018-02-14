@@ -4,7 +4,7 @@
  * menus, theme-support settings, general settings and a wp_head cleaner
  *
  * @author      Flurin Dürst
- * @version     1.8.1
+ * @version     1.8.2
  * @since       WPSeed 0.1.6
  *
  */
@@ -138,7 +138,7 @@ function wpseed_wphead_cleanup () {
   // remove canonical links
   remove_action('wp_head', 'rel_canonical');
 }
-add_action('after_setup_theme', 'wphead_cleanup');
+add_action('after_setup_theme', 'wpseed_wphead_cleanup');
 
 
 ?>
