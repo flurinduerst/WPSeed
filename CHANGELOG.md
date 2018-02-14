@@ -1,6 +1,8 @@
 # CHANGELOG
 
-## HEAD | 1.1.6 | 14.02.2018
+## 1.2.0Beta | 14.02.2018 | «Busted»
+* add cache-busting
+* update/debug gulpfile
 * add unification to function-names cleanup functions
 * re-organize build-process
   * rename main.js to functions.js

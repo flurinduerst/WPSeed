@@ -1,6 +1,6 @@
 <img src="/assets/images/wpseed.png" width="518"/>
 
-**Version 1.1.6** (14.02.2018)
+**Version 1.2.0Beta** (14.02.2018)
 
 ## What is WPSeed?
 WPSeed is a WordPress starter theme following the intention of being able to skip the time-consuming first steps when creating a new theme.
@@ -26,6 +26,7 @@ WPSeed uses npm to manage development-modules aswell as frontend-modules and [gu
   * in the theme directory run `npm install && gulp`
   * add your domain/ip to `browsersync_proxy` in `gulpfile.js`
   * you can now use gulp (run `gulp watch` in your theme directory) to compile and optimize your asset files and run browsersync
+  * you can use any TLD for local development. WPSeed assumes you're using `.vm` for "virtual machine". If you want to use a different TLD make sure to change `.vm` to your preffered TLD in `Vagrantfile`, `gulpfile.js` and `functions-wpsetup.php`.
 
 #### Deployment
 * when deploying your website using a deployment-environment like [deploybot](https://deploybot.com/) or [deployHQ](https://www.deployhq.com/) run
@@ -37,6 +38,7 @@ WPSeed uses npm to manage development-modules aswell as frontend-modules and [gu
 
 ### General
 * All important files provide a description/version at the top. Make sure to read it first.
+* Since Version 1.2.0 WPSeed creates cache-busting using [gulp-rev](https://www.npmjs.com/package/gulp-rev). If you're working locally (using the `.vm` TLD) the non-busted stylesheet (style.min.css) is enqueued, to make sure browsersync runs as expected.
 
 ### Important Files/Folders
 
