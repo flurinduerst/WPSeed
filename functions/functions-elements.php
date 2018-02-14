@@ -4,7 +4,7 @@
  * WPSeed_Text and WPSeed_Gallery are placeholder presets.
  *
  * @author     Flurin Dürst
- * @version    1.2
+ * @version    1.2.1
  * @since      WPSeed 0.10.0
  *
  */
@@ -13,21 +13,21 @@
 /----------------------------*/
 // adds the title-sub_field to the ACF-element bar. Edit `name` at `add_filter` to match your ACF-value.
 // » https://www.advancedcustomfields.com/resources/acf-fields-flexible_content-layout_title/
-function acf_flexiblecontent_title( $title, $field, $layout, $i ) {
+function WPSeed_acf_flexiblecontent_title( $title, $field, $layout, $i ) {
   if (!empty(get_sub_field('title'))) {          // remove layout title from text
   	$title = get_sub_field('title')." ($title)";  // add new title
   }
   return $title;
 }
-add_filter('acf/fields/flexible_content/layout_title/name=element', 'acf_flexiblecontent_title', 10, 4);
+add_filter('acf/fields/flexible_content/layout_title/name=element', 'WPSeed_acf_flexiblecontent_title', 10, 4);
 
 
 /* GATHER ELEMENTS
 /--------------------------*/
-function elements() {
+function WPSeed_elements() {
   ob_start('sanitize_output');
-  if (have_rows('elements')):
-    while (have_rows('elements')): the_row();
+  if (have_rows('element_content')):
+    while (have_rows('element_content')): the_row();
       if (get_row_layout() == 'text'): WPSeed_Text(); endif;
       if (get_row_layout() == 'gallery'): WPSeed_Gallery(); endif;
       if (get_row_layout() == 'seperator'): echo '<hr>'; endif;

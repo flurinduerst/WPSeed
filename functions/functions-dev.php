@@ -3,7 +3,7 @@
  * Functions used for development purposes
  *
  * @author      Flurin Dürst
- * @version     1.6.0
+ * @version     1.6.1
  * @since       WPegg 0.1.0
  *
  */
@@ -39,7 +39,7 @@
   /* STRING SHORTENER
   /------------------------*/
   // shorten strings and append ...
-  function wpseed_shorten($string,$length,$append="...") {
+  function shorten($string,$length,$append="...") {
     $string = trim($string);
     if(strlen($string) > $length) {
       $string  = substr($string, 0, $length);
@@ -50,7 +50,7 @@
 
   /* URL CHECK
   /------------------------*/
-  // searches url by string
+  // searche url by string
   // note: also consider using basename($url) or basename(dirname($url)) => http://php.net/manual/de/function.basename.php
   function urlcontains($string) {
     if (strpos('http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'],$string) == true) {
@@ -60,8 +60,8 @@
 
   /* SLUGIFY
   /------------------------*/
-  // creates slugs
-  // exaple: "Lorem Ipsum 25%" will be "lorem-ipsum-25"
+  // create slugs
+  // example: "Lorem Ipsum 25%" will be "lorem-ipsum-25"
   function slugify($text) {
      // replace non letter or digits by -
      $text = preg_replace('~[^\pL\d]+~u', '-', $text);
@@ -89,19 +89,12 @@
     return $buffer;
   }
 
-  /* THUMBNAIL URL
-  /------------------------*/
-  // output the absolute url of the featured image
-  // usage: wpseed_the_post_thumbnail_url($post->ID, 'large');
-  function wpseed_the_post_thumbnail_url($size, $postid) {
-    echo wp_get_attachment_image_src( get_post_thumbnail_id($postid), $size )['0'];
-  }
 
   /* BLOG RELATED
   /------------------------*/
 
   // Output formatted post-date in german
-  function wpseed_get_the_date_german() {
+  function get_the_date_german() {
     $months_de = ['Januar','Februar','März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
     return get_the_date('d.').' '.$months_de[intval(get_the_date('m'))-1].' '.get_the_date('Y');
   }

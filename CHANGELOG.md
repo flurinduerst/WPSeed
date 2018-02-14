@@ -1,6 +1,7 @@
 # CHANGELOG
 
-## HEAD | 1.1.5 | 06.02.2018
+## HEAD | 1.1.6 | 14.02.2018
+* add unification to function-names cleanup functions
 * re-organize build-process
   * rename main.js to functions.js
   * rename main.scss to bundler.scss

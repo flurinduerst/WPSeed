@@ -4,7 +4,7 @@
  *
  * @author      Flurin Dürst
  * @version     1.0
- * @since       WPSeed 0.11.3
+ * @since       WPSeed 0.11.4
  *
  */
 
@@ -30,7 +30,7 @@
      wp_redirect('/admin'); die();
    }
 
-   /* MAINTENANCE MODE
+   /* MAINTENANCE MODE (GERMAN)
    /------------------------*/
    // show maintenance page if not my ip (is_me() and not logged in as admin)
    // remove `false && ` to activate

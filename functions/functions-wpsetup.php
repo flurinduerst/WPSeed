@@ -4,7 +4,7 @@
  * menus, theme-support settings, general settings and a wp_head cleaner
  *
  * @author      Flurin Dürst
- * @version     1.8.0
+ * @version     1.8.1
  * @since       WPSeed 0.1.6
  *
  */
@@ -35,13 +35,13 @@
   /* SETUP WP-MENUS
   /------------------------*/
   // » https://codex.wordpress.org/Function_Reference/register_nav_menus
-  function register_theme_menus() {
+  function wpseed_register_theme_menus() {
     register_nav_menus([
       'mainmenu' => __('Mainmenu'),
       'submenu' => __('Submenu')
     ]);
   }
-  add_action( 'init', 'register_theme_menus');
+  add_action( 'init', 'wpseed_register_theme_menus');
 
 
 /* THEME SUPPORT
@@ -84,10 +84,10 @@
 
   /* Disable Backend Theme-Editor
   /------------------------------*/
-  function remove_editor_menu() {
+  function wpseed_remove_editor_menu() {
     remove_action('admin_menu', '_add_themes_utility_last', 101);
   }
-  add_action('_admin_menu', 'remove_editor_menu', 1);
+  add_action('_admin_menu', 'wpseed_remove_editor_menu', 1);
 
   /* Disable Admin Bar
   /------------------------------*/
@@ -100,7 +100,7 @@
 
   /* Remove html hardcoded thumbnail dimensions (for CSS-Scaling of Images)
   /------------------------------------------------------------------------*/
-  function remove_thumbnail_dimensions( $html, $post_id, $post_image_id ) {
+  function wpseed_remove_thumbnail_dimensions( $html, $post_id, $post_image_id ) {
     $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html);
     return $html;
   }
@@ -110,7 +110,7 @@
 /* WPHEAD CLEANUP
 /===================================================== */
 // removes unused stuff from wp_head()
-function wphead_cleanup () {
+function wpseed_wphead_cleanup () {
   // remove the generator meta tag
   remove_action('wp_head', 'wp_generator');
   // remove wlwmanifest link
