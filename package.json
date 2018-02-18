@@ -1,6 +1,6 @@
 {
   "name": "wpseed",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "modules for local development (devDependencies) and frontend-modules (dependencies)",
   "author": "flurinduerst",
   "dependencies": {
@@ -20,6 +20,7 @@
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.0",
     "gulp-rename": "^1.2.2",
+    "gulp-rev": "^8.1.1",
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^3.0.0",
     "gulp-watch": "^4.3.11"

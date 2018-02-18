@@ -18,7 +18,7 @@
     <? if (have_posts() ) : while (have_posts()) : the_post(); ?>
       <article>
         <h2><? the_title(); ?></h2>
-        <div class="postinfo"><?= wpseed_get_the_date_german(); ?></div>
+        <div class="postinfo"><?= get_the_date_german(); ?></div>
           <? if (has_post_thumbnail()) : ?>
           <div class="thumbnail" style="background-image: url(<? the_post_thumbnail_url() ?>)"></div>
           <? endif ?>
