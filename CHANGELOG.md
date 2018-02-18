@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## 1.2.0Beta | 14.02.2018 | «Busted»
+## 1.2.0 | 18.02.2018 | «Busted»
 * add cache-busting
 * update/debug gulpfile
 * add unification to function-names cleanup functions
