@@ -3,13 +3,13 @@
 ## 1.2.0 | 18.02.2018 | «Busted»
 * add cache-busting
 * update/debug gulpfile
-* add unification to function-names cleanup functions
 * re-organize build-process
   * rename main.js to functions.js
   * rename main.scss to bundler.scss
   * remove vendor-dependencies from `functions-wppsetup.php` and `bundler.scss`
   * add all vendor-dependencies to the gulpfile to have them organized in one place
   * remove bower, use npm for frontend-modules/vendors
+* add unification to function-names cleanup functions
 * fix minor bugs and cleanup code
 * rearrange defaults in vars.scss
 * remove editor-hiding in elements-template (we can hide it within ACF now)
