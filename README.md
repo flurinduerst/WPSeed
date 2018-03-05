@@ -1,6 +1,6 @@
 <img src="/assets/images/wpseed.png" width="518"/>
 
-**Version 1.2.0** (18.02.2018)
+**Version 1.2.1** (18.02.2018)
 
 ## What is WPSeed?
 WPSeed is a WordPress starter theme following the intention of being able to skip the time-consuming first steps when creating a new theme.
@@ -17,10 +17,10 @@ WPSeed uses a variety of pre-built objects that allow kickstarting any kind of t
   * php >= 5.4 or [short_open_tag](http://php.net/manual/de/ini.core.php#ini.short-open-tag) set `true` on your VM/Webserver
 
 ## Installation
-#### WPSeed Theme:
 * Clone WPSeed `$ git clone git@github.com:flurinduerst/WPSeed.git` into your `themes` directory.
 
-#### Workflow
+## Workflow
+#### Gulp
 WPSeed uses npm to manage development-modules aswell as frontend-modules and [gulp](https://gulpjs.com) to compile assets from `assets` to `dist`. For details see `gulpfile.js`.
   * Install gulp globally with `npm install -g gulp` if you haven't already
   * in the theme directory run `npm install && gulp`
@@ -28,7 +28,14 @@ WPSeed uses npm to manage development-modules aswell as frontend-modules and [gu
   * you can now use gulp (run `gulp watch` in your theme directory) to compile and optimize your asset files and run browsersync
   * you can use any TLD for local development. WPSeed assumes you're using `.vm` for "virtual machine". If you want to use a different TLD make sure to change `.vm` to your preffered TLD in `Vagrantfile`, `gulpfile.js` and `functions-wpsetup.php`.
 
-#### Deployment
+#### Modernizr
+WPSeed uses [modernizr](https://www.npmjs.com/package/modernizr) to automatically detect the availability of next-generation web technologies.
+  * install the modernizr [command line config](https://www.npmjs.com/package/modernizr) with `npm install -g modernizr`
+  * create/download your custom modernizr config at [modernizr.com](https://modernizr.com/download?setclasses) and select the `command line config` download option. Move the downloaded `modernizr-config.json` into `assets/scripts`.
+  * run `modernizr -c assets/scripts/modernizr-config.json` to generate your `modernizr.js`. This file will be compiled by gulp.
+  * Note: If you don't want to use modernizr you can just ignore/delete the modernizr files in `assets/scripts/` Everything will work perfectly fine without them.
+
+## Deployment
 * when deploying your website using a deployment-environment like [deploybot](https://deploybot.com/) or [deployHQ](https://www.deployhq.com/) run
   * `npm install` to install the frontend-modules/vendors on the deployment-docker (`--no-spin` helps to keep the logfile clean)
   * `gulp` to compile assets

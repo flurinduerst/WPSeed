@@ -18,6 +18,7 @@
     "gulp-concat": "^2.6.1",
     "gulp-imagemin": "^3.4.0",
     "gulp-notify": "^3.2.0",
+    "gulp-order": "^1.1.1",
     "gulp-plumber": "^1.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-rev": "^8.1.1",

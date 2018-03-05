@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## HEAD | 1.2.1 | 05.03.2018
+* add [modernizr](https://www.npmjs.com/package/modernizr) to the workflow
+
 ## 1.2.0 | 18.02.2018 | «Busted»
 * add cache-busting
 * update/debug gulpfile

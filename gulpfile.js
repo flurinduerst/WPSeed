@@ -5,13 +5,15 @@
  *              - compiling/optimization of sass, javascript and images from assets to dist and vendors
  *              - browsersync
  *              - cache-busting
+ *              - modernizr
  *
- * Usage:       - gulp (to run the whole process)
- *              - gulp watch (to watch for changes and compile if anything is being modified)
+ * Usage:       - `gulp` (to run the whole process)
+ *              - `gulp watch` (to watch for changes and compile if anything is being modified)
+ *              - `modernizr -c assets/scripts/modernizr-config.json` to generate the modernizr.js file from the config-file
  *
  * Author:      Flurin Dürst (https://flurinduerst.ch)
  *
- * Version:     2.0.0
+ * Version:     2.1.0
  *
 */
 
@@ -28,7 +30,7 @@ var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
 var concat = require('gulp-concat');
 var rename = require("gulp-rename");
-// var clean = require('gulp-clean');
+var order = require("gulp-order");
 // css
 var sass = require('gulp-sass');
 var cleanCSS = require('gulp-clean-css');
@@ -131,6 +133,7 @@ gulp.task('cachebust', ['clean:cachebust', 'css'], function() {
 // from:    assets/scripts/ (+ optional vendors)
 // actions: concatinate, minify, rename
 // to:      dist/script.min.css
+// note:    modernizr.js is concatinated first in .pipe(order)
 gulp.task('javascript', ['clean:javascript'], function() {
   return gulp.src([
     // main
@@ -138,6 +141,10 @@ gulp.task('javascript', ['clean:javascript'], function() {
     // vendors
     'node_modules/wowjs/dist/wow.min.js' // https://github.com/matthieua/WOW
   ])
+  .pipe(order([
+    'assets/scripts/modernizr.js',
+    'assets/scripts/*.js'
+  ], { base: './' }))
   .pipe(plumber({errorHandler: notify.onError("<%= error.message %>")}))
   .pipe(concat('script.min.js'))
   .pipe(uglify())
