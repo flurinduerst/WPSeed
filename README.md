@@ -32,7 +32,7 @@ WPSeed uses npm to manage development-modules aswell as frontend-modules and [gu
 WPSeed uses [modernizr](https://www.npmjs.com/package/modernizr) to automatically detect the availability of next-generation web technologies.
   * install the modernizr [command line config](https://www.npmjs.com/package/modernizr) with `npm install -g modernizr`
   * create/download your custom modernizr config at [modernizr.com](https://modernizr.com/download?setclasses) and select the `command line config` download option. Move the downloaded `modernizr-config.json` into `assets/scripts`.
-  * run `modernizr -c assets/scripts/modernizr-config.json` to generate your `modernizr.js`. This file will be compiled by gulp.
+  * run `modernizr -c assets/scripts/modernizr-config.json -d assets/scripts` to generate your `modernizr.js`. This file will be compiled by gulp.
   * Note: If you don't want to use modernizr you can just ignore/delete the modernizr files in `assets/scripts/` Everything will work perfectly fine without them.
 
 ## Deployment

@@ -9,7 +9,7 @@
  *
  * Usage:       - `gulp` (to run the whole process)
  *              - `gulp watch` (to watch for changes and compile if anything is being modified)
- *              - `modernizr -c assets/scripts/modernizr-config.json` to generate the modernizr.js file from the config-file
+ *              - `modernizr -c assets/scripts/modernizr-config.json -d assets/scripts` to generate the modernizr.js file from the config-file
  *
  * Author:      Flurin Dürst (https://flurinduerst.ch)
  *
