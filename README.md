@@ -26,13 +26,14 @@ WPSeed uses a variety of pre-built objects that allow kickstarting any kind of t
 #### Gulp
 WPSeed uses npm to manage development-modules aswell as frontend-modules and [gulp](https://gulpjs.com) to compile assets from `assets` to `dist`. For details see `gulpfile.js`.
   * Install gulp globally with `npm install -g gulp` if you haven't already
-  * in the theme directory run `npm install && gulp`
   * add your domain/ip to `browsersync_proxy` in `gulpfile.js`
-  * you can now use gulp (run `gulp watch` in your theme directory) to compile and optimize your asset files and run browsersync
+  * in the theme directory run `npm install`
+  * you can now use `gulp` to compile and optimize your asset files and run browsersync. Use `gulp watch` to let gulp compile your files automatically whenever you've made changes to the associated files.
   * gulp is handling vendor-requirements (external tools/frameworks) by additionally compiling/bundling the files defined in `gulp-vendors.json`. So, if you add vendors, make sure to add them to `gulp-vendors.json`.
+  * for further information about gulp see [gulpjs.com](https://gulpjs.com/)
 
 #### Modernizr
-WPSeed uses [modernizr](https://www.npmjs.com/package/modernizr) to automatically detect the availability of next-generation web technologies.
+WPSeed uses [modernizr](https://modernizr.com/) to automatically detect the availability of next-generation web technologies.
   * install the modernizr [command line config](https://www.npmjs.com/package/modernizr) with `npm install -g modernizr`
   * create/download your custom modernizr config at [modernizr.com](https://modernizr.com/download?setclasses) and select the `command line config` download option. Move the downloaded `modernizr-config.json` into `assets/scripts`.
   * run `modernizr -c assets/scripts/modernizr-config.json -d assets/scripts` to generate your `modernizr.js`. This file will be compiled by gulp.
