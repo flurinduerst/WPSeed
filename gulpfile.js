@@ -15,19 +15,25 @@
  *
  * Author:      Flurin Dürst (https://flurinduerst.ch)
  *
- * Version:     2.2.0
+ * Version:     2.2.1
  *
 */
 
 
 /* SETTINGS
 /===================================================== */
+// local domain used by browsersync
 var browsersync_proxy = "wpseed.vm";
+
+// default asset paths
 var assets = {
   css: ['assets/styles/bundle.scss'],
+  css_watch: ['assets/styles/*.scss'],
   javascript: ['assets/scripts/*.js'],
   images: ['assets/images/*.*']
 }
+
+// vendors are loaded from gulp-vendors.json
 var vendors = require('./gulp-vendors.json');
 
 
@@ -35,10 +41,10 @@ var vendors = require('./gulp-vendors.json');
 /===================================================== */
 // general
 var gulp = require('gulp');
-var browserSync = require('browser-sync').create();
 var concat = require('gulp-concat');
 var rename = require("gulp-rename");
 var order = require("gulp-order");
+var browserSync = require('browser-sync').create();
 // css
 var sass = require('gulp-sass');
 var cleanCSS = require('gulp-clean-css');
@@ -65,22 +71,10 @@ var del = require('del');
 /------------------------*/
 // delete compiled files/folders (before running the build)
 // css
-gulp.task('clean:css', function() {
-  return del(['dist/*.css', 'dist/rev-manifest.json']);
-});
-// cachebust
-gulp.task('clean:cachebust', function() {
-  return del(['dist/style-*.min.css']);
-});
-// javascript
-gulp.task('clean:javascript', function() {
-  return del(['dist/*.js']);
-});
-// images
-gulp.task('clean:images', function() {
-  return del(['dist/images']);
-});
-
+gulp.task('clean:css', function() { return del(['dist/*.css', 'dist/rev-manifest.json'])});
+gulp.task('clean:cachebust', function() { return del(['dist/style-*.min.css'])});
+gulp.task('clean:javascript', function() { return del(['dist/*.js'])});
+gulp.task('clean:images', function() { return del(['dist/images'])});
 
 /* BROWSERSYNC
 /------------------------*/
@@ -100,7 +94,7 @@ gulp.task('browsersync', function() {
 
 /* CSS
 /------------------------*/
-// from:    assets/styles/main.css (+ optional vendors)
+// from:    assets/styles/main.css
 // actions: compile, minify, prefix, rename
 // to:      dist/style.min.css
 gulp.task('css', ['clean:css'], function() {
@@ -132,7 +126,7 @@ gulp.task('cachebust', ['clean:cachebust', 'css'], function() {
 
 /* JAVASCRIPT
 /------------------------*/
-// from:    assets/scripts/ (+ optional vendors)
+// from:    assets/scripts/
 // actions: concatinate, minify, rename
 // to:      dist/script.min.css
 // note:    modernizr.js is concatinated first in .pipe(order)
@@ -169,9 +163,9 @@ gulp.task('images', ['clean:images'],  function() {
 // watch for modifications in
 // styles, scripts, images, php files, html files
 gulp.task('watch',  ['browsersync'], function() {
-  gulp.watch('assets/styles/*.scss', ['css', 'cachebust']);
-  gulp.watch('assets/scripts/*.js', ['javascript']);
-  gulp.watch('assets/images/*.*', ['images']);
+  gulp.watch(assets['css_watch'], ['css', 'cachebust']);
+  gulp.watch(assets['javascript'], ['javascript']);
+  gulp.watch(assets['images'], ['images']);
   gulp.watch('*.php', browserSync.reload);
   gulp.watch('*.html', browserSync.reload);
 });
