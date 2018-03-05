@@ -1,0 +1,13 @@
+{
+  "javascript": [
+    "assets/scripts/modernizr.js",
+    "node_modules/wowjs/dist/wow.min.js"
+  ],
+  "css": [
+    "node_modules/hamburgers/dist/hamburgers.min.css",
+    "node_modules/animate.css/animate.min.css"
+  ],
+  "images": [
+    ""
+  ]
+}

@@ -6,14 +6,16 @@
  *              - browsersync
  *              - cache-busting
  *              - modernizr
+ *              - vendor handling through glulp-vendors.json
  *
  * Usage:       - `gulp` (to run the whole process)
  *              - `gulp watch` (to watch for changes and compile if anything is being modified)
  *              - `modernizr -c assets/scripts/modernizr-config.json -d assets/scripts` to generate the modernizr.js file from the config-file
+ *              - add vendor-requirements to gulp-vendors.json, they will be compiled/bundled by `gulp` (restart `gulp watch`)
  *
  * Author:      Flurin Dürst (https://flurinduerst.ch)
  *
- * Version:     2.1.0
+ * Version:     2.2.0
  *
 */
 
@@ -21,6 +23,12 @@
 /* SETTINGS
 /===================================================== */
 var browsersync_proxy = "wpseed.vm";
+var assets = {
+  css: ['assets/styles/bundle.scss'],
+  javascript: ['assets/scripts/*.js'],
+  images: ['assets/images/*.*']
+}
+var vendors = require('./gulp-vendors.json');
 
 
 /* DEPENDENCIES
@@ -96,21 +104,15 @@ gulp.task('browsersync', function() {
 // actions: compile, minify, prefix, rename
 // to:      dist/style.min.css
 gulp.task('css', ['clean:css'], function() {
-  return gulp.src([
-    //main
-    'assets/styles/bundle.scss',
-    // vendors
-    'node_modules/hamburgers/dist/hamburgers.min.css', // https://jonsuh.com/hamburgers/
-    'node_modules/animate.css/animate.min.css' // https://daneden.github.io/animate.css/
-  ])
-  .pipe(plumber({errorHandler: notify.onError("<%= error.message %>")}))
-  .pipe(concat('style.min.css'))
-  .pipe(sass())
-  .pipe(autoprefixer('last 2 version', { cascade: false }))
-  .pipe(cleanCSS())
-  .pipe(rename('dist/style.min.css'))
-  .pipe(gulp.dest('./'))
-  .pipe(browserSync.stream());
+  return gulp.src(assets['css'].concat(vendors['css']))
+    .pipe(plumber({errorHandler: notify.onError("<%= error.message %>")}))
+    .pipe(concat('style.min.css'))
+    .pipe(sass())
+    .pipe(autoprefixer('last 2 version', { cascade: false }))
+    .pipe(cleanCSS())
+    .pipe(rename('dist/style.min.css'))
+    .pipe(gulp.dest('./'))
+    .pipe(browserSync.stream());
 });
 
 
@@ -135,22 +137,17 @@ gulp.task('cachebust', ['clean:cachebust', 'css'], function() {
 // to:      dist/script.min.css
 // note:    modernizr.js is concatinated first in .pipe(order)
 gulp.task('javascript', ['clean:javascript'], function() {
-  return gulp.src([
-    // main
-    'assets/scripts/*.js',
-    // vendors
-    'node_modules/wowjs/dist/wow.min.js' // https://github.com/matthieua/WOW
-  ])
-  .pipe(order([
-    'assets/scripts/modernizr.js',
-    'assets/scripts/*.js'
-  ], { base: './' }))
-  .pipe(plumber({errorHandler: notify.onError("<%= error.message %>")}))
-  .pipe(concat('script.min.js'))
-  .pipe(uglify())
-  .pipe(rename('dist/script.min.js'))
-  .pipe(gulp.dest('./'))
-  .pipe(browserSync.stream());
+  return gulp.src(assets['javascript'].concat(vendors['javascript']))
+    .pipe(order([
+      'assets/scripts/modernizr.js',
+      'assets/scripts/*.js'
+    ], { base: './' }))
+    .pipe(plumber({errorHandler: notify.onError("<%= error.message %>")}))
+    .pipe(concat('script.min.js'))
+    .pipe(uglify())
+    .pipe(rename('dist/script.min.js'))
+    .pipe(gulp.dest('./'))
+    .pipe(browserSync.stream());
 });
 
 
@@ -160,7 +157,7 @@ gulp.task('javascript', ['clean:javascript'], function() {
 // actions: minify
 // to:      dist/images
 gulp.task('images', ['clean:images'],  function() {
-  return gulp.src('assets/images/*.*')
+  return gulp.src(assets['images'].concat(vendors['images']))
     .pipe(imagemin())
     .pipe(gulp.dest('dist/images'))
     // .pipe(browserSync.stream()); // currently bugged (18.12.2017)

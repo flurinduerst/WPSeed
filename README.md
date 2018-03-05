@@ -1,6 +1,6 @@
 <img src="/assets/images/wpseed.png" width="518"/>
 
-**Version 1.2.1** (18.02.2018)
+**Version 1.3.0** (05.03.2018)
 
 ## What is WPSeed?
 WPSeed is a WordPress starter theme following the intention of being able to skip the time-consuming first steps when creating a new theme.
@@ -20,13 +20,16 @@ WPSeed uses a variety of pre-built objects that allow kickstarting any kind of t
 * Clone WPSeed `$ git clone git@github.com:flurinduerst/WPSeed.git` into your `themes` directory.
 
 ## Workflow
+#### General
+* you can use any TLD for local development. WPSeed assumes you're using `.vm` for "virtual machine". If you want to use a different TLD make sure to change `.vm` to your preffered TLD in `Vagrantfile`, `gulpfile.js` and `functions-wpsetup.php`.
+
 #### Gulp
 WPSeed uses npm to manage development-modules aswell as frontend-modules and [gulp](https://gulpjs.com) to compile assets from `assets` to `dist`. For details see `gulpfile.js`.
   * Install gulp globally with `npm install -g gulp` if you haven't already
   * in the theme directory run `npm install && gulp`
   * add your domain/ip to `browsersync_proxy` in `gulpfile.js`
   * you can now use gulp (run `gulp watch` in your theme directory) to compile and optimize your asset files and run browsersync
-  * you can use any TLD for local development. WPSeed assumes you're using `.vm` for "virtual machine". If you want to use a different TLD make sure to change `.vm` to your preffered TLD in `Vagrantfile`, `gulpfile.js` and `functions-wpsetup.php`.
+  * gulp is handling vendor-requirements (external tools/frameworks) by additionally compiling/bundling the files defined in `gulp-vendors.json`. So, if you add vendors, make sure to add them to `gulp-vendors.json`.
 
 #### Modernizr
 WPSeed uses [modernizr](https://www.npmjs.com/package/modernizr) to automatically detect the availability of next-generation web technologies.

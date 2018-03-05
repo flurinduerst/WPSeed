@@ -1,6 +1,8 @@
 # CHANGELOG
 
-## HEAD | 1.2.1 | 05.03.2018
+## 1.3.0 | 05.03.2018 | «Vendorizr»
+* add `gulp-vendors.json` for compiling/bundling of vendor-requirements
+* add configuration variables for assets and vendor paths
 * add [modernizr](https://www.npmjs.com/package/modernizr) to the workflow
 
 ## 1.2.0 | 18.02.2018 | «Busted»
