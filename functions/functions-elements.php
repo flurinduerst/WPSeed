@@ -4,7 +4,7 @@
  * WPSeed_Text and WPSeed_Gallery are placeholder presets.
  *
  * @author     Flurin Dürst
- * @version    1.2.1
+ * @version    1.2.2
  * @since      WPSeed 0.10.0
  *
  */
@@ -19,7 +19,7 @@ function WPSeed_acf_flexiblecontent_title( $title, $field, $layout, $i ) {
   }
   return $title;
 }
-add_filter('acf/fields/flexible_content/layout_title/name=element', 'WPSeed_acf_flexiblecontent_title', 10, 4);
+add_filter('acf/fields/flexible_content/layout_title/name=element_content', 'WPSeed_acf_flexiblecontent_title', 10, 4);
 
 
 /* GATHER ELEMENTS

@@ -1,7 +1,8 @@
 # CHANGELOG
 
-## HEAD | 1.3.1 | 05.03.2018
+## HEAD | 1.3.2 | 14.03.2018
 * cleanup gulpfile, add variables to watch-task
+* cleanup elements
 
 ## 1.3.0 | 05.03.2018 | «Vendorizr»
 * add `gulp-vendors.json` for compiling/bundling of vendor-requirements

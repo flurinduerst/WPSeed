@@ -3,7 +3,7 @@
  * Template for ACF flexible elements
  *
  * @author      Flurin Dürst
- * @version     1.0.1
+ * @version     1.1
  * @since       WPSeed 0.10.0
  *
  */
@@ -18,16 +18,7 @@
 
 		<? if (have_posts()): while (have_posts()): the_post() ?>
 
-			<? elements_teaser() ?>
-
-			<? if (get_the_content() != ''): ?>
-				<section class="text intro">
-					<h1><? the_title(); ?></h1>
-					<? the_content(); ?>
-				</section>
-			<? endif; ?>
-
-			<? elements() ?>
+			<? WPSeed_elements() ?>
 
 		<? endwhile; endif ?>
 
