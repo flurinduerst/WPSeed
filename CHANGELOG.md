@@ -1,8 +1,10 @@
 # CHANGELOG
 
-## HEAD | 1.3.2 | 14.03.2018
+## HEAD | 1.3.4 | 16.03.2018
+* change default nav to menu
 * cleanup gulpfile, add variables to watch-task
 * cleanup elements
+* cleanup css
 
 ## 1.3.0 | 05.03.2018 | «Vendorizr»
 * add `gulp-vendors.json` for compiling/bundling of vendor-requirements

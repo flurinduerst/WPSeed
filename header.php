@@ -1,7 +1,7 @@
 <?
 /**
  * @author      Flurin Dürst
- * @version     1.3
+ * @version     1.4
  * @since       WPSeed 0.1
  */
 ?>
@@ -33,15 +33,15 @@
           </span>
         </button>
         <nav id="nav_main" class="hiddenmobile">
-          <ul>
-          <? $frontPageID = get_option('page_on_front') ?>
-          <? wp_list_pages([
-      				'depth' => 1,
-      				'sort_column' => 'menu_order',
-      				'title_li' => '',
-      				'exclude' => $frontPageID
-      			]);
+          <?
+            wp_nav_menu([
+              'menu_class'=> false,
+              'menu_id' => false,
+              'container'=> false,
+              'depth' => 1,
+              'theme_location' => 'mainmenu'
+            ]);
           ?>
-          </ul>
         </nav>
+
       </div>
