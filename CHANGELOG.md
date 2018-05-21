@@ -1,7 +1,8 @@
 # CHANGELOG
 
-## HEAD | 1.3.6 | 21.03.2018
-* change default nav to menu
+## HEAD | 1.3.7 | 21.03.2018
+* change default nav to WPmenu
+* add function for smooth anchor scrolling
 * cleanup gulpfile, add variables to watch-task
 * create custom css-class for anchors
 * add anchor with custom #ID to elements
