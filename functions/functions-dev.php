@@ -3,7 +3,7 @@
  * Functions used for development purposes
  *
  * @author      Flurin Dürst
- * @version     1.6.1
+ * @version     1.6.2
  * @since       WPegg 0.1.0
  *
  */
@@ -33,7 +33,7 @@
 
   /* VARIABLES
   /------------------------*/
-  $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+  $url = 'https://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
   $loremipsum = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.';
 
   /* STRING SHORTENER
@@ -53,7 +53,7 @@
   // searche url by string
   // note: also consider using basename($url) or basename(dirname($url)) => http://php.net/manual/de/function.basename.php
   function urlcontains($string) {
-    if (strpos('http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'],$string) == true) {
+    if (strpos('https://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'],$string) == true) {
       return true;
     }
   }
@@ -61,19 +61,17 @@
   /* SLUGIFY
   /------------------------*/
   // create slugs
-  // example: "Lorem Ipsum 25%" will be "lorem-ipsum-25"
+  // example: "LORÖM %< 123+ ipsüm!" will be "loroem-123-ipsuem-"
   function slugify($text) {
-     // replace non letter or digits by -
-     $text = preg_replace('~[^\pL\d]+~u', '-', $text);
-     // remove unwanted characters
-     $text = preg_replace('~[^-\w]+~', '', $text);
-     // trim
-     $text = trim($text, '-');
-     // remove duplicate -
-     $text = preg_replace('~-+~', '-', $text);
-     // lowercase
-     $text = strtolower($text);
-     return $text;
+    // trim (remove whitespace before/after string)
+    $text = trim($text, '-');
+    // replace umlaute
+    $text = preg_replace (['/ä/','/ö/','/ü/','/ß/'] , ['ae','oe','ue','ss'], $text);
+    // replace special symbols
+    $text = preg_replace('~[^\pL\d]+~u', '-', $text);
+    // set lowercase
+    $text = strtolower($text);
+    return $text;
    }
 
 
