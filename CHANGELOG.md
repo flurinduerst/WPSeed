@@ -1,8 +1,10 @@
 # CHANGELOG
 
-## HEAD | 1.3.5 | 21.03.2018
+## HEAD | 1.3.6 | 21.03.2018
 * change default nav to menu
 * cleanup gulpfile, add variables to watch-task
+* create custom css-class for anchors
+* add anchor with custom #ID to elements
 * update dev functions
   * slugify
   * add https to $url and urlcontains

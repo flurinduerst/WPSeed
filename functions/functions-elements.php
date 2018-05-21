@@ -4,7 +4,7 @@
  * WPSeed_Text and WPSeed_Gallery are placeholder presets.
  *
  * @author     Flurin Dürst
- * @version    1.2.2
+ * @version    1.2.3
  * @since      WPSeed 0.10.0
  *
  */
@@ -42,6 +42,7 @@ function WPSeed_Text() {
   ob_start('sanitize_output') ?>
   <section class="text">
     <h2><?php the_sub_field('title') ?></h2>
+    <a class="anchor" id="<?= slugify(get_sub_field('title')) ?>">&nbsp;</a>
     <?php the_sub_field('content') ?>
   </section>
   <?php return ob_get_flush();
@@ -53,6 +54,7 @@ function WPSeed_Gallery() {
   ob_start('sanitize_output') ?>
     <section class="gallery">
       <h2><?php the_sub_field('title') ?></h2>
+      <a class="anchor" id="<?= slugify(get_sub_field('title')) ?>">&nbsp;</a>
       <?php if (have_rows('galleryimg')): ?>
         <ul>
           <?php while (have_rows('galleryimg')) : the_row(); ?>

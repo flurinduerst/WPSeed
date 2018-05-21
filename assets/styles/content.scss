@@ -3,7 +3,7 @@
  * Contains all content related styles
  *
  * @author      Flurin Dürst
- * @version     1.11.0
+ * @version     1.12.0
  * @since       WPSeed 0.1
  *
  */
@@ -34,14 +34,22 @@
   }
 }
 
+// add margin to first div
 .top + div {
   margin-top: 4rem;
 }
 
+// defaut .wow divs
 .wow {
   visibility: hidden;
 }
 
+// preset anchor div to fix .top overlap
+.anchor {
+  display:block;
+  height: 4rem; // = height of .top
+  margin-top: -4rem;  // = height of .top
+}
 
 /* TOP
 /===================================================== */
