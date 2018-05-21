@@ -101,7 +101,6 @@
   add_filter( 'the_content_more_link', 'modify_read_more_link' );
   function modify_read_more_link() {
     return ' <span class="readmore"><a href="' . get_permalink() . '">[mehr...]</a>';
-    // to hide the button use `return;`
   }
 
 ?>

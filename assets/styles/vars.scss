@@ -6,7 +6,7 @@
   * because we define settings here (we might add some though)
   *
   * @author     Flurin Dürst
-  * @version    1.7.1
+  * @version    1.7.2
   * @since      WPSeed 0.1
   *
   */
@@ -59,8 +59,8 @@ $color__green:        #97c475;
 
   // Nav
   $default__color__nav:         $color__grey;
-  $default__color__nav_active:  $color__dark;
   $default__color__nav_hover:   $color__green;
+  $default__color__nav_active:  $color__dark;
   $default__color__nav_spacer:  $color__grey;
 
 
