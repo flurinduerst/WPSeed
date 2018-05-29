@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## HEAD | 1.3.9 | 29.05.2018
+## HEAD | 1.3.10 | 29.05.2018
 * host fonts locally (#GDPR)
 * change default nav to WPmenu
 * add function for smooth anchor scrolling

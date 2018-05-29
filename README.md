@@ -1,6 +1,8 @@
+** UPDATE ME! **
+
 <img src="/assets/images/wpseed.png" width="518"/>
 
-**Version 1.3.9** (29.05.2018)
+**Version 1.3.10** (29.05.2018)
 
 ## What is WPSeed?
 WPSeed is a WordPress starter theme following the intention of being able to skip the time-consuming first steps when creating a new theme.
@@ -65,7 +67,7 @@ WPSeed uses [modernizr](https://modernizr.com/) to automatically detect the avai
 * `assets/styles/general.scss` (re-usable classes and settings)
 * `assets/styles/bundle.scss` (gathers all .scss files for compiling with gulp)
 * `assets/styles/nav.scss` (navigation)
-* `assets/styles/essentials.scss` (required SASS functions and all presets for responsive, **this file is not meant to be changed**)
+* `assets/styles/essentials.scss` (required SASS functions and all presets for responsive)
 * `assets/styles/fonts.scss` (locally hosted fonts)
 * `assets/styles/vars.scss` (manages scaling, all colors, fonts and other presets)
 
