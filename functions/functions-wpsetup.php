@@ -4,7 +4,7 @@
  * menus, theme-support settings, cache-busting integration, a wp_head cleaner and general settings
  *
  * @author      Flurin Dürst
- * @version     1.10.0
+ * @version     1.11.0
  * @since       WPSeed 0.1.6
  *
  */
@@ -60,6 +60,28 @@
     wp_enqueue_style('wpseed/styles', get_template_directory_uri() . wpseed_get_cachebusted_css(), false, null);
   }
   add_action('wp_enqueue_scripts', 'wpseed_enqueue_scripts_and_styles');
+
+
+  /* LOAD OG Tags
+  /------------------------*/
+  // loads all open graph tags » http://ogp.me/
+  // use wpseed_load_ogtags(true) to also display the og:image tag
+  function wpseed_load_ogtags($ogimg = false) {
+    echo '<meta property="og:title" content="'.get_bloginfo('name').'">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="'.get_bloginfo('url').'">
+    <meta property="og:site_name" content="'.get_bloginfo('name').'">
+    <meta property="og:description" content="'.get_bloginfo('description').'">';
+    if ($ogimg) :
+    echo '<meta property="og:image" content="'.get_bloginfo('template_url').'/dist/images/ogimg.jpg">
+    <meta property="og:image:secure_url" content="'.get_bloginfo('template_url').'/dist/images/ogimg.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="400">
+    <meta property="og:image:height" content="300">
+    <meta property="og:image:alt" content="A shiny red apple with a bite taken out">';
+    endif;
+  }
+
 
   /* SETUP WP-MENUS
   /------------------------*/

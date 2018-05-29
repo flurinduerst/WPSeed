@@ -1,7 +1,7 @@
 <?
 /**
  * @author      Flurin Dürst
- * @version     1.5.0
+ * @version     1.6.0
  * @since       WPSeed 0.1
  */
 ?>
@@ -11,13 +11,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, initial-scale=1, user-scalable=no">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-    <!--===== OPEN-GRAPH TAGS =====-->
-    <meta property="og:title" content="<? bloginfo('name'); ?>">
-    <meta property="og:description" content="<? bloginfo('description'); ?>">
-    <meta property="og:url" content="<? bloginfo('url'); ?>">
-    <meta property="og:image" content="<? bloginfo('template_url') ?>/dist/images/ogimg.jpg">
-    <meta property="og:image:width" content="">
-    <meta property="og:image:height" content="">
+    <!--=== OPEN-GRAPH TAGS ===-->
+    <? wpseed_load_ogtags() ?>
     <!--=== FONTS ===-->
     <? wpseed_load_fonts() ?>
     <!--=== WP HEAD ===-->
