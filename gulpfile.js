@@ -15,7 +15,7 @@
  *
  * Author:      Flurin Dürst (https://flurinduerst.ch)
  *
- * Version:     2.2.1
+ * Version:     2.3.0
  *
 */
 
@@ -30,7 +30,8 @@ var assets = {
   css: ['assets/styles/bundle.scss'],
   css_watch: ['assets/styles/*.scss'],
   javascript: ['assets/scripts/*.js'],
-  images: ['assets/images/*.*']
+  images: ['assets/images/*.*'],
+  fonts: ['assets/fonts/*.*']
 }
 
 // vendors are loaded from gulp-vendors.json
@@ -75,6 +76,7 @@ gulp.task('clean:css', function() { return del(['dist/*.css', 'dist/rev-manifest
 gulp.task('clean:cachebust', function() { return del(['dist/style-*.min.css'])});
 gulp.task('clean:javascript', function() { return del(['dist/*.js'])});
 gulp.task('clean:images', function() { return del(['dist/images'])});
+gulp.task('clean:fonts', function() { return del(['dist/fonts'])});
 
 /* BROWSERSYNC
 /------------------------*/
@@ -157,6 +159,16 @@ gulp.task('images', ['clean:images'],  function() {
     // .pipe(browserSync.stream()); // currently bugged (18.12.2017)
 });
 
+/* FONTS
+/------------------------*/
+// from:    assets/fonts/
+// actions: move (no processing at all, just keeping stuff in place)
+// to:      dist/fonts/
+gulp.task('fonts', ['clean:fonts'],  function() {
+  return gulp.src(assets['fonts'])
+  .pipe(gulp.dest('dist/fonts'))
+});
+
 
 /* WATCH
 /------------------------*/
@@ -166,6 +178,7 @@ gulp.task('watch',  ['browsersync'], function() {
   gulp.watch(assets['css_watch'], ['css', 'cachebust']);
   gulp.watch(assets['javascript'], ['javascript']);
   gulp.watch(assets['images'], ['images']);
+  gulp.watch(assets['fonts'], ['fonts']);
   gulp.watch('*.php', browserSync.reload);
   gulp.watch('*.html', browserSync.reload);
 });
@@ -174,4 +187,4 @@ gulp.task('watch',  ['browsersync'], function() {
 /* DEFAULT
 /------------------------*/
 // default gulp tasks executed with `gulp`
-gulp.task('default', ['css', 'cachebust', 'javascript', 'images']);
+gulp.task('default', ['css', 'cachebust', 'javascript', 'images', 'fonts']);

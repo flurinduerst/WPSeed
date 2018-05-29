@@ -1,6 +1,7 @@
 # CHANGELOG
 
-## HEAD | 1.3.7 | 21.03.2018
+## HEAD | 1.3.8 | 29.05.2018
+* host fonts locally (#GDPR)
 * change default nav to WPmenu
 * add function for smooth anchor scrolling
 * cleanup gulpfile, add variables to watch-task

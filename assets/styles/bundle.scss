@@ -4,19 +4,19 @@
  * To add vendors, use gulp-vendors.json
  *
  * @author      Flurin Dürst
- * @version     1.6.0
+ * @version     1.7.0
  * @since       WPSeed 0.1
- * was main.scss until 1.6.0
  *
  */
 
 
 @charset 'UTF-8';
 
-/* VARS/FUNCTIONS
+/* PRESETS
 /===================================================== */
 @import 'vars';
 @import 'essentials';
+@import 'fonts';
 
 /* SITE STYLES
 /===================================================== */

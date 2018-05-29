@@ -1,7 +1,7 @@
 <?
 /**
  * @author      Flurin Dürst
- * @version     1.4
+ * @version     1.5.0
  * @since       WPSeed 0.1
  */
 ?>
@@ -18,11 +18,13 @@
     <meta property="og:image" content="<? bloginfo('template_url') ?>/dist/images/ogimg.jpg">
     <meta property="og:image:width" content="">
     <meta property="og:image:height" content="">
+    <!--=== FONTS ===-->
+    <? wpseed_load_fonts() ?>
+    <!--=== WP HEAD ===-->
     <? wp_head(); ?>
   </head>
 
   <body>
-
       <div class="top">
         <a href="<?= get_bloginfo('url'); ?>">
           <div class="logo"></div>
