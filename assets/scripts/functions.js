@@ -4,16 +4,18 @@
  * @author      Flurin Dürst
  * @version     3.5.0
  * @since       WPSeed 0.12
- * was main.js until 3.4.0
+ * was main.js until 3.4.1
  *
  */
 
 
-/* Functions
-/===================================================== */
+/*==================================================================================
+  Functions
+==================================================================================*/
+
 
 /* Hamburger switch
-/------------------------*/
+/––––––––––––––––––––––––*/
 $(function(){
   $(document).on('click', '#hamburger', function (event) {
     // show overlay
@@ -25,15 +27,17 @@ $(function(){
   });
 });
 
+
 /* WOW
-/------------------------*/
+/––––––––––––––––––––––––*/
 // http://mynameismatthieu.com/WOW/
 $(function(){
   new WOW().init();
 });
 
+
 /* Smooth Anchor Scrolling
-/------------------------*/
+/––––––––––––––––––––––––*/
 // https://css-tricks.com/snippets/jquery/smooth-scrolling/
 // Select all links with hashes
 $('a[href*="#"]')

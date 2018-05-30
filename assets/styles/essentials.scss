@@ -1,81 +1,155 @@
 /**
- * SASS Functions/Mixings/Toolbox
- * Contains general SASS functions aswell all responsive/fluid mixins
- * This file is not meant to be changed
+ * Essentials
+ *
+ * contains
+ * - responsive/fluid mixins
+ * - general SASS functions
+ * - preset-classes and reusable containers
+ *
+ * Normally, you don't have to change anything here.
  *
  * @author      Flurin Dürst
- * @version     1.0.0
+ * @version     1.1.0
  * @since       WPSeed 0.13
  *
  */
 
+/*=======================================================
+Table of Contents:
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+  1.0 Responsive Mixins
+  2.0 General SASS-Functions
+  3.0 Presets, Sanitizing
+=======================================================*/
+
 
 @import 'vars';
 
-/* GENERAL FUNCTIONS
-/===================================================== */
-
-  /* STRIP UNIT
-  /------------------------*/
-  // removes a unit from a variable
-  @function stripunit($number) {
-    @if type-of($number) == 'number' and not unitless($number) {
-      @return $number / ($number * 0 + 1);
-    }
-    @return $number;
-  }
 
 
-/* RESPONSIVE MIXINS
-/===================================================== */
+/*==================================================================================
+  1.0 RESPONSIVE MIXINS
+==================================================================================*/
 // contains styles & mixins for responsive/fluid usage
 
-  /* BY BREAKPOINTS
-  /------------------------*/
-  // breakpoint-width defined in vars.scss
-  @mixin desktop {
-    @media (min-width: #{$desktop_min}) {
-      @content;
-    }
-  }
-  @mixin mobile {
-    @media (max-width: #{$desktop_min - 1px}) {
-      @content;
-    }
-  }
 
-  /* BY PIXELS
-  /------------------------*/
-  // usage example:  { ... }
-  @mixin vpw_min($min) {
-      @media (min-width: #{$min}) { @content; }
+/* BY BREAKPOINTS
+/––––––––––––––––––––––––*/
+// breakpoint-width defined in vars.scss
+@mixin desktop {
+  @media (min-width: #{$breakpoint}) {
+    @content;
   }
-  @mixin vpw_max($max) {
-      @media (max-width: #{$max}) { @content; }
+}
+@mixin mobile {
+  @media (max-width: #{$breakpoint - 1px}) {
+    @content;
   }
-  @mixin vpw($min: 0px, $max: 0px) {
-      @media (min-width: #{$min}) and (max-width: #{$max}) { @content; }
-  }
+}
 
-  /* BY ASPECT RATIO
-  /------------------------*/
-  // usage example: asr_min(16,9) { ... }
-  @mixin asr_min($width: 16, $height: 9) {
-      @media (min-aspect-ratio:  #{$width} / #{$height}) { @content; }
-  }
-  @mixin asr_max($width: 16, $height: 9) {
-      @media (max-aspect-ratio:  #{$width} / #{$height}) { @content; }
-  }
 
-  /* BY CLASS
-  /------------------------*/
-  .mobile {
-    @include desktop {
-      display: none;
-    }
+/* BY PIXELS
+/––––––––––––––––––––––––*/
+// usage example:  { ... }
+@mixin vpw_min($min) {
+    @media (min-width: #{$min}) { @content; }
+}
+@mixin vpw_max($max) {
+    @media (max-width: #{$max}) { @content; }
+}
+@mixin vpw($min: 0px, $max: 0px) {
+    @media (min-width: #{$min}) and (max-width: #{$max}) { @content; }
+}
+
+
+/* BY ASPECT RATIO
+/––––––––––––––––––––––––*/
+// usage example: asr_min(16,9) { ... }
+@mixin asr_min($width: 16, $height: 9) {
+    @media (min-aspect-ratio:  #{$width} / #{$height}) { @content; }
+}
+@mixin asr_max($width: 16, $height: 9) {
+    @media (max-aspect-ratio:  #{$width} / #{$height}) { @content; }
+}
+
+
+/* BY CLASS
+/––––––––––––––––––––––––*/
+.mobile {
+  @include desktop {
+    display: none;
   }
-  .desktop {
-    @include mobile {
-      display: none;
-    }
+}
+.desktop {
+  @include mobile {
+    display: none;
   }
+}
+
+
+
+/*==================================================================================
+  2.0 GENERAL SASS-FUNCTIONS
+==================================================================================*/
+
+
+/* STRIP UNIT
+/––––––––––––––––––––––––*/
+// removes a unit from a variable
+@function stripunit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+  @return $number;
+}
+
+
+
+/*==================================================================================
+  3.0 PRESETS, SANITIZING
+==================================================================================*/
+
+
+/* PRESETS
+/––––––––––––––––––––––––*/
+.noscroll {
+  overflow: hidden;
+}
+
+.dn {
+  display: none !important;
+}
+.db {
+  display: block !important;
+}
+
+.hidden {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+.shown {
+  opacity: 1 !important;
+  pointer-events: all !important;
+}
+
+
+/* ADDITIONAL SANITIZING
+/––––––––––––––––––––––––*/
+:focus {
+  outline: 0;
+}
+
+address {
+  font-style: normal;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  font-size: $body__fontsize;
+  font-family: $html__fontname;
+}
+
+table {
+  border-collapse: collapse;
+}

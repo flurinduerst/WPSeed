@@ -1,6 +1,6 @@
 <?php
 /**
- * Functions to output ACF flexible elements.
+ * functions to output ACF flexible elements
  * WPSeed_Text and WPSeed_Gallery are placeholder presets.
  *
  * @author     Flurin Dürst
@@ -8,6 +8,7 @@
  * @since      WPSeed 0.10.0
  *
  */
+
 
 /* ADD TITLES TO ELEMENT BARS
 /----------------------------*/
@@ -36,8 +37,9 @@ function WPSeed_elements() {
   return ob_get_flush();
 }
 
+
 /* TEXT
-/------------------------*/
+/––––––––––––––––––––––––*/
 function WPSeed_Text() {
   ob_start('sanitize_output') ?>
   <section class="text">
@@ -48,8 +50,9 @@ function WPSeed_Text() {
   <?php return ob_get_flush();
 }
 
+
 /* GALLERY
-/------------------------*/
+/––––––––––––––––––––––––*/
 function WPSeed_Gallery() {
   ob_start('sanitize_output') ?>
     <section class="gallery">

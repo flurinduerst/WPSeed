@@ -1,10 +1,10 @@
 /*
  * Main CSS File
- * Merges all .scss files (in the desired order) before they're processed by gulp
- * To add vendors, use gulp-vendors.json
+ * Merges all .scss files (in the desired order) before they're processed by gulp.
+ * To add vendors, use gulp-vendors.json.
  *
  * @author      Flurin Dürst
- * @version     1.7.0
+ * @version     1.7.1
  * @since       WPSeed 0.1
  *
  */
@@ -12,14 +12,18 @@
 
 @charset 'UTF-8';
 
-/* PRESETS
-/===================================================== */
+
+
+/*==================================================================================
+  PRESETS/ASSETS
+==================================================================================*/
 @import 'vars';
 @import 'essentials';
 @import 'fonts';
 
-/* SITE STYLES
-/===================================================== */
+/*==================================================================================
+  SITE STYLES
+==================================================================================*/
 @import 'general';
 @import 'content';
 @import 'nav';

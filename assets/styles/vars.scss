@@ -1,75 +1,84 @@
  /**
-  * Variables CSS File
-  * Contains re-usable variables like
-  * colors, sizes, breakpoints etc
-  * we don't have to add styles to responsive.css and general.css
-  * because we define settings here (we might add some though)
+  * Variables
+  * Contains re-usable variables like colors, sizes, breakpoints etc.
+  * Normally, you don't have to change anything in essentials.css and general.css
+  * because you'll define the basic-values here.
   *
   * @author     Flurin Dürst
-  * @version    1.7.2
+  * @version    1.8.0
   * @since      WPSeed 0.1
   *
   */
 
 
-/* GENERAL
-/===================================================== */
+/*==================================================================================
+  SCALING
+==================================================================================*/
 
-/* SCALING
-/------------------------*/
-$size:                2vw;          // scales all `rem` based elements
-$size_mobile:         $size * 2.2;  // scaling filter for mobile viewport
-$scaling_breakpoint:  1200px;       // scaling of all `rem` based elements stops here
-$desktop_min:         800px;        // Desktop/Mobile Breakpoint
-
-
-/* FONTS
-/===================================================== */
-$font__Ubuntu: 'Ubuntu', sans-serif; // Normal 400, Medium 500, Bold 700
+$base_size:                   2vw;                // scales all `rem` based elements by adding this value as html font-size
+$breakpoint:                  800px;              // breakpoint between @desktop and @mobile mixins
+$scaling_endpoint:            1200px;             // scaling of all `rem` based elements stops here
+$base_size_mobile:            $base_size * 2.2;   // scaling multiplicator for mobile viewport
 
 
-/* COLORS
-/===================================================== */
-$color__dark:         #333333;
-$color__bright:       #f7f7f2;
-$color__grey:         #b5b5b1;
-$color__green:        #97c475;
+
+/*==================================================================================
+  COLORS
+==================================================================================*/
+
+/* Presets
+/––––––––––––––––––––––––*/
+$color__dark:                 #333333;
+$color__bright:               #f7f7f2;
+$color__grey:                 #b5b5b1;
+$color__green:                #97c475;
 
 
-/* DEFAULTS
-/===================================================== */
-// these variables are applied to html at general.scss
 
-  /* Fonts
-  /------------------------*/
-  $default__font__name:        $font__Ubuntu;
-  $default__font__size:        1rem;
-  $default__font__line_height: 1.3;
-  $default__font__weight:      400;
+/*==================================================================================
+  DEFAULTS
+==================================================================================*/
+// these basic defaults are applied to the 'html', 'body', 'nav' or 'a' tags
 
-  /* Colors
-  /------------------------*/
-  // Text/Links
-  $default__color__text:        $color__dark;
-  $default__color__link:        $color__dark;
-  $default__color__link_hover:  $color__dark;
+/* HTML
+/––––––––––––––––––––––––*/
+$html__fontname:              'Ubuntu', sans-serif; // Normal 400, Medium 500, Bold 700
+$html__bgcolor:                $color__bright;
+$html__textcolor:              $color__dark;
 
-  // Background
-  $default__color__bgcolor:     $color__bright;
+/* BODY
+/––––––––––––––––––––––––*/
+$body__fontsize:              1rem;
+$body__fontweight:            400;
+$body__lineheight:            1.3;
 
-  // Nav
-  $default__color__nav:         $color__grey;
-  $default__color__nav_hover:   $color__green;
-  $default__color__nav_active:  $color__dark;
-  $default__color__nav_spacer:  $color__grey;
+/* NAV
+/––––––––––––––––––––––––*/
+$nav__linkcolor:              $color__grey;
+$nav__hovercolor:             $color__green;
+$nav__activecolor:            $color__dark;
+$nav__spacercolor:            $color__grey;
+
+/* ANCHORS
+/––––––––––––––––––––––––*/
+$a__linkcolor:                $color__dark;
+$a__hovercolor:               $color__dark;
+$a__textdecoration:           'none';
 
 
-/* TRANSITIONS
-/===================================================== */
-$transition_fast:    .3s;
-$transition_slow:    .7s;
 
-/* SHADOWS
-/===================================================== */
-$shadow:        0 2px 5px 0 rgba(0, 0, 0, 0.16),    0 2px 10px 0 rgba(0, 0, 0, .12);
-$shadow__soft:  0 1px 2px 0 rgba(0, 0, 0, 0.08),    0 1px 5px 0 rgba(0, 0, 0, 0.06);
+/*==================================================================================
+  TRANSITIONS
+==================================================================================*/
+
+$transition_fast:            .3s;
+$transition_slow:            .7s;
+
+
+
+/*==================================================================================
+  SHADOWS
+==================================================================================*/
+
+$shadow:                      0 2px 5px 0 rgba(0, 0, 0, 0.16),    0 2px 10px 0 rgba(0, 0, 0, .12);
+$shadow__soft:                0 1px 2px 0 rgba(0, 0, 0, 0.08),    0 1px 5px 0 rgba(0, 0, 0, 0.06);

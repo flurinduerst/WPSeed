@@ -1,6 +1,11 @@
 # CHANGELOG
 
-## HEAD | 1.3.10 | 29.05.2018
+## HEAD | 1.3.11 | 30.05.2018
+* cleanup/restructure
+  * vars.scss
+  * basic CSS
+  * functions
+* cleanup comments and extend documentation
 * host fonts locally (#GDPR)
 * change default nav to WPmenu
 * add function for smooth anchor scrolling

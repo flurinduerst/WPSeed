@@ -15,7 +15,7 @@
  *
  * Author:      Flurin Dürst (https://flurinduerst.ch)
  *
- * Version:     2.3.0
+ * Version:     2.3.1
  *
 */
 
@@ -69,7 +69,7 @@ var del = require('del');
 /===================================================== */
 
 /* CLEAN
-/------------------------*/
+/––––––––––––––––––––––––*/
 // delete compiled files/folders (before running the build)
 // css
 gulp.task('clean:css', function() { return del(['dist/*.css', 'dist/rev-manifest.json'])});
@@ -79,7 +79,7 @@ gulp.task('clean:images', function() { return del(['dist/images'])});
 gulp.task('clean:fonts', function() { return del(['dist/fonts'])});
 
 /* BROWSERSYNC
-/------------------------*/
+/––––––––––––––––––––––––*/
 // initialize Browser Sync
 gulp.task('browsersync', function() {
   browserSync.init({
@@ -95,7 +95,7 @@ gulp.task('browsersync', function() {
 
 
 /* CSS
-/------------------------*/
+/––––––––––––––––––––––––*/
 // from:    assets/styles/main.css
 // actions: compile, minify, prefix, rename
 // to:      dist/style.min.css
@@ -113,7 +113,7 @@ gulp.task('css', ['clean:css'], function() {
 
 
 /* CSS CACHE BUSTING
-/------------------------*/
+/––––––––––––––––––––––––*/
 // from:    dist/style.min.css
 // actions: create busted version of file
 // to:      dist/style-[hash].min.css
@@ -127,7 +127,7 @@ gulp.task('cachebust', ['clean:cachebust', 'css'], function() {
 
 
 /* JAVASCRIPT
-/------------------------*/
+/––––––––––––––––––––––––*/
 // from:    assets/scripts/
 // actions: concatinate, minify, rename
 // to:      dist/script.min.css
@@ -148,7 +148,7 @@ gulp.task('javascript', ['clean:javascript'], function() {
 
 
 /* IMAGES
-/------------------------*/
+/––––––––––––––––––––––––*/
 // from:    assets/images/
 // actions: minify
 // to:      dist/images
@@ -160,7 +160,7 @@ gulp.task('images', ['clean:images'],  function() {
 });
 
 /* FONTS
-/------------------------*/
+/––––––––––––––––––––––––*/
 // from:    assets/fonts/
 // actions: move (no processing at all, just keeping stuff in place)
 // to:      dist/fonts/
@@ -171,7 +171,7 @@ gulp.task('fonts', ['clean:fonts'],  function() {
 
 
 /* WATCH
-/------------------------*/
+/––––––––––––––––––––––––*/
 // watch for modifications in
 // styles, scripts, images, php files, html files
 gulp.task('watch',  ['browsersync'], function() {
@@ -185,6 +185,6 @@ gulp.task('watch',  ['browsersync'], function() {
 
 
 /* DEFAULT
-/------------------------*/
+/––––––––––––––––––––––––*/
 // default gulp tasks executed with `gulp`
 gulp.task('default', ['css', 'cachebust', 'javascript', 'images', 'fonts']);

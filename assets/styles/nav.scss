@@ -1,9 +1,9 @@
 /**
  * Nav CSS File
- * Contains all navigation related styles
+ * Contains all navigation related styles.
  *
  * @author      Flurin Dürst
- * @version     1.8.0
+ * @version     1.9.0
  * @since       WPSeed 0.1
  *
  */
@@ -11,8 +11,11 @@
 
 @import 'vars';
 
-/* NAV
-/===================================================== */
+
+
+/*==================================================================================
+  NAV
+==================================================================================*/
 
 nav {
   z-index: 210;
@@ -26,10 +29,10 @@ nav {
     display: inline-block;
     list-style-type: none;
     a {
-      color: $default__color__nav;
+      color: $nav__linkcolor;
     }
     a:hover {
-      color: $default__color__nav_hover;
+      color: $nav__hovercolor;
     }
     &.current_page_item,
     &.current_page_parent,
@@ -37,18 +40,22 @@ nav {
     &.current_page_item a,
     &.current_page_parent a,
     &.current-page-ancestor a {
-      color: $default__color__nav-active;
+      color: $nav__activecolor;
     }
     + li:before{
       padding: 0 .8rem;
-      color: $default__color__nav_spacer;
+      color: $nav__spacercolor;
       content: ' | ';
     }
   }
 }
 
-/* MOBILE NAV
-/===================================================== */
+
+
+/*==================================================================================
+  MOBILE NAV
+==================================================================================*/
+
 @include desktop {
   #hamburger {
     display: none;

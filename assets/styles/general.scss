@@ -1,12 +1,12 @@
 /**
  * General CSS File
- * Contains re-usable classes and settings
+ * Contains defaults and presets of general elements.
  *
  * The Idea is to keep editing in this file to a
  * minimum while using vars.scss for very basic styling.
  *
  * @author      Flurin Dürst
- * @version     1.10.0
+ * @version     1.11.0
  * @since       WPSeed 0.1
  *
  */
@@ -14,8 +14,11 @@
 
 @import 'vars';
 
-/* GENERAL
-/------------------------*/
+
+
+/*==================================================================================
+  GENERAL
+==================================================================================*/
 *,
 *::before,
 *::after {
@@ -34,16 +37,16 @@ html {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
-  font-family: $default__font__name;
-  font-size: $size;
-  @include vpw_min($scaling_breakpoint) {
-    font-size: $scaling_breakpoint / 100 * stripunit($size);
+  font-family: $html__fontname;
+  font-size: $base_size;
+  @include vpw_min($scaling_endpoint) {
+    font-size: $scaling_endpoint / 100 * stripunit($base_size);
   }
   @include mobile {
-    font-size: $size_mobile;
+    font-size: $base_size_mobile;
   }
-  color: $default__color__text;
-  background-color: $default__color__bgcolor;
+  color: $html__textcolor;
+  background-color: $html__bgcolor;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -54,86 +57,34 @@ body  {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  font-size: $default__font__size;
-  font-weight: $default__font__weight;
-  line-height: $default__font__line_height;
+  font-size: $body__fontsize; // actual font size
+  font-weight: $body__fontweight;
+  line-height: $body__lineheight;
 }
 
 a {
-  color: $default__color__link;
-  text-decoration: none;
-  transition: .3s;
+  color: $a__linkcolor;
+  text-decoration: $a__textdecoration;
+  transition: $transition_fast;
   &:hover {
-    color: $default__color__link_hover;
+    color: $a__hovercolor;
   }
 }
 
-/* ADDITIONAL SANITIZING
-/------------------------*/
-:focus {
-  outline: 0;
-}
-
-address {
-  font-style: normal;
-}
-
-button {
-  border: none;
-  background-color: transparent;
-  font-size: $default__font__size;
-  font-family: $default__font__name;
-}
-
-table {
-  border-collapse: collapse;
-}
-
-/* CUSTOM CLASSES
-/------------------------*/
-.noscroll {
-  overflow: hidden;
-}
-
-.dn {
-  display: none !important;
-}
-.db {
-  display: block !important;
-}
-
-.hidden {
-  opacity: 0 !important;
-  pointer-events: none !important;
-}
-.shown {
-  opacity: 1 !important;
-  pointer-events: all !important;
-}
 
 
-/* DEBUGGING
-/------------------------*/
-// used in debug() and dd() @ functions-dev.php
+/*==================================================================================
+  PRESETS
+==================================================================================*/
 
-pre {
-  margin: .1rem;
-  padding: .3rem;
-  font-family: 'Menlo', 'Consolas', 'DejaVu Sans Mono', monospace;
-  font-size: .5rem;
-  color: #abb2c0;
-  border-radius: 5px;
-  background-color: #282c34;
-  &.green {
-    color: #97c475;
-  }
-  &.blue {
-    color: #51b6c3;
-  }
-  &.orange {
-    color: #cc9b62;
-  }
-  &.red {
-    color: #e26b73;
-  }
+// defaut wowjs div
+.wow {
+  visibility: hidden;
+}
+
+// anchor div to fix .top overlap when navigation through 'domain.tld/#anchor'
+.anchor {
+  display:block;
+  height: 4rem; // = height of .top
+  margin-top: -4rem;  // = height of .top
 }
