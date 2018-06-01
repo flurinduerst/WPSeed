@@ -1,3 +1,4 @@
+/* Note to myself: add Index like https://github.com/johnpitchko/johnpitchko-wp-theme/blob/master/style.css */
 /**
  * Content CSS File
  * Contains all content related styles.
@@ -27,30 +28,27 @@
   1.0 GENERAL
 ==================================================================================*/
 
-.content {
+/* THE SHINY NEW WPSEED 2.0 STRUCTURE
+main:              contains everything but navigation, footer, side-elements
+section:           servers as a structural container and/or fullwidth-background
+.element/article:  contains the content, positioned by default with width, max-width and center-margin
+*/
+
+main {
   position: relative;
-  width: 80vw;
-  padding-top: 2rem;
-  @include mobile {
-    width: 100%;
-    padding: 1rem;
-  }
-  section img,
-  article img {
-    float: left;
-    width: 50%;
-    padding: 0 1rem 1rem 0;
-    @include mobile {
-      float: none;
-      width: 100%;
-      padding: -1rem;
+  width: 100vw;
+  margin-top: $top_height;
+  section {
+    article, .element {
+      width: $element_width;
+      max-width: $element_maxwidth;
+      margin: 0 auto;
+      padding: 1rem;
+      @include mobile {
+        width: 100vw;
+      }
     }
   }
-}
-
-// add margin to first div
-.top + div {
-  margin-top: 4rem;
 }
 
 
@@ -69,7 +67,7 @@
   justify-content: flex-start;
   align-items: center;
   width: 100vw;
-  height: 4rem;
+  height: $top_height;
   padding: 0 10%;
   background-color: $color__bright;
   box-shadow: $shadow;
@@ -108,82 +106,113 @@ p {
 
 
 
-/* TEMPLATE - HOME
-/------------------------*/
-.teaser {
-  width: 100%;
-  height: 25rem;
-  background-position: center;
-  background-size: cover;
 /*==================================================================================
   4.0 PAGES
 ==================================================================================*/
-}
 
-
-/* TEMPLATE - BLOG
+/* PAGE
 /––––––––––––––––––––––––*/
-.blog {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  article {
-    flex-basis: calc(90% / 2);
-    margin-bottom: 1rem;
-    @include mobile {
-      flex-basis: 100%;
-    }
-    .readmore a {
-      color: $default__color__link;
-      &:hover {
-        opacity: .5;
+//=> templates/wp-page.php
+main#page {
+  section {
+    .element.teaser {
+      max-width: 100vw;
+      width: 100vw;
+      height: 25rem;
+      padding: 0;
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
       }
     }
   }
 }
 
-.blog,
-.post {
-  .postinfo {
-    margin: 0 0 1rem 0;
-    color: $color__grey;
-  }
 
-  .thumbnail {
-    width: 100%;
-    height: 15rem;
-    margin-bottom: .5rem;
-    background-size: cover;
+/* BLOG & POST
+/––––––––––––––––––––––––*/
+//=> templates/wp-home.php
+//=> templates/wp-single.php
+main#blog {
+  section {
+    article {
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 8rem;
+      }
+    }
+  }
+}
+
+main#post {
+  section {
+    article {
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 20rem;
+      }
+    }
   }
 }
 
 
 /* TEMPLATE - SUBSITES
 /––––––––––––––––––––––––*/
-.subsites {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+//=> templates/subsites.php
+
+main#subsites {
   section {
-    flex-basis: calc(90% / 3);
-    margin-bottom: 1rem;
-    @include vpw_min(1600px) {
-      flex-basis: calc(90% / 4);
+      .element.sites {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .site {
+          flex-basis: calc((100% / 3) - 1rem);
+          margin-bottom: 1rem;
+          @include mobile {
+            flex-basis: 100%;
+          }
+          img {
+            object-fit: cover;
+            width: 100%;
+            height: 5rem;
+          }
+        }
+      }
     }
-    @include vpw_max(1000px) {
-      flex-basis: calc(90% / 2);
+}
+
+
+/* BLOCK - ARTICLE
+/––––––––––––––––––––––––*/
+//=> templates/temp-bocks-article.php
+
+main#blocks {
+  section {
+      article {
+        display: flex;
+        flex-direction: row;
+        img {
+          object-fit: cover;
+          width: 30%;
+          height: 10rem;
+          margin: 0 1rem 0 0;
+        }
+      }
+      @include mobile {
+        article {
+          flex-direction: column;
+          img {
+            width: 100%;
+            margin: 0 0 1rem 0;
+          }
+        }
+      }
     }
-    @include mobile {
-      flex-basis: 100%;
-    }
-    .thumbnail {
-      width: 100%;
-      height: 15rem;
-      background-size: cover;
-    }
-  }
 }
 
 

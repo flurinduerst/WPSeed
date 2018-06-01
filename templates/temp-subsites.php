@@ -3,7 +3,7 @@
  * Template for Sites with Sub-Sites.
  *
  * @author      Flurin Dürst
- * @version     1.4.1
+ * @version     1.5.0
  * @since       WPSeed 0.2
  *
  */
@@ -12,15 +12,15 @@
 
 <? get_header(); ?>
 
-<!-- content » subsites -->
-
-  <div class="content subsites">
+  <main id="subsites">
 
     <? if (have_posts() ) : while (have_posts()) : the_post(); ?>
-      <div class="summary">
-        <h1><? the_title(); ?></h1>
-        <p><? the_content(); ?><p>
-      </div>
+      <section>
+        <div class="element overview">
+          <h1><? the_title(); ?></h1>
+          <p><? the_content(); ?><p>
+        </div>
+      </section>
     <? endwhile; endif; ?>
 
     <? // Child Pages
@@ -32,20 +32,21 @@
       'orderby'        => 'menu_order'
      ];
     $query = new WP_Query( $args );
+
     if ( $query->have_posts() ) : ?>
-      <? while ( $query->have_posts() ) : $query->the_post(); ?>
-
-        <article>
-          <h2><? the_title(); ?></h2>
-          <? if (has_post_thumbnail()) : ?>
-            <div class="thumbnail" style="background-image: url(<? the_post_thumbnail_url() ?>)"></div>
-          <? endif ?>
-          <p><? the_content(); ?></p>
-        </article>
-
-      <? endwhile; ?>
+      <section>
+        <div class="element sites">
+          <? while ( $query->have_posts() ) : $query->the_post(); ?>
+            <div class="site">
+              <h2><? the_title(); ?></h2>
+              <? the_post_thumbnail('large', ['class' => 'mdrnz-of']); ?>
+              <p><? the_content(); ?></p>
+            </div>
+          <? endwhile; ?>
+        </div>
+      </section>
     <? endif; wp_reset_query(); ?>
 
-  </div>
+  </main>
 
 <? get_footer(); ?>
