@@ -35,6 +35,6 @@
 /===================================================== */
   // Elements for ACF Flexible Content
   // » https://www.advancedcustomfields.com/resources/flexible-content/
-  require('functions/functions-elements.php');
+  require('functions/functions-blocks.php');
 
 ?>
