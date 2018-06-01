@@ -55,7 +55,7 @@ function wpseed_load_fonts() {
     'woff2'
   ];
   // define font folder
-  $font_folder = '/fonts/';
+  $font_folder = '/dist/fonts/';
   // loop through fonts
   foreach($font_names as $font_name) {
     // loop through font-formats

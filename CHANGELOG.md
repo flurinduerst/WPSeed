@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## HEAD | 1.3.11 | 30.05.2018
+## HEAD | 1.3.12 | 01.06.2018
 * cleanup/restructure
   * vars.scss
   * basic CSS
@@ -17,6 +17,7 @@
   * add https to $url and urlcontains
 * cleanup elements
 * cleanup css
+* bugfixes
 
 ## 1.3.0 | 05.03.2018 | «Vendorizr»
 * add `gulp-vendors.json` for compiling/bundling of vendor-requirements
