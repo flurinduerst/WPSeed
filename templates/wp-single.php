@@ -3,7 +3,7 @@
  * The template for displaying all single posts and attachments
  *
  * @author      Flurin Dürst
- * @version     1.3.0
+ * @version     1.3.1
  * @since       WPegg 0.18
  */
 ?>
@@ -17,7 +17,7 @@
       <article>
         <h2><? the_title(); ?></h2>
         <div class="postinfo"><?= get_the_date_german(); ?></div>
-        <? the_post_thumbnail('large', ['class' => 'mdrnz-of']); ?>
+        <? the_post_thumbnail('large', ['class' => 'modernizr-of']); ?>
         <? the_content(); ?>
       </article>
     <? endwhile; endif; ?>

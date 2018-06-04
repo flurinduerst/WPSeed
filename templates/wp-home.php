@@ -3,7 +3,7 @@
  * The template displaying the posts-overview
  *
  * @author      Flurin Dürst
- * @version     1.5.0
+ * @version     1.5.1
  * @since       WPSeed 0.18
  */
 
@@ -18,7 +18,7 @@
         <article>
           <h2><? the_title(); ?></h2>
           <div class="postinfo"><?= get_the_date_german(); ?></div>
-          <? the_post_thumbnail('large', ['class' => 'mdrnz-of']); ?>
+          <? the_post_thumbnail('large', ['class' => 'modernizr-of']); ?>
           <? the_content(); ?>
         </article>
       <? endwhile; endif; ?>

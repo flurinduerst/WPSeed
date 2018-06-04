@@ -4,7 +4,7 @@
  * Contains all content related styles.
  *
  * @author      Flurin Dürst
- * @version     1.13.0
+ * @version     1.14.0
  * @since       WPSeed 0.1
  *
  */
@@ -106,6 +106,7 @@ p {
 
 
 
+
 /*==================================================================================
   4.0 PAGES
 ==================================================================================*/
@@ -120,8 +121,9 @@ main#page {
       width: 100vw;
       height: 25rem;
       padding: 0;
-      img {
+      img, .modernizr-of {
         object-fit: cover;
+        background-size: cover; // modernizr
         width: 100%;
         height: 100%;
       }
@@ -137,8 +139,9 @@ main#page {
 main#blog {
   section {
     article {
-      img {
+      img, .modernizr-of {
         object-fit: cover;
+        background-size: cover; // modernizr
         width: 100%;
         height: 8rem;
       }
@@ -149,8 +152,9 @@ main#blog {
 main#post {
   section {
     article {
-      img {
+      img, .modernizr-of {
         object-fit: cover;
+        background-size: cover; // modernizr
         width: 100%;
         height: 20rem;
       }
@@ -176,8 +180,9 @@ main#subsites {
           @include mobile {
             flex-basis: 100%;
           }
-          img {
+          img, .modernizr-of {
             object-fit: cover;
+            background-size: cover; // modernizr
             width: 100%;
             height: 5rem;
           }
@@ -196,12 +201,13 @@ main#blocks {
       article {
         display: flex;
         flex-direction: row;
-        img {
+        img, .modernizr-of {
           object-fit: cover;
+          background-size: cover; // modernizr
           width: 30%;
           height: 10rem;
           margin: 0 1rem 0 0;
-        }
+          }
       }
       @include mobile {
         article {

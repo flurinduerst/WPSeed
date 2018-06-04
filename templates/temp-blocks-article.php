@@ -5,7 +5,7 @@
  * it get's included through 'functions-blocks.php' which is triggered by 'temp-blocks.php'.
  *
  * @author      Flurin Dürst
- * @version     1.0.0
+ * @version     1.0.1
  * @since       WPSeed 2.0
  *
  */
@@ -18,7 +18,7 @@
     <?php
     $image = get_sub_field('image')['ID'];
     if ($image) :
-      echo wp_get_attachment_image( $image, 'large', ['class' => 'mdrnz-of']);
+      echo wp_get_attachment_image( $image, 'large', "", ['class' => 'modernizr-of']);
     endif;
     ?>
 

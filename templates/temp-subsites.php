@@ -3,7 +3,7 @@
  * Template for Sites with Sub-Sites.
  *
  * @author      Flurin Dürst
- * @version     1.5.0
+ * @version     1.5.1
  * @since       WPSeed 0.2
  *
  */
@@ -39,7 +39,7 @@
           <? while ( $query->have_posts() ) : $query->the_post(); ?>
             <div class="site">
               <h2><? the_title(); ?></h2>
-              <? the_post_thumbnail('large', ['class' => 'mdrnz-of']); ?>
+              <? the_post_thumbnail('large', ['class' => 'modernizr-of']); ?>
               <p><? the_content(); ?></p>
             </div>
           <? endwhile; ?>

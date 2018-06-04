@@ -2,7 +2,7 @@
  * All sorts javascript/jQuery functions
  *
  * @author      Flurin Dürst
- * @version     3.5.0
+ * @version     3.6.0
  * @since       WPSeed 0.12
  * was main.js until 3.4.1
  *
@@ -33,6 +33,25 @@ $(function(){
 // http://mynameismatthieu.com/WOW/
 $(function(){
   new WOW().init();
+});
+
+
+/* Modernizr Fix: 'object-fit'
+/––––––––––––––––––––––––––––––––*/
+// displays images with the object-fit attribute as background-images for older browsers
+$(function(){
+  if ( ! Modernizr.objectfit ) {
+    $('img.mdrnz-of').each(function () {
+      // Check if image has attribute 'object-fit'
+      var $img = $(this);
+      imgUrl = $img.prop('src');
+      classes = $img.attr("class");
+      if (imgUrl) {
+        // Replace img with a div containing the image as background-image and get background-image value from object-fit
+        $img.replaceWith('<div class="' + classes + '" style="background-image:url(' + imgUrl + ')');
+      }
+    });
+  }
 });
 
 

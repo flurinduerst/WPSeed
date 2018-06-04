@@ -1,7 +1,7 @@
 <?
 /**
  * @author      Flurin Dürst
- * @version     1.3.0
+ * @version     1.3.1
  * @since       WPSeed 0.1
  */
 ?>
@@ -12,7 +12,7 @@
 
   <section>
     <div class="element teaser">
-      <? the_post_thumbnail('large', ['class' => 'mdrnz-of']); ?>
+      <? the_post_thumbnail('large', ['class' => 'modernizr-of']); ?>
     </div>
   </section>
 
