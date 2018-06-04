@@ -5,7 +5,7 @@
   * because you'll define the basic-values here.
   *
   * @author     Flurin Dürst
-  * @version    1.8.0
+  * @version    1.9.0
   * @since      WPSeed 0.1
   *
   */
@@ -20,7 +20,9 @@ $breakpoint:                  800px;              // breakpoint between @desktop
 $scaling_endpoint:            1200px;             // scaling of all `rem` based elements stops here
 $base_size_mobile:            $base_size * 2.2;   // scaling multiplicator for mobile viewport
 
-
+$top_height:                  4rem;               // define the height of the .top div
+$element_width:               90vw;               // default width of the .element content-div
+$element_maxwidth:            1200px;             // max-width of the .element content-div (normally around = $scaling_endpoint)
 
 /*==================================================================================
   COLORS

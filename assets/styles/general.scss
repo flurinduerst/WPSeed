@@ -6,7 +6,7 @@
  * minimum while using vars.scss for very basic styling.
  *
  * @author      Flurin Dürst
- * @version     1.11.0
+ * @version     1.12.0
  * @since       WPSeed 0.1
  *
  */
@@ -85,6 +85,6 @@ a {
 // anchor div to fix .top overlap when navigation through 'domain.tld/#anchor'
 .anchor {
   display:block;
-  height: 4rem; // = height of .top
-  margin-top: -4rem;  // = height of .top
+  height: $top_height;
+  margin-top: -$top_height;  // negative top_height
 }
