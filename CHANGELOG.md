@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## BETA 2.0.0 | RC 1 | 04.06.2018
+* additional documentation (modernizr)
+* rename elements (ACF Flexible Elements) to blocks (=> WPSeed_blocks)
+* restructure basic template-structure (main > section > div/article)
+* add preset-variabales for .top and .element
+* change background-images to img with object fit
+* add object-fit preset for modernizr
+
 ## HEAD | 1.3.12 | 01.06.2018
 * cleanup/restructure
   * vars.scss
