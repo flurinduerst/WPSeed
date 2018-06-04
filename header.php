@@ -1,7 +1,7 @@
 <?
 /**
  * @author      Flurin Dürst
- * @version     1.6.0
+ * @version     1.6.1
  * @since       WPSeed 0.1
  */
 ?>
@@ -20,15 +20,14 @@
   </head>
 
   <body>
+
+      <!-- TOP -->
       <div class="top">
         <a href="<?= get_bloginfo('url'); ?>">
           <div class="logo"></div>
         </a>
-        <button class="hamburger--squeeze" id="hamburger" type="button">
-          <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-          </span>
-        </button>
+
+        <!-- DESKTOP NAV -->
         <nav id="nav_main" class="hiddenmobile">
           <?
             wp_nav_menu([
@@ -40,5 +39,12 @@
             ]);
           ?>
         </nav>
+
+        <!-- MOBILE NAV (BURGER) -->
+        <button class="hamburger--squeeze" id="hamburger" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
 
       </div>
