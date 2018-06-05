@@ -38,7 +38,7 @@ html {
   margin: 0;
   padding: 0;
   font-family: $html__fontname;
-  font-size: $base_size;
+  font-size: $base_size; // only used for rem-handling, the actual font-size is $body__fontsize
   @include vpw_min($scaling_endpoint) {
     font-size: $scaling_endpoint / 100 * stripunit($base_size);
   }
@@ -57,9 +57,12 @@ body  {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  font-size: $body__fontsize; // actual font size
+  font-size: $body__fontsize;
   font-weight: $body__fontweight;
   line-height: $body__lineheight;
+  @include mobile {
+    font-size: $body__fontsize_mobile;
+  }
 }
 
 a {
