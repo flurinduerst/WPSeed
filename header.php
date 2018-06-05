@@ -1,7 +1,7 @@
 <?
 /**
  * @author      Flurin Dürst
- * @version     1.6.1
+ * @version     1.6.2
  * @since       WPSeed 0.1
  */
 ?>
