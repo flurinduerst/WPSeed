@@ -3,7 +3,7 @@
  * WordPress-setup including settings, wp-setup, theme support, cleanups
  *
  * @author      Flurin Dürst
- * @version     1.12.0
+ * @version     1.13.0
  * @since       WPSeed 0.1.6
  *
  */
@@ -40,9 +40,9 @@ setlocale(LC_ALL, 'de_CH.UTF-8');
 
 /* 1.2 PRELOAD FONTS
 /––––––––––––––––––––––––*/
-// (pre-)loads all fonts into the page header
+// preloads all fonts into the page header
 // add your desired fonts and font-types into $font_names and $font_formats
-function wpseed_load_fonts() {
+function wpseed_preload_fonts() {
   // define fonts
   $font_names = [
     'ubuntu-v11-latin-regular',
@@ -128,13 +128,15 @@ add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10, 3);
 function wpseed_enqueue_scripts_and_styles() {
   // jQuery (from wp core)
   wp_deregister_script( 'jquery' );
-  wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js', false, '2.1.4');
+  wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', false, '3.3.1');
   wp_enqueue_script( 'jquery' );
   // scripts
   wp_register_script('wpseed/scripts', get_template_directory_uri() . '/dist/script.min.js', false, array( 'jquery' ), true);
   wp_enqueue_script('wpseed/scripts');
   // styles
   wp_enqueue_style('wpseed/styles', get_template_directory_uri() . wpseed_get_cachebusted_css(), false, null);
+  // fonts
+  // wp_enqueue_style('typekit/styles', 'https://use.typekit.net/kitIDhere.css', false, null);
 }
 add_action('wp_enqueue_scripts', 'wpseed_enqueue_scripts_and_styles');
 
