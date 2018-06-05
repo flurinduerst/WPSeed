@@ -5,7 +5,7 @@
   * because you'll define the basic-values here.
   *
   * @author     Flurin Dürst
-  * @version    1.10.0
+  * @version    1.11.0
   * @since      WPSeed 0.1
   *
   */
@@ -30,10 +30,11 @@ $element_maxwidth:            1200px;             // max-width of the .element c
 
 /* Presets
 /––––––––––––––––––––––––*/
+$color_main:                  #97c475;
+$color_sub:                   #68c4a4;
 $color__dark:                 #333333;
 $color__bright:               #f7f7f2;
 $color__grey:                 #b5b5b1;
-$color__green:                #97c475;
 
 
 
@@ -58,7 +59,7 @@ $body__lineheight:            1.3;
 /* NAV
 /––––––––––––––––––––––––*/
 $nav__linkcolor:              $color__grey;
-$nav__hovercolor:             $color__green;
+$nav__hovercolor:             $color_main;
 $nav__activecolor:            $color__dark;
 $nav__spacercolor:            $color__grey;
 
