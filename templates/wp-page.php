@@ -1,7 +1,7 @@
 <?
 /**
  * @author      Flurin Dürst
- * @version     1.3.2
+ * @version     1.3.3
  * @since       WPSeed 0.1
  */
 ?>
@@ -10,7 +10,7 @@
 
 <main id="page">
 
-  <? if (the_post_thumbnail()) : ?>
+  <? if (has_post_thumbnail()) : ?>
     <section>
       <div class="element teaser">
         <? the_post_thumbnail('large', ['class' => 'modernizr-of']); ?>
