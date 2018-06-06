@@ -5,7 +5,7 @@
  * it get's included through 'functions-blocks.php' which is triggered by 'temp-blocks.php'.
  *
  * @author      Flurin Dürst
- * @version     1.0.1
+ * @version     1.0.2
  * @since       WPSeed 2.0
  *
  */
@@ -24,7 +24,7 @@
 
     <div class="text">
       <h2><? the_title(); ?></h2>
-      <a class="anchor" id="<? slugify(get_sub_field('title')) ?>">&nbsp;</a>
+      <a class="anchor" id="<?= slugify(get_sub_field('title')) ?>">&nbsp;</a>
       <?php the_sub_field('content') ?>
     </div>
 
