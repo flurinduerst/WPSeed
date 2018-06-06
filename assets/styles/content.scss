@@ -4,7 +4,7 @@
  * Contains all content related styles.
  *
  * @author      Flurin Dürst
- * @version     1.14.0
+ * @version     1.15.0
  * @since       WPSeed 0.1
  *
  */
@@ -13,7 +13,7 @@
  Table of Contents:
  –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
   1.0 General
-  2.0 Top
+  2.0 Header
   3.0 Headings & Paragraphs
   4.0 Pages
   5.0 Footer
@@ -29,58 +29,60 @@
 ==================================================================================*/
 
 /* THE SHINY NEW WPSEED 2.0 STRUCTURE
+header:
+  nav:
 main:              contains everything but navigation, footer, side-elements
-section:           servers as a structural container and/or fullwidth-background
-.element/article:  contains the content, positioned by default with width, max-width and center-margin
+  section:           servers as a structural container and/or fullwidth-background
+    .element/article:  contains the content, positioned by default with width, max-width and center-margin
+footer:
 */
 
 main {
   position: relative;
   width: 100vw;
-  margin-top: $top_height;
-  section {
-    article, .element {
-      width: $element_width;
-      max-width: $element_maxwidth;
-      margin: 0 auto;
-      padding: 1rem;
-      @include mobile {
-        width: 100vw;
-      }
-    }
+  margin-top: $header_height;
+  article, .element {
+    padding: 1rem 0;
   }
 }
 
 
+article, .element, nav, footer .inner {
+  width: $element_width;
+  max-width: $element_maxwidth;
+  margin: 0 auto;
+  @include mobile {
+    width: $element_width_mobile;
+  }
+}
 
 /*==================================================================================
-  2.0 TOP
+  2.0 HEADER
 ==================================================================================*/
 
-.top {
+header {
   position: fixed;
   top: 0;
   left: 0;
   z-index: 200;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100vw;
-  height: $top_height;
-  padding: 0 10%;
+  height: $header_height;
   background-color: $color__bright;
-  box-shadow: $shadow;
-  @include mobile {
-    padding: 0 1rem;
-  }
-  .logo {
-    width: 3rem;
-    height: 3rem;
-    margin-right: 2rem;
-    background-image: url('images/logo.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
+  width: 100vw;
+  border-bottom: 2px solid $color__main;
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    .logo {
+      width: 3rem;
+      height: 3rem;
+      margin-right: 2rem;
+      background-image: url('images/logo.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
   }
 }
 
@@ -103,7 +105,6 @@ h2 {
 p {
   margin: 0 0 .5rem 0;
 }
-
 
 
 
@@ -231,9 +232,10 @@ main#blocks {
 .footer {
   width: 100vw;
   margin-top: auto;
-  padding: 1.5rem;
-  font-size: .8rem;
   color: $color__grey;
-  background: $color__bright;
-  box-shadow: $shadow;
+  background: $color__dark;
+  .inner {
+    padding: 1.5rem 0;
+    font-size: .8rem;
+  }
 }

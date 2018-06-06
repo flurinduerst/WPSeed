@@ -1,7 +1,7 @@
 <?
 /**
  * @author      Flurin Dürst
- * @version     1.6.2
+ * @version     1.7.0
  * @since       WPSeed 0.1
  */
 ?>
@@ -21,30 +21,34 @@
 
   <body>
 
-      <!-- TOP -->
-      <div class="top">
-        <a href="<?= get_bloginfo('url'); ?>">
-          <div class="logo"></div>
-        </a>
+      <header>
 
-        <!-- DESKTOP NAV -->
-        <nav id="nav_main" class="hiddenmobile">
-          <?
-            wp_nav_menu([
-              'menu_class'=> false,
-              'menu_id' => false,
-              'container'=> false,
-              'depth' => 1,
-              'theme_location' => 'mainmenu'
-            ]);
-          ?>
-        </nav>
+        <nav>
 
-        <!-- MOBILE NAV (BURGER) -->
-        <button class="hamburger--squeeze" id="hamburger" type="button">
-          <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-          </span>
-        </button>
+          <a href="<?= get_bloginfo('url'); ?>">
+            <div class="logo"></div>
+          </a>
 
-      </div>
+          <!-- DESKTOP NAV -->
+            <?
+              // make sure there's a menu placed at 'mainmenu' or a div will be created by WP
+              wp_nav_menu([
+                'menu_class'=> 'hidden_mobile',
+                'menu_id' => 'menu_main',
+                'container'=> false,
+                'depth' => 1,
+                'theme_location' => 'mainmenu'
+              ]);
+            ?>
+          <!-- </nav> -->
+
+          <!-- MOBILE NAV (BURGER) -->
+          <button class="hamburger--squeeze" id="hamburger" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+
+        </div>
+
+      </header>

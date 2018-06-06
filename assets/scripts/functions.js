@@ -2,7 +2,7 @@
  * All sorts javascript/jQuery functions
  *
  * @author      Flurin Dürst
- * @version     3.6.0
+ * @version     3.6.1
  * @since       WPSeed 0.12
  * was main.js until 3.4.1
  *
@@ -19,7 +19,7 @@
 $(function(){
   $(document).on('click', '#hamburger', function (event) {
     // show overlay
-    $('#nav_main').toggleClass('hiddenmobile');
+    $('#menu_main').toggleClass('hidden_mobile');
     // switch icon
     $('#hamburger').toggleClass('is-active');
     // prevent content scrolling

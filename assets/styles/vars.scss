@@ -5,7 +5,7 @@
   * because you'll define the basic-values here.
   *
   * @author     Flurin Dürst
-  * @version    1.11.0
+  * @version    1.11.1
   * @since      WPSeed 0.1
   *
   */
@@ -20,9 +20,12 @@ $breakpoint:                  800px;              // breakpoint between @desktop
 $scaling_endpoint:            1200px;             // scaling of all `rem` based elements stops here
 $base_size_mobile:            $base_size * 2.2;   // scaling multiplicator for mobile viewport
 
-$top_height:                  4rem;               // define the height of the .top div
+$header_height:               4rem;               // define the height of the header
 $element_width:               90vw;               // default width of the .element content-div
 $element_maxwidth:            1200px;             // max-width of the .element content-div (normally around = $scaling_endpoint)
+
+$header_height_mobile:        4rem;               // define the height of the header
+$element_width_mobile:        95vw;               // default width of the .element content-div
 
 /*==================================================================================
   COLORS
@@ -30,8 +33,8 @@ $element_maxwidth:            1200px;             // max-width of the .element c
 
 /* Presets
 /––––––––––––––––––––––––*/
-$color_main:                  #97c475;
-$color_sub:                   #68c4a4;
+$color__main:                 #97c475;
+$color__sub:                  #68c4a4;
 $color__dark:                 #333333;
 $color__bright:               #f7f7f2;
 $color__grey:                 #b5b5b1;
@@ -59,7 +62,7 @@ $body__lineheight:            1.3;
 /* NAV
 /––––––––––––––––––––––––*/
 $nav__linkcolor:              $color__grey;
-$nav__hovercolor:             $color_main;
+$nav__hovercolor:             $color__main;
 $nav__activecolor:            $color__dark;
 $nav__spacercolor:            $color__grey;
 
