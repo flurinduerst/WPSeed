@@ -210,7 +210,7 @@ function wpseed_wphead_cleanup () {
   remove_action('wp_head', 'rsd_link');
   // remove wp shortlink support
   remove_action('wp_head', 'wp_shortlink_wp_head');
-  // remove next/previous links (this is not touching blog-posts)
+  // remove next/previous links (this is not affecting blog-posts)
   remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10);
   // remove generator name from RSS
   add_filter('the_generator', '__return_false');
