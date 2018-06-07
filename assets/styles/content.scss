@@ -4,7 +4,7 @@
  * Contains all content related styles.
  *
  * @author      Flurin Dürst
- * @version     1.15.1
+ * @version     1.16.0
  * @since       WPSeed 0.1
  *
  */
@@ -71,16 +71,25 @@ header {
   nav {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     height: 100%;
     .logo {
-      width: 3rem;
+      width: 12rem;
       height: 3rem;
       margin-right: 2rem;
       background-image: url('images/logo.svg');
       background-size: contain;
       background-repeat: no-repeat;
+      @include vpw_max($element_maxwidth){
+        background-image: url('images/logo_simplified.svg');
+      }
+      @include vpw_max(1000px){
+        background-image: url('images/logo_minimal.svg');
+      }
+      @include mobile {
+        background-image: url('images/logo_simplified.svg');
+      }
     }
   }
 }
