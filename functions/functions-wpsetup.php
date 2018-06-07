@@ -45,9 +45,9 @@ setlocale(LC_ALL, 'de_CH.UTF-8');
 function wpseed_preload_fonts() {
   // define fonts
   $font_names = [
-    'ubuntu-v11-latin-regular',
-    'ubuntu-v11-latin-500',
-    'ubuntu-v11-latin-700'
+    'asap-v7-latin-regular',
+    'asap-v7-latin-500',
+    'asap-v7-latin-700'
   ];
   // define font-formats for all fonts
   $font_formats = [
