@@ -63,14 +63,12 @@ nav {
 }
 @include mobile {
   header {
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);
     #hamburger {
       // » https://jonsuh.com/hamburgers/
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
+      position: relative;
       z-index: 260;
       display: block;
+      height: 28px;
       cursor: pointer;
       &.is-active {
         z-index: 300;
@@ -81,8 +79,8 @@ nav {
         .hamburger-inner:before,
         .hamburger-inner:after {
           width: 35px;
-          height: 5px;
-          background-color: $color__grey;
+          height: 4px;
+          background-color: $color__dark;
           border-radius: 1px;
         }
       }
@@ -98,7 +96,7 @@ nav {
     z-index: 250;
     width: 100%;
     height: 100vh;
-    padding-top: 3rem; // = x icon height
+    padding-top: $header_height;
     overflow: scroll;
     background-color: white;
     opacity: 1;
