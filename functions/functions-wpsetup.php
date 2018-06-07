@@ -3,7 +3,7 @@
  * WordPress-setup including settings, wp-setup, theme support, cleanups
  *
  * @author      Flurin Dürst
- * @version     1.13.0
+ * @version     1.13.1
  * @since       WPSeed 0.1.6
  *
  */
