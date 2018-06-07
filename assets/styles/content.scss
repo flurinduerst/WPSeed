@@ -4,7 +4,7 @@
  * Contains all content related styles.
  *
  * @author      Flurin Dürst
- * @version     1.15.0
+ * @version     1.15.1
  * @since       WPSeed 0.1
  *
  */
@@ -66,9 +66,8 @@ header {
   left: 0;
   z-index: 200;
   height: $header_height;
-  background-color: $color__bright;
+  background-color: $color__grey;
   width: 100vw;
-  border-bottom: 2px solid $color__main;
   nav {
     display: flex;
     flex-direction: row;
