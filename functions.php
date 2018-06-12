@@ -6,35 +6,41 @@
  * • general functions like replacements, translations
  *
  * @author      Flurin Dürst
- * @version     1.3
+ * @version     2.0
  * @since       WPSeed 0.1
  *
  */
 
-/* ACCESS CONTROL
-/===================================================== */
-  require('functions/functions-access.php');
+
+/*==================================================================================
+  DEVELOPER TOOLKIT
+==================================================================================*/
+require('functions/functions-dev.php');
 
 
-/* DEVELOPER TOOLKIT
-/===================================================== */
-  require('functions/functions-dev.php');
+
+/*==================================================================================
+  WP SETUP & SETTINGS
+==================================================================================*/
+require('functions/functions-setup.php');
+require('functions/functions-settings.php');
 
 
-/* WP SETUP & SETTINGS
-/===================================================== */
-  require('functions/functions-wpsetup.php');
+
+/*==================================================================================
+  BLOCKS
+==================================================================================*/
+// Blocks using the ACF Flexible Content
+// » https://www.advancedcustomfields.com/resources/flexible-content/
+require('functions/functions-blocks.php');
 
 
-/* BACKEND
-/===================================================== */
-  require('functions/functions-backend.php');
+
+/*==================================================================================
+  CUSTOM
+==================================================================================*/
+require('functions/functions-custom.php');
 
 
-/* ELEMENTS
-/===================================================== */
-  // Elements for ACF Flexible Content
-  // » https://www.advancedcustomfields.com/resources/flexible-content/
-  require('functions/functions-blocks.php');
 
 ?>
