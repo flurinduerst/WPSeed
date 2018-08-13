@@ -9,33 +9,39 @@
  *
  */
 
- /*=======================================================
+
+/*=======================================================
  Table of Contents:
  –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-  1.0 General
-  2.0 Header
-  3.0 Headings & Paragraphs
-  4.0 Pages
-  5.0 Footer
+      STRUCTURE INFORMATIONS
+  1.0 GENERAL
+  2.0 HEADER
+  3.0 HEADINGS & PARAGRAPHS
+  4.0 PAGES
+  5.0 FOOTER
   =======================================================*/
 
 
 @import 'vars';
 
 
+/*==================================================================================
+  STRUCTURE INFORMATION
+==================================================================================*//*
+WPSeed uses a semantical structure as followed:
+
+header:                the page header containing the navigation and the logo
+  nav:                 the main navigation
+main:                  contains everything but navigation, footer and aside-elements
+  section:             serves as a structural container and/or fullwidth-background
+    .element/article:  contains the content, positioned by default with width, max-width and center-margin
+footer:                the page footer, can contain additional links and informations like address or logos
+*/
+
 
 /*==================================================================================
   1.0 GENERAL
 ==================================================================================*/
-
-/* THE SHINY NEW WPSEED 2.0 STRUCTURE
-header:
-  nav:
-main:              contains everything but navigation, footer, side-elements
-  section:           servers as a structural container and/or fullwidth-background
-    .element/article:  contains the content, positioned by default with width, max-width and center-margin
-footer:
-*/
 
 main {
   position: relative;
