@@ -28,6 +28,7 @@
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: contain;
+
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -39,14 +40,15 @@ html {
   padding: 0;
   font-family: $html__fontname;
   font-size: $base_size; // only used for rem-handling, the actual font-size is $body__fontsize
+  color: $html__textcolor;
+  background-color: $html__bgcolor;
   @include vpw_min($scaling_endpoint) {
     font-size: $scaling_endpoint / 100 * stripunit($base_size);
   }
   @include mobile {
     font-size: $base_size_mobile;
   }
-  color: $html__textcolor;
-  background-color: $html__bgcolor;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -87,7 +89,7 @@ a {
 
 // anchor div to fix .top overlap when navigation through 'domain.tld/#anchor'
 .anchor {
-  display:block;
+  display: block;
   height: $header_height;
   margin-top: -$header_height;  // negative top_height
 }

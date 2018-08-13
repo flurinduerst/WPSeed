@@ -4,7 +4,7 @@
  * Contains all content related styles.
  *
  * @author      Flurin Dürst
- * @version     1.16.0
+ * @version     2.0.0
  * @since       WPSeed 0.1
  *
  */
@@ -71,9 +71,9 @@ header {
   top: 0;
   left: 0;
   z-index: 200;
+  width: 100vw;
   height: $header_height;
   background-color: $color__grey;
-  width: 100vw;
   nav {
     display: flex;
     flex-direction: row;
@@ -85,8 +85,8 @@ header {
       height: 3rem;
       margin-right: 2rem;
       background-image: url('images/logo.svg');
-      background-size: contain;
       background-repeat: no-repeat;
+      background-size: contain;
       @include vpw_max($element_maxwidth){
         background-image: url('images/logo_simplified.svg');
       }
@@ -132,15 +132,16 @@ p {
 main#page {
   section {
     .element.teaser {
-      max-width: 100vw;
       width: 100vw;
+      max-width: 100vw;
       height: 25rem;
       padding: 0;
       img, .modernizr-of {
-        object-fit: cover;
-        background-size: cover; // modernizr
         width: 100%;
         height: 100%;
+        background-size: cover; // modernizr
+
+        object-fit: cover;
       }
     }
   }
@@ -155,10 +156,11 @@ main#blog {
   section {
     article {
       img, .modernizr-of {
-        object-fit: cover;
-        background-size: cover; // modernizr
         width: 100%;
         height: 8rem;
+        background-size: cover; // modernizr
+
+        object-fit: cover;
       }
     }
   }
@@ -168,10 +170,11 @@ main#post {
   section {
     article {
       img, .modernizr-of {
-        object-fit: cover;
-        background-size: cover; // modernizr
         width: 100%;
         height: 20rem;
+        background-size: cover; // modernizr
+
+        object-fit: cover;
       }
     }
   }
@@ -184,26 +187,27 @@ main#post {
 
 main#subsites {
   section {
-      .element.sites {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        .site {
-          flex-basis: calc((100% / 3) - 1rem);
-          margin-bottom: 1rem;
-          @include mobile {
-            flex-basis: 100%;
-          }
-          img, .modernizr-of {
-            object-fit: cover;
-            background-size: cover; // modernizr
-            width: 100%;
-            height: 5rem;
-          }
+    .element.sites {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .site {
+        flex-basis: calc((100% / 3) - 1rem);
+        margin-bottom: 1rem;
+        @include mobile {
+          flex-basis: 100%;
+        }
+        img, .modernizr-of {
+          width: 100%;
+          height: 5rem;
+          background-size: cover; // modernizr
+
+          object-fit: cover;
         }
       }
     }
+  }
 }
 
 
@@ -213,27 +217,28 @@ main#subsites {
 
 main#blocks {
   section {
+    @include mobile {
       article {
-        display: flex;
-        flex-direction: row;
-        img, .modernizr-of {
-          object-fit: cover;
-          background-size: cover; // modernizr
-          width: 30%;
-          height: 10rem;
-          margin: 0 1rem 0 0;
-          }
-      }
-      @include mobile {
-        article {
-          flex-direction: column;
-          img {
-            width: 100%;
-            margin: 0 0 1rem 0;
-          }
+        flex-direction: column;
+        img {
+          width: 100%;
+          margin: 0 0 1rem 0;
         }
       }
     }
+    article {
+      display: flex;
+      flex-direction: row;
+      img, .modernizr-of {
+        width: 30%;
+        height: 10rem;
+        margin: 0 1rem 0 0;
+        background-size: cover; // modernizr
+
+        object-fit: cover;
+      }
+    }
+  }
 }
 
 

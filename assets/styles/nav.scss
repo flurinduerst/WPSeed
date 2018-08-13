@@ -19,7 +19,7 @@
 
 nav {
   z-index: 210;
-  font-size: 1rem;
+  font-size: .1rem;
   font-weight: 700;
   ul {
     margin: 0;
@@ -90,14 +90,14 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 250;
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 250;
     width: 100%;
     height: 100vh;
-    padding-top: $header_height;
     overflow: scroll;
+    padding-top: $header_height;
     background-color: white;
     opacity: 1;
     transition: .5s;
