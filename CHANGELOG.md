@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## HEAD | 2.0.1
+* add global scope vars to `functions.js`
+* remove `modernizr.js` from root
+
 ## 2.0.0 BETA | RC 2 | 13.08.2018
 * GENERAL
   * update documentation
