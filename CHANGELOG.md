@@ -1,31 +1,57 @@
 # CHANGELOG
 
-## BETA 2.0.0 | RC 1 | 04.06.2018
-* additional documentation (modernizr)
-* rename elements (ACF Flexible Elements) to blocks (=> WPSeed_blocks)
-* restructure basic template-structure (main > section > div/article)
-* add preset-variabales for .top and .element
-* change background-images to img with object fit
-* add object-fit preset for modernizr
+*** NEXT UP ***
+DOCS UPDATES:
+* add info about fonts (use local hosted fonts @font-face or typekit kit enqueue in functions-wpsetup.php)
+* responsive logo instructions
 
-## HEAD | 1.3.12 | 01.06.2018
-* cleanup/restructure
-  * vars.scss
-  * basic CSS
-  * functions
-* cleanup comments and extend documentation
-* host fonts locally (#GDPR)
-* change default nav to WPmenu
-* add function for smooth anchor scrolling
-* cleanup gulpfile, add variables to watch-task
-* create custom css-class for anchors
-* add anchor with custom #ID to elements
-* update dev functions
-  * slugify
-  * add https to $url and urlcontains
-* cleanup elements
-* cleanup css
-* bugfixes
+2.0.1
+* create a simple structure-image
+* add comment guide and comment snippets (comment-template.php)
+
+2.1
+* 4O4 TEMPLATE
+* Maintenace Template and activation `/wp-content/maintenance.php`
+* add CPT-Preset
+* default button-styling
+
+
+## BETA 2.0.0 | RC 2 | 13.08.2018
+* GENERAL
+  * update documentation
+  * cleanup/rebuild comments
+  * update to jquery 3
+  * add typekit enqueue preset
+  * enable self-referring canonical
+  * host fonts locally (#GDPR)
+  * change default nav to WPmenu
+  * small bugfixes
+* FUNCTIONS/TEMPLATES
+  * rename elements (ACF Flexible Elements) to blocks (=> WPSeed_blocks)
+  * revise all functions and presets
+  * remove custom maintenance function, (Customizable Maintenance-Template will be available within an upcoming major release)
+  * hide `.teaser` if there's no post-thumbnail
+  * add function for smooth anchor scrolling
+  * update dev functions (slugify, add https to `$url` and urlcontains)
+* HTML/CSS STRUCTURE
+  * check nav/top and footer structure and add $element_width/maxwidth => `#nav_main` is now `#menu_main`
+  * restructure basic template-structure (`main` > `section` > `div/article`)
+  * add responsive logo and css-presets for switching it on breakpoints
+  * add preset-variabales for `.top` and `.element`
+  * change background-images to img with object fit
+  * improve color names
+  * add mobile body-font size
+  * change default font to asap
+  * add new default colors/logo
+  * remove top-shadow
+  * create custom css-class for anchors
+  * add anchor with custom #ID to elements
+  * cleanup elements
+  * cleanup css
+* WORKFLOW
+  * add object-fit preset for modernizr
+  * cleanup gulpfile, add variables to watch-task
+
 
 ## 1.3.0 | 05.03.2018 | «Vendorizr»
 * add `gulp-vendors.json` for compiling/bundling of vendor-requirements
