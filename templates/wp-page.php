@@ -1,7 +1,7 @@
 <?
 /**
  * @author      Flurin Dürst
- * @version     1.3.3
+ * @version     1.3.4
  * @since       WPSeed 0.1
  */
 ?>
@@ -20,10 +20,10 @@
 
   <section>
     <? while (have_posts()) : the_post(); ?>
-      <div class="element text">
+      <article>
         <h1><? the_title(); ?></h1>
         <? the_content(); ?>
-      </div>
+      </article>
     <? endwhile; ?>
   </section>
 
