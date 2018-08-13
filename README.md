@@ -1,7 +1,7 @@
 
-<img src="/assets/images/wpseed.png" width="518"/>
+<img src="/assets/images/wpseed.png" width="480"/>
 
-**Version BETA 2.0.0 - release candidate 1** (04.06.2018)
+**Version BETA 2.0.0 - release candidate 2** (13.08.2018)
 
 ## What is WPSeed?
 WPSeed is a WordPress starter theme following the intention of being able to skip the time-consuming first steps when creating a new theme.

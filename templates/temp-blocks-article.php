@@ -2,7 +2,7 @@
 /**
  * Article Block
  * This is a (very basic) default ACF-Block using the "Flexible Element" field-type
- * it get's included through 'functions-blocks.php' which is triggered by 'temp-blocks.php'.
+ * it is included through 'functions-blocks.php' which is triggered by 'temp-blocks.php'.
  *
  * @author      Flurin Dürst
  * @version     1.0.2

@@ -120,7 +120,6 @@ function wpseed_wphead_cleanup () {
   // remove oEmbed link
   remove_action( 'wp_head', 'wp_oembed_add_discovery_links', 10);
   remove_action('wp_head', 'wp_oembed_add_host_js');
-  // remove canonical links
 }
 add_action('after_setup_theme', 'wpseed_wphead_cleanup');
 
