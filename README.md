@@ -1,20 +1,24 @@
 <img src="/assets/images/wpseed.png" width="480"/>
 
-**Version BETA 2.0.0 - release candidate 2** (13.08.2018)
+**Version Beta 2.0.0 Release Candidate 2** (13.08.2018)
 
 ## What is WPSeed?
-WPSeed is a WordPress starter theme following the intention of being able to skip the time-consuming first steps when creating a new theme.
-WPSeed uses a variety of pre-built objects that allow kickstarting any kind of theme. These objects consist of:
-* basic templates
-* basic html/scss structure
-* html/scss/javascript presets and essential functions
-* responsive functionality including viewport-mixins, rem-based content resizing and a animated mobile menu
-* a preset/config scss file managing all colors, fonts and sizes
+Planting trees? Why waste your time digging a hole each time when you can just plant a seed instead? Even better, you can use the same seed for every tree you're planting from now on. WPSeed is your blueprint for modern WordPress theme development.
+
+Following the DRY principle, WPSeed comes with everything you'll need for 90% of your themes, but nothing more, keeping it clean and simple.
+
+
+* A **clean workflow** including compiling, minifying, cachebusting and more.
+* SASS-presets and configs with everything you really need, but nothing more. Including **an amazing responsive setup**, you'll love it.
+* Functions that actually do stuff and will **make your dev-life a lot easier**.
+* Templates and presets for stuff you'll need often. **WPSeed will make sure you [D.R.Y.](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)**.
+* 100% **Free**.
+
 
 ## Requirements:
   * Node >= 8.0 ([nodejs.org](https://nodejs.org/))
   * npm >=5.0 (`npm install -g npm@latest` - [npm](https://www.npmjs.com/))
-  * php >= 5.4 or [short_open_tag](http://php.net/manual/de/ini.core.php#ini.short-open-tag) set `true` on your VM/Webserver
+  * php >= 7.1 (Make sure [short_open_tag](http://php.net/manual/de/ini.core.php#ini.short-open-tag) is set to `true` on your VM/Webserver).
 
 ## Installation
 * Clone WPSeed `$ git clone git@github.com:flurinduerst/WPSeed.git` into your `themes` directory.
@@ -53,6 +57,17 @@ In WPSeed the following semantical structure is used on every site:
 <footer>                        the page footer, can contain additional links and informations like address or logos
 ```
 
+## Get Started
+The first things you want to do (after setting up the workflow as explained above) when creating a new website using WPSeed:
+* open `functions/functions-setup.php` and add your custom settings
+* quickly check the other files in `/functions` to make sure it suits your needs
+* open `assets/styles/vars.scss` and add your custom sizes, breakpoints, colors, and so on
+* add your templates like `templates/temp-yourtemplate.php`
+* add your acf-blocks in `functions-blocks.php` and create a template like `templates/temp-blocks-yourcustomblock`
+* use the SASS files in `assets/styles` to add your custom css
+
+For more detailed informations about all file-types, see "Important Files/Folders" below.
+
 ## Deployment
 * when deploying your website using a deployment-environment like [deploybot](https://deploybot.com/) or [deployHQ](https://www.deployhq.com/) run
   * `npm install` to install the frontend-modules/vendors on the deployment-docker (`--no-spin` helps to keep the logfile clean)
@@ -68,41 +83,49 @@ In WPSeed the following semantical structure is used on every site:
 ### Important Files/Folders
 
 ##### Functions
-* `functions-access.php` (functions that control access to the site)
-* `functions-backend.php` (backend related functions)
-* `functions-dev.php` (functions used for development purposes)
-* `functions-elements.php` (functions to output ACF flexible elements)
-* `functions-wpsetup.php` (WordPress setup)
+```
+functions-blocks.php      functions to output ACFs flexible blocks (called "blocks" in WPSeed)
+functions-custom.php      space for your own, custom functions, for example shortcodes
+functions-dev.php         functions used for development purposes
+functions-settings.php    theme-settings and general functions that normally don't need much editing
+functions-setup.php       the starting point for setting up a new theme, this is where the basic settings are located
+```
 
 ##### CSS
-* `assets/styles/content.scss` (content related styles)
-* `assets/styles/general.scss` (re-usable classes and settings)
-* `assets/styles/bundle.scss` (gathers all .scss files for compiling with gulp)
-* `assets/styles/nav.scss` (navigation)
-* `assets/styles/essentials.scss` (required SASS functions and all presets for responsive)
-* `assets/styles/fonts.scss` (locally hosted fonts)
-* `assets/styles/vars.scss` (manages scaling, all colors, fonts and other presets)
+```
+assets/styles/bundle.scss       gathers all .scss files for compiling with gulp
+assets/styles/content.scss      content related styles
+assets/styles/essentials.scss   required SASS functions and all presets for responsive
+assets/styles/general.scss      re-usable classes and settings
+assets/styles/fonts.scss        locally hosted fonts
+assets/styles/nav.scss          navigation
+assets/styles/vars.scss         manages scaling, all colors, fonts and other presets
+```
 
 ##### Javascript
-* `assets/scrips/essentials.js` (re-usable essential javascript/jQuery functions/variables)
-* `assets/scrips/functions.js` (javascript/jQuery)
-
+```
+assets/scrips/essentials.js   re-usable essential javascript/jQuery functions/variables
+assets/scrips/functions.js    javascript/jQuery
+modernizr-config.json         Modernizr configuration, see the "Modernizr" section above
+modernizr.js                  Modernizr modules, see the "Modernizr" section above
+```
 
 ##### Templates
 The Wordpress default templates (like page.php, single.php) receive their content from the associated file inside the template folder. This way all templates are grouped together. `index.php` is forwarded to `page.php`.
 
-* `str-footer.php`      footer content that shows up at the bottom of the page (this is content, don't mix this up with `footer.php`)
-* `str-elements.php`    template for ACF flexible elements
-* `temp-home.php`       displays default content and a full width teaser image
-* `temp-subsites.php`   displays default content and content of the respective child pages
-* `wp-home.php`         WP blog default
-* `wp-page.php`         WP page default
-* `wp-single.php`       WP post default
-
-All templates are seperate into three categories recognizable by their prefix:
-* **`wp`**: wordpress default templates.
+All templates are seperated into two categories recognizable by their prefix:
 * **`temp`**: individual site templates.
-* **`str`**: structure files that have to be included in other sites or the main structure.
+* **`wp`**: wordpress default templates.
+
+```
+temp-blocks.php         loads the acf-blocks (using the "Flexible Element" field-type) from `functions-blocks.php`
+temp-blocks-***.php     loads your custom acf-block and shows its content (see the example `temp-blocks-article`)
+temp-home.php           displays default content and a full width teaser image
+temp-subsites.php       displays default content and content of the respective child pages
+wp-home.php             WP blog default
+wp-page.php             WP page default
+wp-single.php           WP post default
+```
 
 
 ### Responsive/Fluid presets

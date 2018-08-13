@@ -1,6 +1,6 @@
 <?php
 /**
- * Theme-settings and general functions that mostly don't need much editing
+ * Theme-settings and general functions that normally don't need much editing
  *
  * @author      Flurin Dürst
  * @version     2.0.0
