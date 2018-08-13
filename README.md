@@ -1,4 +1,3 @@
-
 <img src="/assets/images/wpseed.png" width="480"/>
 
 **Version BETA 2.0.0 - release candidate 2** (13.08.2018)
@@ -40,6 +39,19 @@ WPSeed uses [modernizr](https://modernizr.com/) to automatically detect the avai
   * run `modernizr -c assets/scripts/modernizr-config.json -d assets/scripts` to generate your `modernizr.js`. This file will be compiled by gulp.
   * Note: If you don't want to use modernizr you can just ignore/delete the modernizr files in `assets/scripts/` Everything will work perfectly fine without them.
   * Add the class `modernizr-of` to every image you're using the object-fit class with. If the current browser does not support the `object-fit` attribute, all images with the class `modernizr-of` will be replaced with a div with the image-url set to background to ensure browser-compatability. Also make sure to add the background-position to the image so it can be use within the generated div.
+
+## HTML Structure
+In WPSeed the following semantical structure is used on every site:
+``` html
+<header>                        the page header containing the navigation and the logo
+  <nav>                         the main navigation
+<main>                          contains everything but navigation, footer and aside-elements
+  <section>                     serves as a structural container and/or fullwidth-background
+    <article>                   contains the content when the use of an article tag is semantically correct
+    or
+    <div class="element">       contains the content when using an article tag is semantically wrong
+<footer>                        the page footer, can contain additional links and informations like address or logos
+```
 
 ## Deployment
 * when deploying your website using a deployment-environment like [deploybot](https://deploybot.com/) or [deployHQ](https://www.deployhq.com/) run
