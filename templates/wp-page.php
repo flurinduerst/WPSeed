@@ -1,25 +1,32 @@
 <?
 /**
  * @author      Flurin Dürst
- * @version     1.2.1
+ * @version     1.3.4
  * @since       WPSeed 0.1
  */
 ?>
 
 <? get_header(); ?>
 
-<!-- content » page -->
+<main id="page">
 
-  <div class="content page">
+  <? if (has_post_thumbnail()) : ?>
+    <section>
+      <div class="element teaser">
+        <? the_post_thumbnail('large', ['class' => 'modernizr-of']); ?>
+      </div>
+    </section>
+  <? endif?>
 
-    <? if (have_posts() ) : while (have_posts()) : the_post(); ?>
+  <section>
+    <? while (have_posts()) : the_post(); ?>
       <article>
         <h1><? the_title(); ?></h1>
-        <? the_post_thumbnail('medium'); ?>
         <? the_content(); ?>
       </article>
-    <? endwhile; endif; ?>
+    <? endwhile; ?>
+  </section>
 
-  </div>
+</main>
 
 <? get_footer(); ?>

@@ -1,7 +1,7 @@
 <?
 /**
  * @author      Flurin Dürst
- * @version     1.6.0
+ * @version     1.7.0
  * @since       WPSeed 0.1
  */
 ?>
@@ -9,36 +9,48 @@
 <html <? language_attributes(); ?>>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, initial-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, initial-scale=1">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+    <? WPSeed_gtm('head') ?>
     <!--=== OPEN-GRAPH TAGS ===-->
-    <? wpseed_load_ogtags() ?>
-    <!--=== FONTS ===-->
-    <? wpseed_load_fonts() ?>
+    <? WPSeed_ogtags() ?>
+    <!--=== PRELOAD FONTS ===-->
+    <? WPSeed_preload_fonts() ?>
     <!--=== WP HEAD ===-->
     <? wp_head(); ?>
   </head>
 
   <body>
-      <div class="top">
+    <? WPSeed_gtm('body') ?>
+
+    <header>
+
+      <nav>
+
         <a href="<?= get_bloginfo('url'); ?>">
           <div class="logo"></div>
         </a>
-        <button class="hamburger--squeeze" id="hamburger" type="button">
-          <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-          </span>
-        </button>
-        <nav id="nav_main" class="hiddenmobile">
+
+        <!-- DESKTOP NAV -->
           <?
+            // make sure there's a menu placed at 'mainmenu' or a div will be created by WP
             wp_nav_menu([
-              'menu_class'=> false,
-              'menu_id' => false,
+              'menu_class'=> 'hidden_mobile',
+              'menu_id' => 'menu_main',
               'container'=> false,
               'depth' => 1,
               'theme_location' => 'mainmenu'
             ]);
           ?>
-        </nav>
+        <!-- </nav> -->
+
+        <!-- MOBILE NAV (BURGER) -->
+        <button class="hamburger--squeeze" id="hamburger" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
 
       </div>
+
+    </header>

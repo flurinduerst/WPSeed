@@ -5,7 +5,7 @@
   * because you'll define the basic-values here.
   *
   * @author     Flurin Dürst
-  * @version    1.8.0
+  * @version    2.0.0
   * @since      WPSeed 0.1
   *
   */
@@ -20,7 +20,12 @@ $breakpoint:                  800px;              // breakpoint between @desktop
 $scaling_endpoint:            1200px;             // scaling of all `rem` based elements stops here
 $base_size_mobile:            $base_size * 2.2;   // scaling multiplicator for mobile viewport
 
+$header_height:               4rem;               // define the height of the header
+$element_width:               90vw;               // default width of the .element content-div
+$element_maxwidth:            1200px;             // max-width of the .element content-div (normally around = $scaling_endpoint)
 
+$header_height_mobile:        4rem;               // define the height of the header
+$element_width_mobile:        95vw;               // default width of the .element content-div
 
 /*==================================================================================
   COLORS
@@ -28,10 +33,11 @@ $base_size_mobile:            $base_size * 2.2;   // scaling multiplicator for m
 
 /* Presets
 /––––––––––––––––––––––––*/
-$color__dark:                 #333333;
-$color__bright:               #f7f7f2;
-$color__grey:                 #b5b5b1;
-$color__green:                #97c475;
+$color__main:                 #92c947;
+$color__sub:                  #bf9262;
+$color__dark:                 #505050;
+$color__bright:               #F7F7F7;
+$color__grey:                 #F2F2F2;
 
 
 
@@ -42,22 +48,23 @@ $color__green:                #97c475;
 
 /* HTML
 /––––––––––––––––––––––––*/
-$html__fontname:              'Ubuntu', sans-serif; // Normal 400, Medium 500, Bold 700
+$html__fontname:              'Asap', sans-serif; // Normal 400, Medium 500, Bold 700
 $html__bgcolor:                $color__bright;
 $html__textcolor:              $color__dark;
 
 /* BODY
 /––––––––––––––––––––––––*/
 $body__fontsize:              1rem;
+$body__fontsize_mobile:       1.3rem;
 $body__fontweight:            400;
 $body__lineheight:            1.3;
 
 /* NAV
 /––––––––––––––––––––––––*/
-$nav__linkcolor:              $color__grey;
-$nav__hovercolor:             $color__green;
-$nav__activecolor:            $color__dark;
-$nav__spacercolor:            $color__grey;
+$nav__linkcolor:              $color__dark;
+$nav__hovercolor:             $color__main;
+$nav__activecolor:            $color__main;
+$nav__spacercolor:            $color__dark;
 
 /* ANCHORS
 /––––––––––––––––––––––––*/
