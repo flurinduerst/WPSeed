@@ -1,22 +1,6 @@
 # CHANGELOG
 
-*** NEXT UP ***
-DOCS UPDATES:
-* add info about fonts (use local hosted fonts @font-face or typekit kit enqueue in functions-wpsetup.php)
-* responsive logo instructions
-
-2.0.1
-* create a simple structure-image
-* add comment guide and comment snippets (comment-template.php)
-
-2.1
-* 4O4 TEMPLATE
-* Maintenace Template and activation `/wp-content/maintenance.php`
-* add CPT-Preset
-* default button-styling
-
-
-## BETA 2.0.0 | RC 2 | 13.08.2018
+## 2.0.0 BETA | RC 2 | 13.08.2018
 * GENERAL
   * update documentation
   * cleanup/rebuild comments
