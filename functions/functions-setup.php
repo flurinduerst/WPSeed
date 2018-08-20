@@ -4,7 +4,7 @@
  * Go through this file to setup your preferences
  *
  * @author      Flurin Dürst
- * @version     2.0.0
+ * @version     2.0.1
  * @since       WPSeed 0.1.6
  *
  * was part of 'functions-wpsetup.php' before 2.0.0
@@ -29,7 +29,7 @@ Table of Contents:
 ==================================================================================*/
 // Define local time, date and language-location (PHP-only, does not affect WordPress)
 // => http://php.net/manual/function.setlocale.php
-echo setlocale(LC_ALL, 'de_CH.UTF-8');
+setlocale(LC_ALL, 'de_CH.UTF-8');
 
 
 

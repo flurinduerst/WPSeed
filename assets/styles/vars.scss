@@ -21,8 +21,8 @@ $scaling_endpoint:            1200px;             // scaling of all `rem` based 
 $base_size_mobile:            $base_size * 2.2;   // scaling multiplicator for mobile viewport
 
 $header_height:               4rem;               // define the height of the header
-$element_width:               90vw;               // default width of the .element content-div
-$element_maxwidth:            1200px;             // max-width of the .element content-div (normally around = $scaling_endpoint)
+$element_width:               90vw;               // default width of the inner elements --> nav, article, div.element, footer
+$element_maxwidth:            1200px;             // max-width of the inner elements (should be <= $scaling_endpoint)
 
 $header_height_mobile:        4rem;               // define the height of the header
 $element_width_mobile:        95vw;               // default width of the .element content-div

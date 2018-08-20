@@ -1,6 +1,6 @@
 <img src="/assets/images/wpseed.png" width="480"/>
 
-**Version 2.0.1 BETA Release Candidate 2** (13.08.2018)
+**Version 2.0.2 BETA Release Candidate 2** (20.08.2018)
 
 ## What is WPSeed?
 Planting trees? Why waste your time digging a hole each time when you can just plant a seed instead? Even better, you can use the same seed for every tree you're planting from now on. WPSeed is your blueprint for modern WordPress theme development.

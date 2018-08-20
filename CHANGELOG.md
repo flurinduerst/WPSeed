@@ -1,6 +1,8 @@
 # CHANGELOG
 
-## HEAD | 2.0.1
+## HEAD | 2.0.2
+* bugfixes
+* documentation updates
 * add global scope vars to `functions.js`
 * remove `modernizr.js` from root
 
