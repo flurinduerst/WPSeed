@@ -1,6 +1,9 @@
 # CHANGELOG
 
 ## HEAD | 2.0.2
+
+## HEAD | 2.0 Beta RC 3
+* remove theme-side og tags (og-tags should be implemented through SEO-Plugins)
 * bugfixes
 * documentation updates
 * add global scope vars to `functions.js`

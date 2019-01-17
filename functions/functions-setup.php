@@ -4,7 +4,7 @@
  * Go through this file to setup your preferences
  *
  * @author      Flurin Dürst
- * @version     2.0.1
+ * @version     2.1.0
  * @since       WPSeed 0.1.6
  *
  * was part of 'functions-wpsetup.php' before 2.0.0
@@ -18,8 +18,7 @@ Table of Contents:
   1.0 LOCALE SETTING
   2.0 FONTS
   3.0 GOOGLE TAG MANAGER
-  4.0 OPEN TAG IMAGE
-  5.0 SETUP WP-MENUS
+  4.0 SETUP WP-MENUS
 =======================================================*/
 
 
@@ -64,22 +63,7 @@ $GTM_id = '';
 
 
 /*==================================================================================
-  4.0 OPEN TAG IMAGE
-==================================================================================*/
-// open graph tags are returned by default => WPSeed_ogtags()
-// add your og-image credentials here or leave ['active', false] to not emped an og-image
-$ogimg = [
-  ['active', false],
-  ['path', '/dist/images/ogimg.jpg'],
-  ['height', '300'],
-  ['width', '400'],
-  ['alt', 'true']
-];
-
-
-
-/*==================================================================================
-  5.0 SETUP WP-MENUS
+  4.0 SETUP WP-MENUS
 ==================================================================================*/
 // loads wordpress-menus, add your custom menus here or remove if not needed
 // by default, only 'mainmenu' is shown
