@@ -25,7 +25,7 @@ Following the DRY principle, WPSeed comes with everything you'll need for 90% of
 
 ## Workflow
 #### General
-* you can use any TLD for local development. WPSeed assumes you're using `.vm` for "virtual machine". If you want to use a different TLD make sure to change `.vm` to your preffered TLD in `Vagrantfile`, `gulpfile.js` and `functions-wpsetup.php`.
+* you can use any TLD for local development. WPSeed assumes you're using `.vm` for "virtual machine". If you want to use a different TLD make sure to change `.vm` to your preffered TLD in `gulpfile.js` and `functions-wpsetup.php`.
 
 #### Gulp
 WPSeed uses npm to manage development-modules aswell as frontend-modules and [gulp](https://gulpjs.com) to compile assets from `assets` to `dist`. For details see `gulpfile.js`.
