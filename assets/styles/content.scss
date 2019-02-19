@@ -4,7 +4,7 @@
  * Contains all content related styles.
  *
  * @author      Flurin Dürst
- * @version     2.0.0
+ * @version     2.1.0
  * @since       WPSeed 0.1
  *
  */
@@ -16,8 +16,9 @@
   1.0 GENERAL
   2.0 HEADER
   3.0 HEADINGS & PARAGRAPHS
-  4.0 PAGES
-  5.0 FOOTER
+  4.0 GUTENBERG BLOCKS
+  5.0 PAGES
+  6.0 FOOTER
   =======================================================*/
 
 
@@ -50,6 +51,8 @@ footer .inner {
     width: $element_width_mobile;
   }
 }
+
+
 
 /*==================================================================================
   2.0 HEADER
@@ -98,11 +101,13 @@ header {
 h1 {
   margin: 0 0 .25rem 0;
   font-size: 2rem;
+  width: 100%;
 }
 
 h2 {
   margin: 0 0 .5rem 0;
   font-size: 1.5rem;
+  width: 100%;
 }
 
 p {
@@ -112,7 +117,14 @@ p {
 
 
 /*==================================================================================
-  4.0 PAGES
+  4.0 GUTENBERG BLOCKS
+==================================================================================*/
+
+
+
+
+/*==================================================================================
+  5.0 PAGES
 ==================================================================================*/
 
 /* PAGE
@@ -133,6 +145,12 @@ main#page {
 
         object-fit: cover;
       }
+    }
+    article {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
     }
   }
 }
@@ -209,15 +227,6 @@ main#subsites {
 
 main#blocks {
   section {
-    @include mobile {
-      article {
-        flex-direction: column;
-        img {
-          width: 100%;
-          margin: 0 0 1rem 0;
-        }
-      }
-    }
     article {
       display: flex;
       flex-direction: row;
@@ -231,13 +240,22 @@ main#blocks {
         object-fit: cover;
       }
     }
+    @include mobile {
+      article {
+        flex-direction: column;
+        img {
+          width: 100%;
+          margin: 0 0 1rem 0;
+        }
+      }
+    }
   }
 }
 
 
 
 /*==================================================================================
-  5.0 FOOTER
+  6.0 FOOTER
 ==================================================================================*/
 //=> templates/str-footer.php
 
