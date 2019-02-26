@@ -1,6 +1,6 @@
 /**
  * General CSS File
- * Contains defaults and presets of general elements.
+ * Contains defaults and presets
  *
  * The Idea is to keep editing in this file to a
  * minimum while using vars.scss for very basic styling.
@@ -64,15 +64,6 @@ body  {
   line-height: $body__lineheight;
   @include mobile {
     font-size: $body__fontsize_mobile;
-  }
-}
-
-a {
-  color: $a__linkcolor;
-  text-decoration: $a__textdecoration;
-  transition: $transition_fast;
-  &:hover {
-    color: $a__hovercolor;
   }
 }
 
