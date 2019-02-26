@@ -66,11 +66,12 @@ a {
 
 /* Vertical Spacing
 /––––––––––––––––––––––––*/
-article {
+article, .wp-block-wpseed-container {
   & > p,
   & > ul,
   & > figure,
   & > .wp-block-button,
+  & > .wp-block-cover,
   & > blockquote {
     margin-bottom: 2rem;
   }
@@ -238,13 +239,14 @@ main#post {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  flex-direction: column;
 }
 
 
 /* Image Blocks
 /––––––––––––––––––––––––*/
 // -> https://www.billerickson.net/full-and-wide-alignment-in-gutenberg/
-figure.wp-block-image {
+figure.wp-block-image, div.wp-block-cover {
   &.alignfull {
     width: 100vw;
     max-width: 100vw;
@@ -261,6 +263,43 @@ figure.wp-block-image {
     width: 100%;
   }
 }
+
+
+/* Cover Blocks
+/––––––––––––––––––––––––*/
+.wp-block-cover {
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    min-height: 20rem;
+    display: flex;
+    justify-content: center; // vertical position
+    align-items: center; // horizontal position
+    overflow: hidden;
+}
+
+.wp-block-cover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: black;
+    opacity: .3;
+    z-index: 1;
+}
+
+.wp-block-cover .wp-block-cover-text {
+  z-index: 1;
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  max-width: 50%;
+  padding: 1rem;
+  text-align: left;
+}
+
 
 
 /* Separator
