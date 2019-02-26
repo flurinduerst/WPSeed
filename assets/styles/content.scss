@@ -226,39 +226,6 @@ main#post {
 
 
 
-/* BLOCK - ARTICLE
-/––––––––––––––––––––––––*/
-//=> templates/temp-bocks-article.php
-
-main#blocks {
-  section {
-    @include mobile {
-      article {
-        flex-direction: column;
-        img {
-          width: 100%;
-          margin: 0 0 1rem 0;
-        }
-      }
-    }
-    article {
-      display: flex;
-      flex-direction: row;
-      img,
-      .modernizr-of {
-        width: 30%;
-        height: 10rem;
-        margin: 0 1rem 0 0;
-        background-size: cover; // modernizr
-
-        object-fit: cover;
-      }
-    }
-  }
-}
-
-
-
 /*==================================================================================
   6.0 GUTENBERG BLOCKS
 ==================================================================================*/
