@@ -87,6 +87,11 @@ function wpseed_theme_support()  {
   // => http://codex.wordpress.org/Function_Reference/add_image_size
   add_theme_support('post-thumbnails');
 
+  /* Gutenberg -> enable wide images
+  /––––––––––––––––––––––––*/
+  add_theme_support( 'align-wide' );
+
+
 }
 add_action( 'after_setup_theme', 'wpseed_theme_support');
 
