@@ -28,11 +28,7 @@ require('functions/functions-settings.php');
 
 
 /*==================================================================================
-  BLOCKS
 ==================================================================================*/
-// Blocks using the ACF Flexible Content
-// » https://www.advancedcustomfields.com/resources/flexible-content/
-require('functions/functions-blocks.php');
 
 
 
