@@ -3,7 +3,7 @@
  * Theme-settings and general functions that normally don't need much editing
  *
  * @author      Flurin Dürst
- * @version     2.2.0
+ * @version     2.3.0
  * @since       WPSeed 0.1.6
  *
  * was part of 'functions-wpsetup.php' before 2.0.0
