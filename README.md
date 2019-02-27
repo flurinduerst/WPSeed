@@ -178,6 +178,6 @@ Twitter: [@flurinduerst](https://twitter.com/flurinduerst)
 Feel free to contact me if you have questions or need any advice.
 
 ### License
-WPDistillery is released under the MIT Public License.
+WPSeed is released under the MIT Public License.
 
 Note: The "About" section in `README.md` and the author (`@author`) notice in the file-headers shall not be edited or deleted without permission. For Details see [License](LICENSE.md). Thank you.
