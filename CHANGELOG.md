@@ -1,7 +1,7 @@
 # CHANGELOG
 
 
-## 2.0.0 | 01.03.2019
+## 2.0.0 | 01.03.2019 | «Gutenberg»
 * GUTENBERG (new since Beta RC3 in 2019)
   * ensure compatibility with all templates, remove what's no longer needed
   * remove default gutenberg style & add custom css for the most important Gutenberg-blocks:
