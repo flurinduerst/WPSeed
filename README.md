@@ -7,6 +7,10 @@ Planting trees? Why waste your time digging a hole each time when you can just p
 
 Following the [D.R.Y.](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) principle, WPSeed comes with everything you'll need for 90% of your themes, but nothing more, keeping it clean and simple.
 
+I’m putting a lot of time into maintaining WPSeed. So if you like it, please consider supporting it:
+
+[![BMC](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/flurinduerst)
+
 ## Table of contents
 * [🥳 Features](#-features)
 * [🚦 Requirements](#-requirements)
