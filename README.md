@@ -33,7 +33,7 @@ This is a quick `TL;DR` on how to get started, below you'll find detailed inform
 
 * install the workflow-environment → `npm install`
 * run gulp → `gulp && gulp watch`
-* access your Browsersync-powered local website at `localhost:3000`
+* access your Browsersync-powered local website at `localhost:3000` (or use your domain/ip to access it without Browsersync)
 * start developing your website
   * open `functions/functions-setup.php` and add your custom settings
   * open `assets/styles/vars.scss` and add your custom sizes, breakpoints, colors, and so on
@@ -43,8 +43,8 @@ This is a quick `TL;DR` on how to get started, below you'll find detailed inform
 
 
 ## 🧠 Workflow
-### General
-* you can use any TLD for local development. WPSeed assumes you're using `.vm` for "virtual machine". If you want to use a different TLD make sure to change `.vm` to your preffered TLD in `gulpfile.js` and `functions-wpsetup.php`.
+### Local TLD
+* you can use any TLD for local development. WPSeed assumes you're using `.vm` for "virtual machine". If you want to use a different TLD make sure to change `.vm` to your prefered TLD in `gulpfile.js` and `functions-wpsetup.php`. FYI: Browsersync sometimes has [issues](https://github.com/BrowserSync/browser-sync/issues/1346) with `.local`.
 
 ### Gulp
 WPSeed uses [gulp](https://gulpjs.com) to compile assets from `assets` to `dist`. Here's what it will do:
@@ -96,27 +96,32 @@ In WPSeed the following semantical structure is used on every site:
 
 ### Important Files/Folders
 
-##### Functions
+#### Functions
 ```
-functions-blocks.php      functions to output ACFs flexible blocks (called "blocks" in WPSeed)
-functions-custom.php      space for your own, custom functions, for example shortcodes
+functions-custom.php      space for your own custom functions
 functions-dev.php         functions used for development purposes
+functions-gutenberg.php   space for functions to create custom Gutenberg-blocks with ACF, contains a preset
 functions-settings.php    theme-settings and general functions that normally don't need much editing
 functions-setup.php       the starting point for setting up a new theme, this is where the basic settings are located
 ```
 
-##### CSS
+#### ASSETS
+
+**CSS**
 ```
-assets/styles/bundle.scss       gathers all .scss files for compiling with gulp
+# used for development
+assets/styles/vars.scss         this is your starting-point, it manages scaling, colors, fonts and other presets.
 assets/styles/content.scss      content related styles
-assets/styles/essentials.scss   required SASS functions and all presets for responsive
-assets/styles/general.scss      re-usable classes and settings
+assets/styles/nav.scss          everything related to the navigation
 assets/styles/fonts.scss        locally hosted fonts
-assets/styles/nav.scss          navigation
-assets/styles/vars.scss         manages scaling, all colors, fonts and other presets
+
+# normally don't need changes
+assets/styles/essentials.scss   required SASS functions and all presets for responsive
+assets/styles/general.scss      defaults and presets, inherits most of the variables from vars.scss
+assets/styles/bundle.scss       gathers all .scss files for compiling with gulp
 ```
 
-##### Javascript
+**JAVASCRIPT**
 ```
 assets/scrips/essentials.js   re-usable essential javascript/jQuery functions/variables
 assets/scrips/functions.js    javascript/jQuery
@@ -124,18 +129,16 @@ modernizr-config.json         Modernizr configuration, see the "Modernizr" secti
 modernizr.js                  Modernizr modules, see the "Modernizr" section above
 ```
 
-##### Templates
-The Wordpress default templates (like page.php, single.php) receive their content from the associated file inside the template folder. This way all templates are grouped together. `index.php` is forwarded to `page.php`.
+#### Templates
+The Wordpress default templates (like page.php, single.php) receive their content from the associated file inside the template folder. This way all templates are grouped together. `index.php` is forwarded to `page.php` to make it the default.
 
-All templates are seperated into two categories recognizable by their prefix:
-* **`temp`**: individual site templates.
+All templates should be seperated into two categories recognizable by their prefix:
+* **`temp`**: individual site templates (none by default, an example would be `temp-contact.php`)
 * **`wp`**: wordpress default templates.
+* **`block`**: custom Gutenberg-blocks created with ACF.
 
 ```
-temp-blocks.php         loads the acf-blocks (using the "Flexible Element" field-type) from `functions-blocks.php`
-temp-blocks-***.php     loads your custom acf-block and shows its content (see the example `temp-blocks-article`)
-temp-home.php           displays default content and a full width teaser image
-temp-subsites.php       displays default content and content of the respective child pages
+blocks/block-*          if you want to create custom Gutenberg-blocks using acf, create them here and add them in functions-gutenberg.php.
 wp-home.php             WP blog default
 wp-page.php             WP page default
 wp-single.php           WP post default
