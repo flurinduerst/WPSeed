@@ -37,7 +37,7 @@
   * check nav/top and footer structure and add $element_width/maxwidth => `#nav_main` is now `#menu_main`
   * restructure basic template-structure (`main` > `section` > `div/article`)
   * add responsive logo and css-presets for switching it on breakpoints
-  * add preset-variabales for `.top` and `.element`
+  * add preset-variabales for `.top` and `.inner`
   * change background-images to img with object fit
   * improve color names
   * add mobile body-font size

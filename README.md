@@ -8,14 +8,38 @@ Planting trees? Why waste your time digging a hole each time when you can just p
 Following the [D.R.Y.](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) principle, WPSeed comes with everything you'll need for 90% of your themes, but nothing more, keeping it clean and simple.
 
 ## 🥳 Features
-* 🚀  &nbsp; **COMPILING LIKE A BAWS** – Seriously. Your code will be cleaned, modernized, optimized, minified and previewed in real time.
-* 🗞  &nbsp; **MADE FOR GUTENBERG** – WPSeed is made to work with the Gutenberg editor and has all the tools to adapt it to your needs.
-* 🕶  &nbsp; **SASS, DEAL WITH IT** – The SCSS-code is cleanly structured, nested and supplemented with meaningful variables and mixins.
-* ♻️  &nbsp; **CACHE? BUSTED!** – WPSeed comes with cachebusting out of the box. You don't have to setup anything.
-* 📦  &nbsp; **PRESETS SO YOU D.R.Y.** – WPSeed comes with the presets you actually need, so you don’t repeat yourself.
-* 🧙‍  &nbsp; **RESPONSIVE, FOR REAL** – WPSeed comes with features like viewport-scaling, responsive logo breakpoint-mixins and much more.
-* 🧽  &nbsp; **CLEAN & SIMPLE** – Every file is built as minimal as possible to make sure you can add your custom code right away.
-* 💚  &nbsp; **100% FREE** –  WPSeed ist 100% free and will always be.
+🚀 **COMPILING LIKE A BAWS**
+
+* Seriously. Your code will be cleaned, modernized, optimized, minified and previewed in real time.
+
+🗞 **MADE FOR GUTENBERG**
+
+* WPSeed is made to work with the Gutenberg editor and has all the tools to adapt it to your needs.
+
+🕶 **SASS, DEAL WITH IT**
+
+* The SCSS-code is cleanly structured, nested and supplemented with meaningful variables and mixins.
+
+♻️ **CACHE? BUSTED!**
+
+* WPSeed comes with cachebusting out of the box. You don't have to setup anything.
+
+📦 **PRESETS SO YOU D.R.Y.**
+
+* WPSeed comes with the presets you actually need, so you don’t repeat yourself.
+
+🧙 **RESPONSIVE, FOR REAL**
+
+* WPSeed comes with features like viewport-scaling, responsive logo breakpoint-mixins and much more.
+
+🧽 **CLEAN & SIMPLE**
+
+* Every file is built as minimal as possible to make sure you can add your custom code right away.
+
+💚 **100% FREE**
+
+*  WPSeed ist 100% free and will always be.
+
 
 ## ⚙️ Requirements:
   * Node >= 10.0 ([nodejs.org](https://nodejs.org/))
@@ -80,12 +104,12 @@ WPSeed uses [modernizr](https://modernizr.com/) to automatically detect the avai
 ## 📚 HTML Structure
 In WPSeed the following semantical structure is used on every site:
 ``` html
-<header>                        the page header containing the navigation and the logo
-  <nav>                         the main navigation
-<main>                          contains everything but navigation, footer and aside-elements
-  <section>                     serves as a structural container and/or fullwidth-background (repeatable)
-    <article>                   contains the content when the use of an article tag is semantically correct (repeatable)
-<footer>                        the page footer, can contain additional links and informations like address or logos
+<header>           the page header containing the navigation and the logo
+  <nav>            the main navigation
+<main>             contains everything but navigation, footer and aside-elements
+  <section>        serves as a structural container and/or fullwidth-background (repeatable)
+    <article>      contains the content when the use of an article tag is semantically correct (repeatable)
+<footer>           the page footer, can contain additional links and informations like address or logos
 ```
 
 ## 🛠 Development
@@ -102,12 +126,10 @@ functions-custom.php      space for your own custom functions
 functions-dev.php         functions used for development purposes
 functions-gutenberg.php   space for functions to create custom Gutenberg-blocks with ACF, contains a preset
 functions-settings.php    theme-settings and general functions that normally don't need much editing
-functions-setup.php       the starting point for setting up a new theme, this is where the basic settings are located
+functions-setup.php       the starting point for setting up a new theme, most settings are here
 ```
 
-#### ASSETS
-
-**CSS**
+#### CSS
 ```
 # used for development
 assets/styles/vars.scss         this is your starting-point, it manages scaling, colors, fonts and other presets.
@@ -121,7 +143,7 @@ assets/styles/general.scss      defaults and presets, inherits most of the varia
 assets/styles/bundle.scss       gathers all .scss files for compiling with gulp
 ```
 
-**JAVASCRIPT**
+#### Javascript
 ```
 assets/scrips/essentials.js   re-usable essential javascript/jQuery functions/variables
 assets/scrips/functions.js    javascript/jQuery
