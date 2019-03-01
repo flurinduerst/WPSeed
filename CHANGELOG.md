@@ -10,23 +10,50 @@
 * remove `modernizr.js` from root
 
 ## 2.0.0 BETA | RC 2 | 13.08.2018
+## UPDATING NOW
+* update README
+
+## UPCOMING FEATURES, IMPROVEMENTS AND MAINTENANCE
+* Major
+  * check if font preloading is actually improving performance
+* Minor
+  * add font display block?: https://github.com/BlitzDonner/MHG-Master-Theme/commit/c2f0c75c7c8a7a00837a3c9075d55b39e93d3e22
+  * check security: https://github.com/flurinduerst/WPSeed/network/alerts
+  * add Backend Editor Styles
+
+## 2.0.0 | 01.03.2019
+* GUTENBERG (new since Beta RC3 in 2019)
+  * ensure compatibility with all templates, remove what's no longer needed
+  * remove default gutenberg style & add custom css for the most important Gutenberg-blocks:
+    * paragraphs
+    * headings
+    * list items
+    * image
+    * hr
+    * button
+    * blockquote
+    * cover
 * GENERAL
-  * update documentation
+  * update documentation (up to date as of the final realease of 2.0 in March 2019)
   * cleanup/rebuild comments
   * update to jquery 3
   * add typekit enqueue preset
   * enable self-referring canonical
   * host fonts locally (#GDPR)
   * change default nav to WPmenu
-  * small bugfixes
+  * bugfixes
 * FUNCTIONS/TEMPLATES
-  * rename elements (ACF Flexible Elements) to blocks (=> WPSeed_blocks)
+  * remove `modernizr.js` from root (new since Beta RC3 in 2019)
+  * add global scope vars to `functions.js` (new since Beta RC3 in 2019)
+  * remove the subsites template (new since Beta RC3 in 2019)
+  * remove support for acf-elements (called ACF-Blocks as they were called until now)
   * revise all functions and presets
-  * remove custom maintenance function, (Customizable Maintenance-Template will be available within an upcoming major release)
-  * hide `.teaser` if there's no post-thumbnail
+  * remove custom maintenance function
   * add function for smooth anchor scrolling
   * update dev functions (slugify, add https to `$url` and urlcontains)
 * HTML/CSS STRUCTURE
+  * add global rules for vertical spacing (new since Beta RC3 in 2019)
+  * remove theme-side og-tags (og-tags should be implemented through SEO-Plugins) (new since Beta RC3 in 2019)
   * check nav/top and footer structure and add $element_width/maxwidth => `#nav_main` is now `#menu_main`
   * restructure basic template-structure (`main` > `section` > `div/article`)
   * add responsive logo and css-presets for switching it on breakpoints
@@ -38,8 +65,6 @@
   * add new default colors/logo
   * remove top-shadow
   * create custom css-class for anchors
-  * add anchor with custom #ID to elements
-  * cleanup elements
   * cleanup css
 * WORKFLOW
   * add object-fit preset for modernizr
