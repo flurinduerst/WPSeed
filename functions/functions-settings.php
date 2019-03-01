@@ -137,6 +137,7 @@ add_action('after_setup_theme', 'wpseed_wphead_cleanup');
 /* 2.2 PRELOAD FONTS
 /––––––––––––––––––––––––*/
 // preloads fonts that are hosted locally into the page header
+// » check https://caniuse.com/#search=preload
 // add your desired fonts and font-types into $font_names and $font_formats
 function WPSeed_preload_fonts() {
   // font_names and font_formats are defined in 'functions-setup.php'
