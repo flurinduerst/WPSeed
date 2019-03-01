@@ -10,6 +10,7 @@ Following the [D.R.Y.](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) pr
 I’m putting a lot of time into maintaining WPSeed. So if you like it, please consider supporting it:
 
 [![BMC](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/flurinduerst)
+[![Patreon](https://files.flurinduerst.ch/patreon.jpg)](https://www.patreon.com/bePatron?u=10089926)
 
 ## Table of contents
 * [🥳 Features](#-features)
