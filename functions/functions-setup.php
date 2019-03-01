@@ -4,7 +4,7 @@
  * Go through this file to setup your preferences
  *
  * @author      Flurin Dürst
- * @version     2.1.0
+ * @version     2.2.0
  * @since       WPSeed 0.1.6
  *
  * was part of 'functions-wpsetup.php' before 2.0.0
@@ -16,9 +16,10 @@
 Table of Contents:
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
   1.0 LOCALE SETTING
-  2.0 FONTS
-  3.0 GOOGLE TAG MANAGER
-  4.0 SETUP WP-MENUS
+  2.0 DEFAULT BLOCK STYLES
+  3.0 FONTS
+  4.0 GOOGLE TAG MANAGER
+  5.0 SETUP WP-MENUS
 =======================================================*/
 
 
@@ -31,9 +32,17 @@ Table of Contents:
 setlocale(LC_ALL, 'de_CH.UTF-8');
 
 
+/*==================================================================================
+  LOAD DEFAULT GUTENBERG BLOCK STYLES
+==================================================================================*/
+// Gutenberg comes with default styles for all blocks
+// by default these styles are disabled. Change this to `true` to enqueue them
+$load_default_block_styles = false;
+
+
 
 /*==================================================================================
-  2.0 FONTS
+  3.0 FONTS
 ==================================================================================*/
 
 
@@ -54,7 +63,7 @@ $font_formats = ['woff','woff2'];
 
 
 /*==================================================================================
-  3.0 GOOGLE TAG MANAGER
+  4.0 GOOGLE TAG MANAGER
 ==================================================================================*/
 // embed the GTM-scripts into head and body => WPSeed_gtm()
 // add your GTM_id (for example 'GTM-ABC1234') or leave empty to not enqueue any GTM-script
@@ -63,7 +72,7 @@ $GTM_id = '';
 
 
 /*==================================================================================
-  4.0 SETUP WP-MENUS
+  5.0 SETUP WP-MENUS
 ==================================================================================*/
 // loads wordpress-menus, add your custom menus here or remove if not needed
 // by default, only 'mainmenu' is shown

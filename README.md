@@ -1,108 +1,127 @@
 <img src="/assets/images/wpseed.png" width="480"/>
 
-**Version 2.0.2 BETA Release Candidate 2** (20.08.2018)
+**Version 2.0.0** (01.03.2019)
 
-## What is WPSeed?
+## 🧐  What is WPSeed?
 Planting trees? Why waste your time digging a hole each time when you can just plant a seed instead? Even better, you can use the same seed for every tree you're planting from now on. WPSeed is your blueprint for modern WordPress theme development.
 
-Following the DRY principle, WPSeed comes with everything you'll need for 90% of your themes, but nothing more, keeping it clean and simple.
+Following the [D.R.Y.](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) principle, WPSeed comes with everything you'll need for 90% of your themes, but nothing more, keeping it clean and simple.
 
+## 🥳 Features
+* 🚀  &nbsp; **COMPILING LIKE A BAWS** – Seriously. Your code will be cleaned, modernized, optimized, minified and previewed in real time.
+* 🗞  &nbsp; **MADE FOR GUTENBERG** – WPSeed is made to work with the Gutenberg editor and has all the tools to adapt it to your needs.
+* 🕶  &nbsp; **SASS, DEAL WITH IT** – The SCSS-code is cleanly structured, nested and supplemented with meaningful variables and mixins.
+* ♻️  &nbsp; **CACHE? BUSTED!** – WPSeed comes with cachebusting out of the box. You don't have to setup anything.
+* 📦  &nbsp; **PRESETS SO YOU D.R.Y.** – WPSeed comes with the presets you actually need, so you don’t repeat yourself.
+* 🧙‍  &nbsp; **RESPONSIVE, FOR REAL** – WPSeed comes with features like viewport-scaling, responsive logo breakpoint-mixins and much more.
+* 🧽  &nbsp; **CLEAN & SIMPLE** – Every file is built as minimal as possible to make sure you can add your custom code right away.
+* 💚  &nbsp; **100% FREE** –  WPSeed ist 100% free and will always be.
 
-* A **clean workflow** including compiling, minifying, cachebusting and more.
-* SASS-presets and configs with everything you really need, but nothing more. Including **an amazing responsive setup**, you'll love it.
-* Functions that actually do stuff and will **make your dev-life a lot easier**.
-* Templates and presets for stuff you'll need often. **WPSeed will make sure you [D.R.Y.](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)**.
-* 100% **Free**.
-
-
-## Requirements:
-  * Node >= 8.0 ([nodejs.org](https://nodejs.org/))
-  * npm >=5.0 (`npm install -g npm@latest` - [npm](https://www.npmjs.com/))
+## ⚙️ Requirements:
+  * Node >= 10.0 ([nodejs.org](https://nodejs.org/))
+  * npm >=6.0 (`npm install -g npm@latest` - [npm](https://www.npmjs.com/))
   * php >= 7.1 (Make sure [short_open_tag](http://php.net/manual/de/ini.core.php#ini.short-open-tag) is set to `true` on your VM/Webserver).
+  * gulp >= 3.9.0 (`npm install -g gulp`)
 
-## Installation
+## 📦 Installation
 * Clone WPSeed `$ git clone git@github.com:flurinduerst/WPSeed.git` into your `themes` directory.
+* in the theme directory run `npm install`
+* add your domain/ip to `browsersync_proxy` in `gulpfile.js`
 
-## Workflow
-#### General
-* you can use any TLD for local development. WPSeed assumes you're using `.vm` for "virtual machine". If you want to use a different TLD make sure to change `.vm` to your preffered TLD in `Vagrantfile`, `gulpfile.js` and `functions-wpsetup.php`.
+## 🚀 Get Started
+This is a quick `TL;DR` on how to get started, below you'll find detailed informations about the [`🧠 Workflow`](#workflow), [`📚 HTML Structure`](#html-structure) and the [`🛠 Development`](#development).
 
-#### Gulp
-WPSeed uses npm to manage development-modules aswell as frontend-modules and [gulp](https://gulpjs.com) to compile assets from `assets` to `dist`. For details see `gulpfile.js`.
-  * Install gulp globally with `npm install -g gulp` if you haven't already
-  * add your domain/ip to `browsersync_proxy` in `gulpfile.js`
-  * in the theme directory run `npm install`
-  * you can now use `gulp` to compile and optimize your asset files and run browsersync. Use `gulp watch` to let gulp compile your files automatically whenever you've made changes to the associated files.
-  * gulp is handling vendor-requirements (external tools/frameworks) by additionally compiling/bundling the files defined in `gulp-vendors.json`. So, if you add vendors, make sure to add them to `gulp-vendors.json`.
-  * for further information about gulp see [gulpjs.com](https://gulpjs.com/)
+* install the workflow-environment → `npm install`
+* run gulp → `gulp && gulp watch`
+* access your Browsersync-powered local website at `localhost:3000` (or use your domain/ip to access it without Browsersync)
+* start developing your website
+  * open `functions/functions-setup.php` and add your custom settings
+  * open `assets/styles/vars.scss` and add your custom sizes, breakpoints, colors, and so on
+  * add your templates inside `templates/` or use `wp-page.php` with the Gutenberg-editor
+  * add your custom css to `assets/styles/content.scss` and `assets/styles/nav.scss`
+  * add your custom scripts to `assets/scripts/functions.js`
 
-#### Modernizr
-WPSeed uses [modernizr](https://modernizr.com/) to automatically detect the availability of next-generation web technologies.
+
+## 🧠 Workflow
+### Local TLD
+* you can use any TLD for local development. WPSeed assumes you're using `.vm` for "virtual machine". If you want to use a different TLD make sure to change `.vm` to your prefered TLD in `gulpfile.js` and `functions-wpsetup.php`. FYI: Browsersync sometimes has [issues](https://github.com/BrowserSync/browser-sync/issues/1346) with `.local`.
+
+### Gulp
+WPSeed uses [gulp](https://gulpjs.com) to compile assets from `assets` to `dist`. Here's what it will do:
+* CSS: checks for errors, then adds browser-prefixes before cleaning, compiling, minifying and bundling all .scss-files into a cache-busted version of `style.min.css`
+* Javascript: checks for errors, then concatinates and minifies all javascript files into `script.min.js`
+* Images: optimize all images using [imagemin](https://www.npmjs.com/package/gulp-imagemin) and move them to the `dist` (distribution) directory
+* Fonts: get all fonts inside `assets/fonts/` and move them to the `dist` directory
+
+Run `gulp` or `gulp watch` to execute the develoment workflow:
+* `gulp` →  run all tasks (see above) once.
+* `gulp watch` → let gulp compile your files automatically whenever you've made changes to the associated files.
+* gulp is handling vendor-requirements (external tools/frameworks) by additionally compiling/bundling the files defined in `gulp-vendors.json`. So, if you add vendors, make sure to add them to `gulp-vendors.json`.
+
+For more details on everything that is done (minifying, compiling, adding prefixes and much more) see `gulpfile.js`.
+
+### NPM
+WPSeed uses npm to manage development-modules as well as frontend-modules. Everything in `package.json` will be installed on `npm install`. You'll find two categories inside it:
+* **dependencies** contains all modules that need to be loaded into the frontend of the website like css and javascript frameworks. Feel free to add/remove whatever you need. They're merged into the compiled files through `gulp-vendors.json`.
+* **devDependencies** contains only modules that are needed for the local development.
+* You'll never need to upload the `npm-modules` folder to your live-server.
+
+### Browsersync
+You don't have to reload your browser when changing your CSS. Simply use the local address provided after executing `gulp watch` (usally localhost:3000) to access your website via Browsersync. Changes to your CSS are now injected to your browser in real time every time you save a file.
+
+### Modernizr
+WPSeed uses [modernizr](https://modernizr.com/) to automatically detect the availability of next-generation web technologies. This is totally optional. You can safely ignored it if you don't need it.
   * install the modernizr [command line config](https://www.npmjs.com/package/modernizr) with `npm install -g modernizr`
   * create/download your custom modernizr config at [modernizr.com](https://modernizr.com/download?setclasses) and select the `command line config` download option. Move the downloaded `modernizr-config.json` into `assets/scripts`.
   * run `modernizr -c assets/scripts/modernizr-config.json -d assets/scripts` to generate your `modernizr.js`. This file will be compiled by gulp.
   * Note: If you don't want to use modernizr you can just ignore/delete the modernizr files in `assets/scripts/` Everything will work perfectly fine without them.
   * Add the class `modernizr-of` to every image you're using the object-fit class with. If the current browser does not support the `object-fit` attribute, all images with the class `modernizr-of` will be replaced with a div with the image-url set to background to ensure browser-compatability. Also make sure to add the background-position to the image so it can be use within the generated div.
 
-## HTML Structure
+## 📚 HTML Structure
 In WPSeed the following semantical structure is used on every site:
 ``` html
 <header>                        the page header containing the navigation and the logo
   <nav>                         the main navigation
 <main>                          contains everything but navigation, footer and aside-elements
-  <section>                     serves as a structural container and/or fullwidth-background
-    <article>                   contains the content when the use of an article tag is semantically correct
-    or
-    <div class="element">       contains the content when using an article tag is semantically wrong
+  <section>                     serves as a structural container and/or fullwidth-background (repeatable)
+    <article>                   contains the content when the use of an article tag is semantically correct (repeatable)
 <footer>                        the page footer, can contain additional links and informations like address or logos
 ```
 
-## Get Started
-The first things you want to do (after setting up the workflow as explained above) when creating a new website using WPSeed:
-* open `functions/functions-setup.php` and add your custom settings
-* quickly check the other files in `/functions` to make sure it suits your needs
-* open `assets/styles/vars.scss` and add your custom sizes, breakpoints, colors, and so on
-* add your templates like `templates/temp-yourtemplate.php`
-* add your acf-blocks in `functions-blocks.php` and create a template like `templates/temp-blocks-yourcustomblock`
-* use the SASS files in `assets/styles` to add your custom css
-
-For more detailed informations about all file-types, see "Important Files/Folders" below.
-
-## Deployment
-* when deploying your website using a deployment-environment like [deploybot](https://deploybot.com/) or [deployHQ](https://www.deployhq.com/) run
-  * `npm install` to install the frontend-modules/vendors on the deployment-docker (`--no-spin` helps to keep the logfile clean)
-  * `gulp` to compile assets
-  * Note: the `npm_modules` folder is not needed on the webserver itself. Vendors from npm_modules are compiled into `style.min.css` and `script.min.js`.
-
-## Usage
+## 🛠 Development
 
 ### General
 * All important files provide a description/version at the top. Make sure to read it first.
-* Since Version 1.2.0 WPSeed creates cache-busting using [gulp-rev](https://www.npmjs.com/package/gulp-rev). If you're working locally (using the `.vm` TLD) the non-busted stylesheet (style.min.css) is enqueued, to make sure browsersync runs as expected.
+* WPSeed creates cache-busting using [gulp-rev](https://www.npmjs.com/package/gulp-rev). If you're working locally (using the `.vm` TLD) the non-busted stylesheet (style.min.css) is enqueued, to make sure browsersync runs as expected.
 
 ### Important Files/Folders
 
-##### Functions
+#### Functions
 ```
-functions-blocks.php      functions to output ACFs flexible blocks (called "blocks" in WPSeed)
-functions-custom.php      space for your own, custom functions, for example shortcodes
+functions-custom.php      space for your own custom functions
 functions-dev.php         functions used for development purposes
+functions-gutenberg.php   space for functions to create custom Gutenberg-blocks with ACF, contains a preset
 functions-settings.php    theme-settings and general functions that normally don't need much editing
 functions-setup.php       the starting point for setting up a new theme, this is where the basic settings are located
 ```
 
-##### CSS
+#### ASSETS
+
+**CSS**
 ```
-assets/styles/bundle.scss       gathers all .scss files for compiling with gulp
+# used for development
+assets/styles/vars.scss         this is your starting-point, it manages scaling, colors, fonts and other presets.
 assets/styles/content.scss      content related styles
-assets/styles/essentials.scss   required SASS functions and all presets for responsive
-assets/styles/general.scss      re-usable classes and settings
+assets/styles/nav.scss          everything related to the navigation
 assets/styles/fonts.scss        locally hosted fonts
-assets/styles/nav.scss          navigation
-assets/styles/vars.scss         manages scaling, all colors, fonts and other presets
+
+# normally don't need changes
+assets/styles/essentials.scss   required SASS functions and all presets for responsive
+assets/styles/general.scss      defaults and presets, inherits most of the variables from vars.scss
+assets/styles/bundle.scss       gathers all .scss files for compiling with gulp
 ```
 
-##### Javascript
+**JAVASCRIPT**
 ```
 assets/scrips/essentials.js   re-usable essential javascript/jQuery functions/variables
 assets/scrips/functions.js    javascript/jQuery
@@ -110,18 +129,16 @@ modernizr-config.json         Modernizr configuration, see the "Modernizr" secti
 modernizr.js                  Modernizr modules, see the "Modernizr" section above
 ```
 
-##### Templates
-The Wordpress default templates (like page.php, single.php) receive their content from the associated file inside the template folder. This way all templates are grouped together. `index.php` is forwarded to `page.php`.
+#### Templates
+The Wordpress default templates (like page.php, single.php) receive their content from the associated file inside the template folder. This way all templates are grouped together. `index.php` is forwarded to `page.php` to make it the default.
 
-All templates are seperated into two categories recognizable by their prefix:
-* **`temp`**: individual site templates.
+All templates should be seperated into two categories recognizable by their prefix:
+* **`temp`**: individual site templates (none by default, an example would be `temp-contact.php`)
 * **`wp`**: wordpress default templates.
+* **`block`**: custom Gutenberg-blocks created with ACF.
 
 ```
-temp-blocks.php         loads the acf-blocks (using the "Flexible Element" field-type) from `functions-blocks.php`
-temp-blocks-***.php     loads your custom acf-block and shows its content (see the example `temp-blocks-article`)
-temp-home.php           displays default content and a full width teaser image
-temp-subsites.php       displays default content and content of the respective child pages
+blocks/block-*          if you want to create custom Gutenberg-blocks using acf, create them here and add them in functions-gutenberg.php.
 wp-home.php             WP blog default
 wp-page.php             WP page default
 wp-single.php           WP post default
@@ -161,14 +178,14 @@ the two available classes `mobile` and `desktop` perform as followed (with defau
 ```
 
 
-## About
+## 🏖 About
 Author: Flurin Dürst
 
 Contact: [flurin@flurinduerst.ch](mailto:flurin@flurinduerst.ch)
 
 Twitter: [@flurinduerst](https://twitter.com/flurinduerst)
 
-### Contribution
+## 🤝 Contribution
 * Fork it
 * Create your feature branch
 * Commit your changes
@@ -177,7 +194,7 @@ Twitter: [@flurinduerst](https://twitter.com/flurinduerst)
 
 Feel free to contact me if you have questions or need any advice.
 
-### License
-WPDistillery is released under the MIT Public License.
+## ⚖️  License
+WPSeed is released under the MIT Public License.
 
 Note: The "About" section in `README.md` and the author (`@author`) notice in the file-headers shall not be edited or deleted without permission. For Details see [License](LICENSE.md). Thank you.

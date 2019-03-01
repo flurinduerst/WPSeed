@@ -3,7 +3,7 @@
  * Theme-settings and general functions that normally don't need much editing
  *
  * @author      Flurin Dürst
- * @version     2.1.0
+ * @version     2.3.0
  * @since       WPSeed 0.1.6
  *
  * was part of 'functions-wpsetup.php' before 2.0.0
@@ -46,6 +46,11 @@ function WPSeed_enqueue() {
   wp_deregister_script( 'jquery' );
   wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', false, '3.3.1');
   wp_enqueue_script( 'jquery' );
+  // disable Gutenberg block styles
+  global $load_default_block_styles;
+  if (!$load_default_block_styles) :
+    wp_dequeue_style( 'wp-block-library' );
+  endif;
   // scripts
   wp_register_script('wpseed/scripts', get_template_directory_uri() . '/dist/script.min.js', false, array( 'jquery' ), true);
   wp_enqueue_script('wpseed/scripts');
@@ -81,6 +86,11 @@ function wpseed_theme_support()  {
   // => http://codex.wordpress.org/Function_Reference/set_post_thumbnail_size
   // => http://codex.wordpress.org/Function_Reference/add_image_size
   add_theme_support('post-thumbnails');
+
+  /* Gutenberg -> enable wide images
+  /––––––––––––––––––––––––*/
+  add_theme_support( 'align-wide' );
+
 
 }
 add_action( 'after_setup_theme', 'wpseed_theme_support');
@@ -127,6 +137,7 @@ add_action('after_setup_theme', 'wpseed_wphead_cleanup');
 /* 2.2 PRELOAD FONTS
 /––––––––––––––––––––––––*/
 // preloads fonts that are hosted locally into the page header
+// » check https://caniuse.com/#search=preload
 // add your desired fonts and font-types into $font_names and $font_formats
 function WPSeed_preload_fonts() {
   // font_names and font_formats are defined in 'functions-setup.php'
