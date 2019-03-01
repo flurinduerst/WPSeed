@@ -1,25 +1,5 @@
 # CHANGELOG
 
-## HEAD | 2.0.2
-
-## HEAD | 2.0 Beta RC 3
-* remove theme-side og tags (og-tags should be implemented through SEO-Plugins)
-* bugfixes
-* documentation updates
-* add global scope vars to `functions.js`
-* remove `modernizr.js` from root
-
-## 2.0.0 BETA | RC 2 | 13.08.2018
-## UPDATING NOW
-* update README
-
-## UPCOMING FEATURES, IMPROVEMENTS AND MAINTENANCE
-* Major
-  * check if font preloading is actually improving performance
-* Minor
-  * add font display block?: https://github.com/BlitzDonner/MHG-Master-Theme/commit/c2f0c75c7c8a7a00837a3c9075d55b39e93d3e22
-  * check security: https://github.com/flurinduerst/WPSeed/network/alerts
-  * add Backend Editor Styles
 
 ## 2.0.0 | 01.03.2019
 * GUTENBERG (new since Beta RC3 in 2019)
