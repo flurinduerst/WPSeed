@@ -31,7 +31,7 @@ require('functions/functions-settings.php');
 /*==================================================================================
   GUTENBERG ACF
 ==================================================================================*/
-// functions for any Custom Gutenberg Blocks created with ACF
+// bundles all custom Gutenberg-blocks created with ACF
 require('functions/functions-gutenberg.php');
 
 

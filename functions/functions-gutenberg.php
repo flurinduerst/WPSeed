@@ -1,6 +1,6 @@
 <?php
 /**
- * Contains the functions for any Custom Gutenberg Blocks created with ACF
+ * Contains the functions for custom Gutenberg-blocks created with ACF
  * The Block "Employees" is here as a preset for custom ACF-Blocks.
  * Requires ACF Version 5.8+
  *
@@ -11,43 +11,11 @@
  *
  */
 
- /*==================================================================================
-   Employees, Preset ACF Gutenberg Block
- ==================================================================================*/
 
- /* Register ACF Block
- /––––––––––––––––––––––––*/
- if( function_exists('acf_register_block') ) {
+/*==================================================================================
+  LOAD CUSTOM ACF-GUTENBERG-BLOCKS
+==================================================================================*/
 
- 	$result = acf_register_block(array(
- 		'name'				     => 'employees',
- 		'title'				     => __('Mitarbeiter'),
- 		'description'		   => __('Custom Block für Mitarbeiter'),
- 		'render_callback'	 => 'WPSeed_Gutenblock_Employees',
- 		'category'		     => 'common', // common, formatting, layout, widgets, embed
- 		'icon'			       => 'admin-users',
- 		'keywords'		     => ['employee', 'mitarbeiter', 'worker']
- 	));
- }
-
- /* Render Block
- /––––––––––––––––––––––––*/
- function WPSeed_Gutenblock_Employees() {
-
- 	// Get Vars
- 	$name = get_field('name');
- 	$image = get_field('image');
- 	$title = get_field('title');
- 	$email = get_field('email');
-
-  // Return HTML
- 	?>
- 	<div class="employee">
-     <? echo wp_get_attachment_image( $image['ID'], 'thumbnail', "", ['class' => 'modernizr-of']); ?>
-     <p><b><?= $name ?></b></p>
-     <p><?= $title ?></p>
-     <p><a href="mailto:<?= $email ?>"><?= $email ?></a></p>
-   </div>
- 	<?
-
- }
+/* Employees (preset)
+/––––––––––––––––––––––––*/
+require(dirname(__FILE__).'/../templates/blocks/block-employees.php');
