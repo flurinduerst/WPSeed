@@ -7,41 +7,54 @@ Planting trees? Why waste your time digging a hole each time when you can just p
 
 Following the [D.R.Y.](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) principle, WPSeed comes with everything you'll need for 90% of your themes, but nothing more, keeping it clean and simple.
 
+## Table of contents
+* [🥳 Features](#)
+* [⚙️ Requirements](#)
+* [📦 Installation](#)
+* [🚀 Get Started](#)
+* [🧠 Workflow](#)
+* [📚 HTML Structure](#)
+* [🛠 Development](#)
+* [🏖 About](#)
+* [🤝 Contribution](#)
+* [⚖️  License](#)
+
+
 ## 🥳 Features
-🚀 **COMPILING LIKE A BAWS**
-
-* Seriously. Your code will be cleaned, modernized, optimized, minified and previewed in real time.
-
 🗞 **MADE FOR GUTENBERG**
 
-* WPSeed is made to work with the Gutenberg editor and has all the tools to adapt it to your needs.
+WPSeed is made to work with the Gutenberg editor and has all the tools to adapt it to your needs.
+
+🚀 **COMPILING LIKE A BAWS**
+
+Seriously. Your code will be cleaned, modernized, optimized, minified and previewed in real time.
 
 🕶 **SASS, DEAL WITH IT**
 
-* The SCSS-code is cleanly structured, nested and supplemented with meaningful variables and mixins.
+The SCSS-code is cleanly structured, nested and supplemented with meaningful variables and mixins.
 
 ♻️ **CACHE? BUSTED!**
 
-* WPSeed comes with cachebusting out of the box. You don't have to setup anything.
+WPSeed comes with cachebusting out of the box. You don't have to setup anything.
 
 📦 **PRESETS SO YOU D.R.Y.**
 
-* WPSeed comes with the presets you actually need, so you don’t repeat yourself.
+WPSeed comes with the presets you actually need, so you don’t repeat yourself.
 
 🧙 **RESPONSIVE, FOR REAL**
 
-* WPSeed comes with features like viewport-scaling, responsive logo breakpoint-mixins and much more.
+WPSeed comes with features like viewport-scaling, responsive logo breakpoint-mixins and much more.
 
 🧽 **CLEAN & SIMPLE**
 
-* Every file is built as minimal as possible to make sure you can add your custom code right away.
+Every file is built as minimal as possible to make sure you can add your custom code right away.
 
 💚 **100% FREE**
 
-*  WPSeed ist 100% free and will always be.
+WPSeed ist 100% free and will always be.
 
 
-## ⚙️ Requirements:
+## ⚙️ Requirements
   * Node >= 10.0 ([nodejs.org](https://nodejs.org/))
   * npm >=6.0 (`npm install -g npm@latest` - [npm](https://www.npmjs.com/))
   * php >= 7.1 (Make sure [short_open_tag](http://php.net/manual/de/ini.core.php#ini.short-open-tag) is set to `true` on your VM/Webserver).
