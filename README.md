@@ -130,6 +130,8 @@ In WPSeed the following semantical structure is used on every site:
 <footer>           the page footer, can contain additional links and informations like address or logos
 ```
 
+To be able to create simple containers within the Gutenberg editor check out [WPSeed Container Block](https://wordpress.org/plugins/wpseed-container-block/).
+
 ## 🛠 Development
 
 ### General
