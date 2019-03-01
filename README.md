@@ -9,7 +9,7 @@ Following the [D.R.Y.](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) pr
 
 ## Table of contents
 * [🥳 Features](#-features)
-* [⚙️ Requirements](#-requirements)
+* [🚦 Requirements](#-requirements)
 * [📦 Installation](#-installation)
 * [🚀 Get Started](#-get-started)
 * [🧠 Workflow](#-workflow)
@@ -54,7 +54,7 @@ Every file is built as minimal as possible to make sure you can add your custom 
 WPSeed ist 100% free and will always be.
 
 
-## ⚙️ Requirements
+## 🚦 Requirements
   * Node >= 10.0 ([nodejs.org](https://nodejs.org/))
   * npm >=6.0 (`npm install -g npm@latest` - [npm](https://www.npmjs.com/))
   * php >= 7.1 (Make sure [short_open_tag](http://php.net/manual/de/ini.core.php#ini.short-open-tag) is set to `true` on your VM/Webserver).
@@ -66,7 +66,7 @@ WPSeed ist 100% free and will always be.
 * add your domain/ip to `browsersync_proxy` in `gulpfile.js`
 
 ## 🚀 Get Started
-This is a quick `TL;DR` on how to get started, below you'll find detailed informations about the [`🧠 Workflow`](#workflow), [`📚 HTML Structure`](#html-structure) and the [`🛠 Development`](#development).
+This is a quick `TL;DR` on how to get started, below you'll find detailed informations about the [`🧠 Workflow`](#-workflow), [`📚 HTML Structure`](#-html-structure) and the [`🛠 Development`](#-development).
 
 * install the workflow-environment → `npm install`
 * run gulp → `gulp && gulp watch`
