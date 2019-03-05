@@ -60,10 +60,10 @@ WPSeed ist 100% free and will always be.
 
 
 ## 🚦 Requirements
-  * Node >= 10.0 ([nodejs.org](https://nodejs.org/))
-  * npm >=6.0 (`npm install -g npm@latest` - [npm](https://www.npmjs.com/))
-  * php >= 7.1 (Make sure [short_open_tag](http://php.net/manual/de/ini.core.php#ini.short-open-tag) is set to `true` on your VM/Webserver).
-  * gulp >= 3.9.0 (`npm install -g gulp`)
+  * Node >= 10.0 – see [nodejs.org](https://nodejs.org/)
+  * npm >=6.0 (`npm install -g npm@latest`) – see [npmjs.com](https://www.npmjs.com/)
+  * php >= 7.1 – make sure [short_open_tag](http://php.net/manual/de/ini.core.php#ini.short-open-tag) is set to `true` on your VM/Webserver.
+  * gulp >= 3.9.0 (`npm install -g gulp`) – see [gulpjs.org](https://gulpjs.com/)
 
 ## 📦 Installation
 * Clone WPSeed `$ git clone git@github.com:flurinduerst/WPSeed.git` into your `themes` directory.
