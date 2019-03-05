@@ -68,6 +68,7 @@ WPSeed ist 100% free and will always be.
 ## 📦 Installation
 * Clone WPSeed `$ git clone git@github.com:flurinduerst/WPSeed.git` into your `themes` directory.
 * in the theme directory run `npm install`
+* in the theme directory run `gulp`
 * add your domain/ip to `browsersync_proxy` in `gulpfile.js`
 
 ## 🚀 Get Started
