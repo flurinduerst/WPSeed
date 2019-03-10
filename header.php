@@ -1,7 +1,7 @@
 <?
 /**
  * @author      Flurin Dürst
- * @version     1.7.0
+ * @version     1.7.1
  * @since       WPSeed 0.1
  */
 ?>
@@ -40,7 +40,7 @@
               'theme_location' => 'mainmenu'
             ]);
           ?>
-        <!-- </nav> -->
+
 
         <!-- MOBILE NAV (BURGER) -->
         <button class="hamburger--squeeze" id="hamburger" type="button">
@@ -49,6 +49,6 @@
           </span>
         </button>
 
-      </div>
+      </nav>
 
     </header>

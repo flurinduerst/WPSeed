@@ -3,7 +3,7 @@
  * Contains all navigation related styles.
  *
  * @author      Flurin Dürst
- * @version     1.11.0
+ * @version     1.11.1
  * @since       WPSeed 0.1
  *
  */
@@ -86,34 +86,36 @@ nav {
       }
     }
   }
-  ul#menu_main {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 250;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-    overflow: scroll;
-    padding-top: $header_height;
-    background-color: white;
-    opacity: 1;
-    transition: .5s;
-    pointer-events: initial;
+  #menu_main {
     &.hidden_mobile {
       opacity: 0;
       pointer-events: none;
     }
-    li {
-      padding: 1rem 0;
-      font-size: 2rem;
-      text-align: center;
-      list-style-type: none;
-      + li:before{
-        padding: 0;
-        content: '';
+    ul {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 250;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      height: 100vh;
+      overflow: scroll;
+      padding-top: $header_height;
+      background-color: white;
+      opacity: 1;
+      transition: .5s;
+      pointer-events: initial;
+      li {
+        padding: 1rem 0;
+        font-size: 2rem;
+        text-align: center;
+        list-style-type: none;
+        + li:before{
+          padding: 0;
+          content: '';
+        }
       }
     }
   }

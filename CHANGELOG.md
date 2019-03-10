@@ -1,5 +1,7 @@
 # CHANGELOG
 
+# 2.0.1 | HEAD
+* bugfix: mobile-navigation wasn't showing correctly
 
 ## 2.0.0 | 01.03.2019 | «Gutenberg»
 * GUTENBERG (new since Beta RC3 in 2019)
