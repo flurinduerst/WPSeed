@@ -4,7 +4,7 @@
  * Contains all content related styles.
  *
  * @author      Flurin Dürst
- * @version     2.3.0
+ * @version     2.4.0
  * @since       WPSeed 0.1
  *
  */
@@ -69,12 +69,13 @@ a {
 article,
 .wp-block-wpseed-container {
   & > p,
+  & > .wp-block-columns .wp-block-column p,
   & > ul,
   & > figure,
   & > .wp-block-button,
   & > .wp-block-cover,
   & > blockquote {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -302,6 +303,28 @@ div.wp-block-cover {
   text-align: left;
 }
 
+
+/* Columns
+/––––––––––––––––––––––––*/
+.wp-block-columns {
+  display: flex;
+  @include mobile {
+    flex-direction: column;
+  }
+}
+.wp-block-column {
+  display: flex;
+  width: calc(50% - .5rem);
+  @include desktop {
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+  @include mobile {
+    width: 100%;
+    margin-right: 0;
+  }
+}
 
 
 /* Separator
