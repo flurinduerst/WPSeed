@@ -4,7 +4,7 @@
  * Contains all content related styles.
  *
  * @author      Flurin Dürst
- * @version     2.4.0
+ * @version     2.5.0
  * @since       WPSeed 0.1
  *
  */
@@ -399,4 +399,12 @@ hr.wp-block-separator {
       background: $color__main;
     }
   }
+}
+
+
+/* Download
+/––––––––––––––––––––––––*/
+// hide output of name file
+.wp-block-file a:first-of-type {
+    display: none;
 }
