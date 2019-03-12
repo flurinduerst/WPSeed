@@ -149,12 +149,12 @@ function sanitize_output($buffer) {
 
 /* 2.3 BLOG RELATED
 /––––––––––––––––––––––––*/
-
-// return formatted post-date in german
+// return formatted post-date in current language
 function get_the_date_german() {
   $months_de = ['Januar','Februar','März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
   return get_the_date('d.').' '.$months_de[intval(get_the_date('m'))-1].' '.get_the_date('Y');
 }
+
 
 // edit «read more» button
 add_filter( 'the_content_more_link', 'modify_read_more_link' );
