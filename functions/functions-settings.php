@@ -3,7 +3,7 @@
  * Theme-settings and general functions that normally don't need much editing
  *
  * @author      Flurin Dürst
- * @version     2.3.0
+ * @version     2.4.0
  * @since       WPSeed 0.1.6
  *
  * was part of 'functions-wpsetup.php' before 2.0.0
@@ -22,12 +22,11 @@
     2.1 wphead cleanup
     2.2 preload fonts
     2.3 get cache-busted css file
-    2.4 allow svg uploads
-    2.5 reset inline image dimensions (for css-scaling of images)
-    2.6 reset image-processing
-    2.7 hide core-updates for non-admins
-    2.8 disable backend-theme-editor
-    2.9 load textdomain (based on locale)
+    2.4 reset inline image dimensions (for css-scaling of images)
+    2.5 reset image-processing
+    2.6 hide core-updates for non-admins
+    2.7 disable backend-theme-editor
+    2.8 load textdomain (based on locale)
 ==================================================================================*/
 
 
@@ -174,16 +173,7 @@ function wpseed_get_cachebusted_css() {
 }
 
 
-/* 2.4 ALLOW SVG UPLOADS
-/–––––––––––––––––––––––*/
-function cc_mime_types($mimes) {
-  $mimes['svg'] = 'image/svg+xml';
-  return $mimes;
-}
-add_filter('upload_mimes', 'cc_mime_types');
-
-
-/* 2.5 RESET INLINE IMAGE DIMENSIONS (FOR CSS-SCALING OF IMAGES)
+/* 2.4 RESET INLINE IMAGE DIMENSIONS (FOR CSS-SCALING OF IMAGES)
 /–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
 function remove_thumbnail_dimensions( $html, $post_id, $post_image_id ) {
   $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html);
@@ -192,13 +182,13 @@ function remove_thumbnail_dimensions( $html, $post_id, $post_image_id ) {
 add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10, 3);
 
 
-/* 2.6 RESET IMAGE-PROCESSING
+/* 2.5 RESET IMAGE-PROCESSING
 /––––––––––––––––––––––––*/
 add_filter('jpeg_quality', function($arg){return 100;});
 add_filter('wp_editor_set_quality', function($arg){return 100;});
 
 
-/* 2.7 HIDE CORE-UPDATES FOR NON-ADMINS
+/* 2.6 HIDE CORE-UPDATES FOR NON-ADMINS
 /––––––––––––––––––––––––––––––––––––*/
 function onlyadmin_update() {
   if (!current_user_can('update_core')) { remove_action( 'admin_notices', 'update_nag', 3 ); }
@@ -206,7 +196,7 @@ function onlyadmin_update() {
 add_action( 'admin_head', 'onlyadmin_update', 1 );
 
 
-/* 2.8 DISABLE BACKEND-THEME-EDITOR
+/* 2.7 DISABLE BACKEND-THEME-EDITOR
 /–––––––––––––––––––––––––––––––––*/
 function remove_editor_menu() {
   remove_action('admin_menu', '_add_themes_utility_last', 101);
@@ -214,7 +204,7 @@ function remove_editor_menu() {
 add_action('_admin_menu', 'remove_editor_menu', 1);
 
 
-/* 2.9 LOAD TEXTDOMAIN (BASED ON LOCALE)
+/* 2.8 LOAD TEXTDOMAIN (BASED ON LOCALE)
 /––––––––––––––––––––––––––––––––––––––*/
 load_theme_textdomain('WPSeed', get_template_directory() . '/languages');
 

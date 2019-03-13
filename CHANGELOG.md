@@ -6,6 +6,8 @@
   * add custom css for the downloads-block
 * Bugfixes
   * fix css/html to make sure the mobile-navigation is displaying correctly
+* CleanUp
+  * remove obsolete function to allow SVG-uploads
 
 ## 2.0.0 | 01.03.2019 | «Gutenberg»
 * GUTENBERG (new since Beta RC3 in 2019)
