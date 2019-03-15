@@ -118,7 +118,7 @@ WPSeed uses [modernizr](https://modernizr.com/) to automatically detect the avai
   * create/download your custom modernizr config at [modernizr.com](https://modernizr.com/download?setclasses) and select the `command line config` download option. Move the downloaded `modernizr-config.json` into `assets/scripts`.
   * run `modernizr -c assets/scripts/modernizr-config.json -d assets/scripts` to generate your `modernizr.js`. This file will be compiled by gulp.
   * Note: If you don't want to use modernizr you can just ignore/delete the modernizr files in `assets/scripts/` Everything will work perfectly fine without them.
-  * Add the class `modernizr-of` to every image you're using the object-fit class with. If the current browser does not support the `object-fit` attribute, all images with the class `modernizr-of` will be replaced with a div with the image-url set to background to ensure browser-compatability. Also make sure to add the background-position to the image so it can be use within the generated div.
+  * Add the class `modernizr-of` to every image you're using the object-fit class with. If the current browser does not support the `object-fit` attribute, all images with the class `modernizr-of` will be replaced with a div with the image-url set to background to ensure browser-compatibility. Also make sure to add the background-position to the image so it can be use within the generated div.
 
 ## 📚 HTML Structure
 In WPSeed the following semantical structure is used on every site:
