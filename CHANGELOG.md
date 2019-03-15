@@ -1,7 +1,9 @@
 # CHANGELOG
 
-## 2.0.4 | HEAD
-* Features
+## 2.0.5 | HEAD
+* Features/Updates
+  * add css file for compatibility classes and browser-hacks
+  * remove page-section from content css file
   * add custom css for the columns-block
   * add custom css for the downloads-block
   * only show navigation if the Main-Menu exists

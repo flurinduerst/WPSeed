@@ -4,7 +4,7 @@
  * To add vendors, use gulp-vendors.json.
  *
  * @author      Flurin Dürst
- * @version     1.7.1
+ * @version     1.8.0
  * @since       WPSeed 0.1
  *
  */
@@ -27,4 +27,5 @@
 ==================================================================================*/
 @import 'general';
 @import 'content';
+@import 'compatibility';
 @import 'nav';

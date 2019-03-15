@@ -1,0 +1,36 @@
+/**
+ * Compatibility
+ *
+ * contains rules (and maybe hacks) that ensure compatibility with older browsers or specific devices
+ * add your own rules/classes here
+ *
+ * @author      Flurin Dürst
+ * @version     1.0.0
+ * @since       WPSeed 2.0.5
+ *
+ */
+
+
+@import 'vars';
+
+
+
+/*==================================================================================
+  1.0 RESPONSIVE MIXINS
+==================================================================================*/
+
+/* OBJECT-FIT (Modernizr)
+/––––––––––––––––––––––––*/
+// adds images as background-images if the object-fit attribute is not supported
+main#post, main#blog, main#page {
+  section article {
+    img,
+    .modernizr-of {
+      width: 100%;
+      height: 20rem;
+      background-size: cover; // modernizr
+
+      object-fit: cover;
+    }
+  }
+}

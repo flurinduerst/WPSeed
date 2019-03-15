@@ -4,7 +4,7 @@
  * Contains all content related styles.
  *
  * @author      Flurin Dürst
- * @version     2.5.0
+ * @version     2.6.0
  * @since       WPSeed 0.1
  *
  */
@@ -16,8 +16,7 @@
   1.0 GENERAL
   2.0 HEADER/FOOTER
   3.0 TYPO
-  4.0 PAGES
-  5.0 GUTENBERG BLOCKS
+  4.0 GUTENBERG BLOCKS
   =======================================================*/
 
 
@@ -85,6 +84,7 @@ h1 {
 h2 {
   margin-bottom: 0;
 }
+
 
 
 /*==================================================================================
@@ -166,71 +166,7 @@ ul {
 
 
 /*==================================================================================
-  4.0 PAGES
-==================================================================================*/
-
-/* PAGE
-/––––––––––––––––––––––––*/
-//=> templates/wp-page.php
-main#page {
-  section {
-    .teaser {
-      width: 100vw;
-      max-width: 100vw;
-      height: 25rem;
-      padding: 0;
-      img,
-      .modernizr-of {
-        width: 100%;
-        height: 100%;
-        background-size: cover; // modernizr
-
-        object-fit: cover;
-      }
-    }
-  }
-}
-
-
-
-/* BLOG & POST
-/––––––––––––––––––––––––*/
-//=> templates/wp-home.php
-//=> templates/wp-single.php
-main#blog {
-  section {
-    article {
-      img,
-      .modernizr-of {
-        width: 100%;
-        height: 8rem;
-        background-size: cover;
-
-        object-fit: cover;
-      }
-    }
-  }
-}
-
-main#post {
-  section {
-    article {
-      img,
-      .modernizr-of {
-        width: 100%;
-        height: 20rem;
-        background-size: cover; // modernizr
-
-        object-fit: cover;
-      }
-    }
-  }
-}
-
-
-
-/*==================================================================================
-  5.0 GUTENBERG BLOCKS
+  4.0 GUTENBERG BLOCKS
 ==================================================================================*/
 
 /* Container
