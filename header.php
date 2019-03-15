@@ -1,7 +1,7 @@
 <?
 /**
  * @author      Flurin Dürst
- * @version     1.7.1
+ * @version     1.8.0
  * @since       WPSeed 0.1
  */
 ?>
@@ -31,14 +31,15 @@
 
         <!-- DESKTOP NAV -->
           <?
-            // make sure there's a menu placed at 'mainmenu' or a div will be created by WP
-            wp_nav_menu([
-              'menu_class'=> 'hidden_mobile',
-              'menu_id' => 'menu_main',
-              'container'=> false,
-              'depth' => 1,
-              'theme_location' => 'mainmenu'
-            ]);
+            if ( has_nav_menu( 'mainmenu' ) ) :
+              wp_nav_menu([
+                'menu_class'=> 'hidden_mobile',
+                'menu_id' => 'menu_main',
+                'container'=> false,
+                'depth' => 1,
+                'theme_location' => 'mainmenu'
+              ]);
+            endif;
           ?>
 
 

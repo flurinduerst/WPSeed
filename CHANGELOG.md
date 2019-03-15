@@ -1,11 +1,10 @@
 # CHANGELOG
 
-## 2.0.3 | HEAD
+## 2.0.4 | HEAD
 * Features
   * add custom css for the columns-block
   * add custom css for the downloads-block
-* Bugfixes
-  * fix css/html to make sure the mobile-navigation is displaying correctly
+  * only show navigation if the Main-Menu exists
 * CleanUp
   * remove obsolete function to allow SVG-uploads
 
