@@ -1,0 +1,195 @@
+/**
+ * Structure CSS File
+ * Contains everything that is not content related like
+ * header, footer and main navigations
+ *
+ * @author      Flurin Dürst
+ * @version     1.0.0
+ * @since       WPSeed 2.0.8
+ * was part of 'content.css' and `nav.scss` before WPSeed 2.0.6
+ *
+ */
+
+
+@import 'vars';
+
+
+/*=======================================================
+Table of Contents:
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+  1.0 HEADER
+  2.0 FOOTER
+  3.0 NAVIGATION
+=======================================================*/
+
+
+
+/*==================================================================================
+  1.0 HEADER
+==================================================================================*/
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  width: 100vw;
+  height: $header_height;
+  background-color: $color__grey;
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    .logo {
+      width: 12rem;
+      height: 3rem;
+      margin-right: 2rem;
+      background-image: url('images/logo.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      @include vpw_max($inner_maxwidth){
+        background-image: url('images/logo_simplified.svg');
+      }
+      @include vpw_max(1000px){
+        background-image: url('images/logo_minimal.svg');
+      }
+      @include mobile {
+        background-image: url('images/logo_simplified.svg');
+      }
+    }
+  }
+}
+
+
+
+/*==================================================================================
+  FOOTER
+==================================================================================*/
+//=> templates/str-footer.php
+
+footer {
+  width: 100vw;
+  margin-top: auto;
+  color: $color__grey;
+  background: $color__dark;
+  .inner {
+    padding: 1.5rem 0;
+    font-size: .8rem;
+  }
+}
+
+
+
+/*==================================================================================
+  NAVIGATION
+==================================================================================*/
+
+/* GENERAL
+/––––––––––––––––––––––––*/
+nav {
+  z-index: 210;
+  font-size: 1rem;
+  font-weight: 700;
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    display: inline-block;
+    list-style-type: none;
+    a {
+      color: $nav__linkcolor;
+    }
+    a:hover {
+      color: $nav__hovercolor;
+    }
+    &.current_page_item,
+    &.current_page_parent,
+    &.current-page-ancestor,
+    &.current_page_item a,
+    &.current_page_parent a,
+    &.current-page-ancestor a {
+      color: $nav__activecolor;
+    }
+    + li:before{
+      padding: 0 .8rem;
+      color: $nav__spacercolor;
+      content: ' | ';
+    }
+  }
+}
+
+
+/* DESKTOP
+/––––––––––––––––––––––––*/
+@include desktop {
+  #hamburger {
+    display: none;
+  }
+  ul#menu_main {
+
+  }
+}
+
+
+/* MOBILE
+/––––––––––––––––––––––––*/
+@include mobile {
+  header {
+    #hamburger {
+      // » https://jonsuh.com/hamburgers/
+      position: relative;
+      z-index: 260;
+      display: block;
+      height: 28px;
+      cursor: pointer;
+      &.is-active {
+        z-index: 300;
+      }
+      .hamburger-box {
+        width: 35px;
+        .hamburger-inner,
+        .hamburger-inner:before,
+        .hamburger-inner:after {
+          width: 35px;
+          height: 4px;
+          background-color: $color__dark;
+          border-radius: 1px;
+        }
+      }
+    }
+  }
+  ul#menu_main {
+    &.hidden_mobile {
+      opacity: 0;
+      pointer-events: none;
+    }
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 250;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    overflow: scroll;
+    padding-top: $header_height;
+    background-color: white;
+    opacity: 1;
+    transition: .5s;
+    pointer-events: initial;
+    li {
+      padding: 1rem 0;
+      font-size: 2rem;
+      text-align: center;
+      list-style-type: none;
+      + li:before{
+        padding: 0;
+        content: '';
+      }
+    }
+  }
+}

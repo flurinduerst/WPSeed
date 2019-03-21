@@ -4,20 +4,19 @@
  * Contains all content related styles.
  *
  * @author      Flurin Dürst
- * @version     2.6.0
+ * @version     3.0.0
  * @since       WPSeed 0.1
  *
  */
 
 
-/*=======================================================
- Table of Contents:
- –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-  1.0 GENERAL
-  2.0 HEADER/FOOTER
-  3.0 TYPO
-  4.0 GUTENBERG BLOCKS
-  =======================================================*/
+ /*=======================================================
+  Table of Contents:
+  –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+   1.0 GENERAL
+   2.0 TYPO
+   3.0 GUTENBERG BLOCKS
+   =======================================================*/
 
 
 @import 'vars';
@@ -68,12 +67,13 @@ a {
 article,
 .wp-block-wpseed-container {
   & > p,
-  & > .wp-block-columns .wp-block-column p,
   & > ul,
   & > figure,
+  & > blockquote {
   & > .wp-block-button,
   & > .wp-block-cover,
-  & > blockquote {
+  & > .wp-block-file,
+  & > .wp-block-columns .wp-block-column p,
     margin-bottom: 1rem;
   }
 }
@@ -88,64 +88,7 @@ h2 {
 
 
 /*==================================================================================
-  2.0 HEADER/FOOTER
-==================================================================================*/
-
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 200;
-  width: 100vw;
-  height: $header_height;
-  background-color: $color__grey;
-  nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    .logo {
-      width: 12rem;
-      height: 3rem;
-      margin-right: 2rem;
-      background-image: url('images/logo.svg');
-      background-repeat: no-repeat;
-      background-size: contain;
-      @include vpw_max($inner_maxwidth){
-        background-image: url('images/logo_simplified.svg');
-      }
-      @include vpw_max(1000px){
-        background-image: url('images/logo_minimal.svg');
-      }
-      @include mobile {
-        background-image: url('images/logo_simplified.svg');
-      }
-    }
-  }
-}
-
-
-
-/* Footer
-/––––––––––––––––––––––––*/
-//=> templates/str-footer.php
-
-.footer {
-  width: 100vw;
-  margin-top: auto;
-  color: $color__grey;
-  background: $color__dark;
-  .inner {
-    padding: 1.5rem 0;
-    font-size: .8rem;
-  }
-}
-
-
-
-/*==================================================================================
-  3.0 TYPO
+  2.0 TYPO
 ==================================================================================*/
 // see «Vertical Spacing» at «1.0 GENERAL» for bottom/top spacing
 
@@ -165,8 +108,9 @@ ul {
 }
 
 
+
 /*==================================================================================
-  4.0 GUTENBERG BLOCKS
+  3.0 GUTENBERG BLOCKS
 ==================================================================================*/
 
 /* Container

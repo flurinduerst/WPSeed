@@ -1,6 +1,6 @@
 <img src="/assets/images/wpseed.png" width="480"/>
 
-**Version 2.0.7** (21.03.2019)
+**Version 2.0.8** (21.03.2019)
 
 ## 🧐  What is WPSeed?
 Planting trees? Why waste your time digging a hole each time when you can just plant a seed instead? Even better, you can use the same seed for every tree you're planting from now on. WPSeed is your blueprint for modern WordPress theme development.
@@ -81,7 +81,7 @@ This is a quick `TL;DR` on how to get started, below you'll find detailed inform
   * open `functions/functions-setup.php` and add your custom settings
   * open `assets/styles/vars.scss` and add your custom sizes, breakpoints, colors, and so on
   * add your templates inside `templates/` or use `wp-page.php` with the Gutenberg-editor
-  * add your custom css to `assets/styles/content.scss` and `assets/styles/nav.scss`
+  * add your custom css to `assets/styles/content.scss` and `assets/styles/structure.scss`
   * add your custom scripts to `assets/scripts/functions.js`
 
 
@@ -155,7 +155,7 @@ functions-setup.php       the starting point for setting up a new theme, most se
 # used for development
 assets/styles/vars.scss         this is your starting-point, it manages scaling, colors, fonts and other presets.
 assets/styles/content.scss      content related styles
-assets/styles/nav.scss          everything related to the navigation
+assets/styles/structure.scss    contains everything that is not content related like (header, footer and main navigations)
 assets/styles/fonts.scss        locally hosted fonts
 
 # normally don't need changes

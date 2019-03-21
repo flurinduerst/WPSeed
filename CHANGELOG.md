@@ -1,7 +1,8 @@
 # CHANGELOG
 
-## 2.0.7 | HEAD
+## 2.0.8 | HEAD
 * Restructuring
+  * add structure.scss with contents from nav.scss (removed) and header/footer parts of content.scss
   * remove support for post-thumbnails (when using Gutenberg, this is obsolete on pages)
 * Features/Updates
   * add option to toggle font-preloading on/off
