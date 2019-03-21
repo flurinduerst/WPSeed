@@ -1,7 +1,9 @@
 # CHANGELOG
 
 ## 2.0.5 | HEAD
+## 2.0.6 | HEAD
 * Features/Updates
+  * add option to toggle font-preloading on/off
   * add css file for compatibility classes and browser-hacks
   * remove page-section from content css file
   * add custom css for the columns-block

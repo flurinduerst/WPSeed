@@ -4,7 +4,7 @@
  * Go through this file to setup your preferences
  *
  * @author      Flurin Dürst
- * @version     2.2.0
+ * @version     2.3.0
  * @since       WPSeed 0.1.6
  *
  * was part of 'functions-wpsetup.php' before 2.0.0
@@ -56,6 +56,8 @@ $typekit_id = '';
 /* SELF-HOSTED
 /––––––––––––––––––––––––*/
 // preload self-hosted fonts => WPSeed_preload_fonts()
+// set $preload_fonts to false to not preload fonts
+$preload_fonts = true;
 // define font-names and font-formats for all fonts that need preloading (usally the same as in assets/styles/fonts.scss)
 $font_names = ['asap-v7-latin-regular','asap-v7-latin-500','asap-v7-latin-700'];
 $font_formats = ['woff','woff2'];

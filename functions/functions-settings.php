@@ -3,7 +3,7 @@
  * Theme-settings and general functions that normally don't need much editing
  *
  * @author      Flurin Dürst
- * @version     2.4.0
+ * @version     2.5.0
  * @since       WPSeed 0.1.6
  *
  * was part of 'functions-wpsetup.php' before 2.0.0
@@ -38,7 +38,7 @@
 
 /* 1.1 ENQUEUE SCRIPTS/STYLES
 /––––––––––––––––---––––––––*/
-// enqueues  sctipts and styles (optional typekit embed)
+// enqueues scripts and styles (optional typekit embed)
 // » https://developer.wordpress.org/reference/functions/wp_enqueue_script/
 function WPSeed_enqueue() {
   // jQuery (from wp core)
@@ -140,16 +140,19 @@ add_action('after_setup_theme', 'wpseed_wphead_cleanup');
 // add your desired fonts and font-types into $font_names and $font_formats
 function WPSeed_preload_fonts() {
   // font_names and font_formats are defined in 'functions-setup.php'
-  global $font_names;
-  global $font_formats;
-  // define font folder
-  $font_folder = '/dist/fonts/';
-  // loop through fonts
-  foreach($font_names as $font_name) {
-    // loop through font-formats
-    foreach($font_formats as $font_format) {
-      $path = get_bloginfo('template_url').$font_folder.$font_name.'.'.$font_format;
-      echo '<link rel="preload" href="'.$path.'" as="font" type="font/'.$font_format.'" crossorigin="anonymous">'."\r\n";
+  global $preload_fonts;
+  if ($preload_fonts) {
+    global $font_names;
+    global $font_formats;
+    // define font folder
+    $font_folder = '/dist/fonts/';
+    // loop through fonts
+    foreach($font_names as $font_name) {
+      // loop through font-formats
+      foreach($font_formats as $font_format) {
+        $path = get_bloginfo('template_url').$font_folder.$font_name.'.'.$font_format;
+        echo '<link rel="preload" href="'.$path.'" as="font" type="font/'.$font_format.'" crossorigin="anonymous">'."\r\n";
+      }
     }
   }
 }
