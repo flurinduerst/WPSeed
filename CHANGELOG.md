@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## 2.0.8 | HEAD
+## 2.0.9 | HEAD
 * Restructuring
   * add structure.scss with contents from nav.scss (removed) and header/footer parts of content.scss
   * remove support for post-thumbnails (when using Gutenberg, this is obsolete on pages)
@@ -12,6 +12,7 @@
   * add custom css for the downloads-block
   * only show navigation if the Main-Menu exists
 * CleanUp
+  * beautify php (thanks to [@scherii](http://github.com/scherii]))
   * remove obsolete function to allow SVG-uploads
 
 ## 2.0.0 | 01.03.2019 | «Gutenberg»

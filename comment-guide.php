@@ -24,7 +24,6 @@ Table of Contents (2 breaks before)
   1.0 MAIN LEVEL (uppercase)
 ==================================================================================*/
 
-
 /* first Sub-Level
 /––––––––––––––––––––––––*/
 // second sub-level
