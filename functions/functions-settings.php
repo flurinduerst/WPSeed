@@ -3,7 +3,7 @@
  * Theme-settings and general functions that normally don't need much editing
  *
  * @author      Flurin Dürst
- * @version     2.5.0
+ * @version     2.6.0
  * @since       WPSeed 0.1.6
  *
  * was part of 'functions-wpsetup.php' before 2.0.0
@@ -79,12 +79,6 @@ function wpseed_theme_support()  {
   // Add HTML5 markup for search forms, comment forms, comment lists, gallery, and caption
   // => https://codex.wordpress.org/Theme_Markup
   add_theme_support('html5');
-
-  // Add Theme Support for Post thumbnails
-  // => http://codex.wordpress.org/Post_Thumbnails
-  // => http://codex.wordpress.org/Function_Reference/set_post_thumbnail_size
-  // => http://codex.wordpress.org/Function_Reference/add_image_size
-  add_theme_support('post-thumbnails');
 
   /* Gutenberg -> enable wide images
   /––––––––––––––––––––––––*/

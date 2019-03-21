@@ -1,7 +1,8 @@
 # CHANGELOG
 
-## 2.0.5 | HEAD
-## 2.0.6 | HEAD
+## 2.0.7 | HEAD
+* Restructuring
+  * remove support for post-thumbnails (when using Gutenberg, this is obsolete on pages)
 * Features/Updates
   * add option to toggle font-preloading on/off
   * add css file for compatibility classes and browser-hacks
