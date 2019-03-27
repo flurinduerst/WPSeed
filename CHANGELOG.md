@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## 2.0.9 | HEAD
+## 2.0.10 | HEAD
 * Restructuring
   * add structure.scss with contents from nav.scss (removed) and header/footer parts of content.scss
   * remove support for post-thumbnails (when using Gutenberg, this is obsolete on pages)
@@ -14,6 +14,8 @@
 * CleanUp
   * beautify php (thanks to [@scherii](http://github.com/scherii]))
   * remove obsolete function to allow SVG-uploads
+* Bugfixes
+  * add missing or wrong curly braces, classes and values (thanks to Hongwei Tang)
 
 ## 2.0.0 | 01.03.2019 | «Gutenberg»
 * GUTENBERG (new since Beta RC3 in 2019)
