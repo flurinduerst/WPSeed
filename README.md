@@ -231,7 +231,7 @@ Twitter: [@flurinduerst](https://twitter.com/flurinduerst)
 ## 🤝 Contribution
 * Fork it
 * Create your feature branch
-* Commit your changes
+* Commit your changes (please consider writing commits using https://github.com/flurinduerst/WPSeed-Emoji-Log (optional))
 * Push to the branch
 * Create new Pull Request
 
