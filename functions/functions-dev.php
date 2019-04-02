@@ -3,7 +3,7 @@
  * Functions used for development purposes.
  *
  * @author      Flurin Dürst
- * @version     2.0.0
+ * @version     2.1.0
  * @since       WPegg 0.1.0
  *
  */
@@ -18,7 +18,8 @@ Table of Contents:
     1.3 variables
     1.4 string shortener
     1.5 url check
-    1.6 slugify
+    1.6 environment check
+    1.7 slugify
 
   2.0 OUTPUT TOOLKIT
     2.1 google tag manager
@@ -89,7 +90,29 @@ function urlcontains($string) {
 }
 
 
-/* 1.6 SLUGIFY
+/* 1.6 ENVIRONMENT CHECK
+/––––––––––––––––––––––––*/
+// check the current staging environment (i.E. preview, beta, production)
+// assuming your using subdomains for staging (i.E. beta.domain.com)
+// usage: if (environemtn('production')) // dev, preview, beta, production
+// always returns true if $check_staging is set to `false`
+function environment($stage) {
+  GLOBAL $check_staging, $stages;
+  if (!$check_staging) {
+    return true;
+  }
+  elseif (array_key_exists($stage, $stages)) {
+    if ($stages[$stage] == $_SERVER['SERVER_NAME']) {
+        return true;
+      }
+    else {
+      return false;
+    }
+  }
+}
+
+
+/* 1.8 SLUGIFY
 /––––––––––––––––––––––––*/
 // create slugs
 // example: "LORÖM %< 123+ ipsüm!" will be "loroem-123-ipsuem-"
@@ -117,21 +140,23 @@ function slugify($text) {
 // outputs one of the two parts of the Google Tag Manager scripts
 // Usage: gtm('head', 'GTM-1234567) and gtm('body', 'GTM-1234567)
 function WPSeed_gtm($type) {
-  global $GTM_id;
-  if ($GTM_id) :
-    if ($type == 'head') : ?>
-      <!-- Google Tag Manager -->
-      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','<?= $GTM_id ?>');</script>
-      <?
-    elseif ($type == 'body') : ?>
-      <!-- Google Tag Manager (noscript) -->
-      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<?= $GTM_id ?>"
-      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-      <?
+  if (environment('production')) :
+    GLOBAL $GTM_id;
+    if ($GTM_id) :
+      if ($type == 'head') : ?>
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','<?= $GTM_id ?>');</script>
+        <?
+      elseif ($type == 'body') : ?>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<?= $GTM_id ?>"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <?
+      endif;
     endif;
   endif;
 }

@@ -4,7 +4,7 @@
  * Go through this file to setup your preferences
  *
  * @author      Flurin Dürst
- * @version     2.3.0
+ * @version     2.4.0
  * @since       WPSeed 0.1.6
  *
  * was part of 'functions-wpsetup.php' before 2.0.0
@@ -17,9 +17,10 @@ Table of Contents:
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
   1.0 LOCALE SETTING
   2.0 DEFAULT BLOCK STYLES
-  3.0 FONTS
-  4.0 GOOGLE TAG MANAGER
-  5.0 SETUP WP-MENUS
+  3.0 STAGING
+  4.0 FONTS
+  5.0 GOOGLE TAG MANAGER
+  6.0 SETUP WP-MENUS
 =======================================================*/
 
 
@@ -32,8 +33,9 @@ Table of Contents:
 setlocale(LC_ALL, 'de_CH.UTF-8');
 
 
+
 /*==================================================================================
-  LOAD DEFAULT GUTENBERG BLOCK STYLES
+  2.0 DEFAULT GUTENBERG BLOCK STYLES
 ==================================================================================*/
 // Gutenberg comes with default styles for all blocks
 // by default these styles are disabled. Change this to `true` to enqueue them
@@ -42,7 +44,24 @@ $load_default_block_styles = false;
 
 
 /*==================================================================================
-  3.0 FONTS
+  3.0 STAGING
+==================================================================================*/
+// define stages or set $check_staging to `false` to disable all checks related to environments
+$check_staging = true;
+
+// by deault, GTM will only be executed on the 'prodution' environment
+// use the `environment()` function to check for the current environment
+$stages = [
+  "dev"         => "wpseed.vm", // should be the same as `browsersync_proxy` in gulpfile.js
+  "preview"     => "preview.wpseed.tld",
+  "beta"        => "beta.wpseed.tld",
+  "production"  => "wpseed.tld"
+];
+
+
+
+/*==================================================================================
+  4.0 FONTS
 ==================================================================================*/
 
 
@@ -65,7 +84,7 @@ $font_formats = ['woff','woff2'];
 
 
 /*==================================================================================
-  4.0 GOOGLE TAG MANAGER
+  5.0 GOOGLE TAG MANAGER
 ==================================================================================*/
 // embed the GTM-scripts into head and body => WPSeed_gtm()
 // add your GTM_id (for example 'GTM-ABC1234') or leave empty to not enqueue any GTM-script
@@ -74,7 +93,7 @@ $GTM_id = '';
 
 
 /*==================================================================================
-  5.0 SETUP WP-MENUS
+  6.0 SETUP WP-MENUS
 ==================================================================================*/
 // loads wordpress-menus, add your custom menus here or remove if not needed
 // by default, only 'mainmenu' is shown
