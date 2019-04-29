@@ -1,12 +1,12 @@
 <?
 /**
  * @author      Flurin Dürst
- * @version     1.8.1
+ * @version     1.9.0
  * @since       WPSeed 0.1
  */
 ?>
 <!DOCTYPE html>
-<html <? language_attributes() ?>>
+<html <? language_attributes(); ?> class="<?= get_browser_name() ?>">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, initial-scale=1">

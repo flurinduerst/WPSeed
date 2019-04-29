@@ -3,7 +3,7 @@
  * Functions used for development purposes.
  *
  * @author      Flurin Dürst
- * @version     2.1.0
+ * @version     2.2.0
  * @since       WPegg 0.1.0
  *
  */
@@ -19,7 +19,8 @@ Table of Contents:
     1.4 string shortener
     1.5 url check
     1.6 environment check
-    1.7 slugify
+    1.7 browser check
+    1.8 slugify
 
   2.0 OUTPUT TOOLKIT
     2.1 google tag manager
@@ -109,6 +110,20 @@ function environment($stage) {
       return false;
     }
   }
+}
+
+
+/* 1.7 BROWSER CHECK
+/------------------------*/
+function get_browser_name() {
+  $user_agent = $_SERVER['HTTP_USER_AGENT'];
+  if (strpos($user_agent, 'Chrome')) return 'Chrome';
+  elseif (strpos($user_agent, 'Safari')) return 'Safari';
+  elseif (strpos($user_agent, 'Firefox')) return 'Firefox';
+  elseif (strpos($user_agent, 'Opera') || strpos($user_agent, 'OPR/')) return 'Opera';
+  elseif (strpos($user_agent, 'Edge')) return 'Edge';
+  elseif (strpos($user_agent, 'MSIE') || strpos($user_agent, 'Trident/7')) return 'InternetExplorer';
+  return 'Other';
 }
 
 

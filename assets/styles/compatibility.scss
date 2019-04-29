@@ -5,7 +5,7 @@
  * add your own rules/classes here
  *
  * @author      Flurin Dürst
- * @version     1.0.2
+ * @version     1.1.0
  * @since       WPSeed 2.0.5
  *
  */
@@ -34,3 +34,12 @@ main#post, main#blog, main#page {
     }
   }
 }
+
+/*==================================================================================
+  2.0 BROWSER HACKS
+==================================================================================*/
+// see get_browser_name() in `functions-dev.php` for details
+html.InternetExplorer {
+  .example {
+    // add your browser-specific styles
+  }

@@ -1,6 +1,6 @@
 <img src="/assets/images/wpseed.png" width="480"/>
 
-**Version 2.0.11** (02.04.2019)
+**Version 2.0.12** (29.04.2019)
 
 ## 🧐  What is WPSeed?
 Planting trees? Why waste your time digging a hole each time when you can just plant a seed instead? Even better, you can use the same seed for every tree you're planting from now on. WPSeed is your blueprint for modern WordPress theme development.
@@ -138,6 +138,7 @@ To be able to create simple containers within the Gutenberg editor check out [WP
 ### General
 * All important files provide a description/version at the top. Make sure to read it first.
 * WPSeed creates cache-busting using [gulp-rev](https://www.npmjs.com/package/gulp-rev). If you're working locally (using the `.vm` TLD) the non-busted stylesheet (style.min.css) is enqueued, to make sure browsersync runs as expected.
+* WPSeed knows the currently used browser and adds it as a class to the `<html>`-Tag. See `compatibility.scss` for details.
 
 ### Important Files/Folders
 

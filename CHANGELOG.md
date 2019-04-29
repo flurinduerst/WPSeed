@@ -1,10 +1,11 @@
 # CHANGELOG
 
-## 2.0.11 | HEAD
+## 2.0.12 | HEAD
 * Restructuring
   * add structure.scss with contents from nav.scss (removed) and header/footer parts of content.scss
   * remove support for post-thumbnails (when using Gutenberg, this is obsolete on pages)
 * Features/Updates
+  * add browser-check/output
   * add function to check the current staging environment
   * add option to toggle font-preloading on/off
   * add css file for compatibility classes and browser-hacks
