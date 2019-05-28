@@ -1,4 +1,3 @@
-/* Note to myself: add Index like https://github.com/johnpitchko/johnpitchko-wp-theme/blob/master/style.css */
 /**
  * Content CSS File
  * Contains all content related styles.
@@ -10,13 +9,14 @@
  */
 
 
- /*=======================================================
-  Table of Contents:
-  –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-   1.0 GENERAL
-   2.0 TYPO
-   3.0 GUTENBERG BLOCKS
-   =======================================================*/
+/*=======================================================
+Table of Contents:
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+ 1.0 GENERAL
+ 2.0 TYPO
+ 3.0 GUTENBERG BLOCKS
+=======================================================*/
+
 
 
 @import 'vars';
@@ -25,30 +25,6 @@
 /*==================================================================================
   1.0 GENERAL
 ==================================================================================*/
-
-/* Containers
-/––––––––––––––––––––––––*/
-main {
-  position: relative;
-  width: 100vw;
-  margin-top: $header_height;
-  article {
-    padding: 1rem 0;
-  }
-}
-
-
-article,
-nav,
-footer .inner {
-  width: $inner_width;
-  max-width: $inner_maxwidth;
-  margin: 0 auto;
-  @include mobile {
-    width: $inner_width_mobile;
-  }
-}
-
 
 /* Anchors
 /––––––––––––––––––––––––*/

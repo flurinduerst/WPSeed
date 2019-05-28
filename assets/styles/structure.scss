@@ -1,6 +1,6 @@
 /**
  * Structure CSS File
- * Contains everything that is not content related like
+ * Contains everything that is not related to the content itself like
  * header, footer and main navigations
  *
  * @author      Flurin Dürst
@@ -17,15 +17,45 @@
 /*=======================================================
 Table of Contents:
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-  1.0 HEADER
-  2.0 FOOTER
-  3.0 NAVIGATION
+  1.0 GENERAL
+  2.0 HEADER
+  3.0 FOOTER
+  4.0 NAVIGATION
 =======================================================*/
 
 
+/*==================================================================================
+  1.0 GENERAL
+==================================================================================*/
+
+/* Containers
+/––––––––––––––––––––––––*/
+main {
+  position: relative;
+  width: 100vw;
+  margin-top: $header_height;
+  @include mobile {
+    margin-top: $header_height_mobile;
+  }
+  article {
+    padding: 1rem 0;
+  }
+}
+
+
+article,
+nav,
+footer .inner {
+  width: $inner_width;
+  max-width: $inner_maxwidth;
+  margin: 0 auto;
+  @include mobile {
+    width: $inner_width_mobile;
+  }
+}
 
 /*==================================================================================
-  1.0 HEADER
+  2.0 HEADER
 ==================================================================================*/
 
 header {
@@ -65,7 +95,7 @@ header {
 
 
 /*==================================================================================
-  FOOTER
+  3.0 FOOTER
 ==================================================================================*/
 //=> templates/str-footer.php
 
@@ -83,7 +113,7 @@ footer {
 
 
 /*==================================================================================
-  NAVIGATION
+  4.0 NAVIGATION
 ==================================================================================*/
 
 /* GENERAL

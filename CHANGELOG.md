@@ -18,6 +18,7 @@
   * beautify php (thanks to [@scherii](http://github.com/scherii]))
   * remove obsolete function to allow SVG-uploads
   * rename Submenu to Footermenu
+  * move general-containers to `structure.scss`
 * Bugfixes
   * add missing or wrong curly braces, classes and values (thanks to Hongwei Tang)
 
