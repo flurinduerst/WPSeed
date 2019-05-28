@@ -225,6 +225,15 @@ hr.wp-block-separator {
 /––––––––––––––––––––––––*/
 .wp-block-button {
   color: $color__bright;
+  &.aligncenter {
+    text-align: center;
+  }
+  &.alignright {
+    text-align: right;
+  }
+  &.alignleft {
+    text-align: left;
+  }
   &.is-style-squared .wp-block-button__link {
     border-radius: 0;
   }

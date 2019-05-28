@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## 2.0.12 | HEAD
+## 2.0.16 | HEAD
 * Restructuring
   * add structure.scss with contents from nav.scss (removed) and header/footer parts of content.scss
   * remove support for post-thumbnails (when using Gutenberg, this is obsolete on pages)
@@ -13,6 +13,7 @@
   * add custom css for the columns-block
   * add custom css for the downloads-block
   * only show navigation if the Main-Menu exists
+  * add center/left/right aligns for default Gutenberg Button-Block
   * minor gulp update
 * CleanUp
   * beautify php (thanks to [@scherii](http://github.com/scherii]))
