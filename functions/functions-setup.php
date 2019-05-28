@@ -4,7 +4,7 @@
  * Go through this file to setup your preferences
  *
  * @author      Flurin Dürst
- * @version     2.4.0
+ * @version     2.4.1
  * @since       WPSeed 0.1.6
  *
  * was part of 'functions-wpsetup.php' before 2.0.0
@@ -101,7 +101,7 @@ $GTM_id = '';
 function wpseed_register_theme_menus() {
   register_nav_menus([
     'mainmenu' => __('Mainmenu'),
-    'submenu' => __('Submenu')
+    'footermenu' => __('Footermenu')
   ]);
 }
 add_action( 'init', 'wpseed_register_theme_menus');

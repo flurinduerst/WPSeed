@@ -13,9 +13,11 @@
   * add custom css for the columns-block
   * add custom css for the downloads-block
   * only show navigation if the Main-Menu exists
+  * minor gulp update
 * CleanUp
   * beautify php (thanks to [@scherii](http://github.com/scherii]))
   * remove obsolete function to allow SVG-uploads
+  * rename Submenu to Footermenu
 * Bugfixes
   * add missing or wrong curly braces, classes and values (thanks to Hongwei Tang)
 
