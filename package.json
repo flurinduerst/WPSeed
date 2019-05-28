@@ -1,6 +1,6 @@
 {
   "name": "wpseed",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "modules for local development (devDependencies) and frontend-modules (dependencies)",
   "author": "flurinduerst",
   "dependencies": {
@@ -12,7 +12,7 @@
   "devDependencies": {
     "browser-sync": "^2.13.0",
     "del": "^3.0.0",
-    "gulp": "^3.8.6",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-clean-css": "^3.7.0",
     "gulp-concat": "^2.6.1",
