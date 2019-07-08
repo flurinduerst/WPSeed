@@ -111,7 +111,6 @@ function wpseed_wphead_cleanup () {
   remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10);
   // remove generator name from RSS
   add_filter('the_generator', '__return_false');
-  add_filter('show_admin_bar','__return_false');
   // disable emoji support
   remove_action('wp_head', 'print_emoji_detection_script', 7);
   remove_action('wp_print_styles', 'print_emoji_styles');
