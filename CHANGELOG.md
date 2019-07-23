@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## 2.0.16 | HEAD
+## 2.0.17 | HEAD
 * Restructuring
   * add structure.scss with contents from nav.scss (removed) and header/footer parts of content.scss
   * remove support for post-thumbnails (when using Gutenberg, this is obsolete on pages)
@@ -20,8 +20,10 @@
   * remove obsolete function to allow SVG-uploads
   * rename Submenu to Footermenu
   * move general-containers to `structure.scss`
+  * re-enable display of the admin bar (thanks to [@Sigizmund2012)](http://github.com/Sigizmund2012)]))
 * Bugfixes
   * add missing or wrong curly braces, classes and values (thanks to Hongwei Tang)
+  * add missing curly braces (thanks to [@Sigizmund2012)](http://github.com/Sigizmund2012)]))
 
 ## 2.0.0 | 01.03.2019 | «Gutenberg»
 * GUTENBERG (new since Beta RC3 in 2019)
