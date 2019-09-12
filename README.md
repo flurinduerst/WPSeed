@@ -44,7 +44,7 @@ WPSeed comes with cachebusting out of the box. You don't have to setup anything.
 
 📦 **PRESETS SO YOU D.R.Y.**
 
-WPSeed comes with the presets you actually need, so you don’t repeat yourself.
+You'll find the presets you actually need, so you **d**on’t **r**epeat **y**ourself.
 
 🧙 **RESPONSIVE, FOR REAL**
 
@@ -56,7 +56,7 @@ Every file is built as minimal as possible to make sure you can add your custom 
 
 💚 **100% FREE**
 
-WPSeed ist 100% free and will always be.
+WPSeed is 100% free and will always be.
 
 
 ## 🚦 Requirements
