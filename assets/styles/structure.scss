@@ -4,7 +4,7 @@
  * header, footer and main navigations
  *
  * @author      Flurin Dürst
- * @version     1.0.1
+ * @version     1.0.3
  * @since       WPSeed 2.0.8
  * was part of 'content.css' and `nav.scss` before WPSeed 2.0.6
  *
@@ -119,7 +119,6 @@ footer {
 /* GENERAL
 /––––––––––––––––––––––––*/
 nav {
-  z-index: 210;
   font-size: 1rem;
   font-weight: 700;
   ul {
@@ -138,9 +137,9 @@ nav {
     &.current_page_item,
     &.current_page_parent,
     &.current-page-ancestor,
-    &.current_page_item a,
-    &.current_page_parent a,
-    &.current-page-ancestor a {
+    &.current_page_item > a,
+    &.current_page_parent > a,
+    &.current-page-ancestor > a  {
       color: $nav__activecolor;
     }
     + li:before{
