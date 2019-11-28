@@ -9,7 +9,7 @@
  * Normally, you don't have to change anything here.
  *
  * @author      Flurin Dürst
- * @version     1.1.0
+ * @version     1.2.0
  * @since       WPSeed 0.13
  *
  */
@@ -116,6 +116,7 @@ Table of Contents:
   overflow: hidden;
 }
 
+// display
 .dn {
   display: none !important;
 }
@@ -123,6 +124,7 @@ Table of Contents:
   display: block !important;
 }
 
+// visibility
 .hidden {
   opacity: 0 !important;
   pointer-events: none !important;
@@ -130,6 +132,12 @@ Table of Contents:
 .shown {
   opacity: 1 !important;
   pointer-events: all !important;
+}
+
+// touch interaction, used for phone-number links that should only be tappable on touch-devices
+html[data-touch=false] .taplink {
+    pointer-events: none;
+    cursor: none;
 }
 
 
