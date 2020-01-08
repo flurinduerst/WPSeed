@@ -1,6 +1,7 @@
 # CHANGELOG
 
-## 2.0.18 | HEAD
+## 2.1.0 | 08.01.2020 | «Plug»
+* Update to Gulp 4
 * Restructuring
   * add structure.scss with contents from nav.scss (removed) and header/footer parts of content.scss
   * remove support for post-thumbnails (when using Gutenberg, this is obsolete on pages)
