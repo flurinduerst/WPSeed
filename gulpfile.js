@@ -15,7 +15,7 @@
  *
  * Author:      Flurin Dürst (https://flurinduerst.ch)
  *
- * Version:     2.3.1
+ * Version:     3.0
  *
 */
 
@@ -99,8 +99,10 @@ gulp.task('browsersync', function() {
 // from:    assets/styles/main.css
 // actions: compile, minify, prefix, rename
 // to:      dist/style.min.css
-gulp.task('css', ['clean:css'], function() {
-  return gulp.src(assets['css'].concat(vendors['css']))
+gulp.task('css', gulp.series('clean:css', function() {
+
+  return gulp
+    .src(assets['css'].concat(vendors['css']))
     .pipe(plumber({errorHandler: notify.onError("<%= error.message %>")}))
     .pipe(concat('style.min.css'))
     .pipe(sass())
@@ -109,7 +111,7 @@ gulp.task('css', ['clean:css'], function() {
     .pipe(rename('dist/style.min.css'))
     .pipe(gulp.dest('./'))
     .pipe(browserSync.stream());
-});
+}));
 
 
 /* CSS CACHE BUSTING
@@ -117,13 +119,14 @@ gulp.task('css', ['clean:css'], function() {
 // from:    dist/style.min.css
 // actions: create busted version of file
 // to:      dist/style-[hash].min.css
-gulp.task('cachebust', ['clean:cachebust', 'css'], function() {
-  return gulp.src('dist/style.min.css')
+gulp.task('cachebust', gulp.series('clean:cachebust', 'css', function() {
+  return gulp
+    .src('dist/style.min.css')
     .pipe(rev())
     .pipe(gulp.dest('dist'))
     .pipe(rev.manifest({merge: true}))
     .pipe(gulp.dest('dist'))
-});
+}));
 
 
 /* JAVASCRIPT
@@ -132,8 +135,9 @@ gulp.task('cachebust', ['clean:cachebust', 'css'], function() {
 // actions: concatinate, minify, rename
 // to:      dist/script.min.css
 // note:    modernizr.js is concatinated first in .pipe(order)
-gulp.task('javascript', ['clean:javascript'], function() {
-  return gulp.src(assets['javascript'].concat(vendors['javascript']))
+gulp.task('javascript', gulp.series('clean:javascript', function() {
+  return gulp
+    .src(assets['javascript'].concat(vendors['javascript']))
     .pipe(order([
       'assets/scripts/modernizr.js',
       'assets/scripts/*.js'
@@ -144,7 +148,7 @@ gulp.task('javascript', ['clean:javascript'], function() {
     .pipe(rename('dist/script.min.js'))
     .pipe(gulp.dest('./'))
     .pipe(browserSync.stream());
-});
+}));
 
 
 /* IMAGES
@@ -152,39 +156,42 @@ gulp.task('javascript', ['clean:javascript'], function() {
 // from:    assets/images/
 // actions: minify
 // to:      dist/images
-gulp.task('images', ['clean:images'],  function() {
-  return gulp.src(assets['images'].concat(vendors['images']))
+gulp.task('images', gulp.series('clean:images', function() {
+  return gulp
+    .src(assets['images'].concat(vendors['images']))
     .pipe(imagemin())
     .pipe(gulp.dest('dist/images'))
-    // .pipe(browserSync.stream()); // currently bugged (18.12.2017)
-});
+}));
+
 
 /* FONTS
 /––––––––––––––––––––––––*/
 // from:    assets/fonts/
 // actions: move (no processing at all, just keeping stuff in place)
 // to:      dist/fonts/
-gulp.task('fonts', ['clean:fonts'],  function() {
-  return gulp.src(assets['fonts'])
-  .pipe(gulp.dest('dist/fonts'))
-});
+gulp.task('fonts', gulp.series('clean:fonts', function() {
+  return gulp
+    .src(assets['fonts'])
+    .pipe(gulp.dest('dist/fonts'))
+}));
 
 
 /* WATCH
 /––––––––––––––––––––––––*/
 // watch for modifications in
 // styles, scripts, images, php files, html files
-gulp.task('watch',  ['browsersync'], function() {
-  gulp.watch(assets['css_watch'], ['css', 'cachebust']);
-  gulp.watch(assets['javascript'], ['javascript']);
-  gulp.watch(assets['images'], ['images']);
-  gulp.watch(assets['fonts'], ['fonts']);
-  gulp.watch('*.php', browserSync.reload);
-  gulp.watch('*.html', browserSync.reload);
-});
+gulp.task('watch', gulp.parallel('browsersync', function() {
+  watch(assets['css_watch'], gulp.series('css', 'cachebust'));
+  watch(assets['javascript'], gulp.series('javascript'));
+  watch(assets['images'], gulp.series('images'));
+  watch(assets['fonts'], gulp.series('fonts'));
+  watch('*.php', browserSync.reload);
+  watch('*.html', browserSync.reload);
+}));
+
 
 
 /* DEFAULT
 /––––––––––––––––––––––––*/
 // default gulp tasks executed with `gulp`
-gulp.task('default', ['css', 'cachebust', 'javascript', 'images', 'fonts']);
+gulp.task('default', gulp.series('css', 'cachebust', 'javascript', 'images', 'fonts'));
