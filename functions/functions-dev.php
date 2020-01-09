@@ -3,7 +3,7 @@
  * Functions used for development purposes.
  *
  * @author      Flurin Dürst
- * @version     2.2.0
+ * @version     2.2.1
  * @since       WPegg 0.1.0
  *
  */
@@ -155,25 +155,26 @@ function slugify($text) {
 // outputs one of the two parts of the Google Tag Manager scripts
 // Usage: gtm('head', 'GTM-1234567) and gtm('body', 'GTM-1234567)
 function WPSeed_gtm($type) {
-  if (environment('production')) :
+  if (environment('production')) {
     GLOBAL $GTM_id;
-    if ($GTM_id) :
-      if ($type == 'head') : ?>
-        <!-- Google Tag Manager -->
-        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','<?= $GTM_id ?>');</script>
+    if ($GTM_id) {
+      if ($type == 'head') {
+        ?>
+          <!-- Google Tag Manager -->
+          <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','<?= $GTM_id ?>');</script>
         <?
-      elseif ($type == 'body') : ?>
+      } elseif ($type == 'body') { ?>
         <!-- Google Tag Manager (noscript) -->
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<?= $GTM_id ?>"
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <?
-      endif;
-    endif;
-  endif;
+      }
+    }
+  }
 }
 
 

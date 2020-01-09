@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2.1.1 | HEAD
+* fix Zero-width space in GTM-function (thanks to [@scherii)](http://github.com/scherii)]))
+
+
 ## 2.1.0 | 08.01.2020 | «Plug»
 * Update to Gulp 4
 * Restructuring
