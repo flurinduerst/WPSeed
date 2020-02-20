@@ -1,4 +1,4 @@
-<img src="/assets/images/wpseed.png" width="480"/>
+<img src="/assets/images/wpseed.png" width="480">
 
 **Version 2.1.1** (09.01.2020)
 
@@ -92,7 +92,7 @@ This is a quick `TL;DR` on how to get started, below you'll find detailed inform
 ### Gulp
 WPSeed uses [gulp](https://gulpjs.com) to compile assets from `assets` to `dist`. Here's what it will do:
 * CSS: checks for errors, then adds browser-prefixes before cleaning, compiling, minifying and bundling all .scss-files into a cache-busted version of `style.min.css`
-* Javascript: checks for errors, then concatinates and minifies all javascript files into `script.min.js`
+* JavaScript: checks for errors, then concatinates and minifies all javascript files into `script.min.js`
 * Images: optimize all images using [imagemin](https://www.npmjs.com/package/gulp-imagemin) and move them to the `dist` (distribution) directory
 * Fonts: get all fonts inside `assets/fonts/` and move them to the `dist` directory
 
@@ -165,7 +165,7 @@ assets/styles/general.scss      defaults and presets, inherits most of the varia
 assets/styles/bundle.scss       gathers all .scss files for compiling with gulp
 ```
 
-#### Javascript
+#### JavaScript
 ```
 assets/scrips/essentials.js   re-usable essential javascript/jQuery functions/variables
 assets/scrips/functions.js    javascript/jQuery
@@ -241,4 +241,4 @@ Feel free to contact me if you have questions or need any advice.
 ## ⚖️  License
 WPSeed is released under the MIT Public License.
 
-Note: The "About" section in `README.md` and the author (`@author`) notice in the file-headers shall not be edited or deleted without permission. For Details see [License](LICENSE.md). Thank you.
+Note: The "About" section in `README.md` and the author (`@author`) notice in the file-headers shall not be edited or deleted without permission. For Details see [License](LICENSE). Thank you.
