@@ -57,10 +57,10 @@ article,
 h1 {
   margin-bottom: .5rem;
 }
+
 h2 {
   margin-bottom: 0;
 }
-
 
 
 /*==================================================================================
@@ -71,11 +71,20 @@ h2 {
 h1 {
   width: 100%;
   font-size: 2rem;
+  font-weight: $bold;
 }
 
 h2 {
   width: 100%;
   font-size: 1.5rem;
+  font-weight: $bold;
+}
+
+p {
+  font-weight: $regular;
+  b, strong {
+    font-weight: $bold;
+  }
 }
 
 main ul {
@@ -104,23 +113,22 @@ main ul {
 /* Image Blocks
 /––––––––––––––––––––––––*/
 // -> https://www.billerickson.net/full-and-wide-alignment-in-gutenberg/
-figure.wp-block-image,
-div.wp-block-cover {
-  &.alignfull {
+.wp-block-image img {
+  width: 100%
+}
+
+.alignfull {
     // should span the full width of the screen
     width: 100vw;
     max-width: 100vw;
     margin-right: calc(50% - 50vw);
     margin-left: calc(50% - 50vw);
-  }
-  &.alignwide {
-    // should be wider than the main content area, but not as wide as the full alignment
-    margin-right: calc(25% - 25vw);
-    margin-left: calc(25% - 25vw);
-  }
-  img {
-    width: 100%;
-  }
+}
+
+.alignwide {
+  // should be wider than the main content area, but not as wide as the full alignment
+  margin-right: calc(25% - 25vw);
+  margin-left: calc(25% - 25vw);
 }
 
 
