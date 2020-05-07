@@ -49,14 +49,15 @@ $(function(){
   // displays images with the object-fit attribute as background-images for older browsers
   $(function(){
     if ( ! Modernizr.objectfit ) {
-      $('img.mdrnz-of').each(function () {
+      // $('.InternetExplorer img.modernizr-of').each(function () { --> add option for .InternetExplorer to documentation --> see get_browser_name
+      $('img.modernizr-of').each(function () {
         // Check if image has attribute 'object-fit'
         var $img = $(this);
         imgUrl = $img.prop('src');
         classes = $img.attr("class");
         if (imgUrl) {
           // Replace img with a div containing the image as background-image and get background-image value from object-fit
-          $img.replaceWith('<div class="' + classes + '" style="background-image:url(' + imgUrl + ')');
+          $img.replaceWith('<div class="' + classes + '" style="background-image:url(' + imgUrl + ')"></div>');
         }
       });
     }

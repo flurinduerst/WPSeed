@@ -22,17 +22,10 @@
 /* OBJECT-FIT (Modernizr)
 /––––––––––––––––––––––––*/
 // adds images as background-images if the object-fit attribute is not supported
-main#post, main#blog, main#page {
-  section article {
-    img,
-    .modernizr-of {
-      width: 100%;
-      height: 100%; // add custom height as needed
-      background-size: cover; // modernizr
-
-      object-fit: cover;
-    }
-  }
+img.modernizr-of {
+  width: 100%;
+  height: 100%; // add custom height as needed
+  background-size: cover; // modernizr
 }
 
 /*==================================================================================

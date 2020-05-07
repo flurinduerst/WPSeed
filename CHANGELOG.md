@@ -1,8 +1,11 @@
 # CHANGELOG
 
-## 2.1.1 | HEAD
+## 2.1.2 | HEAD
 * fix Zero-width space in GTM-function (thanks to [@scherii)](http://github.com/scherii)]))
-
+* add default user capabilities for the "editor"-user
+* update gulp to v4 in package.json
+* add animation presets
+* add font-weight variables
 
 ## 2.1.0 | 08.01.2020 | «Plug»
 * Update to Gulp 4

@@ -3,7 +3,7 @@
  * The template for displaying 404 pages (not found)
  *
  * @author      Flurin Dürst
- * @version     1.2
+ * @version     2.0
  * @since       WPSeed 0.1
  */
 ?>
@@ -13,14 +13,17 @@
 
 <!-- content » 404 -->
 
-  <div class="content">
+  <main id="page">
 
-    <h1>Error#404</h1>
+    <section>
+      <h1>Error#404</h1>
 
-    <div class="error404">
-      Page could not be found.
-    </div>
+      <div class="error404">
+        Page could not be found.
+      </div>
+    </section>
 
-  </div>
+  </main>
+
 
 <? get_footer() ?>
