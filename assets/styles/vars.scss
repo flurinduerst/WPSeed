@@ -17,7 +17,7 @@
 
 $base_size:                   2vw;                // scales all `rem` based objects by adding this value as html font-size
 $breakpoint:                  800px;              // breakpoint between @desktop and @mobile mixins
-$scaling_endpoint:            1200px;             // scaling of all `rem` based objects stops here
+$scaling_endpoint:            1200px;             // scaling of all `rem` based objects stops here (100px = no scaling)
 $base_size_mobile:            $base_size * 2.2;   // scaling multiplicator for mobile viewport
 
 $header_height:               4rem;               // define the height of the header
@@ -26,6 +26,10 @@ $inner_maxwidth:              1200px;             // max-width of the inner obje
 
 $header_height_mobile:        4rem;               // define the height of the header
 $inner_width_mobile:          90vw;               // default width of the inner objects --> nav, article and footer
+
+/* to do:
+/* add option to scale  by viewport-width (using html-font-size-rem, as it currently is)
+/* or via fixed breakpoints (also using html-font-size-rem. = VSA)
 
 /*==================================================================================
   COLORS
