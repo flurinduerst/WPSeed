@@ -6,7 +6,7 @@
  * minimum while using vars.scss for very basic styling.
  *
  * @author      Flurin Dürst
- * @version     1.12.1
+ * @version     1.13.0
  * @since       WPSeed 0.1
  *
  */
@@ -89,3 +89,44 @@ body  {
   height: $header_height;
   margin-top: -$header_height;  // negative top_height
 }
+
+
+/* Animation Presets
+/––––––––––––––––––––––––*/
+
+/* Animations
+/––––––––––––––––––––––––*/
+.ani-0-2    {animation-delay: .0s; animation-duration: .2s;}
+.ani-2-2    {animation-delay: .2s; animation-duration: .2s;}
+.ani-4-2    {animation-delay: .4s; animation-duration: .2s;}
+.ani-6-2    {animation-delay: .6s; animation-duration: .2s;}
+.ani-8-2    {animation-delay: .8s; animation-duration: .2s;}
+.ani-10-2   {animation-delay:  1s; animation-duration: .2s;}
+
+.ani-0-4    {animation-delay: .0s; animation-duration: .4s;}
+.ani-2-4    {animation-delay: .2s; animation-duration: .4s;}
+.ani-4-4    {animation-delay: .4s; animation-duration: .4s;}
+.ani-6-4    {animation-delay: .6s; animation-duration: .4s;}
+.ani-8-4    {animation-delay: .8s; animation-duration: .4s;}
+.ani-10-4   {animation-delay:  1s; animation-duration: .4s;}
+
+.ani-0-6    {animation-delay: .0s; animation-duration: .6s;}
+.ani-2-6    {animation-delay: .2s; animation-duration: .6s;}
+.ani-4-6    {animation-delay: .4s; animation-duration: .6s;}
+.ani-6-6    {animation-delay: .6s; animation-duration: .6s;}
+.ani-8-6    {animation-delay: .8s; animation-duration: .6s;}
+.ani-10-6   {animation-delay:  1s; animation-duration: .6s;}
+
+.ani-0-8    {animation-delay: .0s; animation-duration: .8s;}
+.ani-2-8    {animation-delay: .2s; animation-duration: .8s;}
+.ani-4-8    {animation-delay: .4s; animation-duration: .8s;}
+.ani-6-8    {animation-delay: .6s; animation-duration: .8s;}
+.ani-8-8    {animation-delay: .8s; animation-duration: .8s;}
+.ani-10-8   {animation-delay:  1s; animation-duration: .8s;}
+
+.ani-0-10    {animation-delay: .0s; animation-duration: 1s;}
+.ani-2-10    {animation-delay: .2s; animation-duration: 1s;}
+.ani-4-10    {animation-delay: .4s; animation-duration: 1s;}
+.ani-6-10    {animation-delay: .6s; animation-duration: 1s;}
+.ani-8-10    {animation-delay: .8s; animation-duration: 1s;}
+.ani-10-10   {animation-delay:  1s; animation-duration: 1s;}
