@@ -82,7 +82,8 @@ h2 {
 
 p {
   font-weight: $regular;
-  b, strong {
+  b,
+  strong {
     font-weight: $bold;
   }
 }
@@ -114,15 +115,15 @@ main ul {
 /––––––––––––––––––––––––*/
 // -> https://www.billerickson.net/full-and-wide-alignment-in-gutenberg/
 .wp-block-image img {
-  width: 100%
+  width: 100%;
 }
 
 .alignfull {
-    // should span the full width of the screen
-    width: 100vw;
-    max-width: 100vw;
-    margin-right: calc(50% - 50vw);
-    margin-left: calc(50% - 50vw);
+  // should span the full width of the screen
+  width: 100vw;
+  max-width: 100vw;
+  margin-right: calc(50% - 50vw);
+  margin-left: calc(50% - 50vw);
 }
 
 .alignwide {
@@ -278,5 +279,5 @@ hr.wp-block-separator {
 /––––––––––––––––––––––––*/
 // hide output of name file
 .wp-block-file a:first-of-type {
-    display: none;
+  display: none;
 }
