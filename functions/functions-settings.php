@@ -3,7 +3,7 @@
  * Theme-settings and general functions that normally don't need much editing
  *
  * @author      Flurin Dürst
- * @version     2.6.0
+ * @version     2.7.0
  * @since       WPSeed 0.1.6
  *
  * was part of 'functions-wpsetup.php' before 2.0.0
@@ -27,6 +27,7 @@
     2.6 hide core-updates for non-admins
     2.7 disable backend-theme-editor
     2.8 load textdomain (based on locale)
+  3.0 USER CAPABILITIES
 ==================================================================================*/
 
 
@@ -203,5 +204,38 @@ add_action('_admin_menu', 'remove_editor_menu', 1);
 /* 2.8 LOAD TEXTDOMAIN (BASED ON LOCALE)
 /––––––––––––––––––––––––––––––––––––––*/
 load_theme_textdomain('WPSeed', get_template_directory() . '/languages');
+
+
+
+/*==================================================================================
+  3.0 USER CAPABILITIES
+==================================================================================*/
+
+/* EDITOR
+/––––––––––––––––––––––––––––––––––––––*/
+
+// add theme-options menu for «editor»-user
+$role_object = get_role( 'editor' );
+$role_object->add_cap( 'edit_theme_options' );
+
+// restrict rights to menu only
+function capabilities_editor_themeoptions(){
+  // get current login user's role
+  $roles = wp_get_current_user()->roles;
+  // check role
+  if( !in_array('editor',$roles)){
+    return;
+  }
+  // remove menu
+  remove_menu_page( 'tools.php' ); //Tools
+  // remove theme selection
+  remove_submenu_page( 'themes.php', 'themes.php' );
+  // remove widgets
+  remove_submenu_page( 'themes.php', 'widgets.php' );
+  // remove customizer
+  remove_submenu_page( 'themes.php', 'customize.php' );
+  global $submenu; unset($submenu['themes.php'][6]);
+}
+add_action( 'admin_menu', 'capabilities_editor_themeoptions' , 100 );
 
 ?>
